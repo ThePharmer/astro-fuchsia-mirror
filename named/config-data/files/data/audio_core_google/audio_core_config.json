@@ -1,0 +1,378 @@
+{
+  "volume_curve": [
+    {"level":0.0, "db":-120.0},
+    {"level":0.01,"db": -53.0},
+    {"level":0.1, "db": -44.0},
+    {"level":0.2, "db": -38.0},
+    {"level":0.3, "db": -32.0},
+    {"level":0.4, "db": -26.0},
+    {"level":0.5, "db": -21.0},
+    {"level":0.6, "db": -16.0},
+    {"level":0.7, "db": -11.0},
+    {"level":0.8, "db":  -6.0},
+    {"level":0.9, "db":  -2.5},
+    {"level":1.0, "db":   0.0}
+  ],
+  "output_devices": [
+    {
+      "device_id": [
+        "01000000000000000000000000000000",
+        "01010101010101010101010101010101"
+      ],
+      "supported_stream_types": [
+        "render:media",
+        "render:interruption",
+        "render:background",
+        "render:communications",
+        "render:system_agent",
+        "render:ultrasound",
+        "capture:loopback"
+      ],
+      "independent_volume_control": false,
+      "driver_gain_db": -6.0,
+      "pipeline": {
+        "name": "linearize",
+        "output_channels": 1,
+        "output_rate": 96000,
+        "streams": [
+          "render:ultrasound"
+        ],
+        "inputs": [
+          {
+            "name": "mix",
+            "output_channels": 1,
+            "output_rate": 48000,
+            "loopback": true,
+            "inputs": [
+              {
+                "name": "default",
+                "output_channels": 1,
+                "output_rate": 48000,
+                "streams": [
+                  "render:media",
+                  "render:background",
+                  "render:interruption",
+                  "render:system_agent"
+                ],
+                "effects": [
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "equalizer2",
+                    "name": "High Pass",
+                    "config": {
+                      "first_channel": 0,
+                      "filters": [
+                        {
+                          "type": "high_pass",
+                          "frequency": 90,
+                          "quality": 0.707,
+                          "gain_db": 0
+                        },
+                        {
+                          "type": "high_pass",
+                          "frequency": 90,
+                          "quality": 0.707,
+                          "gain_db": 0
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "equalizer",
+                    "name": "equalizer",
+                    "config": {
+                      "gain_db": 0
+                    }
+                  },
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "bass_extender",
+                    "name": "Bass Extension",
+                    "config": {
+                      "speaker_cutoff_hz": 296,
+                      "quality": 0.69,
+                      "target_quality": 0.9,
+                      "gain_factor": 1,
+                      "makeup_gain_db": 6
+                    }
+                  },
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "dynamic_range_processor",
+                    "name": "Multiband Comp (Dist)",
+                    "config": {
+                      "subprocessors": [
+                        {
+                          "name": "eq",
+                          "config": {
+                            "filters": [
+                              {
+                                "type": "peak",
+                                "frequency": 5123,
+                                "quality": 1.41,
+                                "gain_db": -7.57
+                              },
+                              {
+                                "type": "high_shelf",
+                                "frequency": 6509,
+                                "quality": 1.4,
+                                "gain_db": -6
+                              },
+                              {
+                                "type": "high_shelf",
+                                "frequency": 572,
+                                "quality": 0.87,
+                                "gain_db": -4.94
+                              },
+                              {
+                                "type": "high_shelf",
+                                "frequency": 4880,
+                                "quality": 1.29,
+                                "gain_db": 17.79
+                              },
+                              {
+                                "type": "high_shelf",
+                                "frequency": 8862,
+                                "quality": 1.4,
+                                "gain_db": 4.61
+                              },
+                              {
+                                "type": "peak",
+                                "frequency": 3740,
+                                "quality": 1.4,
+                                "gain_db": 6
+                              },
+                              {
+                                "type": "peak",
+                                "frequency": 5392,
+                                "quality": 0.4,
+                                "gain_db": 5.39
+                              },
+                              {
+                                "type": "high_shelf",
+                                "frequency": 18799,
+                                "quality": 1.4,
+                                "gain_db": 0
+                              },
+                              {
+                                "type": "high_shelf",
+                                "frequency": 6000,
+                                "quality": 0.7,
+                                "gain_db": 5
+                              },
+                              {
+                                "type": "high_shelf",
+                                "frequency": 2000,
+                                "quality": 0.5,
+                                "gain_db": -8
+                              }
+                            ]
+                          },
+                          "type": "equalizer"
+                        },
+                        {
+                          "name": "DC stopband",
+                          "config": {
+                            "enabled": true,
+                            "bands": [
+                              {
+                                "bins": [
+                                  0,
+                                  0
+                                ],
+                                "gain_db": -80
+                              }
+                            ]
+                          },
+                          "type": "raw"
+                        },
+                        {
+                          "name": "Bass Distortion",
+                          "config": {
+                            "compressors": [
+                              {
+                                "low_cutoff_hz": 20,
+                                "high_cutoff_hz": 300,
+                                "threshold_db": -6,
+                                "output_gain_db": 0,
+                                "ratio": 2
+                              }
+                            ]
+                          },
+                          "type": "compressor"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "dynamic_range_control",
+                    "name": "Louder",
+                    "config": {
+                      "dynamics_type": "compressor",
+                      "envelope_type": "rms",
+                      "input_gain_db": 0,
+                      "output_gain_db": 0,
+                      "threshold_db": -13,
+                      "ratio": 3,
+                      "knee_width_db": 0,
+                      "attack_s": 0.01,
+                      "release_s": 0.02,
+                      "lookahead_s": 0
+                    }
+                  },
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "dynamic_range_control",
+                    "name": "Clipping Control",
+                    "config": {
+                      "dynamics_type": "limiter",
+                      "envelope_type": "peak",
+                      "input_gain_db": 2,
+                      "output_gain_db": 0,
+                      "threshold_db": -10.5,
+                      "ratio": 10,
+                      "knee_width_db": 0,
+                      "attack_s": 0.01,
+                      "release_s": 0.02,
+                      "lookahead_s": 0
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "communications",
+                "output_channels": 1,
+                "output_rate": 48000,
+                "streams": [
+                  "render:communications"
+                ],
+                "effects": [
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "dynamic_range_control",
+                    "name": "communications_limiter",
+                    "config": {
+                      "_comment": "Limit output to -14 (11dB from max, and 3dB for added gain).",
+                      "dynamics_type": "limiter",
+                      "envelope_type": "peak",
+                      "input_gain_db": 0,
+                      "output_gain_db": 0,
+                      "threshold_db": -14,
+                      "ratio": 10,
+                      "knee_width_db": 1,
+                      "attack_s": 0.001,
+                      "release_s": 0.01,
+                      "lookahead_s": 0.004
+                    }
+                  },
+                  {
+                    "lib": "google_audio_effects.so",
+                    "effect": "saturated_gain",
+                    "name": "communications_saturated_gain",
+                    "config": {
+                      "gain_db": 3
+                    }
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "lib": "google_audio_effects.so",
+                "effect": "dynamic_range_control",
+                "name": "Thermal Throttle",
+                "config": {
+                  "_comment": "Nominal (unthrottled) state",
+                  "dynamics_type": "compressor",
+                  "envelope_type": "rms",
+                  "input_gain_db": 0,
+                  "output_gain_db": 0,
+                  "threshold_db": -44,
+                  "ratio": 1,
+                  "knee_width_db": 0,
+                  "attack_s": 0.01,
+                  "release_s": 0.02,
+                  "lookahead_s": 0
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "device_id": "*",
+      "supported_stream_types": [
+        "render:media"
+      ],
+      "independent_volume_control": true
+    }
+  ],
+  "input_devices": [
+    {
+      "device_id": [
+        "03000000000000000000000000000000",
+        "03030303030303030303030303030303"
+      ],
+      "supported_stream_types": [
+        "capture:background",
+        "capture:foreground",
+        "capture:system_agent",
+        "capture:communications",
+        "capture:ultrasound"
+      ],
+      "rate": 96000
+    },
+    {
+      "device_id": "*",
+      "supported_stream_types": [
+        "capture:background",
+        "capture:foreground",
+        "capture:system_agent",
+        "capture:communications"
+      ],
+      "rate": 48000
+    }
+  ],
+  "thermal_policy": [
+    {
+      "target_name": "Thermal Throttle",
+      "states": [
+        {
+          "trip_point": 74,
+          "config": {
+            "_comment": "Light throttling (-0.399 dB), 0.6 power ratio",
+            "dynamics_type": "compressor",
+            "envelope_type": "rms",
+            "input_gain_db": 0,
+            "output_gain_db": 0,
+            "threshold_db": -44,
+            "ratio": 1.047,
+            "knee_width_db": 0,
+            "attack_s": 0.01,
+            "release_s": 0.02,
+            "lookahead_s": 0
+          }
+        },
+        {
+          "trip_point": 84,
+          "config": {
+            "_comment": "Significant throttling (-1.257 dB), 0.2 power ratio",
+            "dynamics_type": "compressor",
+            "envelope_type": "rms",
+            "input_gain_db": 0,
+            "output_gain_db": 0,
+            "threshold_db": -44,
+            "ratio": 1.157,
+            "knee_width_db": 0,
+            "attack_s": 0.01,
+            "release_s": 0.02,
+            "lookahead_s": 0
+          }
+        }
+      ]
+    }
+  ]
+}

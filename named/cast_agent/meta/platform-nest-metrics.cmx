@@ -1,0 +1,14 @@
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--platform-nest-metrics" ]
+  },
+  "sandbox": {
+    "services": [
+      "fuchsia.diagnostics.ArchiveAccessor",
+      "fuchsia.legacymetrics.MetricsRecorder",
+      "fuchsia.logger.LogSink",
+      "fuchsia.modular.ComponentContext"
+    ]
+  }
+}
