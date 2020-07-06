@@ -1,0 +1,23 @@
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--cast-auth" ]
+  },
+  "sandbox": {
+    "features": [
+      "build-info",
+      "config-data",
+      "isolated-temp"
+    ],
+    "services": [
+      "fuchsia.castauth.CastKeySigner",
+      "fuchsia.hwinfo.Board",
+      "fuchsia.hwinfo.Device",
+      "fuchsia.hwinfo.Product",
+      "fuchsia.logger.LogSink",
+      "fuchsia.update.channel.Provider",
+      "google.flashts.Reader",
+      "google.migration.CastAuthProvider"
+    ]
+  }
+}

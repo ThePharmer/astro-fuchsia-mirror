@@ -1,0 +1,22 @@
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--multizone-leader" ]
+  },
+  "sandbox": {
+    "features": [],
+    "services": [
+      "fuchsia.intl.PropertyProvider",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.Audio",
+      "fuchsia.media.ProfileProvider",
+      "fuchsia.media.sessions2.Publisher",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.modular.PuppetMaster",
+      "fuchsia.net.NameLookup",
+      "fuchsia.netstack.Netstack",
+      "fuchsia.posix.socket.Provider",
+      "fuchsia.tracing.provider.Registry"
+    ]
+  }
+}
