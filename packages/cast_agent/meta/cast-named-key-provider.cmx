@@ -1,0 +1,16 @@
+{
+    "program": {
+        "binary": "cast_agent_exe",
+        "args": [ "--cast-named-key-provider" ]
+    },
+    "sandbox": {
+        "features": [
+            "config-data"
+        ],
+        "services": [
+            "fuchsia.intl.PropertyProvider",
+            "fuchsia.logger.LogSink",
+            "fuchsia.sys.Launcher"
+        ]
+    }
+}
