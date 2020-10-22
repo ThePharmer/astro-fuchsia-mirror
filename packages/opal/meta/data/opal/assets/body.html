@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+  Template HTML wrapper for rendered_card feature. The following strings must be replaced
+  with relevant portions of the HTML extracted from an [HtmlComponent].
+    __CSS_INSERT__
+    __HTML_INSERT__
+    __SCRIPT_INSERT__
+-->
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Google+Sans:400,500,700');
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        min-height: 100vh;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .aog-background-style {
+       width: 100%;
+       height: 100vh;
+       margin:0;
+       padding:0;
+       background-size: cover;
+       top: 0;
+       right: 0;
+       position: fixed;
+       z-index: -1;
+    }
+
+    .aog-header-padding {
+      height: 96px;
+      margin: 0;
+    }
+
+    .aog-style-content {
+      padding: 0;
+      margin: 0;
+      overflow:scroll;
+      width: 100%;
+      height: calc(100% - 96px);
+      position: fixed;
+      top: 96px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content">
+<!--
+  LINT.IfChange
+-->
+  <style>
+<!--__CSS_INSERT__-->
+  </style>
+<!--__HTML_INSERT__-->
+</div>
+<!--__SCRIPT_INSERT__-->
+<!--
+  LINT.ThenChange(//depot/google3/assistant/gallium/dragonglass/features/rendered_card/lib/src/web_view_manager.dart)
+-->
+  <!-- Notify RenderedCardController that the page load is complete. -->
+  <script>
+    window.AssistantHost &&
+        window.AssistantHost.pageLoadComplete &&
+        window.AssistantHost.pageLoadComplete('', '');
+  </script>
+</body>
+</html>
