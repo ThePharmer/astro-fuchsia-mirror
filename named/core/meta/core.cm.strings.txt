@@ -30,6 +30,11 @@ fuchsia.kernel.IoportResource
 fuchsia.kernel.IrqResource
 fuchsia.kernel.MmioResource
 fuchsia.kernel.SmcResource
+activity#
+fuchsia.ui.activity.control.Control
+activity
+fuchsia.ui.activity.Provider
+fuchsia.ui.activity.Tracker
 fuchsia.hardware.serial.NewDeviceProxy
 fuchsia.pkg.FontResolver
 font_provider
@@ -98,6 +103,8 @@ data
 persistent
 /svc/fuchsia.appmgr.Startup
 fuchsia-pkg://fuchsia.com/appmgr#meta/appmgr.cm
+activity3
+fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
