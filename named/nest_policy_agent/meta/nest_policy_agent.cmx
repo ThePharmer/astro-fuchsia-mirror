@@ -1,1 +1,47 @@
-{"sandbox": {"services": ["fuchsia.camera3.DeviceWatcher", "fuchsia.castsetup.ApiRegistry", "fuchsia.factory.MiscFactoryStoreProvider", "fuchsia.intl.PropertyProvider", "fuchsia.legacymetrics.MetricsRecorder", "fuchsia.logger.LogSink", "fuchsia.media.ActivityReporter", "fuchsia.media.AudioCore", "fuchsia.media.AudioDeviceEnumerator", "fuchsia.media.UsageGainReporter", "fuchsia.media.UsageReporter", "fuchsia.media.sessions2.Discovery", "fuchsia.modular.SessionRestartController", "fuchsia.settings.Audio", "fuchsia.settings.Display", "fuchsia.settings.Input", "fuchsia.settings.Light", "fuchsia.ui.activity.Provider", "fuchsia.update.Manager", "google.camera.CameraInteropProvider", "google.cast.ccsconfig.CcsConfigWatcher", "google.cast.feature.FeatureService", "google.cast.medialoudness.Provider", "google.cast.setup.EurekaInfoManager", "google.policy.comms.CommsProvider", "google.policy.concierge.ConciergeController", "google.policy.mlframework.MlFrameworkStateWriter", "google.policy.proximity.ProximityController", "google.proximity.ProximityWatcher", "google.reconnect.ReconnectProvider"], "features": ["config-data", "isolated-persistent-storage"], "dev": ["class/light"]}, "program": {"binary": "nest_policy_exe"}}
+{
+    "program": {
+        "binary": "cast_agent_exe",
+        "args": [ "--nest-policy-agent" ]
+    },
+    "sandbox": {
+        "dev": [
+            "class/light"
+        ],
+        "features": [
+            "config-data",
+            "isolated-persistent-storage"
+        ],
+        "services": [
+            "fuchsia.camera3.DeviceWatcher",
+            "fuchsia.castsetup.ApiRegistry",
+            "fuchsia.factory.MiscFactoryStoreProvider",
+            "fuchsia.intl.PropertyProvider",
+            "fuchsia.legacymetrics.MetricsRecorder",
+            "fuchsia.logger.LogSink",
+            "fuchsia.media.ActivityReporter",
+            "fuchsia.media.AudioCore",
+            "fuchsia.media.AudioDeviceEnumerator",
+            "fuchsia.media.UsageGainReporter",
+            "fuchsia.media.UsageReporter",
+            "fuchsia.media.sessions2.Discovery",
+            "fuchsia.modular.SessionRestartController",
+            "fuchsia.settings.Audio",
+            "fuchsia.settings.Display",
+            "fuchsia.settings.Input",
+            "fuchsia.settings.Light",
+            "fuchsia.ui.activity.Provider",
+            "fuchsia.update.Manager",
+            "google.camera.CameraInteropProvider",
+            "google.cast.ccsconfig.CcsConfigWatcher",
+            "google.cast.feature.FeatureService",
+            "google.cast.medialoudness.Provider",
+            "google.cast.setup.EurekaInfoManager",
+            "google.policy.comms.CommsProvider",
+            "google.policy.concierge.ConciergeController",
+            "google.policy.mlframework.MlFrameworkStateWriter",
+            "google.policy.proximity.ProximityController",
+            "google.proximity.ProximityWatcher",
+            "google.reconnect.ReconnectProvider"
+        ]
+    }
+}
