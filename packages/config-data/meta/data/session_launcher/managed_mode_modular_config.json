@@ -60,6 +60,7 @@
       {
         "uri": "fuchsia-pkg://fuchsia.com/nest_policy_agent#meta/nest_policy_agent.cmx",
         "args": [
+          "--interop-concierge-enabled",
           "--interop-led-enabled",
           "--daily-restart-enabled",
           "--nightly-reboot-enabled",
@@ -79,6 +80,10 @@
       {
         "service_name": "chromium.cast.CorsExemptHeaderProvider",
         "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx"
+      },
+      {
+        "service_name": "chromium.cast.DataReset",
+        "agent_url": "cast:chromium.cast.DataReset"
       },
       {
         "service_name": "fuchsia.auth.oldtokens.CredentialsProducer",
@@ -142,6 +147,10 @@
       },
       {
         "service_name": "google.assistant.libassistantv2.CommsAgent",
+        "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx"
+      },
+      {
+        "service_name": "google.comms.opal.CommunicationRequestService",
         "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx"
       },
       {
