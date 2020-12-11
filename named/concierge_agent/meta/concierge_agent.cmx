@@ -1,1 +1,25 @@
-{"sandbox": {"services": ["fuchsia.castsysteminfo.Provider", "fuchsia.hwinfo.Product", "fuchsia.legacymetrics.MetricsRecorder", "fuchsia.logger.LogSink", "fuchsia.media.ActivityReporter", "fuchsia.media.Audio", "fuchsia.modular.ComponentContext", "fuchsia.posix.socket.Provider", "fuchsia.settings.Input", "google.assistant.soundsensing.SoundSensing", "google.cast.ccsconfig.CcsConfigWatcher", "google.cast.hds.HdsService", "google.comms.dropin.DropInController", "google.mlframework.OutputManager"], "features": ["isolated-persistent-storage"]}, "program": {"binary": "concierge_agent_exe"}}
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--concierge-agent" ]
+  },
+  "sandbox": {
+    "features": [ "isolated-persistent-storage" ],
+    "services": [
+      "fuchsia.castsysteminfo.Provider",
+      "fuchsia.hwinfo.Product",
+      "fuchsia.legacymetrics.MetricsRecorder",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.ActivityReporter",
+      "fuchsia.media.Audio",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.posix.socket.Provider",
+      "fuchsia.settings.Input",
+      "google.assistant.soundsensing.SoundSensing",
+      "google.cast.ccsconfig.CcsConfigWatcher",
+      "google.cast.hds.HdsService",
+      "google.comms.dropin.DropInController",
+      "google.mlframework.OutputManager"
+    ]
+  }
+}
