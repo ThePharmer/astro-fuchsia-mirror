@@ -1,1 +1,55 @@
-{"sandbox": {"services": ["fuchsia.auth.oldtokens.CredentialsProducer", "fuchsia.castsetup.StateWatcher", "fuchsia.castsysteminfo.Provider", "fuchsia.device.NameProvider", "fuchsia.hwinfo.Board", "fuchsia.hwinfo.Device", "fuchsia.hwinfo.Product", "fuchsia.intl.PropertyProvider", "fuchsia.legacymetrics.MetricsRecorder", "fuchsia.location.position.EmergencyProvider", "fuchsia.logger.LogSink", "fuchsia.media.Audio", "fuchsia.media.sounds.Player", "fuchsia.mediacodec.CodecFactory", "fuchsia.modular.ComponentContext", "fuchsia.modular.PuppetMaster", "fuchsia.net.http.Loader", "fuchsia.net.NameLookup", "fuchsia.net.interfaces.State", "fuchsia.netstack.Netstack", "fuchsia.posix.socket.Provider", "fuchsia.process.Launcher", "fuchsia.settings.Audio", "fuchsia.settings.Input", "fuchsia.sys.Environment", "fuchsia.sys.Launcher", "fuchsia.sys.Loader", "fuchsia.sysmem.Allocator", "fuchsia.update.channel.Provider", "google.assistant.libassistant.AssistantState", "google.assistant.libassistantv2.Kronk", "google.camera.CameraStateProvider", "google.cast.auth.AppCredentialProducer", "google.cast.ccsconfig.CcsConfigWatcher", "google.cast.feature.FeatureService", "google.duocore.DuoCore", "google.flashts.Reader"], "features": ["build-info", "config-data", "isolated-persistent-storage", "isolated-temp", "root-ssl-certificates"]}, "program": {"binary": "comms"}}
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--comms" ]
+  },
+  "sandbox": {
+    "features": [
+      "build-info",
+      "config-data",
+      "isolated-persistent-storage",
+      "isolated-temp",
+      "root-ssl-certificates"
+    ],
+    "services": [
+      "fuchsia.auth.oldtokens.CredentialsProducer",
+      "fuchsia.castsetup.StateWatcher",
+      "fuchsia.castsysteminfo.Provider",
+      "fuchsia.device.NameProvider",
+      "fuchsia.hwinfo.Board",
+      "fuchsia.hwinfo.Device",
+      "fuchsia.hwinfo.Product",
+      "fuchsia.intl.PropertyProvider",
+      "fuchsia.legacymetrics.MetricsRecorder",
+      "fuchsia.location.position.EmergencyProvider",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.Audio",
+      "fuchsia.media.sounds.Player",
+      "fuchsia.mediacodec.CodecFactory",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.modular.PuppetMaster",
+      "fuchsia.net.http.Loader",
+      "fuchsia.net.NameLookup",
+      "fuchsia.net.interfaces.State",
+      "fuchsia.netstack.Netstack",
+      "fuchsia.posix.socket.Provider",
+      "fuchsia.process.Launcher",
+      "fuchsia.settings.Audio",
+      "fuchsia.settings.Input",
+      "fuchsia.sys.Environment",
+      "fuchsia.sys.Launcher",
+      "fuchsia.sys.Loader",
+      "fuchsia.sysmem.Allocator",
+      "fuchsia.update.channel.Provider",
+      "google.assistant.libassistant.AssistantState",
+      "google.assistant.libassistantv2.Kronk",
+      "google.camera.CameraStateProvider",
+      "google.cast.auth.AppCredentialProducer",
+      "google.cast.ccsconfig.CcsConfigWatcher",
+      "google.cast.feature.FeatureService",
+      "google.cast.hds.HdsService",
+      "google.duocore.DuoCore",
+      "google.flashts.Reader"
+    ]
+  }
+}
