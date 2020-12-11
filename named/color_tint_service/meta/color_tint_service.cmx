@@ -1,1 +1,35 @@
-{"sandbox": {"services": ["fuchsia.castsetup.ApiRegistry", "fuchsia.factory.MiscFactoryStoreProvider", "fuchsia.intl.PropertyProvider", "fuchsia.legacymetrics.MetricsRecorder", "fuchsia.logger.LogSink", "fuchsia.media.sessions2.Discovery", "fuchsia.modular.ComponentContext", "fuchsia.sys.Launcher", "fuchsia.ui.brightness.ColorAdjustmentHandler", "fuchsia.ui.brightness.Control", "fuchsia.ui.policy.DisplayBacklight", "fuchsia.settings.Audio", "fuchsia.settings.Display", "fuchsia.settings.Input", "fuchsia.migration.DisplayProvider", "fuchsia.posix.socket.Provider", "google.proximity.ProximityWatcher", "google.cast.setup.EurekaInfoManager"], "features": ["config-data", "isolated-persistent-storage"], "dev": ["class/light"]}, "program": {"binary": "color_tint_service_exe"}}
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--light-eq-agent" ]
+  },
+  "sandbox": {
+    "dev": [
+      "class/light"
+    ],
+    "features": [
+      "config-data",
+      "isolated-persistent-storage"
+    ],
+    "services": [
+      "fuchsia.castsetup.ApiRegistry",
+      "fuchsia.factory.MiscFactoryStoreProvider",
+      "fuchsia.intl.PropertyProvider",
+      "fuchsia.legacymetrics.MetricsRecorder",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.sessions2.Discovery",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.sys.Launcher",
+      "fuchsia.ui.brightness.ColorAdjustmentHandler",
+      "fuchsia.ui.brightness.Control",
+      "fuchsia.ui.policy.DisplayBacklight",
+      "fuchsia.settings.Audio",
+      "fuchsia.settings.Display",
+      "fuchsia.settings.Input",
+      "fuchsia.migration.DisplayProvider",
+      "fuchsia.posix.socket.Provider",
+      "google.proximity.ProximityWatcher",
+      "google.cast.setup.EurekaInfoManager"
+    ]
+  }
+}

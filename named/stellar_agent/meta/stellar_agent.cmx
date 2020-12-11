@@ -1,1 +1,21 @@
-{"sandbox": {"services": ["fuchsia.castsetup.StateWatcher", "fuchsia.logger.LogSink", "fuchsia.media.Audio", "fuchsia.modular.ComponentContext", "fuchsia.posix.socket.Provider", "fuchsia.settings.Audio", "fuchsia.settings.Input", "google.libinteraction.PerceptionAudioInput", "google.libinteraction.PerceptionControl", "google.libinteraction.PerceptionEventsWatcher"], "features": []}, "program": {"binary": "stellar_agent_exe"}}
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--stellar-agent" ]
+  },
+  "sandbox": {
+    "features": [],
+    "services": [
+      "fuchsia.castsetup.StateWatcher",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.Audio",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.posix.socket.Provider",
+      "fuchsia.settings.Audio",
+      "fuchsia.settings.Input",
+      "google.libinteraction.PerceptionAudioInput",
+      "google.libinteraction.PerceptionControl",
+      "google.libinteraction.PerceptionEventsWatcher"
+    ]
+  }
+}

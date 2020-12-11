@@ -1,1 +1,33 @@
-{"sandbox": {"services": ["fuchsia.castsetup.ApiRegistry", "fuchsia.hwinfo.Board", "fuchsia.hwinfo.Device", "fuchsia.hwinfo.Product", "fuchsia.legacymetrics.MetricsRecorder", "fuchsia.logger.LogSink", "fuchsia.media.audio.VolumeControl", "fuchsia.media.sessions2.ActiveSession", "fuchsia.migration.UltrasoundProvider", "fuchsia.modular.ComponentContext", "fuchsia.settings.Audio", "fuchsia.settings.Input", "fuchsia.settings.Privacy", "fuchsia.ultrasound.Factory", "fuchsia.update.channel.Provider", "google.cast.feature.FeatureService", "google.cast.setup.EurekaInfoManager", "google.flashts.Reader"], "features": ["build-info", "config-data", "isolated-persistent-storage"]}, "program": {"binary": "ultrasound_agent_exe"}}
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--ultrasound-agent" ]
+  },
+  "sandbox": {
+    "features": [
+      "build-info",
+      "config-data",
+      "isolated-persistent-storage"
+    ],
+    "services": [
+      "fuchsia.castsetup.ApiRegistry",
+      "fuchsia.hwinfo.Board",
+      "fuchsia.hwinfo.Device",
+      "fuchsia.hwinfo.Product",
+      "fuchsia.legacymetrics.MetricsRecorder",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.audio.VolumeControl",
+      "fuchsia.media.sessions2.ActiveSession",
+      "fuchsia.migration.UltrasoundProvider",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.settings.Audio",
+      "fuchsia.settings.Input",
+      "fuchsia.settings.Privacy",
+      "fuchsia.ultrasound.Factory",
+      "fuchsia.update.channel.Provider",
+      "google.cast.feature.FeatureService",
+      "google.cast.setup.EurekaInfoManager",
+      "google.flashts.Reader"
+    ]
+  }
+}
