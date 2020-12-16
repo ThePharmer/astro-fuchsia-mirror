@@ -29,12 +29,16 @@ sampler
 fuchsia.diagnostics.internal.SamplerController
 fuchsia.boot.RootResource
 debug_serial
+fuchsia.kernel.DebugResource
 fuchsia.kernel.HypervisorResource
+fuchsia.kernel.InfoResource
 fuchsia.kernel.IoportResource
 fuchsia.kernel.IrqResource
 fuchsia.kernel.MmioResource
 fuchsia.kernel.SmcResource
 fuchsia.kernel.VmexResource
+system-update-committer
+fuchsia.update.CommitStatusProvider
 activity#
 fuchsia.ui.activity.control.Control
 activity
@@ -45,6 +49,7 @@ fuchsia.pkg.FontResolver
 font_provider
 temperature-logger
 fuchsia.thermal.test.TemperatureLogger
+ephemeral-resolver
 fuchsia.boot.Arguments
 fuchsia.boot.FactoryItems
 fuchsia.boot.Items
@@ -77,7 +82,6 @@ fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.logger.Log
 fuchsia.logger.LogSink
 remote-control
-system-update-committer
 fuchsia.sys2.BlockingEventSource
 fuchsia.sys2.EventSource
 fuchsia.overnet.Overnet
@@ -117,8 +121,12 @@ fuchsia-pkg://fuchsia.com/triage-detect#meta/triage-detect.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
+test-manager-env 
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
 fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
 fuchsia-pkg://fuchsia.com/temperature-logger#meta/temperature-logger.cm
+fuchsia-pkg://fuchsia.com/ephemeral-resolver#meta/ephemeral-resolver.cm
+test-manager-env
+fuchsia-pkg
