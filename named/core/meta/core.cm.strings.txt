@@ -49,7 +49,7 @@ fuchsia.pkg.FontResolver
 font_provider
 temperature-logger
 fuchsia.thermal.test.TemperatureLogger
-ephemeral-resolver
+universe-resolver
 fuchsia.boot.Arguments
 fuchsia.boot.FactoryItems
 fuchsia.boot.Items
@@ -84,11 +84,15 @@ fuchsia.logger.LogSink
 remote-control
 fuchsia.sys2.BlockingEventSource
 fuchsia.sys2.EventSource
+config-data
+fuchsia.hardware.display.Provider
+fuchsia.sysmem.Allocator
+dev-display-controller
+class/display-controller
 fuchsia.overnet.Overnet
 fuchsia.overnet.ServicePublisher
 fuchsia.test.manager.Harness
 remote-diagnostics-bridge
-config-data
 fonts
 fuchsia.developer.remotecontrol.RemoteDiagnosticsBridge
 fuchsia.developer.remotecontrol.RemoteControl
@@ -127,6 +131,6 @@ fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
 fuchsia-pkg://fuchsia.com/temperature-logger#meta/temperature-logger.cm
-fuchsia-pkg://fuchsia.com/ephemeral-resolver#meta/ephemeral-resolver.cm
+fuchsia-pkg://fuchsia.com/universe-resolver#meta/universe-resolver.cm
 test-manager-env
 fuchsia-pkg
