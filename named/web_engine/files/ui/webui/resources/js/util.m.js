@@ -337,3 +337,4 @@ export function hasKeyModifiers(e) {
 export function isTextInputElement(el) {
   return el.tagName === 'INPUT' || el.tagName === 'TEXTAREA';
 }
+
