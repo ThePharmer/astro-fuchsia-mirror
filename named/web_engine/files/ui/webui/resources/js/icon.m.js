@@ -130,18 +130,16 @@ import {isAndroid, isIOS} from './cr.m.js';
    * @param {boolean} isSyncedUrlForHistoryUi Should be set to true only if the
    *     caller is an UI aimed at displaying user history, and the requested url
    *     is known to be present in Chrome sync data.
-   * @param {string} remoteIconUrlForUma In case the entry is contained in sync
-   *     data, we can pass the associated icon url.
-   * @param {number} size The favicon size.
+   * @param {string} remoteIconUrlForUma In case the entry is contained in
+   * sync data, we can pass the associated icon url.
    *
    * @return {string} -webkit-image-set for the favicon.
    */
   export function getFaviconForPageURL(
-      url, isSyncedUrlForHistoryUi, remoteIconUrlForUma = '', size = 16) {
+      url, isSyncedUrlForHistoryUi, remoteIconUrlForUma = '') {
     // Note: URL param keys used below must match those in the description of
     // chrome://favicon2 format in components/favicon_base/favicon_url_parser.h.
     const faviconUrl = getBaseFaviconUrl();
-    faviconUrl.searchParams.set('size', size);
     faviconUrl.searchParams.set('page_url', url);
     // TODO(dbeam): use the presence of 'allow_google_server_fallback' to
     // indicate true, otherwise false.
