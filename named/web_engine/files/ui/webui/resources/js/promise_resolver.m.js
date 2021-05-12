@@ -80,3 +80,4 @@ export var PromiseResolver = class {
     assertNotReached();
   }
 };
+
