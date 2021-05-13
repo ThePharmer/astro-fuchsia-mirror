@@ -47,8 +47,6 @@
         "args": [
           "--product=estelle",
           "--mic_sensitivity=-38",
-          "--platform_audio_input_channel_count=2",
-          "--platform_audio_reference_input_channel_count=1",
           "--backend_type=auto",
           "--enable_bluetooth_module=false",
           "--cast_app_preloading_enabled=true",
@@ -67,7 +65,8 @@
           "--daily-restart-enabled",
           "--nightly-reboot-enabled",
           "--max_privacy_led_lux=382.5",
-          "--min_privacy_led_brightness=0.0333",
+          "--min_privacy_led_brightness=0.01",
+          "--max_privacy_led_brightness=0.3",
           "--max-output-volume-dba1m=86",
           "--max-tts-volume-dba1m=79",
           "--min-tts-volume-dba1m=45"
@@ -208,10 +207,6 @@
         "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx"
       },
       {
-        "service_name": "google.cast.session.Manager",
-        "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx"
-      },
-      {
         "service_name": "google.cast.setup.ApiHandler",
         "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx"
       },
@@ -226,10 +221,6 @@
       {
         "service_name": "google.cast.soundsensingstate.SoundSensingState",
         "agent_url": "fuchsia-pkg://fuchsia.com/concierge_agent#meta/concierge_agent.cmx"
-      },
-      {
-        "service_name": "google.cast.window.InteractionHandlerRegistry",
-        "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx"
       },
       {
         "service_name": "google.comms.assistant.ExplicitAutomationHandler",
@@ -276,20 +267,8 @@
         "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx"
       },
       {
-        "service_name": "google.policy.comms.SmartFramingConnection",
-        "agent_url": "fuchsia-pkg://fuchsia.com/nest_policy_agent#meta/nest_policy_agent.cmx"
-      },
-      {
         "service_name": "google.policy.concierge.ConciergeController",
         "agent_url": "fuchsia-pkg://fuchsia.com/concierge_agent#meta/concierge_agent.cmx"
-      },
-      {
-        "service_name": "google.policy.opal.OpalCameraServiceController",
-        "agent_url": "fuchsia-pkg://fuchsia.com/nest_policy_agent#meta/nest_policy_agent.cmx"
-      },
-      {
-        "service_name": "google.policy.opal.OpalCameraServiceProvider",
-        "agent_url": "fuchsia-pkg://fuchsia.com/nest_policy_agent#meta/nest_policy_agent.cmx"
       },
       {
         "service_name": "google.policy.proximity.ProximityController",

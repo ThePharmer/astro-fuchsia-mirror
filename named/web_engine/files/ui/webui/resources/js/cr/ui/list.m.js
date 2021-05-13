@@ -1393,8 +1393,11 @@ import {ListItem} from './list_item.m.js';
    * @param {Event} e The mouse event object.
    */
   function handleMouseDown(e) {
-    const target = /** @type {!HTMLElement} */ (e.target);
-    const listItem = this.getListItemAncestor(target);
+    e.target = /** @type {!HTMLElement} */ (e.target);
+    const listItem = this.getListItemAncestor(e.target);
+    if (!listItem) {
+      return;
+    }
     const wasSelected = listItem && listItem.selected;
     this.handlePointerDownUp_(e);
 
@@ -1413,7 +1416,7 @@ import {ListItem} from './list_item.m.js';
     //
     // [1] For example, clicking non-focusable area gives focus on the first
     // form control in the item.
-    if (!containsFocusableElement(target, listItem) &&
+    if (!containsFocusableElement(e.target, listItem) &&
         listItem.contains(listItem.ownerDocument.activeElement)) {
       e.preventDefault();
     }
