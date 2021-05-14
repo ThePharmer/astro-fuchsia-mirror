@@ -4,10 +4,7 @@
     "args": [ "--cast-assistant" ]
   },
   "sandbox": {
-    "features": [
-      "config-data",
-      "isolated-persistent-storage"
-    ],
+    "features": ["config-data"],
     "services": [
       "fuchsia.buildinfo.Provider",
       "fuchsia.castsetup.ApiRegistry",
@@ -18,7 +15,6 @@
       "fuchsia.legacymetrics.MetricsRecorder",
       "fuchsia.logger.LogSink",
       "fuchsia.media.AudioCore",
-      "fuchsia.media.sessions2.Discovery",
       "fuchsia.modular.ComponentContext",
       "fuchsia.net.NameLookup",
       "fuchsia.posix.socket.Provider",
@@ -29,7 +25,6 @@
       "google.assistant.libassistantv2.Kronk",
       "google.cast.actionscript.Executor",
       "google.cast.dcsconfig.DcsConfigWatcher",
-      "google.cast.setup.ApiHandler",
       "google.flashts.Reader"
     ]
   }
