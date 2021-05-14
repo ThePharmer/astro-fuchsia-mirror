@@ -1,1 +1,19 @@
-{"sandbox": {"services": ["fuchsia.feedback.ComponentDataRegister", "fuchsia.feedback.CrashReportingProductRegister", "fuchsia.logger.LogSink", "fuchsia.process.Launcher"], "features": ["config-data", "deprecated-ambient-replace-as-executable", "root-ssl-certificates", "vulkan"]}, "program": {"binary": "web_engine_exe"}}
+{
+  "program": {
+    "binary": "web_engine_exe"
+  },
+  "sandbox": {
+    "features": [
+      "config-data",
+      "deprecated-ambient-replace-as-executable",
+      "root-ssl-certificates",
+      "vulkan"
+    ],
+    "services": [
+      "fuchsia.feedback.ComponentDataRegister",
+      "fuchsia.feedback.CrashReportingProductRegister",
+      "fuchsia.logger.LogSink",
+      "fuchsia.process.Launcher"
+    ]
+  }
+}
