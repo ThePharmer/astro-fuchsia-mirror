@@ -30,7 +30,7 @@ GCS_BUCKET_INTERNAL = 'nest-prebuilts-internal'
 CONFIGURATION_PATH = os.path.join(packages.get_base_path(), 'prebuilts.json')
 RUNTIME_DEPS_FILE = os.path.join(packages.get_packages_path(), 'runtime_deps')
 GOOGLE3_RESOURCE_DIR = os.path.join('resources', 'google3')
-SUPPORTED_ARCHITECTURES = ['android_arm', 'android_arm64', 'android_x86', 'android_x86_64', 'arm', 'arm64', 'x64']
+SUPPORTED_ARCHITECTURES = ['arm', 'arm64', 'x64']
 
 # We search for these strings within the output of a subprocess call below. In
 # Python 3, the stdout and stderr fields in a subprocess object have type

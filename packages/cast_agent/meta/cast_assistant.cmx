@@ -4,14 +4,12 @@
     "args": [ "--cast-assistant" ]
   },
   "sandbox": {
-    "features": [
-      "config-data",
-      "isolated-persistent-storage"
-    ],
+    "features": ["config-data"],
     "services": [
       "fuchsia.buildinfo.Provider",
       "fuchsia.castsetup.ApiRegistry",
       "fuchsia.castsysteminfo.Provider",
+      "fuchsia.feedback.CrashReportingProductRegister",
       "fuchsia.hwinfo.Board",
       "fuchsia.hwinfo.Device",
       "fuchsia.hwinfo.Product",
