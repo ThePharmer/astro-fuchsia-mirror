@@ -143,4 +143,3 @@ export const I18nBehavior = {
  * }}
  */
 I18nBehavior.Proto;
-
