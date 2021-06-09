@@ -89,3 +89,4 @@ export var EventTracker = class {
  *            capture: boolean}}
  */
 EventTracker.Entry;
+
