@@ -81,3 +81,4 @@ export function assertInstanceof(value, type, opt_message) {
   }
   return value;
 }
+
