@@ -1,0 +1,128 @@
+[
+    {
+        "name": "ZBI Buffer",
+        "process": ".*",
+        "vmo": "uncompressed-bootfs",
+        "event_code": 1
+    },
+    {
+        "name": "Graphics",
+        "process": ".*",
+        "vmo": "magma_create_buffer|Mali .*|Magma.*|ImagePipe2Surface.*|GFXBufferCollection.*|ScenicImageMemory|Display.*|CompactImage.*|GFX Device Memory.*",
+        "event_code": 2
+    },
+    {
+        "name": "ProtectedPool",
+        "process": "driver_host:.*",
+        "vmo": "SysmemAmlogicProtectedPool",
+        "event_code": 27
+    },
+    {
+        "name": "ContiguousPool",
+        "process": "driver_host:.*",
+        "vmo": "SysmemContiguousPool",
+        "event_code": 26
+    },
+    {
+        "name": "Fshost",
+        "process": "fshost.cm",
+        "vmo": ".*",
+        "event_code": 21
+    },
+    {
+        "name": "Minfs",
+        "process": ".*minfs",
+        "vmo": ".*",
+        "event_code": 4
+    },
+    {
+        "name": "Blobfs",
+        "process": ".*blobfs",
+        "vmo": ".*",
+        "event_code": 5
+    },
+    {
+        "name": "BlobfsInactive",
+        "process": ".*blobfs",
+        "vmo": "inactive-blob-.*",
+        "event_code": 29
+    },
+    {
+        "name": "FlutterApps",
+        "process": "io\\.flutter\\..*",
+        "vmo": "dart.*",
+        "event_code": 28
+    },
+    {
+        "name": "Flutter",
+        "process": "io\\.flutter\\..*",
+        "vmo": ".*",
+        "event_code": 20
+    },
+    {
+        "name": "Web",
+        "process": "web_engine_exe:.*",
+        "vmo": ".*",
+        "event_code": 7
+    },
+    {
+        "name": "Kronk",
+        "process": "kronk.cmx|kronk_for_testing.cmx",
+        "vmo": ".*",
+        "event_code": 8
+    },
+    {
+        "name": "Scenic",
+        "process": "scenic.cmx",
+        "vmo": ".*",
+        "event_code": 9
+    },
+    {
+        "name": "Amlogic",
+        "process": "driver_host:pdev:05:00:f",
+        "vmo": ".*",
+        "event_code": 10
+    },
+    {
+        "name": "Netstack",
+        "process": "netstack.cmx",
+        "vmo": ".*",
+        "event_code": 11
+    },
+    {
+        "name": "Pkgfs",
+        "process": "pkgfs",
+        "vmo": ".*",
+        "event_code": 13
+    },
+    {
+        "name": "Cast",
+        "process": "cast_agent.cmx",
+        "vmo": ".*",
+        "event_code": 14
+    },
+    {
+        "name": "Archivist",
+        "process": "archivist.cm",
+        "vmo": ".*",
+        "event_code": 22
+    },
+    {
+        "name": "Cobalt",
+        "process": "cobalt.cmx",
+        "vmo": ".*",
+        "event_code": 23
+    },
+    {
+        "name": "Audio",
+        "process": "audio_core.cmx",
+        "vmo": ".*",
+        "event_code": 24
+    },
+    {
+        "name": "Context",
+        "process": "context_provider.cmx",
+        "vmo": ".*",
+        "event_code": 25
+    }
+]
