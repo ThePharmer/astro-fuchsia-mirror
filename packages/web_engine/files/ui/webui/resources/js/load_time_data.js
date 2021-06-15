@@ -14,20 +14,9 @@
  * change if the page is re-opened later.
  */
 
-import {assert} from './assert.m.js';
-import {parseHtmlSubset} from './parse_html_subset.m.js';
-
-/**
- * @typedef {{
- *   substitutions: (!Array<string>|undefined),
- *   attrs: (!Array<string>|undefined),
- *   tags: (!Array<string>|undefined),
- * }}
- */
-export let SanitizeInnerHtmlOpts;
-
+/** @type {!LoadTimeData} */
 // eslint-disable-next-line no-var
-export /** @type {!LoadTimeData} */ var loadTimeData;
+var loadTimeData;
 
 class LoadTimeData {
   constructor() {
@@ -47,14 +36,6 @@ class LoadTimeData {
   set data(value) {
     expect(!this.data_, 'Re-setting data.');
     this.data_ = value;
-  }
-
-  /**
-   * Returns a JsEvalContext for |data_|.
-   * @returns {JsEvalContext}
-   */
-  createJsEvalContext() {
-    return new JsEvalContext(this.data_);
   }
 
   /**
@@ -108,20 +89,6 @@ class LoadTimeData {
   }
 
   /**
-   * Make a string safe for use with with Polymer bindings that are
-   * inner-h-t-m-l (or other innerHTML use).
-   * @param {string} rawString The unsanitized string.
-   * @param {SanitizeInnerHtmlOpts=} opts Optional additional allowed tags and
-   *     attributes.
-   * @return {string}
-   */
-  sanitizeInnerHtml(rawString, opts) {
-    opts = opts || {};
-    return parseHtmlSubset('<b>' + rawString + '</b>', opts.tags, opts.attrs)
-        .firstChild.innerHTML;
-  }
-
-  /**
    * Returns a formatted localized string where $1 to $9 are replaced by the
    * second to the tenth argument. Any standalone $ signs must be escaped as
    * $$.
@@ -134,7 +101,7 @@ class LoadTimeData {
   substituteString(label, var_args) {
     const varArgs = arguments;
     return label.replace(/\$(.|$|\n)/g, function(m) {
-      assert(m.match(/\$[$1-9]/), 'Unescaped $ found in localized string.');
+      expect(m.match(/\$[$1-9]/), 'Unescaped $ found in localized string.');
       return m === '$$' ? '$' : varArgs[m[1]];
     });
   }
@@ -159,7 +126,7 @@ class LoadTimeData {
       // Pieces that are not $1-9 should be returned after replacing $$
       // with $.
       if (!p.match(/^\$[1-9]$/)) {
-        assert(
+        expect(
             (p.match(/\$/g) || []).length % 2 === 0,
             'Unescaped $ found in localized string.');
         return {value: p.replace(/\$\$/g, '$'), arg: null};
@@ -207,16 +174,21 @@ class LoadTimeData {
       this.data_[key] = replacements[key];
     }
   }
+
+  /** Reset loadTimeData's data to empty. Should only be used in tests. */
+  resetForTesting() {
+    this.data_ = {};
+  }
 }
 
   /**
-   * Checks condition, displays error message if expectation fails.
+   * Checks condition, throws error message if expectation fails.
    * @param {*} condition The condition to check for truthiness.
    * @param {string} message The message to display if the check fails.
    */
   function expect(condition, message) {
     if (!condition) {
-      console.error(
+      throw new Error(
           'Unexpected condition on ' + document.location.href + ': ' + message);
     }
   }
@@ -235,8 +207,9 @@ class LoadTimeData {
   expect(!loadTimeData, 'should only include this file once');
   loadTimeData = new LoadTimeData;
 
-  // Expose |loadTimeData| directly on |window|. This is only necessary by the
-  // auto-generated load_time_data.m.js, since within a JS module the scope is
-  // local.
+  // Expose |loadTimeData| directly on |window|, since within a JS module the
+  // scope is local and not all files have been updated to import the exported
+  // |loadTimeData| explicitly.
   window.loadTimeData = loadTimeData;
 
+  console.warn('crbug/1173575, non-JS module files deprecated.');
