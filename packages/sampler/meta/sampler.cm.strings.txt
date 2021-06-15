@@ -1,8 +1,10 @@
 args
-lapis
+sampler
 --minimum-sample-rate-sec
 binary
 bin/launcher
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.logger.Log
 /svc/fuchsia.logger.Log
 fuchsia.diagnostics.ArchiveAccessor
@@ -15,9 +17,7 @@ fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegisterE
 /svc/fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 config-data
 /config/data
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
-fuchsia.diagnostics.internal.SamplerController
 diagnostics
-/svc/fuchsia.diagnostics.internal.SamplerController
+fuchsia.diagnostics.internal.SamplerController
 /diagnostics
+/svc/fuchsia.diagnostics.internal.SamplerController
