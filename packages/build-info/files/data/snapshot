@@ -2,7 +2,7 @@
   <projects>
     <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="3c54c353963366a3e282c6a64affd5fc26b4b44c" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,stem,topaz"/>
     <project name="protobuf-gn" path="build/secondary/third_party/protobuf" remote="https://fuchsia.googlesource.com/protobuf-gn" revision="0959043e9ef27e593d6104a3d62b768bc88cadf9" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="fuchsia,google,topaz"/>
-    <project name="integration" path="integration" remote="sso://turquoise-internal/integration" revision="6b656a6aaffc5d004dd05e62fd04174f99b86360" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,stem,topaz"/>
+    <project name="integration" path="integration" remote="sso://turquoise-internal/integration" revision="13a58f128fe4927cdddf78edbd466d3eed90d45c" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,stem,topaz"/>
     <project name="experiences" path="src/experiences" remote="https://fuchsia.googlesource.com/experiences" revision="536373b897d3b23f33cd0becbff3cfde8c599a3d" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,topaz"/>
     <project name="third_party/Vulkan-Headers" path="third_party/Vulkan-Headers" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Headers" revision="aa21256b0f12a330a65d838f3c1da2e62762c341" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="fuchsia,google,topaz"/>
     <project name="third_party/Vulkan-Loader" path="third_party/Vulkan-Loader" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Loader" revision="00ed22700b67acd779d8494df15132622a457f15" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="fuchsia,google,topaz"/>
@@ -316,8 +316,8 @@
     <package name="turquoise_internal/gallium/npm_opal" version="g3-revision:turquoise_npm_20210607_1753_RC00" path="prebuilt/gallium/npm_opal" internal="true">
       <instance name="turquoise_internal/gallium/npm_opal" id="v-PentOGdgM6OFbV9BQ2OCulGCn4e1vplbSXdx4ZVsgC"></instance>
     </package>
-    <package name="turquoise_internal/gallium" version="g3-revision:opal_r40_1.56_release_RC23" path="prebuilt/gallium" internal="true">
-      <instance name="turquoise_internal/gallium" id="dxS83h1Nzst7LKo-JI-vjx4qvBp_4I96M_0nma1AVzQC"></instance>
+    <package name="turquoise_internal/gallium" version="g3-revision:opal_r40_1.56_release_RC28" path="prebuilt/gallium" internal="true">
+      <instance name="turquoise_internal/gallium" id="gDI2WCjMPnrQ7SGc_BenMlFkhXQotj-ZYtPC2VD11YMC"></instance>
     </package>
     <package name="turquoise_internal/gallium" version="g3-revision:opal_20210604_RC00" path="prebuilt/gallium_latest" internal="true">
       <instance name="turquoise_internal/gallium" id="YvKm7fDjz6_aMe9oZBS_KuGwkeEhLYuOHrp90fIXvvIC"></instance>
@@ -384,11 +384,11 @@
       <instance name="fuchsia/sdk/core/linux-amd64" id="Olajzs6cUvy8sORicw7rxbHvec6pVN7MqSujyPQr0PcC"></instance>
       <instance name="fuchsia/sdk/core/mac-amd64" id="DAcMi9vhdh1rzplmAkLPIRr4ECXSesq3wtKIMwljcMoC"></instance>
     </package>
-    <package name="chromium/fuchsia/debug-symbols-amd64" version="version:92.0.4515.71" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-chromium,debug-symbols-x64">
-      <instance name="chromium/fuchsia/debug-symbols-amd64" id="Dqa5JxuAkIHaRvfISmaGHtDybDh4n1fKMQhRUxTblVwC"></instance>
+    <package name="chromium/fuchsia/debug-symbols-amd64" version="version:92.0.4515.82" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-chromium,debug-symbols-x64">
+      <instance name="chromium/fuchsia/debug-symbols-amd64" id="zA4Wh44ih6hkcnySXl59juA2F0JKuU6Rxcu5MpOUtd8C"></instance>
     </package>
-    <package name="chromium/fuchsia/debug-symbols-arm64" version="version:92.0.4515.71" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
-      <instance name="chromium/fuchsia/debug-symbols-arm64" id="Fo7EOUL8V5t2ljPKpYdg26QiSEqKbki0P-4W3bpwhmUC"></instance>
+    <package name="chromium/fuchsia/debug-symbols-arm64" version="version:92.0.4515.82" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
+      <instance name="chromium/fuchsia/debug-symbols-arm64" id="lolEMX0egdFEi0Plu6ZFYGKoOBrlU6jxc45JYYsHmY4C"></instance>
     </package>
     <package name="flutter/fuchsia-debug-symbols-arm64" version="git_revision:67c537d41bab8a6b61cc585ca132e9fd23ef0f76" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-flutter">
       <instance name="flutter/fuchsia-debug-symbols-arm64" id="JnGP5drxGdgc81n9Wf9--jRFCXSKlVTBBEXq0INwG9gC"></instance>
@@ -501,11 +501,11 @@
     <package name="fuchsia/tools/breakpad/${platform}" version="git_revision:322eb2b4c63d10f55120b45d6b1a66e847266768" path="prebuilt/third_party/breakpad/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
       <instance name="fuchsia/tools/breakpad/linux-amd64" id="iPecgb_-NXl-XOqdY1PtnDRwqwTFis4gXM6mYBkdLxcC"></instance>
     </package>
-    <package name="chromium/fuchsia/castrunner-arm64" version="version:92.0.4515.71" path="prebuilt/third_party/cast_runner/arch/arm64">
-      <instance name="chromium/fuchsia/castrunner-arm64" id="CATGmKayO6zFpDnl8mmwwZ-L-Yazspr7EoGe6GJkoo8C"></instance>
+    <package name="chromium/fuchsia/castrunner-arm64" version="version:92.0.4515.82" path="prebuilt/third_party/cast_runner/arch/arm64">
+      <instance name="chromium/fuchsia/castrunner-arm64" id="AfxPUxQXnVPYOcrvzxs_99jp_dzT5dAG24FWa4P4aUUC"></instance>
     </package>
-    <package name="chromium/fuchsia/castrunner-amd64" version="version:92.0.4515.71" path="prebuilt/third_party/cast_runner/arch/x64">
-      <instance name="chromium/fuchsia/castrunner-amd64" id="w6Aj_D4AxscelQ-g3pvoGcvDedStCkFsq9fmXXW5QnoC"></instance>
+    <package name="chromium/fuchsia/castrunner-amd64" version="version:92.0.4515.82" path="prebuilt/third_party/cast_runner/arch/x64">
+      <instance name="chromium/fuchsia/castrunner-amd64" id="CulO4aRPe1i1Szs5n11bGSEpuzYvxkjdCyKPonkMDF0C"></instance>
     </package>
     <package name="chrome_internal/fuchsia/castrunner-arm64" version="version:91.0.4464.0" path="prebuilt/third_party/cast_runner_internal/arch/arm64">
       <instance name="chrome_internal/fuchsia/castrunner-arm64" id="rm0oC9o1wjqH86DQE0KQ00QKSXqZLCYm_4A1S5CR13YC"></instance>
@@ -819,8 +819,8 @@
     <package name="chromecast/fuchsia/ultrasoundagent-amd64" version="version:260435" path="prebuilt/third_party/chromecast_latest/ultrasoundagent/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/ultrasoundagent-amd64" id="uTh-oNmRlmUHHOf8ZHlt4OEJuja-5n_1-FoZpyUSIa0C"></instance>
     </package>
-    <package name="chromium/fuchsia/chromedriver/${platform}" version="version:92.0.4515.71" path="prebuilt/third_party/chromedriver/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
-      <instance name="chromium/fuchsia/chromedriver/linux-amd64" id="AJmUk9fJ2gZdnpSn3SPlbSPsjhkAU2L-dEWfpkhEU8AC"></instance>
+    <package name="chromium/fuchsia/chromedriver/${platform}" version="version:92.0.4515.82" path="prebuilt/third_party/chromedriver/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
+      <instance name="chromium/fuchsia/chromedriver/linux-amd64" id="4CMrNt-dBFak2TkgZDPIFFEvsoV8WNpx1ankOx9wsQAC"></instance>
     </package>
     <package name="chrome_internal/fuchsia/chromedriver/${platform}" version="version:91.0.4464.0" path="prebuilt/third_party/chromedriver_internal/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
       <instance name="chrome_internal/fuchsia/chromedriver/linux-amd64" id="g5Kkyg0tsD4RxAtLWecO1RmkHFVRraRVYWoAsS44WfEC"></instance>
@@ -831,11 +831,11 @@
     <package name="chromium/fuchsia/chromedriver/${platform}" version="version:93.0.4531.0" path="prebuilt/third_party/chromedriver_latest/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
       <instance name="chromium/fuchsia/chromedriver/linux-amd64" id="4w61kySsiDyJio60FD3H4wGEv7uMZx707VmFjHr89lkC"></instance>
     </package>
-    <package name="chromium/fuchsia/webrunner-arm64" version="version:92.0.4515.71" path="prebuilt/third_party/chromium/arch/arm64">
-      <instance name="chromium/fuchsia/webrunner-arm64" id="4aFZaFfO6neDsnG1bpqrF8ZIvF95GAdieSirvlc7xCAC"></instance>
+    <package name="chromium/fuchsia/webrunner-arm64" version="version:92.0.4515.82" path="prebuilt/third_party/chromium/arch/arm64">
+      <instance name="chromium/fuchsia/webrunner-arm64" id="Vk7XzHhXkdS1X_ld3brI8fA0KLZr9_U-OPyl5eIyGJYC"></instance>
     </package>
-    <package name="chromium/fuchsia/webrunner-amd64" version="version:92.0.4515.71" path="prebuilt/third_party/chromium/arch/x64">
-      <instance name="chromium/fuchsia/webrunner-amd64" id="W0YqhXJPPxDfB-fB_HCtzTBtO1GlTLdX9Stk8rdrdsMC"></instance>
+    <package name="chromium/fuchsia/webrunner-amd64" version="version:92.0.4515.82" path="prebuilt/third_party/chromium/arch/x64">
+      <instance name="chromium/fuchsia/webrunner-amd64" id="lCAb9QefyjieGGm6gvWZ7R6Ga87gDICgrzU39AthByEC"></instance>
     </package>
     <package name="chrome_internal/fuchsia/webrunner-arm64" version="version:91.0.4464.0" path="prebuilt/third_party/chromium_internal/arch/arm64">
       <instance name="chrome_internal/fuchsia/webrunner-arm64" id="iC1t29aYi3OcRdHqwcQt_oalF6_L5mZ3bWJBjDUZ9eAC"></instance>
@@ -855,11 +855,11 @@
     <package name="chromium/fuchsia/webrunner-amd64" version="version:93.0.4531.0" path="prebuilt/third_party/chromium_latest/arch/x64">
       <instance name="chromium/fuchsia/webrunner-amd64" id="kVKvj83Xh5aiJaeHzvTldmLpyuWl8tpRLVVifFc06r4C"></instance>
     </package>
-    <package name="chromium/fuchsia/tests-arm64" version="version:92.0.4515.71" path="prebuilt/third_party/chromium_tests/arch/arm64">
-      <instance name="chromium/fuchsia/tests-arm64" id="P7n0WmW6VGYutmm_8ln06S55HPS9mLMBkolotx8FWiwC"></instance>
+    <package name="chromium/fuchsia/tests-arm64" version="version:92.0.4515.82" path="prebuilt/third_party/chromium_tests/arch/arm64">
+      <instance name="chromium/fuchsia/tests-arm64" id="ACVti4sEIDXSq5T_WTk3foor8c0eRelx1nV-pMjWLT0C"></instance>
     </package>
-    <package name="chromium/fuchsia/tests-amd64" version="version:92.0.4515.71" path="prebuilt/third_party/chromium_tests/arch/x64">
-      <instance name="chromium/fuchsia/tests-amd64" id="oXAWbVeQNNxoqxgt1UFsL5xzqRnl9Bgc1RWddsPGi7kC"></instance>
+    <package name="chromium/fuchsia/tests-amd64" version="version:92.0.4515.82" path="prebuilt/third_party/chromium_tests/arch/x64">
+      <instance name="chromium/fuchsia/tests-amd64" id="xFwsh4RVF0AVV7hzOLbfdbENiVxu6hH55hUIYJjBysUC"></instance>
     </package>
     <package name="chrome_internal/fuchsia/tests-arm64" version="version:91.0.4464.0" path="prebuilt/third_party/chromium_tests_internal/arch/arm64">
       <instance name="chrome_internal/fuchsia/tests-arm64" id="7p1xFvHH0oFgRB8442mVI190apx8wNS95LjYycPWP68C"></instance>
@@ -1102,10 +1102,10 @@
       <instance name="fuchsia/third_party/vulkansdk/linux-amd64" id="BQ-LMkaoj0KAm3pSRoVPrPUBvudUuhGk2gN2EdR64REC"></instance>
       <instance name="fuchsia/third_party/vulkansdk/mac-amd64" id="9HxvhiHNxy5s81tci1yNwUPPQNGxhDznDVe7CPYGZn8C"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine_shell-arm64" version="version:92.0.4515.71" path="prebuilt/third_party/web_engine_shell/arch/arm64">
+    <package name="chromium/fuchsia/web_engine_shell-arm64" version="version:92.0.4515.82" path="prebuilt/third_party/web_engine_shell/arch/arm64">
       <instance name="chromium/fuchsia/web_engine_shell-arm64" id="T2Hv9Ox-zgTz5vCFfvabkYnLFDDCX69aXOSulndbF2UC"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine_shell-amd64" version="version:92.0.4515.71" path="prebuilt/third_party/web_engine_shell/arch/x64">
+    <package name="chromium/fuchsia/web_engine_shell-amd64" version="version:92.0.4515.82" path="prebuilt/third_party/web_engine_shell/arch/x64">
       <instance name="chromium/fuchsia/web_engine_shell-amd64" id="1kS_mpsZR70r0hpKNcr7Ago7I26IoPVwCNh_oonT_BIC"></instance>
     </package>
     <package name="chrome_internal/fuchsia/web_engine_shell-arm64" version="version:91.0.4464.0" path="prebuilt/third_party/web_engine_shell_internal/arch/arm64">
