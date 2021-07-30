@@ -1,7 +1,7 @@
 binary
 bin/vulkan_loader
-forward_stderr_to
-forward_stdout_to
+system-lib
+/system/lib
 dev-gpu
 /dev/class/gpu
 dev-goldfish-pipe
@@ -10,17 +10,9 @@ dev-goldfish-control
 /dev/class/goldfish-control
 dev-goldfish-address-space
 /dev/class/goldfish-address-space
-dev-goldfish-sync
-/dev/class/goldfish-sync
-fuchsia.sys2.Realm
-/svc/fuchsia.sys2.Realm
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.vulkan.loader.Loader
 diagnostics
-icd-loaders
 /svc/fuchsia.vulkan.loader.Loader
-icd_runner
-/svc/fuchsia.component.runner.ComponentRunner
 /diagnostics
-icd-loader-env
