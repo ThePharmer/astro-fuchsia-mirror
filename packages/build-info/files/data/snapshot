@@ -1,8 +1,8 @@
 <manifest version="1.1" attributes="debug-symbols-arm64">
   <projects>
-    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="4c30aa9688fb6c565283f510818df1477f5acb10" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,stem,topaz"/>
+    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="81bb789d9fbd186a6fa39f57506a56e2f9689546" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,stem,topaz"/>
     <project name="protobuf-gn" path="build/secondary/third_party/protobuf" remote="https://fuchsia.googlesource.com/protobuf-gn" revision="d7f07ade6e13efb10eb9c242bf8ff01c3ba05a13" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="fuchsia,google,topaz"/>
-    <project name="integration" path="integration" remote="sso://turquoise-internal/integration" revision="304af4df1e0ca19c77e74d01d10ea56ff1773997" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,stem,topaz"/>
+    <project name="integration" path="integration" remote="sso://turquoise-internal/integration" revision="ca0a0ec67fce3615a036f1170cd9d37ad6d6bc52" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,stem,topaz"/>
     <project name="experiences" path="src/experiences" remote="https://fuchsia.googlesource.com/experiences" revision="9d8d58ee735627d6f51e9df233dc2b2e7a70fbba" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="fuchsia,google,topaz"/>
     <project name="third_party/Vulkan-Headers" path="third_party/Vulkan-Headers" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Headers" revision="0255987d2457576907f046c6d52b89bc6131981d" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="fuchsia,google,topaz"/>
     <project name="third_party/Vulkan-Loader" path="third_party/Vulkan-Loader" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Loader" revision="e3c8a96ce0d5ab67e3478d03e086dc0fcd7302c7" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="fuchsia,google,topaz"/>
@@ -109,7 +109,7 @@
     <project name="vendor/amlogic" path="vendor/amlogic" remote="sso://turquoise-internal/vendor/amlogic" revision="9b3e94b651d5be7793349a9416b245c5a214622e" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
     <project name="vendor/amlogic/drivers" path="vendor/amlogic/drivers" remote="sso://partner-fuchsia/vendor/amlogic/drivers" revision="63a8bec6a7cfe7726ec01e84e0f33b265fa74b3e" gerrithost="https://partner-fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
     <project name="vendor/arm/camera" path="vendor/arm/camera" remote="sso://turquoise-internal/vendor/arm/camera" revision="159ffae31d75d6353bf67485887ac198b4aef1d6" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
-    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="ad3eb3a529119b035141d4610843696d320ec12b" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
+    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="c8974cd8031c9927213a49b8f87ce52a287dbc2c" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
     <project name="vendor/synaptics" path="vendor/synaptics" remote="sso://turquoise-internal/vendor/synaptics" revision="5380e406a0f7674391c0f02458562bea48a1a430" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
     <project name="cobalt-registry" path="vendor/third_party/cobalt_registry" remote="sso://turquoise-internal/cobalt-registry" revision="6038c330aec474049fa61b407e77848c00b755be" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
     <project name="third_party/eigen3" path="vendor/third_party/eigen3" remote="https://third-party-mirror.googlesource.com/eigen/fuchsia" revision="9c30acb7cdd548c4b1e7c8115258defc29487feb" gerrithost="https://third-party-mirror-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google"/>
@@ -242,9 +242,6 @@
     <package name="chromecast/fuchsia/castagent-debug-symbols-arm64" version="version:265775" path="prebuilt/build_ids/arm64/castagent_latest" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
       <instance name="chromecast/fuchsia/castagent-debug-symbols-arm64" id="jYEPQ3FuOHiIUx-57VM9eaWCfGDNSqI2Pkhg66nqurgC"></instance>
     </package>
-    <package name="chrome_internal/fuchsia/debug-symbols-arm64" version="version:93.0.4577.42" path="prebuilt/build_ids/arm64/chromium_internal" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
-      <instance name="chrome_internal/fuchsia/debug-symbols-arm64" id="VYCJ5lq42A_4ntwchZb3YFGllVVapN19zJ8hvJV1srsC"></instance>
-    </package>
     <package name="chromecast/fuchsia/castagent-debug-symbols-amd64" version="version:269241" path="prebuilt/build_ids/x64/castagent" internal="true" attributes="debug-symbols,debug-symbols-chromecast,debug-symbols-x64">
       <instance name="chromecast/fuchsia/castagent-debug-symbols-amd64" id="fZ2uoVT74WCXI4UL4oIGxfRKcJYLH7aKoWFQalveVvgC"></instance>
     </package>
@@ -256,9 +253,6 @@
     </package>
     <package name="chromecast/fuchsia/castagent-debug-symbols-amd64" version="version:265775" path="prebuilt/build_ids/x64/castagent_latest" internal="true" attributes="debug-symbols,debug-symbols-chromecast,debug-symbols-x64">
       <instance name="chromecast/fuchsia/castagent-debug-symbols-amd64" id="K9qrknyARRbXMVwzS9sT8gx-OsHUgDzru6tb4PZ9PfMC"></instance>
-    </package>
-    <package name="chrome_internal/fuchsia/debug-symbols-amd64" version="version:93.0.4577.42" path="prebuilt/build_ids/x64/chromium_internal" attributes="debug-symbols,debug-symbols-chromium,debug-symbols-x64">
-      <instance name="chrome_internal/fuchsia/debug-symbols-amd64" id="vNBnpSQiRcj44mMTrCpyqRaAz5NBIJOQbJe87lUdMycC"></instance>
     </package>
     <package name="fuchsia_internal/firmware/gdc" version="3zL46KF8N1tNniE1QlADLBrnm5Lu3T0WsFtS91P1ZiEC" path="prebuilt/camera/arm/gdc/configs" internal="true" platforms="linux-amd64,linux-arm64,mac-amd64"/>
     <package name="turquoise_internal/camera/camera-e2e-test-assets" version="EH8eADUqJvRKg7mgKg1syFm35Z8Wczal4rnd0Bzjm4wC" path="prebuilt/camera/camera_e2e_test_assets" internal="true"/>
@@ -376,6 +370,12 @@
       <instance name="fuchsia/sdk/core/linux-amd64" id="i2wUrrZcZwlbPi_bFo-rPt35Hte5bvWwHP0RsNkT3loC"></instance>
       <instance name="fuchsia/sdk/core/mac-amd64" id="FlrXh_NRYUGLz1VF-qbT5F3ZBDYBXXQyFnGiTKLT5MAC"></instance>
     </package>
+    <package name="chrome_internal/fuchsia/debug-symbols-amd64" version="version:93.0.4577.42" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-chromium,debug-symbols-x64">
+      <instance name="chrome_internal/fuchsia/debug-symbols-amd64" id="vNBnpSQiRcj44mMTrCpyqRaAz5NBIJOQbJe87lUdMycC"></instance>
+    </package>
+    <package name="chrome_internal/fuchsia/debug-symbols-arm64" version="version:93.0.4577.42" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
+      <instance name="chrome_internal/fuchsia/debug-symbols-arm64" id="VYCJ5lq42A_4ntwchZb3YFGllVVapN19zJ8hvJV1srsC"></instance>
+    </package>
     <package name="chromium/fuchsia/debug-symbols-amd64" version="version:93.0.4577.42" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-chromium,debug-symbols-x64">
       <instance name="chromium/fuchsia/debug-symbols-amd64" id="3o-oQeqA8_suaxTKEWa0691bo7ydY_kPG1onELtke2MC"></instance>
     </package>
@@ -400,41 +400,41 @@
     <package name="turquoise_internal/gallium/assistant-runner/debug-symbols-x64" version="g3-revision:opal_r40_1.56_release_RC31" path="prebuilt/stable/.build-id" attributes="debug-symbols,debug-symbols-flutter,debug-symbols-x64">
       <instance name="turquoise_internal/gallium/assistant-runner/debug-symbols-x64" id="wxe3I3baZpnGOm1eNz6RH6y9I8V5c7cW1yeo2b4LBasC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
-      <instance name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-arm64" id="Yz8LbjX6d5MUbxKZPKJRf-bg2wpbL6KwMveqS4q4MRYC"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
+      <instance name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-arm64" id="LsmjmF-mob4qhvhvegH1MlkWIZS1kelz3U8GAU9TtIkC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
-      <instance name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-x64" id="5_vt8RyRLb2-R7ceo40OKPjh3d1YWBx4gllkCQO5tgcC"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
+      <instance name="turquoise_internal/libassistant/elaine/kronk/debug-symbols-x64" id="lCvG7e_dOIAKJIYSkiAIphaofmmkYpnd6BTzXqDdjvMC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
-      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-arm64" id="OQVZDUm8bSElXMXQmYrfYclEDaISo8GL3EGc5UmQNb4C"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
+      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-arm64" id="ZSnH7M5Yo_ruu1tZf1b_5bJwFUvs5nrYYNP7s14aFd8C"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
-      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-x64" id="H3HlEFzL7BLBYxzkwGsdV8e7bGNa0Htr8QIzGpR1epgC"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
+      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/debug-symbols-x64" id="tjzLlGOK-9RVrH2S7USCseIKOBW6LN2mQ02pzNNmArkC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
-      <instance name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-arm64" id="cR_15Nkm-U2JP0v5Kj5aGCx0PyMw9lRjG3izEmXamd0C"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
+      <instance name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-arm64" id="X0bvtXeIII_U8Ww2etnRX0bBVjjHTCcZbozC1CgOiEwC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
-      <instance name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-x64" id="-6Ui_3-jIUpWXt_kk9z3kkD-2ji3WUYH5GaUvfdea3UC"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
+      <instance name="turquoise_internal/libassistant/estelle/kronk/debug-symbols-x64" id="bfGnIkWh5qSNmjyUOCoLbWO21iyNCEUQ4Ia7yaMt584C"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
-      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-arm64" id="Nx-fACh-ZT9yCw46sMc1a7p8NjAPkzRVCUVmHHDANmgC"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
+      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-arm64" id="AkTnGkGBMyKc6l_62-7_z0mrS2X8rQkkZSqsA_vmrPwC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
-      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-x64" id="ACPDUu0A8URL4fJTlVF-m4lh12kyL26bKbeuDc-DR2gC"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
+      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/debug-symbols-x64" id="SFSrTcPvqjQszNnKnFpgADTy8typcYl7epGDg94YPSIC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
-      <instance name="turquoise_internal/libassistant/newman/kronk/debug-symbols-arm64" id="MNoNbSnew6EYQB39dZ7ozeBbD_9JNazuWOsiRHIryfcC"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
+      <instance name="turquoise_internal/libassistant/newman/kronk/debug-symbols-arm64" id="LAq1gmMGCQBhp6VuoAlS69oXWqQYMGM7FwE4iL_ZSv0C"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
-      <instance name="turquoise_internal/libassistant/newman/kronk/debug-symbols-x64" id="liu-KJGKSS1OxxTLK9aBSGVCz66_ooZIWGV5e5FDC6wC"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
+      <instance name="turquoise_internal/libassistant/newman/kronk/debug-symbols-x64" id="eEhPs6VlL_dySs2OuFmwQxwSa_9hG-GuBNyLBDj6GscC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
-      <instance name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-arm64" id="JIxxy5aEjc1VlM0761vSB2AG2VGlGqxLJ36Hc4dBqA0C"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-kronk">
+      <instance name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-arm64" id="nDPflAyJPEWE3ix4xx_R3URbzQaFtlZmQXeL34vO_vQC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
-      <instance name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-x64" id="aspftYhVuQ-DDCeW5JUUROrKZAx4pK7qXm_sSPfvNTIC"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-kronk,debug-symbols-x64">
+      <instance name="turquoise_internal/libassistant/newman/kronk_eng/debug-symbols-x64" id="QPpMAWcxC3mAhHTmDYCW0PPBa3FW4gCndoGHwmavt3MC"></instance>
     </package>
     <package name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_SD5_20210719_RC4" path="prebuilt/stable/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle">
       <instance name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" id="Xw3Jp5qZrvqm6LvONsba1hKHOEO0s13YnuQ3kvr8FnIC"></instance>
@@ -948,41 +948,41 @@
       <instance name="fuchsia/third_party/jq/linux-arm64" id="B99d5H538hQqnU04lmWivDAc05SEgDkZIBH8oaeqyWcC"></instance>
       <instance name="fuchsia/third_party/jq/mac-amd64" id="o9A6AYztINFwkUQ2gfaWFmnM9VseP0yS3kYObZkSMvkC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/elaine/kronk/arm64" internal="true">
-      <instance name="turquoise_internal/libassistant/elaine/kronk/arm64" id="95DxMyn6sqBcmxtnUnQWCJEgpwzhsQVf1gBYmWbLgqkC"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/elaine/kronk/arm64" internal="true">
+      <instance name="turquoise_internal/libassistant/elaine/kronk/arm64" id="x6Pc1j8bzdnOrgZNgFsFk9BnlRXqZrRJSFgpOcz3yjEC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/elaine/kronk/x64" internal="true">
-      <instance name="turquoise_internal/libassistant/elaine/kronk/x64" id="aCGFsqAGLXjR5BMxca38anLTq8mnw86-o6F2jwDc4vgC"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/elaine/kronk/x64" internal="true">
+      <instance name="turquoise_internal/libassistant/elaine/kronk/x64" id="2BwKQLfPpunEh_dU_UOzqc2xvnEkh27xTXg59b5SpAgC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk_eng/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/elaine/kronk_eng/arm64" internal="true">
-      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/arm64" id="A2bWhT8V8wHQaFKWy_Zbo6JlZWhRn7Ev4aRh3x2fdQ0C"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk_eng/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/elaine/kronk_eng/arm64" internal="true">
+      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/arm64" id="-qMMYpwMhkQkiCVFcoWKUI6WMDuDu2FaQlcK7_pVPPMC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/elaine/kronk_eng/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/elaine/kronk_eng/x64" internal="true">
-      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/x64" id="0f0j_AlhIjvFhHx3jabPNCRNsc0jikQlUzWOz8wjsV8C"></instance>
+    <package name="turquoise_internal/libassistant/elaine/kronk_eng/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/elaine/kronk_eng/x64" internal="true">
+      <instance name="turquoise_internal/libassistant/elaine/kronk_eng/x64" id="Uc1E19kHxiiLLLrMg9lHt38tyV143OelsC5W3gi1DOwC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/estelle/kronk/arm64" internal="true">
-      <instance name="turquoise_internal/libassistant/estelle/kronk/arm64" id="Lc0Psbu_oT4UHDrt4L15V9O5Yl8oX9rjIWQKX5We4HMC"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/estelle/kronk/arm64" internal="true">
+      <instance name="turquoise_internal/libassistant/estelle/kronk/arm64" id="wqfwyTbtDXCCfIT7ejxb5gFzs3xc0j2tqvC_3RQ1sjgC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/estelle/kronk/x64" internal="true">
-      <instance name="turquoise_internal/libassistant/estelle/kronk/x64" id="4YVqUwI6ytSFuBQAwjZbZCDjuvlGuDe8KEg1lAe6RVEC"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/estelle/kronk/x64" internal="true">
+      <instance name="turquoise_internal/libassistant/estelle/kronk/x64" id="wUhxrElGtZAx6aVQTdcHylTGeXPyRoip7U3KhDLlJt8C"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk_eng/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/estelle/kronk_eng/arm64" internal="true">
-      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/arm64" id="UoNHs6tdfEHUGZWmRMhb2Qzoec8UZy3njjfGo16QmUMC"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk_eng/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/estelle/kronk_eng/arm64" internal="true">
+      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/arm64" id="-tIF88vwJbV1QFkT6zYv5gKExuWRXHOdjBPIyxC0dZ8C"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/estelle/kronk_eng/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/estelle/kronk_eng/x64" internal="true">
-      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/x64" id="eVl52qDuR5elI_CxDkYRGRXUnjCXxnmU5Nolk5W6xoAC"></instance>
+    <package name="turquoise_internal/libassistant/estelle/kronk_eng/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/estelle/kronk_eng/x64" internal="true">
+      <instance name="turquoise_internal/libassistant/estelle/kronk_eng/x64" id="cXXwg9dCBvNcD_EY8akaqEpRxV6JEgkcKt8viDgQ5B8C"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/newman/kronk/arm64" internal="true">
-      <instance name="turquoise_internal/libassistant/newman/kronk/arm64" id="vMhN7Z_f2-_w0aevo-ROcPr0HAW7htnSDhmCAj-c2bsC"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/newman/kronk/arm64" internal="true">
+      <instance name="turquoise_internal/libassistant/newman/kronk/arm64" id="jfy8hWXM0cQls8oIbd9qADtClVUtfiggya72kUTFoAcC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/newman/kronk/x64" internal="true">
-      <instance name="turquoise_internal/libassistant/newman/kronk/x64" id="ugOpGilHV8BWQa2KkqsHUwziA0E0kuFKzZeUm82OrbAC"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/newman/kronk/x64" internal="true">
+      <instance name="turquoise_internal/libassistant/newman/kronk/x64" id="170QzNXHTT4uNxOa8KJ6pCu6wNcRxtL2lspYbcWtPVgC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk_eng/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/newman/kronk_eng/arm64" internal="true">
-      <instance name="turquoise_internal/libassistant/newman/kronk_eng/arm64" id="GARFb9pE3yFCi3kfkXzUsE6nNgBhdX6IcQCdvCl7P_IC"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk_eng/arm64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/newman/kronk_eng/arm64" internal="true">
+      <instance name="turquoise_internal/libassistant/newman/kronk_eng/arm64" id="pQtcqt-edSWX7IT9ypEzMKrvRfGlIbCoWGykpvLNWDMC"></instance>
     </package>
-    <package name="turquoise_internal/libassistant/newman/kronk_eng/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC11" path="prebuilt/third_party/libassistant/newman/kronk_eng/x64" internal="true">
-      <instance name="turquoise_internal/libassistant/newman/kronk_eng/x64" id="WAoMIH05Em491nL95U7aI5TNRnfALePRxxdkNa2DFsoC"></instance>
+    <package name="turquoise_internal/libassistant/newman/kronk_eng/x64" version="g3-revision:libassistant_google3_release_20210712_R03_fuchsia_sd5_RC12" path="prebuilt/third_party/libassistant/newman/kronk_eng/x64" internal="true">
+      <instance name="turquoise_internal/libassistant/newman/kronk_eng/x64" id="o2fIUBG3HtSGqN-2g1OWH0Kg67S1lAfoCk5FclAgPVsC"></instance>
     </package>
     <package name="turquoise_internal/libassistant/elaine/kronk/arm64" version="g3-revision:acp_release_20210719_R00_RC00" path="prebuilt/third_party/libassistant_latest/elaine/kronk/arm64" internal="true">
       <instance name="turquoise_internal/libassistant/elaine/kronk/arm64" id="fSMzmMzTJ4Zr3xmoS19IYY_BDtM86d783k0hw2pPwMgC"></instance>
