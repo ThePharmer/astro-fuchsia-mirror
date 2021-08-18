@@ -4,7 +4,10 @@
     "args": [ "--cast-assistant" ]
   },
   "sandbox": {
-    "features": ["config-data"],
+    "features": [
+      "config-data",
+      "isolated-persistent-storage"
+    ],
     "services": [
       "fuchsia.buildinfo.Provider",
       "fuchsia.castsetup.ApiRegistry",
