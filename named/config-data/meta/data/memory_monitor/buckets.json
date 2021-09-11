@@ -1,0 +1,182 @@
+[
+    {
+        "name": "ZBI Buffer",
+        "process": "",
+        "vmo": "uncompressed-bootfs",
+        "event_code": 1
+    },
+    {
+        "name": "Graphics",
+        "process": "",
+        "vmo": "magma_create_buffer|Mali .*|Magma.*|ImagePipe2Surface.*|GFXBufferCollection.*|ScenicImageMemory|Display.*|CompactImage.*|GFX Device Memory.*|FlatlandImageMemory.*",
+        "event_code": 2
+    },
+    {
+        "name": "ProtectedPoolUnallocated",
+        "process": "driver_host:pdev:00:00:1b",
+        "vmo": "SysmemAmlogicProtectedPool",
+        "event_code": 27
+    },
+    {
+        "name": "ContiguousPoolUnallocated",
+        "process": "driver_host:pdev:00:00:1b",
+        "vmo": "SysmemContiguousPool",
+        "event_code": 26
+    },
+    {
+        "name": "Fshost",
+        "process": "fshost\\.cm",
+        "vmo": "",
+        "event_code": 21
+    },
+    {
+        "name": "Minfs",
+        "process": "/pkg/bin/minfs",
+        "vmo": "",
+        "event_code": 4
+    },
+    {
+        "name": "BlobfsInactive",
+        "process": "/pkg/bin/blobfs",
+        "vmo": "inactive-blob-.*",
+        "event_code": 29
+    },
+    {
+        "name": "Blobfs",
+        "process": "/pkg/bin/blobfs",
+        "vmo": "",
+        "event_code": 5
+    },
+    {
+        "name": "FlutterApps",
+        "process": "io\\.flutter\\..*",
+        "vmo": "dart.*",
+        "event_code": 28
+    },
+    {
+        "name": "Flutter",
+        "process": "io\\.flutter\\..*",
+        "vmo": "",
+        "event_code": 20
+    },
+    {
+        "name": "Web",
+        "process": "web_engine_exe:.*",
+        "vmo": "",
+        "event_code": 7
+    },
+    {
+        "name": "Kronk",
+        "process": "kronk\\.cmx|kronk_for_testing\\.cmx",
+        "vmo": "",
+        "event_code": 8
+    },
+    {
+        "name": "Scenic",
+        "process": "scenic\\.cmx",
+        "vmo": "",
+        "event_code": 9
+    },
+    {
+        "name": "Amlogic",
+        "process": "driver_host:pdev:05:00:f",
+        "vmo": "",
+        "event_code": 10
+    },
+    {
+        "name": "Netstack",
+        "process": "netstack\\.cmx",
+        "vmo": "",
+        "event_code": 11
+    },
+    {
+        "name": "Pkgfs",
+        "process": "pkgfs",
+        "vmo": "",
+        "event_code": 13
+    },
+    {
+        "name": "Cast",
+        "process": "cast_agent\\.cmx",
+        "vmo": "",
+        "event_code": 14
+    },
+    {
+        "name": "Archivist",
+        "process": "archivist\\.cm",
+        "vmo": "",
+        "event_code": 22
+    },
+    {
+        "name": "Cobalt",
+        "process": "cobalt\\.cmx",
+        "vmo": "",
+        "event_code": 23
+    },
+    {
+        "name": "Audio",
+        "process": "audio_core\\.cmx",
+        "vmo": "",
+        "event_code": 24
+    },
+    {
+        "name": "Context",
+        "process": "context_provider\\.cmx",
+        "vmo": "",
+        "event_code": 25
+    },
+    {
+        "name": "AppManager",
+        "process": "appmgr\\.cm",
+        "vmo": "",
+        "event_code": 39
+    },
+    {
+        "name": "ComponentManager",
+        "process": "bin/component_manager",
+        "vmo": "",
+        "event_code": 40
+    },
+    {
+        "name": "Comms",
+        "process": "comms_agent\\.cmx",
+        "vmo": "",
+        "event_code": 41
+    },
+    {
+        "name": "Resolvers",
+        "process": ".*-resolver\\.cm.*",
+        "vmo": "",
+        "event_code": 42
+    },
+    {
+        "name": "SoundPlayer",
+        "process": "soundplayer\\.cm",
+        "vmo": "",
+        "event_code": 43
+    },
+    {
+        "name": "Ultrasound",
+        "process": "ultrasound_agent\\.cmx",
+        "vmo": "",
+        "event_code": 44
+    },
+    {
+        "name": "Feedback",
+        "process": "feedback\\.cmx",
+        "vmo": "",
+        "event_code": 46
+    },
+    {
+        "name": "CompositeDrivers",
+        "process": "driver_host:composite-device",
+        "vmo": "",
+        "event_code": 47
+    },
+    {
+        "name": "OtherDrivers",
+        "process": "driver_host:.*",
+        "vmo": "",
+        "event_code": 48
+    }
+]
