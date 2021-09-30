@@ -8,8 +8,7 @@
       "config-data",
       "isolated-persistent-storage",
       "isolated-temp",
-      "root-ssl-certificates",
-      "vulkan"
+      "root-ssl-certificates"
     ],
     "services": [
       "fuchsia.auth.oldtokens.CredentialsProducer",
@@ -32,6 +31,7 @@
       "fuchsia.net.http.Loader",
       "fuchsia.net.NameLookup",
       "fuchsia.net.interfaces.State",
+      "fuchsia.netstack.Netstack",
       "fuchsia.posix.socket.Provider",
       "fuchsia.process.Launcher",
       "fuchsia.settings.Audio",
@@ -41,25 +41,17 @@
       "fuchsia.sys.Launcher",
       "fuchsia.sys.Loader",
       "fuchsia.sysmem.Allocator",
-      "fuchsia.tracing.provider.Provider",
       "fuchsia.update.channel.Provider",
-      "fuchsia.vulkan.loader.Loader",
       "google.assistant.libassistant.AssistantState",
       "google.assistant.libassistantv2.Kronk",
       "google.camera.CameraStateProvider",
-      "google.cast.activityconfig.ActivityConfigManager",
       "google.cast.auth.AppCredentialProducer",
       "google.cast.ccsconfig.CcsConfigWatcher",
       "google.cast.feature.FeatureService",
       "google.cast.hds.HdsService",
       "google.cast.multizone.Leader",
-      "google.cast.window.InteractionHandlerRegistry",
       "google.duocore.DuoCore",
-      "google.flashts.Reader",
-      "google.mlframework.OutputManager",
-      "google.policy.comms.CommsARServiceProvider",
-      "google.policy.comms.SmartFramingConnection",
-      "google.usonia.IpcHandler"
+      "google.flashts.Reader"
     ]
   }
 }
