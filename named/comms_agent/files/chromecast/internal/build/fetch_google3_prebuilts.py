@@ -7,6 +7,7 @@ is generated from the prebuilts to expose them as build targets.
 The versions to fetch are governed by prebuilts.json
 """
 
+
 import codecs
 import collections
 import glob
@@ -24,31 +25,15 @@ import sys
 from prebuilts import gn_util
 from prebuilts import packages
 
-
 GCS_BUCKET_PUBLIC = 'nest-prebuilts-public'
 GCS_BUCKET_INTERNAL = 'nest-prebuilts-internal'
 CONFIGURATION_PATH = os.path.join(packages.get_base_path(), 'prebuilts.json')
 RUNTIME_DEPS_FILE = os.path.join(packages.get_packages_path(), 'runtime_deps')
 GOOGLE3_RESOURCE_DIR = os.path.join('resources', 'google3')
-SUPPORTED_ARCHITECTURES = [
-    'android_arm',
-    'android_arm64',
-    'android_x86',
-    'android_x86_64',
-    'arm',
-    'arm64',
-    'x64'
-]
+SUPPORTED_ARCHITECTURES = ['arm', 'arm64', 'x64']
 
-# We search for these strings within the output of a subprocess call below. In
-# Python 3, the stdout and stderr fields in a subprocess object have type
-# 'bytes', and consequently re.search requires a 'bytes'.
-if sys.version_info[0] == 2:
-  NOT_AUTHENTICATED_ERROR_MSG = 'ServiceException: 401'
-  ACCESS_DENIED_ERROR_MSG = 'AccessDeniedException: 403'
-else:
-  NOT_AUTHENTICATED_ERROR_MSG = b'ServiceException: 401'
-  ACCESS_DENIED_ERROR_MSG = b'AccessDeniedException: 403'
+NOT_AUTHENTICATED_ERROR_MSG = r'ServiceException: 401'
+ACCESS_DENIED_ERROR_MSG = r'AccessDeniedException: 403'
 
 
 Manifest = collections.namedtuple(
@@ -72,11 +57,8 @@ def run_shell_command(cmd, cwd=None, raise_on_failure=True):
     (returncode, stdout, stderr) as a tuple.
   """
   logging.info(' '.join(cmd))
-  p = subprocess.Popen(
-      cmd,
-      stdout=subprocess.PIPE,
-      stderr=subprocess.PIPE,
-      cwd=cwd)
+  p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                       cwd=cwd)
   stdout, stderr = p.communicate()
   if p.returncode != 0 and raise_on_failure:
     raise RuntimeError('"{}" failed with returncode {}: {}'.format(
@@ -114,20 +96,21 @@ def _can_access_internal_gcs_bucket():
     # instructing them to re-authenticate in that case.
     run_shell_command(['gsutil.py', 'ls', 'gs://' + GCS_BUCKET_INTERNAL])
   except RuntimeError as e:
-    logging.info('Cannot access %s. Only fetching public prebuilts. '
-                 'REASON: %s',
-                 GCS_BUCKET_INTERNAL,
-                 str(e))
+    logging.error('Cannot access %s. Only fetching public prebuilts. '
+                  'REASON: %s',
+                  GCS_BUCKET_INTERNAL,
+                  e.message)
     return False
   return True
 
 
-def _write_runtime_deps_file(prebuilts):
+def _write_runtime_deps_file(prebuilts, has_internal_access):
   """Write a file with all possible artifacts and resources, one per line."""
   deps = []
   for p in prebuilts:
-    first_variant = _get_package(p['name'], p['variants'][0])
-    manifest = _load_manifest(first_variant)
+    first_arch = list(p['versions'].items())[0]
+    first_prebuilt = _get_package(p, first_arch[0], has_internal_access)
+    manifest = _load_manifest(first_prebuilt)
     if manifest.binary:
       deps.append(os.path.basename(manifest.binary))
     for r in manifest.resources:
@@ -146,14 +129,7 @@ def _load_manifest(package):
 
 def _get_supported_prebuilt_gn_data(prebuilt, arch, has_internal_access):
   """Generates the data to be added to the GN file for a supported prebuilt."""
-  visibility = 'internal' if has_internal_access else 'public'
-  # TODO(b/190050008): This raises a StopIteration exception and crashes when
-  #                    the comprehension inside next() is empty.
-  variant = next(
-      v for v in prebuilt['variants']
-      if v['target']['architecture'] == arch and
-      v['target']['visibility'] == visibility)
-  package = _get_package(prebuilt['name'], variant)
+  package = _get_package(prebuilt, arch, has_internal_access)
   manifest = _load_manifest(package)
   if not manifest.generate_gn_targets:
     return None
@@ -161,8 +137,7 @@ def _get_supported_prebuilt_gn_data(prebuilt, arch, has_internal_access):
       'name': prebuilt['name'],
       'path': os.path.relpath(
           packages.get_package_path(package), packages.get_base_path()),
-      'public': any(
-          v['target']['visibility'] == 'public' for v in prebuilt['variants']),
+      'public': prebuilt['public'],
       'headers': manifest.headers,
       'resources': manifest.resources,
   }
@@ -178,8 +153,7 @@ def _get_unsupported_prebuilt_gn_data(prebuilt):
   """Generates the data for the GN file for an unsupported prebuilt."""
   return {
       'name': prebuilt['name'],
-      'supported_cpus': sorted(
-          {v['target']['architecture'] for v in prebuilt['variants']})
+      'supported_cpus': prebuilt['architectures']
   }
 
 
@@ -189,13 +163,13 @@ def _write_gn_file(prebuilts, has_internal_access):
     supported_prebuilts = [
         _get_supported_prebuilt_gn_data(p, arch, has_internal_access)
         for p in prebuilts
-        if any(v['target']['architecture'] == arch for v in p['variants'])]
+        if arch in p['architectures']]
     supported_prebuilts = [p for p in supported_prebuilts if p]
 
     unsupported_prebuilts = [
         _get_unsupported_prebuilt_gn_data(p)
         for p in prebuilts
-        if all(v['target']['architecture'] != arch for v in p['variants'])]
+        if arch not in p['architectures']]
 
     gn_data = {
         'modules': supported_prebuilts,
@@ -216,54 +190,63 @@ def _filter_accessible_prebuilts(nested_prebuilts, has_internal_access):
   if has_internal_access:
     return nested_prebuilts
   else:
-    return [
-        p for p in nested_prebuilts
-        if any(v['target']['visibility'] == 'public' for v in p['variants'])]
+    return [p for p in nested_prebuilts if p['public']]
 
 
-def _get_package(prebuilt_name, variant):
+def _get_package(prebuilt, architecture, has_internal_access):
   """Gets package version metadata for the given prebuilt and architecture."""
-  return packages.Package(
-      prebuilt_name, variant['target']['architecture'], variant['url'])
+  version_key = 'internal' if has_internal_access else 'public'
+  version = prebuilt['versions'][architecture][version_key]
+  return packages.Package(prebuilt['name'], architecture, version)
 
 
 def _get_packages(prebuilts, has_internal_access):
   """Gets package version metadata for the given prebuilts."""
-  visibility = 'internal' if has_internal_access else 'public'
-  packages_ = set()
+  key = 'internal' if has_internal_access else 'public'
+  packages = set()
   for p in prebuilts:
-    for v in p['variants']:
-      if v['target']['visibility'] == visibility:
-        packages_.add(_get_package(p['name'], v))
-  return packages_
+    for architecture, versions in p['versions'].items():
+      if key in versions:
+        packages.add(_get_package(p, architecture, has_internal_access))
+  return packages
 
 
-def _enumerate_default_prebuilt_configurations():
-  """Load prebuilt configurations from the two relevant locations on disk."""
+def _load_prebuilt_configuration():
+  """Loads the prebuilt JSON configuration files from disk."""
   relative_path = [
       '..', '..', '..', '..', '..', '..',
       'vendor', '*', 'google3_prebuilts.json']
   search_pattern = os.path.abspath(os.path.normpath(os.path.join(
       __file__, *relative_path)))
-  json_paths = glob.glob(search_pattern)
-  return [CONFIGURATION_PATH] + json_paths
-
-
-def load_prebuilt_configuration_files(prebuilt_configuration_file_paths):
-  """Loads the prebuilt JSON configuration files from disk."""
+  json_paths = [CONFIGURATION_PATH] + glob.glob(search_pattern)
   prebuilts = []
-  for path in prebuilt_configuration_file_paths:
+  for path in json_paths:
     with open(path, 'r') as f:
       prebuilts.extend(json.load(f)['prebuilts'])
   return prebuilts
 
 
-def _fetch_package(package):
+def _get_package_gcs_path(package, bucket):
+  gs_prefix = 'gs://'
+  if package.version.startswith(gs_prefix):
+    return '{}/*'.format(package.version)
+  return '{}{}/{}/{}/{}/*'.format(
+      gs_prefix,
+      bucket,
+      package.name,
+      package.architecture,
+      package.version
+  )
+
+
+def _fetch_package(x):
   """Fetches a single package in a worker process."""
-  logging.debug('Fetching %s', package)
-  output_path = packages.get_package_path(package)
+  p, bucket = x
+  logging.debug('Fetching {}'.format(p))
+  gsc_path = _get_package_gcs_path(p, bucket)
+  output_path = packages.get_package_path(p)
   os.makedirs(output_path)
-  run_gsutil_command(['cp', '-r', package.version + '/*', output_path])
+  run_gsutil_command(['cp', '-r', gsc_path, output_path])
   fix_permissions(output_path)
 
 
@@ -276,20 +259,20 @@ def fix_permissions(path):
     for filename in filenames:
       os.chmod(os.path.join(dirpath, filename), permissions)
 
-
 def _ignore_sig_int():
   """Ignore SIG INT (Ctrl-C) on child processes; the parent handles clean up."""
   signal.signal(signal.SIGINT, signal.SIG_IGN)
 
 
-def _fetch_packages(fetch_packages):
+def _fetch_packages(fetch_packages, bucket):
   """Download packages from the GCS bucket to the local disk."""
   if not fetch_packages:
     return
+  data = [(p, bucket) for p in fetch_packages]
   pool = multiprocessing.Pool(processes=min(multiprocessing.cpu_count(),
-                                            len(fetch_packages)),
+                                            len(data)),
                               initializer=_ignore_sig_int)
-  pool.map(_fetch_package, fetch_packages)
+  pool.map(_fetch_package, data)
 
 
 def _find_existing_packages(wanted_packages, manifest):
@@ -322,19 +305,18 @@ def _remove_obsolete_files(keep_packages):
       shutil.rmtree(filepath)
 
 
-def _update_root_manifest(manifest, packages_):
-  for package in packages_:
+def _update_root_manifest(manifest, packages):
+  for package in packages:
     manifest.set_package_version(package)
   manifest.save()
 
 
-def fetch_google3_prebuilts(prebuilts, use_public_only=False):
+def _fetch_google3_prebuilts():
   """Fetch any outdated or missing prebuilts."""
+  prebuilts = _load_prebuilt_configuration()
   manifest = packages.load_root_manifest()
-  if use_public_only:
-    has_internal_access = False
-  else:
-    has_internal_access = _can_access_internal_gcs_bucket()
+  has_internal_access = _can_access_internal_gcs_bucket()
+  bucket = GCS_BUCKET_INTERNAL if has_internal_access else GCS_BUCKET_PUBLIC
   accessible_prebuilts = _filter_accessible_prebuilts(
       prebuilts, has_internal_access)
   wanted_packages = _get_packages(accessible_prebuilts, has_internal_access)
@@ -342,10 +324,10 @@ def fetch_google3_prebuilts(prebuilts, use_public_only=False):
   missing_packages = wanted_packages - existing_packages
 
   _remove_obsolete_files(existing_packages)
-  _fetch_packages(missing_packages)
+  _fetch_packages(missing_packages, bucket)
 
   _write_gn_file(accessible_prebuilts, has_internal_access)
-  _write_runtime_deps_file(accessible_prebuilts)
+  _write_runtime_deps_file(accessible_prebuilts, has_internal_access)
 
   _update_root_manifest(manifest, wanted_packages)
 
@@ -365,10 +347,7 @@ def main():
         'depot_tools must be on your PATH in order to find gsutil.py')
     return 1
 
-  prebuilt_configuration_files = _enumerate_default_prebuilt_configurations()
-  prebuilt_configurations = load_prebuilt_configuration_files(
-      prebuilt_configuration_files)
-  fetch_google3_prebuilts(prebuilt_configurations)
+  _fetch_google3_prebuilts()
   return 0
 
 
