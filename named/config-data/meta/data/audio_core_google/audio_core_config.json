@@ -1,17 +1,17 @@
 {
   "volume_curve": [
-    {"level": 0.0, "db": "MUTED"},
-    {"level": 0.01,"db": -53.0},
-    {"level": 0.1, "db": -44.0},
-    {"level": 0.2, "db": -38.0},
-    {"level": 0.3, "db": -32.0},
-    {"level": 0.4, "db": -26.0},
-    {"level": 0.5, "db": -21.0},
-    {"level": 0.6, "db": -16.0},
-    {"level": 0.7, "db": -11.0},
-    {"level": 0.8, "db":  -6.0},
-    {"level": 0.9, "db":  -2.5},
-    {"level": 1.0, "db":   0.0}
+    {"level":0.0, "db":-120.0},
+    {"level":0.01,"db": -53.0},
+    {"level":0.1, "db": -44.0},
+    {"level":0.2, "db": -38.0},
+    {"level":0.3, "db": -32.0},
+    {"level":0.4, "db": -26.0},
+    {"level":0.5, "db": -21.0},
+    {"level":0.6, "db": -16.0},
+    {"level":0.7, "db": -11.0},
+    {"level":0.8, "db":  -6.0},
+    {"level":0.9, "db":  -2.5},
+    {"level":1.0, "db":   0.0}
   ],
   "output_devices": [
     {
@@ -33,6 +33,9 @@
         "name": "linearize",
         "output_channels": 1,
         "output_rate": 96000,
+        "streams": [
+          "render:ultrasound"
+        ],
         "inputs": [
           {
             "name": "mix",
@@ -62,7 +65,6 @@
                   {
                     "lib": "google_audio_effects.so",
                     "effect": "waves",
-                    "name": "waves",
                     "config": {
                       "preset": "/config/data/waves.gps",
                       "tts_preset_offset": 0,
@@ -163,8 +165,6 @@
               },
               {
                 "name": "communications",
-                "min_gain_db": -41,
-                "max_gain_db": -11,
                 "output_channels": 1,
                 "output_rate": 48000,
                 "streams": [
@@ -222,7 +222,7 @@
                       "quality": 0.85,
                       "target_quality": 0.85,
                       "gain_factor": 1,
-                      "makeup_gain_db": 0
+                      "makeup_gain_db": 9
                     }
                   },
                   {
@@ -237,13 +237,13 @@
                     "lib": "google_audio_effects.so",
                     "effect": "dynamic_range_control",
                     "name": "communications_limiter",
-                    "_comment": "Limit output to -3dB due to added gain.",
+                    "_comment": "Limit output to -14 (11dB from max, and 3dB for added gain).",
                     "config": {
                       "dynamics_type": "limiter",
                       "envelope_type": "peak",
                       "input_gain_db": 0,
                       "output_gain_db": 0,
-                      "threshold_db": -3,
+                      "threshold_db": -14,
                       "ratio": 10,
                       "knee_width_db": 1,
                       "attack_s": 0.001,
@@ -275,9 +275,6 @@
               }
             ]
           }
-        ],
-        "streams": [
-          "render:ultrasound"
         ]
       }
     },
@@ -327,8 +324,8 @@
   "thermal_policy": [
     {
       "trip_point": {
-        "deactivate_below": 71,
-        "activate_at": 75
+        "deactivate_below": 70,
+        "activate_at": 74
       },
       "state_transitions": [
         {
@@ -351,8 +348,8 @@
     },
     {
       "trip_point": {
-        "deactivate_below": 82,
-        "activate_at": 86
+        "deactivate_below": 80,
+        "activate_at": 84
       },
       "state_transitions": [
         {
