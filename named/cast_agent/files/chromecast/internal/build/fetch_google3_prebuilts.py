@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 """Downloads Google3 prebuilts and supplies them to the build environment.
 
 The prebuilts are downloaded from a GCS bucket and stored locally. A GN file
@@ -8,7 +8,6 @@ The versions to fetch are governed by prebuilts.json
 """
 
 
-from __future__ import absolute_import
 import codecs
 import collections
 import glob
