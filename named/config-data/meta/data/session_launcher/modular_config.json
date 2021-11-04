@@ -61,10 +61,6 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
-                "service_name": "google.assistant.aoghGRPCProcess"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.assistant.libassistantv2.CastAgent"
             },
             {
@@ -78,14 +74,6 @@
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.cast.ccsconfig.CcsConfigWatcher"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
-                "service_name": "google.cast.cert.CastCertificateService"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
-                "service_name": "google.cast.cloudsettings.CloudSettingsManager"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
@@ -133,10 +121,6 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
-                "service_name": "google.cast.activityconfig.ActivityConfigManager"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.usonia.IpcHandler"
             },
             {
@@ -154,10 +138,6 @@
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/concierge_agent#meta/concierge_agent.cmx",
                 "service_name": "google.policy.concierge.ConciergeController"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/concierge_agent#meta/concierge_agent.cmx",
-                "service_name": "google.policy.concierge.ConciergeProvider"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
@@ -221,11 +201,11 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.assistant.grpctransport.LibassistantService"
+                "service_name": "google.assistant.libassistant.AssistantState"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.assistant.libassistant.AssistantState"
+                "service_name": "google.assistant.grpctransport.LibassistantService"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
@@ -234,14 +214,6 @@
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
                 "service_name": "google.assistant.libassistantv2.platform.Kronk"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.assistant.onDeviceAssistant"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.assistant.onDeviceSmartHome"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
@@ -286,13 +258,15 @@
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
                 "service_name": "google.policy.proximity.ProximityController"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cmx",
-                "service_name": "google.assistant.libassistantv2.Presence"
             }
         ],
         "component_args": [
+            {
+                "uri": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "args": [
+                    "--voice-call-aec-gain-fixed=48:0:48:0:48:0:46:2:39:9:34:14:29:19:25:23:24:24:24:24:23:25"
+                ]
+            },
             {
                 "uri": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
                 "args": [
@@ -323,6 +297,13 @@
                 "uri": "fuchsia-pkg://fuchsia.com/opal#meta/opal.cmx",
                 "args": [
                     "--stub"
+                ]
+            },
+            {
+                "uri": "fuchsia-pkg://fuchsia.com/stellar_agent#meta/stellar_agent.cmx",
+                "args": [
+                    "--libaa-classifiers-audio-gain-linear=4.2",
+                    "--tensorflow-classifiers-audio-gain-linear=16.8"
                 ]
             }
         ],
