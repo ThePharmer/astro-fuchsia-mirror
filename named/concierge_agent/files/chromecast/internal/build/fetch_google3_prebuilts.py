@@ -32,8 +32,15 @@ RUNTIME_DEPS_FILE = os.path.join(packages.get_packages_path(), 'runtime_deps')
 GOOGLE3_RESOURCE_DIR = os.path.join('resources', 'google3')
 SUPPORTED_ARCHITECTURES = ['arm', 'arm64', 'x64']
 
-NOT_AUTHENTICATED_ERROR_MSG = r'ServiceException: 401'
-ACCESS_DENIED_ERROR_MSG = r'AccessDeniedException: 403'
+# We search for these strings within the output of a subprocess call below. In
+# Python 3, the stdout and stderr fields in a subprocess object have type
+# 'bytes', and consequently re.search requires a 'bytes'.
+if sys.version_info[0] == 2:
+  NOT_AUTHENTICATED_ERROR_MSG = 'ServiceException: 401'
+  ACCESS_DENIED_ERROR_MSG = 'AccessDeniedException: 403'
+else:
+  NOT_AUTHENTICATED_ERROR_MSG = b'ServiceException: 401'
+  ACCESS_DENIED_ERROR_MSG = b'AccessDeniedException: 403'
 
 
 Manifest = collections.namedtuple(
@@ -57,8 +64,11 @@ def run_shell_command(cmd, cwd=None, raise_on_failure=True):
     (returncode, stdout, stderr) as a tuple.
   """
   logging.info(' '.join(cmd))
-  p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                       cwd=cwd)
+  p = subprocess.Popen(
+      cmd,
+      stdout=subprocess.PIPE,
+      stderr=subprocess.PIPE,
+      cwd=cwd)
   stdout, stderr = p.communicate()
   if p.returncode != 0 and raise_on_failure:
     raise RuntimeError('"{}" failed with returncode {}: {}'.format(
@@ -96,10 +106,10 @@ def _can_access_internal_gcs_bucket():
     # instructing them to re-authenticate in that case.
     run_shell_command(['gsutil.py', 'ls', 'gs://' + GCS_BUCKET_INTERNAL])
   except RuntimeError as e:
-    logging.error('Cannot access %s. Only fetching public prebuilts. '
-                  'REASON: %s',
-                  GCS_BUCKET_INTERNAL,
-                  e.message)
+    logging.info('Cannot access %s. Only fetching public prebuilts. '
+                 'REASON: %s',
+                 GCS_BUCKET_INTERNAL,
+                 str(e))
     return False
   return True
 
