@@ -61,7 +61,19 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
+                "service_name": "google.assistant.aoghGRPCProcess"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.assistant.libassistantv2.CastAgent"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
+                "service_name": "google.cast.DeviceInfoService"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
+                "service_name": "google.cast.UserAuthService"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
@@ -109,6 +121,10 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
+                "service_name": "google.cast.opal.CastService"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.cast.session.Manager"
             },
             {
@@ -138,6 +154,10 @@
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_assistant.cmx",
                 "service_name": "google.assistant.libassistantv2.CastAssistant"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_assistant.cmx",
+                "service_name": "google.kronk.api.MediaFocus"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/color_tint_service#meta/color_tint_service.cmx",
@@ -217,11 +237,11 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.assistant.libassistant.AssistantState"
+                "service_name": "google.assistant.grpctransport.LibassistantService"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.assistant.grpctransport.LibassistantService"
+                "service_name": "google.assistant.libassistant.AssistantState"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
@@ -233,11 +253,15 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.kronk.api.KronkControlService"
+                "service_name": "google.assistant.onDeviceAssistant"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
-                "service_name": "google.kronk.api.MediaFocus"
+                "service_name": "google.assistant.onDeviceSmartHome"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
+                "service_name": "google.kronk.api.KronkControlService"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/nest_policy_agent#meta/nest_policy_agent.cmx",
@@ -269,6 +293,10 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
+                "service_name": "google.proximity.ProximityService"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
                 "service_name": "google.proximity.ProximityWatcher"
             },
             {
@@ -284,8 +312,15 @@
             {
                 "uri": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "args": [
+                    "--enable_eureka_action_script_module",
                     "--disable-mdns=true",
                     "--managed-mode=true"
+                ]
+            },
+            {
+                "uri": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_assistant.cmx",
+                "args": [
+                    "--enable_cast_assistant_media_module"
                 ]
             },
             {
@@ -297,6 +332,8 @@
                     "--backend_type=auto",
                     "--enable_bluetooth_module=false",
                     "--cast_app_preloading_enabled=true",
+                    "--enable_cast_assistant_media_module",
+                    "--enable_eureka_action_script_module",
                     "--managed_mode=true"
                 ]
             },
@@ -320,6 +357,13 @@
                 "args": [
                     "--stub",
                     "--managed_mode"
+                ]
+            },
+            {
+                "uri": "fuchsia-pkg://fuchsia.com/stellar_agent#meta/stellar_agent.cmx",
+                "args": [
+                    "--libaa-classifiers-audio-gain-linear=4.2",
+                    "--tensorflow-classifiers-audio-gain-linear=16.8"
                 ]
             }
         ],

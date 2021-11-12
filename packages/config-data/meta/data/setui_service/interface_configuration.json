@@ -1,15 +1,18 @@
 {
-    "services": [
+    "interfaces": [
         "Accessibility",
         "Audio",
-        "Device",
-        "Display",
+        {
+            "Display": [
+                "Base",
+                "LightSensor"
+            ]
+        },
         "DoNotDisturb",
         "FactoryReset",
         "Input",
         "Intl",
         "Light",
-        "LightSensor",
         "NightMode",
         "Privacy",
         "Setup"
