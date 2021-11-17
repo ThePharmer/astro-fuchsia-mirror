@@ -1,11 +1,21 @@
 {
+  "allocator-dump-names": [
+    "blink_gc/*",
+    "discardable/*",
+    "gpu/*",
+    "malloc/*",
+    "partition_alloc/*",
+    "skia/*",
+    "v8/*",
+    "web_cache/*"
+  ],
   "allow-protected-graphics": true,
   "cdm-data-quota-bytes": 524288,
   "command-line-args": {
     "disable-features": "MojoVideoCapture,site-per-process,IntensiveWakeUpThrottling",
     "disable-mipmap-generation": "",
     "enable-cast-streaming-receiver": "",
-    "enable-features": "UseSkiaOutputDeviceBufferQueue",
+    "enable-features": "OriginTrials,AudioWorkletThreadRealtimePriority",
     "enable-low-end-device-mode": "true",
     "enable-scaling-clipped-images": "",
     "force-gpu-mem-available-mb": "64",
@@ -22,6 +32,9 @@
   },
   "data-quota-bytes": 2097152,
   "enable-frame-host-component": true,
+  "enable-video-only-receiver-for-app-ids": [
+    "BFD92C23"
+  ],
   "force-protected-video-buffers": true,
   "use-overlays-for-video": true
 }
