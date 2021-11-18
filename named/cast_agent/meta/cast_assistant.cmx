@@ -1,9 +1,7 @@
 {
   "program": {
-    "args": [
-      "--cast-assistant"
-    ],
-    "binary": "cast_agent_exe"
+    "binary": "cast_agent_exe",
+    "args": [ "--cast-assistant" ]
   },
   "sandbox": {
     "features": [
@@ -24,11 +22,10 @@
       "fuchsia.media.sessions2.Discovery",
       "fuchsia.modular.ComponentContext",
       "fuchsia.net.NameLookup",
-      "fuchsia.net.name.Lookup",
       "fuchsia.posix.socket.Provider",
       "fuchsia.settings.Audio",
-      "fuchsia.ui.policy.DeviceListenerRegistry",
       "fuchsia.update.channel.Provider",
+      "fuchsia.ui.policy.DeviceListenerRegistry",
       "google.assistant.grpctransport.LibassistantService",
       "google.assistant.libassistantv2.Kronk",
       "google.cast.actionscript.Executor",
