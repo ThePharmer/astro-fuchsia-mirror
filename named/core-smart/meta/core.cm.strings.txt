@@ -40,9 +40,6 @@ fuchsia.mediacodec.CodecFactory
 emergency
 fuchsia.location.position.EmergencyProvider
 /svc/fuchsia.location.position.EmergencyProvider
-widevine_cdm
-fuchsia.media.drm.Widevine
-/svc/fuchsia.media.drm.Widevine
 omaha-client-service
 fuchsia.update.channel.Provider
 /svc/fuchsia.update.channel.Provider
@@ -183,8 +180,6 @@ fuchsia.settings.Setup
 network
 fuchsia.net.http.Loader
 /svc/fuchsia.net.http.Loader
-fuchsia.net.interfaces.admin.Installer
-/svc/fuchsia.net.interfaces.admin.Installer
 fuchsia.net.interfaces.State
 /svc/fuchsia.net.interfaces.State
 fuchsia.net.name.Lookup
@@ -435,8 +430,6 @@ class/display-controller
 dev-mediacodec
 class/media-codec
 fuchsia.location.sensor.WlanBaseStationWatcher
-fuchsia.media.ProfileProvider
-widevine.oemcrypto.Provider
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.feedback.ComponentDataRegister
 omaha-client
@@ -449,10 +442,7 @@ factory
 install
 volume
 svc_for_sys
-/svc/widevine.oemcrypto.Provider
 persistent
-fuchsia.accessibility.semantics.SemanticsManager5
-/svc/fuchsia.accessibility.semantics.SemanticsManager
 /svc/fuchsia.bluetooth.bredr.Profile
 fuchsia.bluetooth.gatt.Server
 /svc/fuchsia.bluetooth.gatt.Server
@@ -474,6 +464,7 @@ fuchsia.lowpan.device.Lookup
 /svc/fuchsia.media.Audio
 /svc/fuchsia.media.AudioCore
 /svc/fuchsia.media.AudioDeviceEnumerator
+fuchsia.media.ProfileProvider
 /svc/fuchsia.media.ProfileProvider
 /svc/fuchsia.media.SessionAudioConsumerFactory
 /svc/fuchsia.media.sessions2.Discovery
@@ -499,8 +490,6 @@ fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.FlatlandDisplay
 /svc/fuchsia.ui.focus.FocusChainListenerRegistry
 /svc/fuchsia.ui.input.ImeService
-fuchsia.ui.input.PointerCaptureListenerRegistry
-/svc/fuchsia.ui.input.PointerCaptureListenerRegistry
 /svc/fuchsia.ui.input3.Keyboard
 /svc/fuchsia.ui.input3.KeyEventInjector
 /svc/fuchsia.ui.keyboard.focus.Controller
@@ -512,8 +501,6 @@ fuchsia.ui.policy.DeviceListenerRegistry-
 /svc/fuchsia.ui.policy.Presenter
 /svc/fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.shortcut.Manager
-fuchsia.ui.shortcut.Registry
-/svc/fuchsia.ui.shortcut.Registry
 /svc/fuchsia.ui.views.ViewRefInstalled
 /svc/fuchsia.virtualization.Manager
 fuchsia.weave.FactoryDataManager%
@@ -523,7 +510,7 @@ fuchsia.weave.Signer
 /svc_for_sys
 fuchsia-pkg://fuchsia.com/device_settings_manager#meta/device_settings_manager.cm
 fuchsia-pkg://fuchsia.com/session_manager#meta/session_manager.cm
-full-resolver-env
+session-env
 fuchsia-pkg://fuchsia.com/system-update-committer#meta/system-update-committer.cm
 fuchsia-pkg://fuchsia.com/forensics#meta/last_reboot.cm
 fuchsia-pkg://fuchsia.com/forensics#meta/exceptions.cm
@@ -531,6 +518,7 @@ fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
+full-resolver-env
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
 fuchsia-pkg://fuchsia.com/triage-detect#meta/triage-detect.cm
 fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
@@ -548,6 +536,7 @@ fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-brid
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
 fuchsia-pkg://fuchsia.com/system-metrics-logger#meta/system-metrics-logger-component.cm
 fuchsia-pkg://fuchsia.com/temperature-logger#meta/temperature-logger.cm
+fuchsia-pkg://fuchsia.com/universe-resolver#meta/full-resolver.cm
 fuchsia-pkg://fuchsia.com/pkg-cache#meta/pkg-cache.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
@@ -567,10 +556,8 @@ fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack-legacy-privacy.cm
-fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
-fuchsia-pkg://fuchsia.com/universe-resolver#meta/full-resolver.cm
 fuchsia-pkg://fuchsia.com/appmgr#meta/appmgr.cm
-session-env
+fuchsia-pkg
 starnix
