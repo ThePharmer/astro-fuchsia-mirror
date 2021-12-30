@@ -1,3 +1,5 @@
+netstack&
+fuchsia.net.interfaces.admin.Installer
 netstack
 fuchsia.net.interfaces.State
 fuchsia.net.routes.State
@@ -14,13 +16,13 @@ dhcpd
 dhcpv6-client
 netcfg
 fuchsia.stash.SecureStore
+fuchsia.tracing.provider.Registry
+netstack!
 fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.name.LookupAdmin
 fuchsia.net.debug.Interfaces
 fuchsia.net.filter.Filter
-netstack&
-fuchsia.net.interfaces.admin.Installer
 fuchsia.net.neighbor.Controller
 dev-class-ethernet
 dev-class-network
@@ -28,9 +30,9 @@ config-data
 root-ssl-certificates
 cache
 data
+#meta/netcfg-basic.cm
 #meta/dhcpd.cm
 #meta/dhcpv6-client.cm
 #meta/dns_resolver.cm
 #meta/http-client.cm
-#meta/netcfg-basic.cm
 #meta/netstack.cm
