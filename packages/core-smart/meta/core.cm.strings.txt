@@ -43,6 +43,9 @@ fuchsia.location.position.EmergencyProvider
 widevine_cdm
 fuchsia.media.drm.Widevine
 /svc/fuchsia.media.drm.Widevine
+feedback_id
+fuchsia.feedback.DeviceIdProvider
+/svc/fuchsia.feedback.DeviceIdProvider
 omaha-client-service
 fuchsia.update.channel.Provider
 /svc/fuchsia.update.channel.Provider
@@ -456,7 +459,6 @@ class/goldfish-sync
 fuchsia.bluetooth.snoop.Snoop
 fuchsia.metrics.MetricEventLoggerFactory
 feedback(
-fuchsia.feedback.DeviceIdProvider
 feedback!
 fuchsia.feedback.internal.CrashReportsDirectoryMigrator
 feedback7
@@ -485,6 +487,9 @@ class/media-codec
 fuchsia.location.sensor.WlanBaseStationWatcher
 fuchsia.media.ProfileProvider
 widevine.oemcrypto.Provider
+google.deviceproperty.Reader
+google.deviceproperty.Writer
+feedback-id
 fuchsia.cobalt.SystemDataUpdater
 omaha-client
 fuchsia.media.AudioDeviceEnumerator
@@ -496,6 +501,8 @@ factory
 install
 svc_for_sys
 /svc/widevine.oemcrypto.Provider
+/svc/google.deviceproperty.Reader
+/svc/google.deviceproperty.Writer
 persistent
 fuchsia.accessibility.semantics.SemanticsManager5
 /svc/fuchsia.accessibility.semantics.SemanticsManager
@@ -505,7 +512,6 @@ fuchsia.factory.MiscFactoryStoreProvider-
 /svc/fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.factory.WeaveFactoryStoreProvider
 /svc/fuchsia.factory.WeaveFactoryStoreProvider
-/svc/fuchsia.feedback.DeviceIdProvider
 /svc/fuchsia.feedback.internal.CrashReportsDirectoryMigrator
 /svc/fuchsia.feedback.internal.FeedbackDataDirectoryMigrator
 /svc/fuchsia.intl.PropertyProvider
@@ -615,6 +621,7 @@ fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack-legacy-privacy.cm
 fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
+fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 fuchsia-pkg://fuchsia.com/universe-resolver#meta/full-resolver.cm
