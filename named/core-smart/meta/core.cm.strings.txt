@@ -26,6 +26,9 @@ fuchsia.memory.Monitor
 /svc/fuchsia.memory.Monitor
 fuchsia.memorypressure.Provider
 /svc/fuchsia.memorypressure.Provider
+factory_reset
+fuchsia.recovery.FactoryReset
+/svc/fuchsia.recovery.FactoryReset
 system-updater
 fuchsia.update.installer.Installer
 /svc/fuchsia.update.installer.Installer
@@ -386,7 +389,7 @@ fuchsia.ui.policy.DeviceListenerRegistry
 dev-light
 class/light
 fuchsia.sys2.ComponentResolver
-full-resolver
+universe-resolver
 fuchsia.factory.MiscFactoryStoreProvider
 dev-sysmem
 class/sysmem
@@ -476,10 +479,13 @@ class/aml-ram
 ffx-laboratory
 laboratory-data
 laboratory-cache
+fuchsia.tee.Application.808032e0-fd9e-4e6f-8896-544735c98480
+fuchsia.tee.DeviceInfo
 fuchsia.pkg.RetainedPackages
 system
 pkgfs-system
 fuchsia.sys2.EventSource
+full-resolver
 dev-display-controller
 class/display-controller
 dev-mediacodec
@@ -500,6 +506,8 @@ durable
 factory
 install
 svc_for_sys
+/svc/fuchsia.tee.Application.808032e0-fd9e-4e6f-8896-544735c98480
+/svc/fuchsia.tee.DeviceInfo
 /svc/widevine.oemcrypto.Provider
 /svc/google.deviceproperty.Reader
 /svc/google.deviceproperty.Writer
@@ -605,6 +613,7 @@ fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
 fuchsia-pkg://fuchsia.com/ssh-key-manager#meta/ssh-key-manager.cm
+fuchsia-pkg://fuchsia.com/universe-resolver#meta/universe-resolver.cm
 bt-avrcp3
 fuchsia-pkg://fuchsia.com/bt-avrcp#meta/bt-avrcp.cm
 fuchsia-pkg://fuchsia.com/network#meta/network.cm
@@ -614,6 +623,7 @@ fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
+fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
 fuchsia-pkg://fuchsia.com/mem#meta/mem.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
@@ -624,6 +634,7 @@ fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
 fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
-fuchsia-pkg://fuchsia.com/universe-resolver#meta/full-resolver.cm
 fuchsia-pkg://fuchsia.com/appmgr#meta/appmgr.cm
+universe-resolver-env
+fuchsia-pkg
 starnix
