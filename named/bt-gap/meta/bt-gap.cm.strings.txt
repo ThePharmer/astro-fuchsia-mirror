@@ -1,6 +1,7 @@
 binary
 bin/bt_gap
-/dev
+dev-bt-host
+/dev/class/bt-host
 fuchsia.device.NameProvider
 /svc/fuchsia.device.NameProvider
 fuchsia.stash.SecureStore
@@ -12,8 +13,6 @@ fuchsia.bluetooth.gatt.Server
 fuchsia.bluetooth.le.Central
 fuchsia.bluetooth.le.Peripheral
 fuchsia.bluetooth.sys.Access
-fuchsia.bluetooth.sys.Bootstrap
-fuchsia.bluetooth.sys.Configuration
 fuchsia.bluetooth.sys.HostWatcher
 diagnostics
 /svc/fuchsia.bluetooth.bredr.Profile
@@ -21,7 +20,5 @@ diagnostics
 /svc/fuchsia.bluetooth.le.Central
 /svc/fuchsia.bluetooth.le.Peripheral
 /svc/fuchsia.bluetooth.sys.Access
-/svc/fuchsia.bluetooth.sys.Bootstrap
-/svc/fuchsia.bluetooth.sys.Configuration
 /svc/fuchsia.bluetooth.sys.HostWatcher
 /diagnostics
