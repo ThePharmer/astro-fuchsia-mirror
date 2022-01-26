@@ -11,38 +11,23 @@
         "nat_rules": [],
         "rdr_rules": [],
         "rules": [
-          "pass in proto tcp to range 8008:8009;",
-          "pass in proto tcp to port 8012;",
-          "pass in proto tcp to port 8443;",
-          "pass in proto tcp to port 9000;",
-          "pass in proto tcp to port 9222;",
-          "pass in proto tcp to port 10001;",
-          "pass in proto tcp to range 10005:10007;",
-          "pass in proto tcp to port 10010;",
-          "pass in proto tcp to port 10101;",
-          "pass in proto tcp to range 11095:11096;",
-          "pass in proto tcp to range 16000:65535;",
-          "drop in proto tcp to range 1:65535;",
-          "pass in proto udp to port 67;",
-          "pass in proto udp to port 1900;",
-          "pass in proto udp to port 5004;",
-          "pass in proto udp to port 5353;",
-          "pass in proto udp to range 8700:8800;",
-          "pass in proto udp to range 10001:10002;",
-          "pass in proto udp to port 10004;",
-          "pass in proto udp to port 10006;",
-          "pass in proto udp to port 10008;",
-          "pass in proto udp to port 10101;",
-          "pass in proto udp to port 11095;",
-          "pass in proto udp to range 16000:65535;",
-          "drop in proto udp to range 1:65535;"
+            "pass in proto tcp to range 1024:65535;",
+            "drop in proto tcp to range 1:65535;"
         ]
     },
     "filter_enabled_interface_types": [
         "wlan"
     ],
-    "interface_metrics": {
-        "wlan": 90,
-        "eth": 100
-    }
+    "rules": [
+        [
+            [
+                "all",
+                "all"
+            ],
+            [
+                "ip_address",
+                "dhcp"
+            ]
+        ]
+    ]
 }
