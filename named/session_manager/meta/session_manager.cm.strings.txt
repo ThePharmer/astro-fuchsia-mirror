@@ -1,7 +1,7 @@
 binary
 bin/session_manager
-fuchsia.sys2.Realm
-/svc/fuchsia.sys2.Realm
+fuchsia.component.Realm
+/svc/fuchsia.component.Realm
 fuchsia.cobalt.LoggerFactory
 /svc/fuchsia.cobalt.LoggerFactory
 fuchsia.ui.lifecycle.LifecycleController-
@@ -16,10 +16,21 @@ fuchsia.session.ElementManager
 fuchsia.session.Launcher
 fuchsia.session.Restarter
 fuchsia.sessionmanager.Startup
+fuchsia.ui.accessibility.view.Registry
 session
+fuchsia.deprecatedtimezone.Timezone
+fuchsia.feedback.CrashReporter
+fuchsia.fonts.Provider
 fuchsia.hardware.power.statecontrol.Admin
+fuchsia.identity.account.AccountManager
+fuchsia.intl.PropertyProvider
+fuchsia.intl.TimeZones
+fuchsia.posix.socket.Provider
 fuchsia.sys.Launcher
+fuchsia.sysmem.Allocator
 fuchsia.tracing.provider.Registry
+fuchsia.ui.composition.Flatland
+fuchsia.ui.composition.FlatlandDisplay
 fuchsia.ui.focus.FocusChainListenerRegistry
 fuchsia.ui.input.ImeService
 fuchsia.ui.input3.Keyboard
@@ -30,6 +41,7 @@ fuchsia.ui.policy.Presenter
 fuchsia.ui.scenic.Scenic
 fuchsia.ui.shortcut.Manager
 fuchsia.ui.views.ViewRefInstalled
+fuchsia.vulkan.loader.Loader
 cache
 data
 dev-input-report
@@ -39,3 +51,4 @@ dev-input-report
 /svc/fuchsia.session.Launcher
 /svc/fuchsia.session.Restarter
 /svc/fuchsia.sessionmanager.Startup
+/svc/fuchsia.ui.accessibility.view.Registry
