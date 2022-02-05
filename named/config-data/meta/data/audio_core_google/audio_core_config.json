@@ -1,17 +1,17 @@
 {
   "volume_curve": [
-    {"level": 0.0, "db": "MUTED"},
-    {"level": 0.01,"db": -53.0},
-    {"level": 0.1, "db": -44.0},
-    {"level": 0.2, "db": -38.0},
-    {"level": 0.3, "db": -32.0},
-    {"level": 0.4, "db": -26.0},
-    {"level": 0.5, "db": -21.0},
-    {"level": 0.6, "db": -16.0},
-    {"level": 0.7, "db": -11.0},
-    {"level": 0.8, "db":  -6.0},
-    {"level": 0.9, "db":  -2.5},
-    {"level": 1.0, "db":   0.0}
+    {"level":0.0, "db":"MUTED"},
+    {"level":0.01,"db": -53.0},
+    {"level":0.1, "db": -44.0},
+    {"level":0.2, "db": -38.0},
+    {"level":0.3, "db": -32.0},
+    {"level":0.4, "db": -26.0},
+    {"level":0.5, "db": -21.0},
+    {"level":0.6, "db": -16.0},
+    {"level":0.7, "db": -11.0},
+    {"level":0.8, "db":  -6.0},
+    {"level":0.9, "db":  -2.5},
+    {"level":1.0, "db":   0.0}
   ],
   "output_devices": [
     {
@@ -33,6 +33,9 @@
         "name": "linearize",
         "output_channels": 1,
         "output_rate": 96000,
+        "streams": [
+          "render:ultrasound"
+        ],
         "inputs": [
           {
             "name": "mix",
@@ -62,7 +65,6 @@
                   {
                     "lib": "google_audio_effects.so",
                     "effect": "waves",
-                    "name": "waves",
                     "config": {
                       "preset": "/config/data/waves.gps",
                       "tts_preset_offset": 0,
@@ -275,9 +277,6 @@
               }
             ]
           }
-        ],
-        "streams": [
-          "render:ultrasound"
         ]
       }
     },
@@ -325,27 +324,6 @@
     }
   ],
   "thermal_policy": [
-    {
-      "nominal_config": true,
-      "state_transitions": [
-        {
-          "target_name": "Thermal Throttle",
-          "config": {
-            "_comment": "Nominal (unthrottled) state",
-            "dynamics_type": "compressor",
-            "envelope_type": "rms",
-            "input_gain_db": 0,
-            "output_gain_db": 0,
-            "threshold_db": -44,
-            "ratio": 1,
-            "knee_width_db": 0,
-            "attack_s": 0.01,
-            "release_s": 0.02,
-            "lookahead_s": 0
-          }
-        }
-      ]
-    },
     {
       "trip_point": {
         "deactivate_below": 71,

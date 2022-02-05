@@ -1,5 +1,13 @@
 binary
 bin/last_reboot
+fuchsia.feedback.CrashReporter
+/svc/fuchsia.feedback.CrashReporter
+fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegisterE
+/svc/fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
+fuchsia.metrics.MetricEventLoggerFactory-
+/svc/fuchsia.metrics.MetricEventLoggerFactory
+boot
+/boot
 cache
 /cache
 /tmp
@@ -9,7 +17,7 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.net.interfaces.State
 /svc/fuchsia.net.interfaces.State
-fuchsia.feedback.internal.LastRebootDirectoryMigrator
+fuchsia.feedback.LastRebootInfoProvider
 diagnostics
-/svc/fuchsia.feedback.internal.LastRebootDirectoryMigrator
+/svc/fuchsia.feedback.LastRebootInfoProvider
 /diagnostics
