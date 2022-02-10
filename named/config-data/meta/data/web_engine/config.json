@@ -1,19 +1,9 @@
 {
   "allow-protected-graphics": true,
-  "allocator-dump-names": [
-    "blink_gc/*",
-    "discardable/*",
-    "gpu/*",
-    "malloc/*",
-    "partition_alloc/*",
-    "skia/*",
-    "v8/*",
-    "web_cache/*"
-  ],
   "command-line-args": {
     "disable-features": "MojoVideoCapture,site-per-process,IntensiveWakeUpThrottling",
     "disable-mipmap-generation": "",
-    "enable-features": "OriginTrials,AudioWorkletThreadRealtimePriority",
+    "enable-features": "UseSkiaOutputDeviceBufferQueue",
     "enable-cast-streaming-receiver": "",
     "enable-low-end-device-mode": "true",
     "enable-scaling-clipped-images": "",
@@ -24,7 +14,6 @@
     "gpu-rasterization-msaa-sample-count": "0",
     "max-decoded-image-size-mb": "10",
     "min-height-for-gpu-raster-tile": "128",
-    "ozone-platform": "scenic",
     "vmodule": "batching_media_log=1",
     "vulkan-heap-memory-limit-mb": "160",
     "vulkan-sync-cpu-memory-limit-mb": "96",
