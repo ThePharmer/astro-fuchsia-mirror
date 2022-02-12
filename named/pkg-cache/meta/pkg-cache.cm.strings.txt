@@ -4,6 +4,8 @@ pkgfs
 /pkgfs
 blob
 /blob
+fuchsia.boot.Arguments
+/svc/fuchsia.boot.Arguments
 fuchsia.cobalt.LoggerFactory
 /svc/fuchsia.cobalt.LoggerFactory
 fuchsia.tracing.provider.Registry
@@ -15,8 +17,14 @@ fuchsia.logger.LogSink
 fuchsia.pkg.PackageCache
 fuchsia.pkg.RetainedPackages
 fuchsia.space.Manager
+system
+pkgfs-packages
+pkgfs-versions
 diagnostics
 /svc/fuchsia.pkg.PackageCache
 /svc/fuchsia.pkg.RetainedPackages
 /svc/fuchsia.space.Manager
+/pkgfs/system
+/pkgfs/packages
+/pkgfs/versions
 /diagnostics
