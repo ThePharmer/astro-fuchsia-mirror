@@ -255,6 +255,13 @@ fuchsia.pkg.RepositoryManager
 /svc/fuchsia.pkg.RepositoryManager
 fuchsia.pkg.rewrite.Engine
 /svc/fuchsia.pkg.rewrite.Engine
+mdns
+fuchsia.net.mdns.Publisher
+/svc/fuchsia.net.mdns.Publisher
+fuchsia.net.mdns.Resolver
+/svc/fuchsia.net.mdns.Resolver
+fuchsia.net.mdns.Subscriber
+/svc/fuchsia.net.mdns.Subscriber
 last_reboot
 fuchsia.feedback.internal.LastRebootDirectoryMigrator
 /svc/fuchsia.feedback.internal.LastRebootDirectoryMigrator
@@ -325,8 +332,6 @@ fuchsia.location.namedplace.RegulatoryRegionWatcher
 session-manager
 fuchsia.element.GraphicalPresenter
 /svc/fuchsia.element.GraphicalPresenter
-fuchsia.input.injection.InputDeviceRegistry
-/svc/fuchsia.input.injection.InputDeviceRegistry
 fuchsia.session.Launcher
 /svc/fuchsia.session.Launcher
 exceptions
@@ -589,6 +594,7 @@ fuchsia-pkg://fuchsia.com/forensics#meta/last_reboot.cm
 fuchsia-pkg://fuchsia.com/forensics#meta/exceptions.cm
 feedback4
 fuchsia-pkg://fuchsia.com/forensics#meta/feedback.cm
+fuchsia-pkg://fuchsia.com/mdns#meta/mdns.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
 sysmem_connectorC
