@@ -6,6 +6,8 @@ fuchsia.net.routes.State
 fuchsia.net.stack.Stack
 fuchsia.netstack.Netstack
 fuchsia.posix.socket.Provider
+netstack!
+fuchsia.posix.socket.raw.Provider
 dns-resolver
 fuchsia.net.name.Lookup
 http-client
@@ -15,9 +17,9 @@ fuchsia.logger.LogSink
 dhcpd
 dhcpv6-client
 netcfg
+reachability
 fuchsia.stash.SecureStore
 fuchsia.tracing.provider.Registry
-netstack!
 fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.name.LookupAdmin
@@ -37,3 +39,4 @@ test-components
 #meta/dns_resolver.cm
 #meta/http-client.cm
 #meta/netstack.cm
+#meta/reachability.cm
