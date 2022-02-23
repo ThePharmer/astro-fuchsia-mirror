@@ -138,6 +138,10 @@ fuchsia.paver.Paver
 /svc/fuchsia.paver.Paver
 fuchsia.power.profile.Watcher
 /svc/fuchsia.power.profile.Watcher
+fuchsia.power.systemmode.ClientConfigurator
+/svc/fuchsia.power.systemmode.ClientConfigurator
+fuchsia.power.systemmode.Requester
+/svc/fuchsia.power.systemmode.Requester
 fuchsia.process.Launcher
 /svc/fuchsia.process.Launcher
 fuchsia.scheduler.ProfileProvider
@@ -364,6 +368,9 @@ svc_from_sys
 /svc_from_sys
 data
 fuchsia.sys2.StorageAdmin
+cache
+fuchsia.sys2.StorageAdmin.cache
+fuchsia.sys2.StorageAdmin.tmp
 fuchsia.component.Binder
 fuchsia.sessionmanager.Startup
 detect
@@ -407,7 +414,6 @@ dev-class-ethernet
 class/ethernet
 dev-class-network
 class/network
-cache
 blob
 pkgfs
 forensics
