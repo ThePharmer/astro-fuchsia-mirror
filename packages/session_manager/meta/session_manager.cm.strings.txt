@@ -18,9 +18,7 @@ fuchsia.accessibility.gesture.ListenerRegistry
 session
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.accessibility.virtualkeyboard.Registry
-fuchsia.bluetooth.a2dp.AudioMode
 fuchsia.bluetooth.gatt.Server
-fuchsia.bluetooth.hfp.Hfp
 fuchsia.bluetooth.le.Central
 fuchsia.bluetooth.le.Peripheral
 fuchsia.bluetooth.sys.Access
@@ -45,7 +43,6 @@ fuchsia.input.virtualkeyboard.ControllerCreator
 fuchsia.input.virtualkeyboard.Manager
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.location.namedplace.RegulatoryRegionWatcher
-fuchsia.location.position.EmergencyProvider
 fuchsia.lowpan.bootstrap.Thread
 fuchsia.media.ActivityReporter
 fuchsia.media.audio.EffectsController
@@ -67,7 +64,7 @@ fuchsia.net.mdns.Subscriber
 fuchsia.net.routes.State
 fuchsia.netstack.Netstack
 fuchsia.paver.Paver
-fuchsia.power.BatteryManager
+fuchsia.power.battery.BatteryManager
 fuchsia.power.profile.Watcher
 fuchsia.power.systemmode.ClientConfigurator
 fuchsia.recovery.FactoryReset
@@ -102,13 +99,12 @@ fuchsia.ui.shortcut.Registry
 fuchsia.ultrasound.Factory
 fuchsia.update.channel.Provider
 fuchsia.update.channelcontrol.ChannelControl
+fuchsia.update.config.OptOut
+fuchsia.update.config.OptOutAdmin
 fuchsia.update.Manager
-fuchsia.weave.Bootstrap
 fuchsia.weave.FactoryDataManager
 fuchsia.weave.Provisioner
 fuchsia.weave.Signer
-fuchsia.weave.Stack
-fuchsia.weave.StackProvider
 fuchsia.web.ContextProvider
 fuchsia.wlan.policy.AccessPointProvider
 fuchsia.wlan.policy.ClientProvider
@@ -118,6 +114,12 @@ google.device.key.encryptor.DeviceKeyEncryptor
 google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
+fuchsia.location.position.EmergencyProvider
+fuchsia.bluetooth.a2dp.AudioMode
+fuchsia.bluetooth.hfp.Hfp
+fuchsia.weave.Bootstrap
+fuchsia.weave.Stack
+fuchsia.weave.StackProvider
 fuchsia.identity.account.AccountManager
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.session.scene.Manager
