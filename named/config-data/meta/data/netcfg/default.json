@@ -18,8 +18,16 @@
     "filter_enabled_interface_types": [
         "wlan"
     ],
-    "interface_metrics": {
-        "wlan": 90,
-        "eth": 100
-    }
+    "rules": [
+        [
+            [
+                "all",
+                "all"
+            ],
+            [
+                "ip_address",
+                "dhcp"
+            ]
+        ]
+    ]
 }
