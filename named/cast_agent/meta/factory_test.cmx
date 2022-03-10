@@ -1,14 +1,12 @@
 {
   "program": {
-    "args": [
-      "--factory-test"
-    ],
-    "binary": "cast_agent_exe"
+    "binary": "cast_agent_exe",
+    "args": [ "--factory-test" ]
   },
   "sandbox": {
     "features": [
-      "deprecated-ambient-replace-as-executable",
-      "isolated-persistent-storage"
+      "isolated-persistent-storage",
+      "deprecated-ambient-replace-as-executable"
     ],
     "services": [
       "fuchsia.accessibility.semantics.SemanticsManager",
@@ -28,7 +26,6 @@
       "fuchsia.modular.SessionShellContext",
       "fuchsia.net.NameLookup",
       "fuchsia.net.interfaces.State",
-      "fuchsia.net.name.Lookup",
       "fuchsia.posix.socket.Provider",
       "fuchsia.process.Launcher",
       "fuchsia.settings.Audio",
