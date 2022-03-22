@@ -1,10 +1,11 @@
 {
   "program": {
-    "binary": "cast_agent_exe",
-    "args": [ "--multizone-follower" ]
+    "args": [
+      "--multizone-follower"
+    ],
+    "binary": "cast_agent_exe"
   },
   "sandbox": {
-    "features": [],
     "services": [
       "fuchsia.feedback.CrashReportingProductRegister",
       "fuchsia.intl.PropertyProvider",
@@ -12,8 +13,8 @@
       "fuchsia.media.Audio",
       "fuchsia.media.ProfileProvider",
       "fuchsia.media.sessions2.Publisher",
-      "fuchsia.net.NameLookup",
       "fuchsia.net.interfaces.State",
+      "fuchsia.net.name.Lookup",
       "fuchsia.posix.socket.Provider",
       "fuchsia.tracing.provider.Registry"
     ]
