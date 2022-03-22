@@ -20,8 +20,8 @@ var loadTimeData;
 
 class LoadTimeData {
   constructor() {
-    /** @type {?Object} */
-    this.data_ = null;
+    /** @type {Object} */
+    this.data_;
   }
 
   /**
@@ -175,20 +175,9 @@ class LoadTimeData {
     }
   }
 
-  /**
-   * Reset loadTimeData's data. Should only be used in tests.
-   * @param {?Object} newData The data to restore to, when null restores to
-   *    unset state.
-   */
-  resetForTesting(newData = null) {
-    this.data_ = newData;
-  }
-
-  /**
-   * @return {boolean} Whether loadTimeData.data has been set.
-   */
-  isInitialized() {
-    return this.data_ !== null;
+  /** Reset loadTimeData's data to empty. Should only be used in tests. */
+  resetForTesting() {
+    this.data_ = {};
   }
 }
 
