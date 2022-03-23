@@ -53,6 +53,9 @@ fuchsia.update.channelcontrol.ChannelControl
 /svc/fuchsia.update.channelcontrol.ChannelControl
 fuchsia.update.Manager
 /svc/fuchsia.update.Manager
+playready-cdm
+fuchsia.media.drm.PlayReady
+/svc/fuchsia.media.drm.PlayReady
 widevine_cdm
 fuchsia.media.drm.Widevine
 /svc/fuchsia.media.drm.Widevine
@@ -562,6 +565,7 @@ omaha-client
 oemcrypto
 widevine.oemcrypto.Provider
 fuchsia.factory.WidevineFactoryStoreProvider
+fuchsia.factory.PlayReadyFactoryStoreProvider
 dev-light
 class/light
 fuchsia.recovery.policy.Device
@@ -596,6 +600,7 @@ fuchsia.accessibility.tts.EngineRegistry-
 /svc/google.deviceproperty.Reader
 /svc/google.deviceproperty.Writer
 /svc/fuchsia.factory.WidevineFactoryStoreProvider
+/svc/fuchsia.factory.PlayReadyFactoryStoreProvider
 /svc/fuchsia.media.ProfileProvider
 persistent
 fuchsia.accessibility.semantics.SemanticsManager5
@@ -722,6 +727,7 @@ fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
+fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
 fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
 fuchsia-pkg://fuchsia.com/waves_host#meta/waves_host.cm
 bt-avrcp3
