@@ -8,7 +8,7 @@
     {
         "name": "Graphics",
         "process": "",
-        "vmo": "magma_create_buffer|Mali .*|Magma.*|ImagePipe2Surface.*|GFXBufferCollection.*|ScenicImageMemory|Display.*|CompactImage.*|GFX Device Memory.*",
+        "vmo": "magma_create_buffer|Mali .*|Magma.*|ImagePipe2Surface.*|GFXBufferCollection.*|ScenicImageMemory|Display.*|CompactImage.*|GFX Device Memory.*|FlatlandImageMemory.*",
         "event_code": 2
     },
     {
@@ -24,18 +24,6 @@
         "event_code": 26
     },
     {
-        "name": "Fshost",
-        "process": "fshost\\.cm",
-        "vmo": "",
-        "event_code": 21
-    },
-    {
-        "name": "Minfs",
-        "process": "/pkg/bin/minfs",
-        "vmo": "",
-        "event_code": 4
-    },
-    {
         "name": "BlobfsInactive",
         "process": "/pkg/bin/blobfs",
         "vmo": "inactive-blob-.*",
@@ -46,6 +34,30 @@
         "process": "/pkg/bin/blobfs",
         "vmo": "",
         "event_code": 5
+    },
+    {
+        "name": "Amlogic",
+        "process": "driver_host:pdev:05:00:f",
+        "vmo": "",
+        "event_code": 10
+    },
+    {
+        "name": "Perception",
+        "process": "concierge_agent\\.cmx|fuchsia_perception_estelle_agent",
+        "vmo": "",
+        "event_code": 37
+    },
+    {
+        "name": "Fshost",
+        "process": "fshost\\.cm",
+        "vmo": "",
+        "event_code": 21
+    },
+    {
+        "name": "Minfs",
+        "process": "/pkg/bin/minfs",
+        "vmo": "",
+        "event_code": 4
     },
     {
         "name": "FlutterApps",
@@ -61,7 +73,7 @@
     },
     {
         "name": "Web",
-        "process": "web_engine_exe:.*",
+        "process": "cast_runner\\.cmx|web_instance\\.cmx|web_engine_exe:.*",
         "vmo": "",
         "event_code": 7
     },
@@ -73,19 +85,13 @@
     },
     {
         "name": "Scenic",
-        "process": "scenic\\.cmx",
+        "process": "root_presenter\\.cmx|scenic\\.cmx",
         "vmo": "",
         "event_code": 9
     },
     {
-        "name": "Amlogic",
-        "process": "driver_host:pdev:05:00:f",
-        "vmo": "",
-        "event_code": 10
-    },
-    {
         "name": "Netstack",
-        "process": "netstack\\.cmx",
+        "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netcfg.*\\.cm|netstack\\.cm|netsvc\\.cm|network-tun\\.cmx|mdns\\.cmx",
         "vmo": "",
         "event_code": 11
     },
@@ -97,19 +103,19 @@
     },
     {
         "name": "Cast",
-        "process": "cast_agent\\.cmx",
+        "process": "cast_agent\\.cmx|cast_assistant\\.cmx|cast_auth_server\\.cmx",
         "vmo": "",
         "event_code": 14
     },
     {
         "name": "Archivist",
-        "process": "archivist\\.cm",
+        "process": "archivist\\.cm|sampler\\.cm",
         "vmo": "",
         "event_code": 22
     },
     {
         "name": "Cobalt",
-        "process": "cobalt\\.cmx",
+        "process": "cobalt\\.cm|cobalt_system_metrics\\.cmx",
         "vmo": "",
         "event_code": 23
     },
@@ -133,13 +139,13 @@
     },
     {
         "name": "ComponentManager",
-        "process": "bin/component_manager",
+        "process": "bin/bootsvc|bin/component_manager|miscsvc\\.cm|svchost\\.cm|sysmgr\\.cmx",
         "vmo": "",
         "event_code": 40
     },
     {
         "name": "Comms",
-        "process": "comms_agent\\.cmx",
+        "process": "comms_agent\\.cmx|duocore\\.cmx",
         "vmo": "",
         "event_code": 41
     },
@@ -163,7 +169,7 @@
     },
     {
         "name": "Feedback",
-        "process": "feedback_data\\.cmx",
+        "process": "exceptions\\.cmx|feedback\\.cmx|system_log_recorder",
         "vmo": "",
         "event_code": 46
     },
@@ -175,8 +181,86 @@
     },
     {
         "name": "OtherDrivers",
-        "process": "driver_host:.*",
+        "process": "driver_host:.*|pwrbtn-monitor\\.cm",
         "vmo": "",
         "event_code": 48
+    },
+    {
+        "name": "A11y",
+        "process": "a11y-manager\\.cmx",
+        "vmo": "",
+        "event_code": 50
+    },
+    {
+        "name": "Bluetooth",
+        "process": "bt-.*",
+        "vmo": "",
+        "event_code": 51
+    },
+    {
+        "name": "HCI",
+        "process": "activity\\.cm|text_manager\\.cmx",
+        "vmo": "",
+        "event_code": 52
+    },
+    {
+        "name": "I18N",
+        "process": "fonts\\.cm|intl_services\\.cmx|timezone\\.cmx",
+        "vmo": "",
+        "event_code": 53
+    },
+    {
+        "name": "SetUI",
+        "process": "setui_service\\.cm",
+        "vmo": "",
+        "event_code": 54
+    },
+    {
+        "name": "SoftwareDelivery",
+        "process": "pkg-cache\\.cm|system-update.*",
+        "vmo": "",
+        "event_code": 55
+    },
+    {
+        "name": "WLAN",
+        "process": "emergency\\.cm|regulatory_region\\.cm|wlan.*",
+        "vmo": "",
+        "event_code": 58
+    },
+    {
+        "name": "NetworkPolicy",
+        "process": "http-client\\.cm|reachability\\.cmx",
+        "vmo": "",
+        "event_code": 59
+    },
+    {
+        "name": "SmartDisplaySession",
+        "process": "basemgr\\.cmx|session.*",
+        "vmo": "",
+        "event_code": 61
+    },
+    {
+        "name": "OtherProductComponents",
+        "process": "brightness_manager\\.cm|color_tint_service\\.cmx|nest_policy_agent\\.cmx|presence_agent\\.cmx",
+        "vmo": "",
+        "event_code": 62
+    },
+    {
+        "name": "DriverFramework",
+        "process": "driver-index\\.cm|driver_manager\\.cm|sysinfo\\.cm",
+        "vmo": "",
+        "event_code": 63
+    },
+    {
+        "name": "EngTools",
+        "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor\\.cm|overnetstack\\.cmx|remote.*|sh:console|sshd-host\\.cmx",
+        "vmo": "",
+        "event_code": 64
+    },
+    {
+        "name": "Power",
+        "process": "power-manager\\.cm|shutdown-shim\\.cm",
+        "vmo": "",
+        "event_code": 65
     }
 ]
