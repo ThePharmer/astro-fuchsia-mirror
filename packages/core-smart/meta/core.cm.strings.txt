@@ -16,6 +16,9 @@ fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 wlandevicemonitor
 fuchsia.wlan.device.service.DeviceMonitor
 /svc/fuchsia.wlan.device.service.DeviceMonitor
+wlanstack
+fuchsia.wlan.device.service.DeviceService
+/svc/fuchsia.wlan.device.service.DeviceService
 build-info
 fuchsia.buildinfo.Provider
 /svc/fuchsia.buildinfo.Provider
@@ -110,9 +113,6 @@ fuchsia.bluetooth.internal.a2dp.Controller
 bt-avrcp#
 fuchsia.bluetooth.avrcp.PeerManager
 /svc/fuchsia.bluetooth.avrcp.PeerManager
-wlanstack
-fuchsia.wlan.device.service.DeviceService
-/svc/fuchsia.wlan.device.service.DeviceService
 tee_manager
 fuchsia.tee.DeviceInfo
 /svc/fuchsia.tee.DeviceInfo
@@ -728,6 +728,7 @@ fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
+fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
 fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
@@ -737,7 +738,6 @@ fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
-fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack-legacy-privacy.cm
 fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
