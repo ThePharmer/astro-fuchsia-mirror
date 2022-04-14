@@ -128,6 +128,24 @@
         },
         {
             "event_codes": [
+                1,
+                0
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/bredr:connection_events"
+        },
+        {
+            "event_codes": [
+                1,
+                1
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/bredr:disconnection_events"
+        },
+        {
+            "event_codes": [
                 0,
                 1
             ],
@@ -146,165 +164,21 @@
         },
         {
             "event_codes": [
-                1,
                 0,
-                1
-            ],
-            "metric_id": 11,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/incoming:successful_connections"
-        },
-        {
-            "event_codes": [
-                1,
-                1,
-                1
-            ],
-            "metric_id": 11,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/incoming:failed_connections"
-        },
-        {
-            "event_codes": [
-                1,
-                0,
-                2
-            ],
-            "metric_id": 11,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/outgoing:successful_connections"
-        },
-        {
-            "event_codes": [
-                1,
-                1,
-                2
-            ],
-            "metric_id": 11,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/outgoing:failed_connections"
-        },
-        {
-            "event_codes": [
-                1,
-                2,
                 0
             ],
             "metric_id": 11,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:interrogation_complete_count"
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/le:connection_events"
         },
         {
             "event_codes": [
-                0,
                 0,
                 1
             ],
             "metric_id": 11,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:incoming_connection_success_count"
-        },
-        {
-            "event_codes": [
-                0,
-                1,
-                1
-            ],
-            "metric_id": 11,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:incoming_connection_failure_count"
-        },
-        {
-            "event_codes": [
-                0,
-                0,
-                2
-            ],
-            "metric_id": 11,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:outgoing_connection_success_count"
-        },
-        {
-            "event_codes": [
-                0,
-                1,
-                2
-            ],
-            "metric_id": 11,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:outgoing_connection_failure_count"
-        },
-        {
-            "event_codes": [
-                1
-            ],
-            "metric_id": 18,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_explicit_disconnect_count"
-        },
-        {
-            "event_codes": [
-                2
-            ],
-            "metric_id": 18,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_link_error_count"
-        },
-        {
-            "event_codes": [
-                3
-            ],
-            "metric_id": 18,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_zero_ref_count"
-        },
-        {
-            "event_codes": [
-                4
-            ],
-            "metric_id": 18,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_remote_disconnection_count"
-        },
-        {
-            "event_codes": [
-                1
-            ],
-            "metric_id": 19,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_local_api_request_count"
-        },
-        {
-            "event_codes": [
-                2
-            ],
-            "metric_id": 19,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_interrogation_failed_count"
-        },
-        {
-            "event_codes": [
-                3
-            ],
-            "metric_id": 19,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_pairing_failed_count"
-        },
-        {
-            "event_codes": [
-                4
-            ],
-            "metric_id": 19,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_acl_link_error_count"
-        },
-        {
-            "event_codes": [
-                5
-            ],
-            "metric_id": 19,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_peer_disconnection_count"
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/le:disconnection_events"
         }
     ],
     "poll_rate_sec": 1800,
