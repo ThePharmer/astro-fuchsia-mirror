@@ -401,11 +401,6 @@ fuchsia.tee.Application.d83c3c4a-9e8d-4e4e-ad30-9d40e137f689
 /svc/fuchsia.tee.Application.d83c3c4a-9e8d-4e4e-ad30-9d40e137f689
 fuchsia.tee.Application.e043cde0-61d0-11e5-9c26-0002a5d5c51b
 /svc/fuchsia.tee.Application.e043cde0-61d0-11e5-9c26-0002a5d5c51b
-data
-fuchsia.sys2.StorageAdmin
-cache
-fuchsia.sys2.StorageAdmin.cache
-fuchsia.sys2.StorageAdmin.tmp
 fuchsia.component.Binder
 fuchsia.sessionmanager.Startup
 detect
@@ -431,6 +426,7 @@ hub-legacy
 fuchsia.sys2.ComponentResolver
 universe-resolver
 fuchsia.factory.MiscFactoryStoreProvider
+data
 dev-sysmem
 class/sysmem
 sysmem_connector!
@@ -441,6 +437,7 @@ dev-class-ethernet
 class/ethernet
 dev-class-network
 class/network
+cache
 blob
 pkgfs
 forensics
@@ -465,6 +462,7 @@ dev-backlight
 class/backlight
 dev-input-report
 class/input-report
+fuchsia.ui.display.internal.DisplayPower
 dev-temperature
 class/temperature
 dev-thermal
@@ -481,7 +479,6 @@ fuchsia.intl.TimeZones
 fuchsia.media.AudioDeviceEnumerator
 fuchsia.media.ProfileProvider
 fuchsia.ui.composition.FlatlandDisplay
-fuchsia.ui.display.internal.DisplayPower
 fuchsia.ui.focus.FocusChainListenerRegistry
 fuchsia.ui.input.ImeService
 fuchsia.ui.input3.KeyEventInjector
