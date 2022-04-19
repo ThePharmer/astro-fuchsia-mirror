@@ -154,8 +154,6 @@ fuchsia.hardware.usb.DeviceWatcher
 /svc/fuchsia.hardware.usb.DeviceWatcher
 fuchsia.kernel.Counter
 /svc/fuchsia.kernel.Counter
-fuchsia.kernel.CpuResource
-/svc/fuchsia.kernel.CpuResource
 fuchsia.kernel.DebugBroker
 /svc/fuchsia.kernel.DebugBroker
 fuchsia.kernel.DebugResource
@@ -423,7 +421,7 @@ fuchsia.appmgr.Startup
 fuchsia.sys.internal.ComponentEventProvider
 fuchsia.sys.internal.LogConnector
 hub-legacy
-fuchsia.sys2.ComponentResolver
+fuchsia.component.resolution.Resolver
 universe-resolver
 fuchsia.factory.MiscFactoryStoreProvider
 data
@@ -527,6 +525,8 @@ system
 pkgfs-system
 fuchsia.sys2.EventSource
 full-resolver
+fuchsia.sys2.ComponentResolver
+fuchsia.kernel.CpuResource
 dev-display-controller
 class/display-controller
 dev-mediacodec
