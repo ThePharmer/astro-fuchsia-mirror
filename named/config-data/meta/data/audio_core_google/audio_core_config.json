@@ -394,5 +394,61 @@
         }
       ]
     }
+  ],
+  "thermal_states": [
+    {
+      "state_number": 0,
+      "effect_configs": {
+        "Thermal Throttle" : {
+          "_comment": "Nominal (unthrottled) state",
+          "dynamics_type": "compressor",
+          "envelope_type": "rms",
+          "input_gain_db": 0,
+          "output_gain_db": 0,
+          "threshold_db": -44,
+          "ratio": 1,
+          "knee_width_db": 0,
+          "attack_s": 0.01,
+          "release_s": 0.02,
+          "lookahead_s": 0
+        }
+      }
+    },
+    {
+      "state_number": 1,
+      "effect_configs": {
+        "Thermal Throttle": {
+          "_comment": "Light throttling (-0.399 dB), 0.6 power ratio",
+          "dynamics_type": "compressor",
+          "envelope_type": "rms",
+          "input_gain_db": 0,
+          "output_gain_db": 0,
+          "threshold_db": -44,
+          "ratio": 1.047,
+          "knee_width_db": 0,
+          "attack_s": 0.01,
+          "release_s": 0.02,
+          "lookahead_s": 0
+        }
+      }
+    },
+    {
+      "state_number": 2,
+      "effect_configs": {
+        "Thermal Throttle": {
+          "_comment": "Significant throttling (-1.257 dB), 0.2 power ratio",
+          "dynamics_type": "compressor",
+          "envelope_type": "rms",
+          "input_gain_db": 0,
+          "output_gain_db": 0,
+          "threshold_db": -44,
+          "ratio": 1.157,
+          "knee_width_db": 0,
+          "attack_s": 0.01,
+          "release_s": 0.02,
+          "lookahead_s": 0
+        }
+      }
+    }
   ]
 }
