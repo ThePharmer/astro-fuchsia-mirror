@@ -4,7 +4,11 @@
     "args": [ "--concierge-agent" ]
   },
   "sandbox": {
-    "features": [ "isolated-persistent-storage" ],
+    "features": [
+      "config-data",
+      "isolated-persistent-storage",
+      "isolated-temp"
+    ],
     "services": [
       "fuchsia.castsysteminfo.Provider",
       "fuchsia.hwinfo.Product",
@@ -14,12 +18,16 @@
       "fuchsia.media.Audio",
       "fuchsia.modular.ComponentContext",
       "fuchsia.posix.socket.Provider",
+      "fuchsia.power.profile.Watcher",
       "fuchsia.settings.Input",
+      "fuchsia.thermal.ClientStateConnector",
       "google.assistant.soundsensing.SoundSensing",
       "google.cast.ccsconfig.CcsConfigWatcher",
+      "google.cast.feature.FeatureService",
       "google.cast.hds.HdsService",
       "google.comms.dropin.DropInController",
-      "google.mlframework.OutputManager"
+      "google.mlframework.OutputManager",
+      "google.policy.mlframework.MlFrameworkStateWriter"
     ]
   }
 }
