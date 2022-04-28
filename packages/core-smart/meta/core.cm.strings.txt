@@ -258,6 +258,15 @@ fuchsia.update.CommitStatusProvider
 remote-control
 fuchsia.developer.remotecontrol.RemoteControl
 /svc/fuchsia.developer.remotecontrol.RemoteControl
+overnetstack
+fuchsia.overnet.MeshController
+/svc/fuchsia.overnet.MeshController
+fuchsia.overnet.Overnet
+/svc/fuchsia.overnet.Overnet
+fuchsia.overnet.ServiceConsumer
+/svc/fuchsia.overnet.ServiceConsumer
+fuchsia.overnet.ServicePublisher%
+/svc/fuchsia.overnet.ServicePublisher
 starnix_manager
 fuchsia.starnix.developer.Manager
 /svc/fuchsia.starnix.developer.Manager
@@ -450,7 +459,6 @@ fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Flatland
 fuchsia.ui.input3.Keyboard
 fuchsia.ui.scenic.Scenic
-fuchsia.overnet.Overnet
 fuchsia.overnet.ServicePublisher
 fuchsia.sys.internal.CrashIntrospect
 remote-diagnostics-bridge
@@ -634,9 +642,6 @@ fuchsia.lowpan.device.Lookup
 /svc/fuchsia.media.sessions2.Discovery
 /svc/fuchsia.media.sessions2.Publisher
 /svc/fuchsia.media.UsageReporter
-/svc/fuchsia.overnet.Overnet
-fuchsia.overnet.ServicePublisher%
-/svc/fuchsia.overnet.ServicePublisher
 fuchsia.power.manager.DriverManagerRegistration
 /svc/fuchsia.power.manager.DriverManagerRegistration
 /svc/fuchsia.process.Resolver
@@ -656,6 +661,8 @@ fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.Allocator
 /svc/fuchsia.ui.composition.Flatland
 /svc/fuchsia.ui.composition.FlatlandDisplay
+fuchsia.ui.composition.ScreenCapture
+/svc/fuchsia.ui.composition.ScreenCapture
 fuchsia.ui.display.internal.DisplayPower-
 /svc/fuchsia.ui.display.internal.DisplayPower
 /svc/fuchsia.ui.focus.FocusChainListenerRegistry
@@ -708,6 +715,7 @@ fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash_secure.cm
 fuchsia-pkg://fuchsia.com/regulatory_region#meta/regulatory_region.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
+fuchsia-pkg://fuchsia.com/overnetstack#meta/overnetstack.cm
 fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
