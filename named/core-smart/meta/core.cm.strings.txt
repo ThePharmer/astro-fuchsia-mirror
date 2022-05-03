@@ -258,15 +258,6 @@ fuchsia.update.CommitStatusProvider
 remote-control
 fuchsia.developer.remotecontrol.RemoteControl
 /svc/fuchsia.developer.remotecontrol.RemoteControl
-overnetstack
-fuchsia.overnet.MeshController
-/svc/fuchsia.overnet.MeshController
-fuchsia.overnet.Overnet
-/svc/fuchsia.overnet.Overnet
-fuchsia.overnet.ServiceConsumer
-/svc/fuchsia.overnet.ServiceConsumer
-fuchsia.overnet.ServicePublisher%
-/svc/fuchsia.overnet.ServicePublisher
 starnix_manager
 fuchsia.starnix.developer.Manager
 /svc/fuchsia.starnix.developer.Manager
@@ -459,6 +450,7 @@ fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Flatland
 fuchsia.ui.input3.Keyboard
 fuchsia.ui.scenic.Scenic
+fuchsia.overnet.Overnet
 fuchsia.overnet.ServicePublisher
 fuchsia.sys.internal.CrashIntrospect
 remote-diagnostics-bridge
@@ -492,6 +484,7 @@ fuchsia.ui.keyboard.focus.Controller
 fuchsia.ui.lifecycle.LifecycleController
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.policy.Presenter
+fuchsia.ui.shortcut.Manager
 fuchsia.ui.views.ViewRefInstalled
 fuchsia.media.Audio
 dev-gpu
@@ -521,7 +514,6 @@ dev-wlanphy
 class/wlanphy
 dev-wlanif
 class/wlanif
-debug_agent
 fuchsia.kernel.RootJobForInspect
 dev-aml-ram
 class/aml-ram
@@ -533,6 +525,7 @@ system
 pkgfs-system
 fuchsia.sys2.EventSource
 full-resolver
+fuchsia.sys2.ComponentResolver
 fuchsia.kernel.CpuResource
 dev-display-controller
 class/display-controller
@@ -598,6 +591,7 @@ fuchsia.recovery.policy.Device
 fuchsia.bluetooth.a2dp.AudioMode
 bt-avrcp
 durable
+install
 svc_for_sys
 /svc/fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.tts.EngineRegistry-
@@ -641,6 +635,9 @@ fuchsia.lowpan.device.Lookup
 /svc/fuchsia.media.sessions2.Discovery
 /svc/fuchsia.media.sessions2.Publisher
 /svc/fuchsia.media.UsageReporter
+/svc/fuchsia.overnet.Overnet
+fuchsia.overnet.ServicePublisher%
+/svc/fuchsia.overnet.ServicePublisher
 fuchsia.power.manager.DriverManagerRegistration
 /svc/fuchsia.power.manager.DriverManagerRegistration
 /svc/fuchsia.process.Resolver
@@ -660,8 +657,6 @@ fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.Allocator
 /svc/fuchsia.ui.composition.Flatland
 /svc/fuchsia.ui.composition.FlatlandDisplay
-fuchsia.ui.composition.ScreenCapture
-/svc/fuchsia.ui.composition.ScreenCapture
 fuchsia.ui.display.internal.DisplayPower-
 /svc/fuchsia.ui.display.internal.DisplayPower
 /svc/fuchsia.ui.focus.FocusChainListenerRegistry
@@ -680,6 +675,9 @@ fuchsia.ui.policy.DeviceListenerRegistry-
 /svc/fuchsia.ui.policy.DeviceListenerRegistry
 /svc/fuchsia.ui.policy.Presenter
 /svc/fuchsia.ui.scenic.Scenic
+/svc/fuchsia.ui.shortcut.Manager
+fuchsia.ui.shortcut.Registry
+/svc/fuchsia.ui.shortcut.Registry
 /svc/fuchsia.ui.views.ViewRefInstalled
 /svc/fuchsia.virtualization.Manager
 fuchsia.weave.FactoryDataManager%
@@ -714,7 +712,6 @@ fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash_secure.cm
 fuchsia-pkg://fuchsia.com/regulatory_region#meta/regulatory_region.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
-fuchsia-pkg://fuchsia.com/overnetstack#meta/overnetstack.cm
 fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
@@ -735,7 +732,6 @@ fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
-fuchsia-pkg://fuchsia.com/debug_agent#meta/debug_agent.cm
 fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
 fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
