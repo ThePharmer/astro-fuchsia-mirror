@@ -2,8 +2,8 @@ binary
 bin/session_manager
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
-fuchsia.metrics.MetricEventLoggerFactory-
-/svc/fuchsia.metrics.MetricEventLoggerFactory
+fuchsia.cobalt.LoggerFactory
+/svc/fuchsia.cobalt.LoggerFactory
 config-data
 /config/data
 fuchsia.logger.LogSink
@@ -84,6 +84,7 @@ fuchsia.ui.activity.Provider
 fuchsia.ui.activity.Tracker
 fuchsia.ui.brightness.ColorAdjustmentHandler
 fuchsia.ui.brightness.Control
+fuchsia.ui.input.ImeVisibilityService
 fuchsia.ui.input.PointerCaptureListenerRegistry
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.ui.policy.DisplayBacklight
@@ -126,7 +127,6 @@ fuchsia.weave.StackProvider
 fuchsia.identity.account.AccountManager
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.session.scene.Manager
-fuchsia.cobalt.LoggerFactory
 fuchsia.feedback.CrashReporter
 fuchsia.fonts.Provider
 fuchsia.hardware.power.statecontrol.Admin
@@ -135,7 +135,6 @@ fuchsia.intl.TimeZones
 fuchsia.media.Audio
 fuchsia.media.AudioDeviceEnumerator
 fuchsia.media.ProfileProvider
-fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
 fuchsia.process.Launcher
@@ -158,6 +157,7 @@ fuchsia.ui.scenic.Scenic
 fuchsia.ui.shortcut.Manager
 fuchsia.ui.views.ViewRefInstalled
 fuchsia.vulkan.loader.Loader
+fuchsia.ui.focus.FocusChainListenerRegistry-workstation
 cache
 data
 dev-input-report
