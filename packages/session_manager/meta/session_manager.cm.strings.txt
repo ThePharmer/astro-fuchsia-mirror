@@ -2,8 +2,8 @@ binary
 bin/session_manager
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
-fuchsia.cobalt.LoggerFactory
-/svc/fuchsia.cobalt.LoggerFactory
+fuchsia.metrics.MetricEventLoggerFactory-
+/svc/fuchsia.metrics.MetricEventLoggerFactory
 config-data
 /config/data
 fuchsia.logger.LogSink
@@ -126,6 +126,7 @@ fuchsia.weave.StackProvider
 fuchsia.identity.account.AccountManager
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.session.scene.Manager
+fuchsia.cobalt.LoggerFactory
 fuchsia.feedback.CrashReporter
 fuchsia.fonts.Provider
 fuchsia.hardware.power.statecontrol.Admin
