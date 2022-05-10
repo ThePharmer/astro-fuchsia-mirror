@@ -288,7 +288,6 @@ fuchsia.systemmetrics.test.SystemMetricsLogger
 temperature-logger
 fuchsia.thermal.test.TemperatureLogger
 /svc/fuchsia.thermal.test.TemperatureLogger
-pkg-cache
 fuchsia.pkg.PackageCache
 /svc/fuchsia.pkg.PackageCache
 fuchsia.space.Manager
@@ -303,12 +302,22 @@ fuchsia.pkg.RepositoryManager
 fuchsia.pkg.rewrite.Engine
 /svc/fuchsia.pkg.rewrite.Engine
 mdns
+fuchsia.net.mdns.HostNameResolver
+/svc/fuchsia.net.mdns.HostNameResolver
+fuchsia.net.mdns.HostNameSubscriber
+/svc/fuchsia.net.mdns.HostNameSubscriber
+fuchsia.net.mdns.ProxyHostPublisher
+/svc/fuchsia.net.mdns.ProxyHostPublisher
 fuchsia.net.mdns.Publisher
 /svc/fuchsia.net.mdns.Publisher
 fuchsia.net.mdns.Resolver
 /svc/fuchsia.net.mdns.Resolver
+fuchsia.net.mdns.ServiceInstancePublisher
+/svc/fuchsia.net.mdns.ServiceInstancePublisher
 fuchsia.net.mdns.ServiceInstanceResolver-
 /svc/fuchsia.net.mdns.ServiceInstanceResolver
+fuchsia.net.mdns.ServiceSubscriber2
+/svc/fuchsia.net.mdns.ServiceSubscriber2
 fuchsia.net.mdns.Subscriber
 /svc/fuchsia.net.mdns.Subscriber
 last_reboot
@@ -454,8 +463,6 @@ class/ethernet
 dev-class-network
 class/network
 cache
-blob
-pkgfs
 forensics
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
@@ -603,7 +610,9 @@ class/light
 fuchsia.recovery.policy.Device
 fuchsia.bluetooth.a2dp.AudioMode
 bt-avrcp
+blob
 durable
+pkgfs
 svc_for_sys
 /svc/fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.tts.EngineRegistry-
@@ -723,7 +732,6 @@ fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
 fuchsia-pkg://fuchsia.com/system-metrics-logger#meta/system-metrics-logger-component.cm
 fuchsia-pkg://fuchsia.com/temperature-logger#meta/temperature-logger.cm
 fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
-fuchsia-pkg://fuchsia.com/pkg-cache#meta/pkg-cache.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
