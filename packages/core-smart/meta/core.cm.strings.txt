@@ -288,7 +288,6 @@ fuchsia.systemmetrics.test.SystemMetricsLogger
 temperature-logger
 fuchsia.thermal.test.TemperatureLogger
 /svc/fuchsia.thermal.test.TemperatureLogger
-pkg-cache
 fuchsia.pkg.PackageCache
 /svc/fuchsia.pkg.PackageCache
 fuchsia.space.Manager
@@ -466,8 +465,6 @@ class/ethernet
 dev-class-network
 class/network
 cache
-blob
-pkgfs
 forensics
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
@@ -548,8 +545,11 @@ class/aml-ram
 ffx-laboratory
 laboratory-data
 laboratory-cache
-fuchsia.pkg.RetainedPackages
+sshd-host
+blob
+pkgfs
 system
+fuchsia.pkg.RetainedPackages
 pkgfs-system
 fuchsia.sys2.EventSource
 full-resolver
@@ -737,7 +737,6 @@ fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
 fuchsia-pkg://fuchsia.com/system-metrics-logger#meta/system-metrics-logger-component.cm
 fuchsia-pkg://fuchsia.com/temperature-logger#meta/temperature-logger.cm
 fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
-fuchsia-pkg://fuchsia.com/pkg-cache#meta/pkg-cache.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
@@ -754,6 +753,7 @@ fuchsia-pkg://fuchsia.com/debug_agent#meta/debug_agent.cm
 fuchsia-pkg://fuchsia.com/mem#meta/mem.cm
 fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
+fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
