@@ -279,15 +279,6 @@ fuchsia.overnet.ServicePublisher%
 starnix_manager
 fuchsia.starnix.developer.Manager
 /svc/fuchsia.starnix.developer.Manager
-zircon-guest-manager
-fuchsia.virtualization.ZirconGuestManager
-/svc/fuchsia.virtualization.ZirconGuestManager
-termina-guest-manager
-fuchsia.virtualization.TerminaGuestManager
-/svc/fuchsia.virtualization.TerminaGuestManager
-debian-guest-manager
-fuchsia.virtualization.DebianGuestManager
-/svc/fuchsia.virtualization.DebianGuestManager
 debug_serial
 fuchsia.hardware.serial.NewDeviceProxy
 /svc/fuchsia.hardware.serial.NewDeviceProxy
@@ -545,7 +536,6 @@ fuchsia.feedback.internal.FeedbackDataDirectoryMigrator
 feedback,
 boot
 feedback5
-fuchsia.net.virtualization.Control
 fuchsia.diagnostics.persist.DataPersistence-wlan
 dev-wlanphy
 class/wlanphy
@@ -759,9 +749,6 @@ fuchsia-pkg://fuchsia.com/universe-resolver#meta/universe-resolver.cm
 fuchsia-pkg://fuchsia.com/network#meta/network.cm
 fuchsia-pkg://fuchsia.com/hwinfo#meta/hwinfo.cm
 fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
-fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
-fuchsia-pkg://fuchsia.com/zircon_guest_manager#meta/zircon_guest_manager.cm
-fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
 fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
