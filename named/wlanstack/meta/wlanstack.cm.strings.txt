@@ -1,5 +1,7 @@
 binary
 bin/wlanstack
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.cobalt.LoggerFactory
 /svc/fuchsia.cobalt.LoggerFactory
 fuchsia.diagnostics.persist.DataPersistence-wlan5
@@ -8,13 +10,7 @@ fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.wlan.device.service.DeviceMonitor
 /svc/fuchsia.wlan.device.service.DeviceMonitor
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
-fuchsia.wlan.device.service.DeviceService
 diagnostics
-/svc/fuchsia.wlan.device.service.DeviceService
+fuchsia.wlan.device.service.DeviceService
 /diagnostics
-wep_supported
-wpa1_supported
-><Tru
-meta/wlanstack.cvf
+/svc/fuchsia.wlan.device.service.DeviceService
