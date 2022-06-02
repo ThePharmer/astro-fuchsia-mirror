@@ -1,0 +1,7 @@
+// astro.profiles: Custom scheduler profile roles Astro.
+{
+  "scope": "product",
+  "profiles": {
+    "fuchsia.netstack.go-worker": { "capacity": "500us", "deadline": "2ms", "period": "2ms" },
+  },
+}
