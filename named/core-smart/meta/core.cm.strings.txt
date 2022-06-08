@@ -35,6 +35,11 @@ fuchsia.recovery.FactoryReset
 system-updater
 fuchsia.update.installer.Installer
 /svc/fuchsia.update.installer.Installer
+trace_manager
+fuchsia.tracing.controller.Controller
+/svc/fuchsia.tracing.controller.Controller
+fuchsia.tracing.provider.Registry
+/svc/fuchsia.tracing.provider.Registry
 test_manager
 fuchsia.test.manager.Query
 /svc/fuchsia.test.manager.Query
@@ -479,8 +484,6 @@ fuchsia.process.Resolver
 fuchsia.sys.Environment
 fuchsia.sys.Launcher
 fuchsia.sys.Loader
-fuchsia.tracing.controller.Controller
-fuchsia.tracing.provider.Registry
 fuchsia.virtualization.LinuxManager
 fuchsia.virtualization.Manager
 fuchsia.appmgr.Startup
@@ -494,7 +497,6 @@ data
 cobalt_system_metrics
 dev-sysmem
 class/sysmem
-sysmem_connector!
 fuchsia.pkg.FontResolver
 agis
 config-data
@@ -570,6 +572,7 @@ feedback!
 feedback,
 boot
 fuchsia.net.virtualization.Control
+sysmem_connector!
 fuchsia.diagnostics.persist.DataPersistence-wlan
 dev-wlanphy
 class/wlanphy
@@ -693,8 +696,6 @@ fuchsia.power.manager.DriverManagerRegistration
 /svc/fuchsia.sys.Loader
 fuchsia.tee.Application.99dc95b2-938e-47eb-80e8-9404ae8a1385
 /svc/fuchsia.tee.Application.99dc95b2-938e-47eb-80e8-9404ae8a1385
-/svc/fuchsia.tracing.controller.Controller
-/svc/fuchsia.tracing.provider.Registry
 /svc/fuchsia.ui.annotation.Registry
 fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.Allocator
@@ -774,6 +775,7 @@ fuchsia-pkg://fuchsia.com/mem#meta/mem.cm
 fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
 fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
+fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
