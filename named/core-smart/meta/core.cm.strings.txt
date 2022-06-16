@@ -1,10 +1,5 @@
 binary
 bin/core_proxy
-trace_manager
-fuchsia.tracing.controller.Controller
-/svc/fuchsia.tracing.controller.Controller
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 wlancfg
 fuchsia.wlan.policy.AccessPointListener
 /svc/fuchsia.wlan.policy.AccessPointListener
@@ -40,6 +35,11 @@ fuchsia.recovery.FactoryReset
 system-updater
 fuchsia.update.installer.Installer
 /svc/fuchsia.update.installer.Installer
+trace_manager
+fuchsia.tracing.controller.Controller
+/svc/fuchsia.tracing.controller.Controller
+fuchsia.tracing.provider.Registry
+/svc/fuchsia.tracing.provider.Registry
 test_manager
 fuchsia.test.manager.Query
 /svc/fuchsia.test.manager.Query
@@ -773,7 +773,6 @@ fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
 fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
 fuchsia-pkg://fuchsia.com/zircon_guest_manager#meta/zircon_guest_manager.cm
 fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
-fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
@@ -783,6 +782,7 @@ fuchsia-pkg://fuchsia.com/mem#meta/mem.cm
 fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
 fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
+fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
