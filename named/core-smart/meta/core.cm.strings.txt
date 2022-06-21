@@ -553,6 +553,7 @@ fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 feedback@
 feedback+
 fuchsia.logger.LogSink
+dash-launcher
 metrics-logger
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.ui.composition.Allocator
@@ -561,6 +562,8 @@ fuchsia.sys.internal.CrashIntrospect
 remote-diagnostics-bridge
 fonts
 fuchsia.developer.remotecontrol.RemoteDiagnosticsBridge
+fuchsia.sys2.RealmQuery.root
+fuchsia.sys2.RealmQuery
 dev-backlight
 class/backlight
 dev-input-report
@@ -581,7 +584,6 @@ fuchsia.hardware.temperature.Device
 minfs
 fuchsia.sys2.LifecycleController.root
 fuchsia.sys2.RealmExplorer.root
-fuchsia.sys2.RealmQuery.root
 fuchsia.intl.PropertyProvider
 fuchsia.intl.TimeZones
 fuchsia.ui.lifecycle.LifecycleController
@@ -718,6 +720,8 @@ fuchsia.power.manager.DriverManagerRegistration
 /svc/fuchsia.sys.Loader
 fuchsia.tee.Application.99dc95b2-938e-47eb-80e8-9404ae8a1385
 /svc/fuchsia.tee.Application.99dc95b2-938e-47eb-80e8-9404ae8a1385
+fuchsia.testing.sl4f.FacadeProvider
+/svc/fuchsia.testing.sl4f.FacadeProvider
 /svc/fuchsia.ui.annotation.Registry
 /svc/fuchsia.ui.input.accessibility.PointerEventRegistry
 /svc/fuchsia.virtualization.LinuxManager
@@ -727,6 +731,8 @@ fuchsia.weave.FactoryDataManager%
 /svc/fuchsia.weave.Signer
 /svc_for_sys
 fuchsia-pkg://fuchsia.com/device_settings_manager#meta/device_settings_manager.cm
+fuchsia-pkg://fuchsia.com/dash-launcher#meta/dash_launcher.cm
+full-resolver-env
 fuchsia-pkg://fuchsia.com/session_manager#meta/session_manager.cm
 session-env
 fuchsia-pkg://fuchsia.com/system-update-committer#meta/system-update-committer.cm
@@ -742,7 +748,6 @@ fuchsia-pkg://fuchsia.com/cobalt_system_metrics#meta/cobalt_system_metrics.cm
 activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
-full-resolver-env
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
 fuchsia-pkg://fuchsia.com/triage-detect#meta/triage-detect.cm
 fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
