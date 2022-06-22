@@ -172,6 +172,9 @@ fuchsia.virtualization.TerminaGuestManager
 debian-guest-manager
 fuchsia.virtualization.DebianGuestManager
 /svc/fuchsia.virtualization.DebianGuestManager
+linux_runner
+fuchsia.virtualization.LinuxManager
+/svc/fuchsia.virtualization.LinuxManager
 debug_serial
 fuchsia.hardware.serial.NewDeviceProxy
 /svc/fuchsia.hardware.serial.NewDeviceProxy
@@ -524,7 +527,6 @@ fuchsia.process.Resolver
 fuchsia.sys.Environment
 fuchsia.sys.Launcher
 fuchsia.sys.Loader
-fuchsia.virtualization.LinuxManager
 fuchsia.virtualization.Manager
 fuchsia.appmgr.Startup
 fuchsia.sys.internal.ComponentEventProvider
@@ -713,7 +715,6 @@ fuchsia.testing.sl4f.FacadeProvider
 /svc/fuchsia.testing.sl4f.FacadeProvider
 /svc/fuchsia.ui.annotation.Registry
 /svc/fuchsia.ui.input.accessibility.PointerEventRegistry
-/svc/fuchsia.virtualization.LinuxManager
 /svc/fuchsia.virtualization.Manager
 fuchsia.weave.FactoryDataManager%
 /svc/fuchsia.weave.FactoryDataManager
@@ -745,6 +746,7 @@ sysmem_connectorC
 fuchsia-pkg://fuchsia.com/sysmem_connector#meta/sysmem_connector.cm
 fuchsia-pkg://fuchsia.com/text_manager#meta/text_manager.cm
 fuchsia-pkg://fuchsia.com/cobalt_system_metrics#meta/cobalt_system_metrics.cm
+fuchsia-pkg://fuchsia.com/linux_runner#meta/linux_runner.cm
 activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
