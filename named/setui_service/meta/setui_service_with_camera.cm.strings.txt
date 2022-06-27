@@ -2,8 +2,6 @@ binary
 bin/setui_service
 fuchsia.camera3.DeviceWatcher
 /svc/fuchsia.camera3.DeviceWatcher
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 fuchsia.hardware.power.statecontrol.Admin
 /svc/fuchsia.hardware.power.statecontrol.Admin
 fuchsia.media.AudioCore
@@ -32,7 +30,8 @@ config-data
 /config/data
 data
 /data
-diagnostics
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.settings.Accessibility
 fuchsia.settings.Audio
 fuchsia.settings.Display
@@ -46,7 +45,7 @@ fuchsia.settings.NightMode
 fuchsia.settings.policy.VolumePolicyController
 fuchsia.settings.Privacy
 fuchsia.settings.Setup
-/diagnostics
+diagnostics
 /svc/fuchsia.settings.Accessibility
 /svc/fuchsia.settings.Audio
 /svc/fuchsia.settings.Display
@@ -60,3 +59,4 @@ fuchsia.settings.Setup
 /svc/fuchsia.settings.policy.VolumePolicyController
 /svc/fuchsia.settings.Privacy
 /svc/fuchsia.settings.Setup
+/diagnostics
