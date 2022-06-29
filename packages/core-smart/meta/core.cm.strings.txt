@@ -543,6 +543,7 @@ dev-sysmem
 class/sysmem
 fuchsia.pkg.FontResolver
 agis
+sl4f_bridge_server
 config-data
 dev-class-ethernet
 class/ethernet
@@ -736,9 +737,10 @@ fuchsia.weave.FactoryDataManager%
 /svc/google.deviceproperty.Reader
 /svc/google.deviceproperty.Writer
 persistent
+fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
+full-resolver-env
 fuchsia-pkg://fuchsia.com/device_settings_manager#meta/device_settings_manager.cm
 fuchsia-pkg://fuchsia.com/dash-launcher#meta/dash_launcher.cm
-full-resolver-env
 fuchsia-pkg://fuchsia.com/session_manager#meta/session_manager.cm
 session-env
 fuchsia-pkg://fuchsia.com/system-update-committer#meta/system-update-committer.cm
