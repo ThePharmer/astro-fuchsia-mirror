@@ -172,9 +172,6 @@ fuchsia.overnet.ServicePublisher%
 starnix_manager
 fuchsia.starnix.developer.Manager
 /svc/fuchsia.starnix.developer.Manager
-linux_runner
-fuchsia.virtualization.LinuxManager
-/svc/fuchsia.virtualization.LinuxManager
 debug_serial
 fuchsia.hardware.serial.NewDeviceProxy
 /svc/fuchsia.hardware.serial.NewDeviceProxy
@@ -559,6 +556,7 @@ dash-launcher
 metrics-logger
 fuchsia.diagnostics.LoWPANArchiveAccessor
 fuchsia.update.verify.BlobfsVerifier
+fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.overnet.ServicePublisher
 remote-diagnostics-bridge
 fonts
@@ -613,7 +611,6 @@ blob
 durable
 factory
 pkgfs
-fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.ui.composition.Allocator
 fuchsia.sys.internal.CrashIntrospect
 fuchsia.ui.display.internal.DisplayPower
@@ -747,7 +744,6 @@ fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
 sysmem_connectorC
 fuchsia-pkg://fuchsia.com/sysmem_connector#meta/sysmem_connector.cm
 fuchsia-pkg://fuchsia.com/cobalt_system_metrics#meta/cobalt_system_metrics.cm
-fuchsia-pkg://fuchsia.com/linux_runner#meta/linux_runner.cm
 activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
