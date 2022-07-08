@@ -424,6 +424,13 @@ fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.scenic.Scenic
 fuchsia.ui.views.ViewRefInstalled
 /svc/fuchsia.ui.views.ViewRefInstalled
+flash_ts_service
+google.deviceproperty.Reader
+/svc/google.deviceproperty.Reader
+google.deviceproperty.Writer
+/svc/google.deviceproperty.Writer
+google.flashts.Reader
+/svc/google.flashts.Reader
 feedback_id
 fuchsia.feedback.DeviceIdProvider
 /svc/fuchsia.feedback.DeviceIdProvider
@@ -634,6 +641,7 @@ sshd-host
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 full-resolver
 fuchsia.kernel.CpuResource
+fuchsia.media.SessionAudioConsumerFactory
 dev-display-controller
 class/display-controller
 dev-mediacodec
@@ -658,7 +666,6 @@ fuchsia.storage.ext4.Server
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.lowpan.bootstrap.Thread
-fuchsia.media.SessionAudioConsumerFactory
 fuchsia.media.sessions2.ActiveSession
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sessions2.Publisher
@@ -675,9 +682,8 @@ fuchsia.pkg.Cup
 omaha-client
 fuchsia.ui.annotation.Registry
 fuchsia.ui.input.accessibility.PointerEventRegistry
-google.deviceproperty.Reader
-google.deviceproperty.Writer
-google.flashts.Reader
+dev-class-skip-block
+class/skip-block
 feedback-id
 waves_host
 google.wavesfx.ProcessorFactory
@@ -696,10 +702,6 @@ dev-light
 class/light
 audio_core_google
 /svc/fuchsia.bluetooth.snoop.Snoop
-fuchsia.feedback.internal.CrashReportsDirectoryMigrator
-/svc/fuchsia.feedback.internal.CrashReportsDirectoryMigrator
-fuchsia.feedback.internal.FeedbackDataDirectoryMigrator
-/svc/fuchsia.feedback.internal.FeedbackDataDirectoryMigrator
 /svc/fuchsia.intl.PropertyProvider
 fuchsia.lowpan.device.Lookup
 /svc/fuchsia.lowpan.device.Lookup
@@ -725,9 +727,6 @@ fuchsia.weave.FactoryDataManager%
 /svc/fuchsia.weave.Provisioner
 /svc/fuchsia.web.ContextProvider
 /svc/fuchsia.ui.input.ImeVisibilityService
-/svc/google.flashts.Reader
-/svc/google.deviceproperty.Reader
-/svc/google.deviceproperty.Writer
 persistent
 fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
 full-resolver-env
@@ -797,6 +796,8 @@ fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.c
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui_with_root_presenter.cm
+flash_ts_serviceC
+fuchsia-pkg://fuchsia.com/flash_ts_service#meta/flash_ts_service.cm
 fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
 fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
