@@ -1,5 +1,11 @@
 {
     "basemgr": {
+        "base_shell": {
+            "args": [
+                "--persist_user"
+            ],
+            "url": "fuchsia-pkg://fuchsia.com/auto_login_base_shell#meta/auto_login_base_shell.cmx"
+        },
         "session_shells": [
             {
                 "url": "fuchsia-pkg://fuchsia.com/opal#meta/opal.cmx"
@@ -9,14 +15,6 @@
     },
     "sessionmgr": {
         "agent_service_index": [
-            {
-                "agent_url": "cast:chromium.cast.DataReset",
-                "service_name": "chromium.cast.DataReset"
-            },
-            {
-                "agent_url": "cast:fuchsia.web.FrameHost",
-                "service_name": "fuchsia.web.FrameHost"
-            },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "chromium.cast.ApplicationConfigManager"
@@ -71,15 +69,7 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
-                "service_name": "google.cast.CloudcastReceiverService"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.cast.DeviceInfoService"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
-                "service_name": "google.cast.GroupInfoService"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
@@ -88,10 +78,6 @@
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.cast.actionscript.Executor"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
-                "service_name": "google.cast.activityconfig.ActivityConfigManager"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
@@ -159,6 +145,10 @@
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
+                "service_name": "google.cast.activityconfig.ActivityConfigManager"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
                 "service_name": "google.usonia.IpcHandler"
             },
             {
@@ -174,42 +164,6 @@
                 "service_name": "google.ambienteq.Listener"
             },
             {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.assistant.libassistantv2.CommsAgent"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.comms.assistant.ExplicitAutomationHandler"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.comms.assistant.ShowSmartDeviceControlHandler"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.comms.dropin.DropInController"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.comms.hfbluetooth.CallStateWatcher"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.comms.hfbluetooth.HfCallManager"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.comms.listenlive.ListenLiveState"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.comms.opal.CommunicationRequestService"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
-                "service_name": "google.policy.comms.CommsProvider"
-            },
-            {
                 "agent_url": "fuchsia-pkg://fuchsia.com/concierge_agent#meta/concierge_agent.cmx",
                 "service_name": "google.cast.soundsensingstate.SoundSensingState"
             },
@@ -222,8 +176,52 @@
                 "service_name": "google.policy.concierge.ConciergeProvider"
             },
             {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.comms.dropin.DropInController"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.comms.assistant.ExplicitAutomationHandler"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.comms.hfbluetooth.CallStateWatcher"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.comms.hfbluetooth.HfCallManager"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.comms.opal.CommunicationRequestService"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.assistant.libassistantv2.CommsAgent"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.comms.assistant.ShowSmartDeviceControlHandler"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.comms.listenlive.ListenLiveState"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
+                "service_name": "google.policy.comms.CommsProvider"
+            },
+            {
+                "agent_url": "cast:chromium.cast.DataReset",
+                "service_name": "chromium.cast.DataReset"
+            },
+            {
                 "agent_url": "fuchsia-pkg://fuchsia.com/duocore#meta/duocore.cmx",
                 "service_name": "google.duocore.DuoCore"
+            },
+            {
+                "agent_url": "cast:fuchsia.web.FrameHost",
+                "service_name": "fuchsia.web.FrameHost"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/fuchsia_perception_estelle_pkg#meta/fuchsia_perception_estelle_agent.cmx",
@@ -290,16 +288,8 @@
                 "service_name": "google.presence.TouchActivity"
             },
             {
-                "agent_url": "fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cmx",
-                "service_name": "google.assistant.libassistantv2.Presence"
-            },
-            {
                 "agent_url": "fuchsia-pkg://fuchsia.com/stellar_agent#meta/stellar_agent.cmx",
                 "service_name": "google.assistant.soundsensing.SoundSensing"
-            },
-            {
-                "agent_url": "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
-                "service_name": "google.policy.proximity.ProximityController"
             },
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
@@ -308,6 +298,14 @@
             {
                 "agent_url": "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
                 "service_name": "google.proximity.ProximityWatcher"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
+                "service_name": "google.policy.proximity.ProximityController"
+            },
+            {
+                "agent_url": "fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cmx",
+                "service_name": "google.assistant.libassistantv2.Presence"
             }
         ],
         "component_args": [
@@ -326,29 +324,35 @@
             {
                 "uri": "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
                 "args": [
-                    "--backend_type=auto",
-                    "--cast_app_preloading_enabled=true",
-                    "--enable_bluetooth_module=false",
-                    "--enable_cast_assistant_media_module",
-                    "--enable_eureka_action_script_module",
                     "--mic_sensitivity=-38",
                     "--platform_audio_input_channel_count=2",
-                    "--platform_audio_reference_input_channel_count=1"
+                    "--platform_audio_reference_input_channel_count=1",
+                    "--backend_type=auto",
+                    "--enable_bluetooth_module=false",
+                    "--cast_app_preloading_enabled=true",
+                    "--enable_cast_assistant_media_module",
+                    "--enable_eureka_action_script_module"
                 ]
             },
             {
                 "uri": "fuchsia-pkg://fuchsia.com/nest_policy_agent#meta/nest_policy_agent.cmx",
                 "args": [
-                    "--daily-restart-enabled",
-                    "--interop-concierge-enabled",
                     "--interop-led-enabled",
+                    "--max_privacy_led_lux=382.5",
+                    "--min_privacy_led_brightness=0.01",
                     "--max-output-volume-dba1m=86",
+                    "--min-tts-volume-dba1m=45",
                     "--max-tts-volume-dba1m=79",
                     "--max_privacy_led_brightness=0.3",
-                    "--max_privacy_led_lux=382.5",
-                    "--min-tts-volume-dba1m=45",
-                    "--min_privacy_led_brightness=0.01",
-                    "--nightly-reboot-enabled"
+                    "--interop-concierge-enabled",
+                    "--nightly-reboot-enabled",
+                    "--daily-restart-enabled"
+                ]
+            },
+            {
+                "uri": "fuchsia-pkg://fuchsia.com/opal#meta/opal.cmx",
+                "args": [
+                    "--stub"
                 ]
             },
             {
@@ -363,17 +367,17 @@
         "session_agents": [
             "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cmx",
             "fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_assistant.cmx",
-            "fuchsia-pkg://fuchsia.com/cast_agent#meta/platform-nest-metrics.cmx",
             "fuchsia-pkg://fuchsia.com/color_tint_service#meta/color_tint_service.cmx",
-            "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
             "fuchsia-pkg://fuchsia.com/concierge_agent#meta/concierge_agent.cmx",
+            "fuchsia-pkg://fuchsia.com/comms_agent#meta/comms_agent.cmx",
             "fuchsia-pkg://fuchsia.com/duocore#meta/duocore.cmx",
             "fuchsia-pkg://fuchsia.com/fuchsia_perception_estelle_pkg#meta/fuchsia_perception_estelle_agent.cmx",
             "fuchsia-pkg://fuchsia.com/kronk#meta/kronk.cmx",
             "fuchsia-pkg://fuchsia.com/nest_policy_agent#meta/nest_policy_agent.cmx",
-            "fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cmx",
+            "fuchsia-pkg://fuchsia.com/cast_agent#meta/platform-nest-metrics.cmx",
             "fuchsia-pkg://fuchsia.com/stellar_agent#meta/stellar_agent.cmx",
-            "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx"
+            "fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cmx",
+            "fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cmx"
         ]
     }
 }
