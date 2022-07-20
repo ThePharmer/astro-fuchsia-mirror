@@ -40,8 +40,6 @@ fuchsia.diagnostics.FeedbackArchiveAccessor
 /svc/fuchsia.diagnostics.FeedbackArchiveAccessor
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor5
 /svc/fuchsia.diagnostics.LegacyMetricsArchiveAccessor
-fuchsia.diagnostics.LoWPANArchiveAccessor
-/svc/fuchsia.diagnostics.LoWPANArchiveAccessor
 fuchsia.driver.development.DriverDevelopment
 /svc/fuchsia.driver.development.DriverDevelopment
 fuchsia.driver.registrar.DriverRegistrar-
@@ -524,7 +522,6 @@ fuchsia.tee.Application.e043cde0-61d0-11e5-9c26-0002a5d5c51b
 /svc/fuchsia.tee.Application.e043cde0-61d0-11e5-9c26-0002a5d5c51b
 fuchsia.component.Binder
 fuchsia.sessionmanager.Startup
-fuchsia.metrics.MetricEventLoggerFactory
 detect
 fuchsia.component.DetectBinder
 diagnostics-kcounter
@@ -565,6 +562,7 @@ feedback@
 feedback+
 debug-dash-launcher
 metrics-logger
+fuchsia.diagnostics.LoWPANArchiveAccessor
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.overnet.ServicePublisher
@@ -605,6 +603,7 @@ dev-goldfish-address-space
 class/goldfish-address-space
 dev-goldfish-sync
 class/goldfish-sync
+fuchsia.metrics.MetricEventLoggerFactory
 feedback(
 boot
 feedback!
