@@ -55,7 +55,7 @@ assistant_aot_product_runner
 chromium.cast.ApplicationConfigManager
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.buildinfo.Provider
-fuchsia.camera3.DeviceWatcher
+fuchsia.camera3.DeviceWatcher-comms
 fuchsia.device.NameProvider
 fuchsia.feedback.ComponentDataRegister
 fuchsia.feedback.CrashReporter
@@ -65,6 +65,7 @@ fuchsia.hwinfo.Product
 fuchsia.input.virtualkeyboard.ControllerCreator
 fuchsia.intl.PropertyProvider
 fuchsia.legacymetrics.MetricsRecorder
+fuchsia.media.Audio-comms
 fuchsia.media.AudioDeviceEnumerator
 fuchsia.media.ProfileProvider
 fuchsia.media.SessionAudioConsumerFactory
@@ -94,7 +95,9 @@ fuchsia.modular.PuppetMaster
 fuchsia.modular.ComponentContext8
 /svc_from_v1_sessionmgr/fuchsia.modular.ComponentContext
 /svc_from_v1_sessionmgr/chromium.cast.ApplicationConfigManager
+/svc_from_v1_sessionmgr/fuchsia.camera3.DeviceWatcher-comms
 /svc_from_v1_sessionmgr/fuchsia.legacymetrics.MetricsRecorder
+/svc_from_v1_sessionmgr/fuchsia.media.Audio-comms
 /diagnostics
 fuchsia-pkg://fuchsia.com/cast_runner#meta/cast_runner.cm
 fuchsia-pkg://fuchsia.com/duocore#meta/duocore.cm
