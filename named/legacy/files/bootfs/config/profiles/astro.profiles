@@ -1,7 +1,12 @@
-// astro.profiles: Custom scheduler profile roles Astro.
+// astro.profiles: Custom scheduler profile roles for Astro.
 {
   "scope": "product",
   "profiles": {
-    "fuchsia.netstack.go-worker": { "capacity": "500us", "deadline": "2ms", "period": "2ms" },
+    // Fuchsia platform profiles.
+    "fuchsia.netstack.go-worker": { "priority": 30 },
+
+    // Chromium platform thread profiles.
+    "chromium.base.threading.realtime-audio": { "capacity": "3ms", "deadline": "10ms", "period": "10ms" },
+    "chromium.base.threading.display": { "capacity": "5ms", "deadline": "16666667ns", "period": "16666667ns" },
   },
 }
