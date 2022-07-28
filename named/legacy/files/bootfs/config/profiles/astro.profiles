@@ -3,7 +3,7 @@
   "scope": "product",
   "profiles": {
     // Fuchsia platform profiles.
-    "fuchsia.netstack.go-worker": { "capacity": "500us", "deadline": "2ms", "period": "2ms" },
+    "fuchsia.netstack.go-worker": { "priority": 30 },
 
     // Chromium platform thread profiles.
     "chromium.base.threading.realtime-audio": { "capacity": "3ms", "deadline": "10ms", "period": "10ms" },
