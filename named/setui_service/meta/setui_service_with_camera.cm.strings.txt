@@ -2,8 +2,6 @@ binary
 bin/setui_service
 fuchsia.camera3.DeviceWatcher
 /svc/fuchsia.camera3.DeviceWatcher
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 fuchsia.hardware.power.statecontrol.Admin
 /svc/fuchsia.hardware.power.statecontrol.Admin
 fuchsia.media.AudioCore
@@ -14,6 +12,8 @@ fuchsia.media.sounds.Player
 /svc/fuchsia.media.sounds.Player
 fuchsia.media.UsageReporter
 /svc/fuchsia.media.UsageReporter
+fuchsia.recovery.policy.Device
+/svc/fuchsia.recovery.policy.Device
 fuchsia.stash.Store
 /svc/fuchsia.stash.Store
 fuchsia.tracing.provider.Registry
@@ -22,8 +22,6 @@ fuchsia.ui.brightness.Control
 /svc/fuchsia.ui.brightness.Control
 fuchsia.ui.policy.DeviceListenerRegistry-
 /svc/fuchsia.ui.policy.DeviceListenerRegistry
-fuchsia.recovery.policy.Device
-/svc/fuchsia.recovery.policy.Device
 dev-input-report
 /dev/class/input-report
 dev-light
@@ -32,7 +30,8 @@ config-data
 /config/data
 data
 /data
-diagnostics
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.settings.Accessibility
 fuchsia.settings.Audio
 fuchsia.settings.Display
@@ -46,7 +45,7 @@ fuchsia.settings.NightMode
 fuchsia.settings.policy.VolumePolicyController
 fuchsia.settings.Privacy
 fuchsia.settings.Setup
-/diagnostics
+diagnostics
 /svc/fuchsia.settings.Accessibility
 /svc/fuchsia.settings.Audio
 /svc/fuchsia.settings.Display
@@ -60,3 +59,4 @@ fuchsia.settings.Setup
 /svc/fuchsia.settings.policy.VolumePolicyController
 /svc/fuchsia.settings.Privacy
 /svc/fuchsia.settings.Setup
+/diagnostics
