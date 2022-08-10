@@ -319,6 +319,11 @@ fuchsia.wlan.device.service.DeviceService
 soundplayer
 fuchsia.media.sounds.Player
 /svc/fuchsia.media.sounds.Player
+trace_manager
+fuchsia.tracing.controller.Controller
+/svc/fuchsia.tracing.controller.Controller
+fuchsia.tracing.provider.Registry
+/svc/fuchsia.tracing.provider.Registry
 test_manager
 fuchsia.test.manager.Query
 /svc/fuchsia.test.manager.Query
@@ -333,11 +338,6 @@ fuchsia.virtualization.TerminaGuestManager
 zircon-guest-manager
 fuchsia.virtualization.ZirconGuestManager
 /svc/fuchsia.virtualization.ZirconGuestManager
-trace_manager
-fuchsia.tracing.controller.Controller
-/svc/fuchsia.tracing.controller.Controller
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 emergency
 fuchsia.location.position.EmergencyProvider
 /svc/fuchsia.location.position.EmergencyProvider
@@ -655,6 +655,7 @@ directory_ready_v2
 running_v2
 started_v2
 stopped_v2
+fuchsia.media.SessionAudioConsumerFactory
 fuchsia.component.resolution.Resolver
 fuchsia.kernel.CpuResource
 fuchsia.sys2.SystemController
@@ -693,7 +694,6 @@ fuchsia.storage.ext4.Server
 mediasession-examples
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.lowpan.bootstrap.Thread
-fuchsia.media.SessionAudioConsumerFactory
 fuchsia.nn.ModelExecutor
 fuchsia.timezone.Timezone
 fuchsia.weave.FactoryDataManager
@@ -804,6 +804,7 @@ fuchsia-pkg://fuchsia.com/debug_agent#meta/debug_agent.cm
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
+fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
@@ -812,7 +813,6 @@ fuchsia-pkg://fuchsia.com/fuzz-registry#meta/fuzz-registry.cm
 fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
 fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
 fuchsia-pkg://fuchsia.com/zircon_guest_manager#meta/zircon_guest_manager.cm
-fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
