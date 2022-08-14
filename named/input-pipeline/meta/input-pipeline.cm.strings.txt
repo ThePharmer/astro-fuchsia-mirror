@@ -14,6 +14,8 @@ fuchsia.ui.pointerinjector.Registry
 /svc/fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.scenic.Scenic
+fuchsia.input.interaction.observation.Aggregator5
+/svc/fuchsia.input.interaction.observation.Aggregator
 config-data
 /config/data
 dev-input-report
@@ -21,11 +23,14 @@ dev-input-report
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.input.injection.InputDeviceRegistry
+fuchsia.input.interaction.Notifier
+fuchsia.input.interaction.observation.Aggregator
 fuchsia.recovery.policy.Device
 fuchsia.recovery.ui.FactoryResetCountdown
 fuchsia.ui.policy.DeviceListenerRegistry
 diagnostics
 /svc/fuchsia.input.injection.InputDeviceRegistry
+/svc/fuchsia.input.interaction.Notifier
 /svc/fuchsia.recovery.policy.Device
 /svc/fuchsia.recovery.ui.FactoryResetCountdown
 fuchsia.ui.policy.DeviceListenerRegistry-
