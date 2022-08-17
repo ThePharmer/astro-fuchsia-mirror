@@ -338,6 +338,9 @@ fuchsia.virtualization.TerminaGuestManager
 zircon-guest-manager
 fuchsia.virtualization.ZirconGuestManager
 /svc/fuchsia.virtualization.ZirconGuestManager
+intl
+fuchsia.intl.TimeZones
+/svc/fuchsia.intl.TimeZones
 emergency
 fuchsia.location.position.EmergencyProvider
 /svc/fuchsia.location.position.EmergencyProvider
@@ -459,6 +462,8 @@ fuchsia.bluetooth.internal.a2dp.Controller
 bt-avrcp#
 fuchsia.bluetooth.avrcp.PeerManager
 /svc/fuchsia.bluetooth.avrcp.PeerManager
+fuchsia.intl.PropertyProvider
+/svc/fuchsia.intl.PropertyProvider
 audio_core
 fuchsia.media.ActivityReporter
 /svc/fuchsia.media.ActivityReporter
@@ -633,7 +638,6 @@ blob
 durable
 factory
 fuchsia.sys.internal.CrashIntrospect
-fuchsia.intl.PropertyProvider
 fuchsia.bluetooth.snoop.Snoop
 feedback,
 fuchsia.diagnostics.persist.DataPersistence-wlan
@@ -731,7 +735,6 @@ class/light
 audio_core_google
 fuchsia.audio.effects.ProcessorCreator
 /svc/fuchsia.bluetooth.snoop.Snoop
-/svc/fuchsia.intl.PropertyProvider
 fuchsia.lowpan.device.Lookup
 /svc/fuchsia.lowpan.device.Lookup
 /svc/fuchsia.media.SessionAudioConsumerFactory
@@ -821,6 +824,7 @@ fuchsia-pkg://fuchsia.com/fuzz-registry#meta/fuzz-registry.cm
 fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
 fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
 fuchsia-pkg://fuchsia.com/zircon_guest_manager#meta/zircon_guest_manager.cm
+fuchsia-pkg://fuchsia.com/intl-services-small#meta/intl.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
