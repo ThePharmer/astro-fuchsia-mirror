@@ -1,5 +1,5 @@
 binary
-bin/bt_init_v2
+bin/bt_init
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.component.Realm
@@ -9,12 +9,14 @@ fuchsia.bluetooth.snoop.Snoop
 diagnostics
 bt-gap
 fuchsia.bluetooth.gatt.Server
+fuchsia.bluetooth.gatt2.Server
 fuchsia.bluetooth.le.Central
 fuchsia.bluetooth.le.Peripheral
 fuchsia.bluetooth.sys.Access
 fuchsia.bluetooth.sys.Bootstrap
 fuchsia.bluetooth.sys.Configuration
 fuchsia.bluetooth.sys.HostWatcher
+fuchsia.bluetooth.sys.Pairing
 fuchsia.bluetooth.bredr.Profile
 fuchsia.device.NameProvider
 fuchsia.stash.SecureStore
