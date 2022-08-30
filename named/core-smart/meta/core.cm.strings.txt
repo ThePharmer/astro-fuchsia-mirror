@@ -87,6 +87,9 @@ fuchsia.virtualization.TerminaGuestManager
 zircon-guest-manager
 fuchsia.virtualization.ZirconGuestManager
 /svc/fuchsia.virtualization.ZirconGuestManager
+linux_runner
+fuchsia.virtualization.LinuxManager
+/svc/fuchsia.virtualization.LinuxManager
 intl
 fuchsia.intl.TimeZones
 /svc/fuchsia.intl.TimeZones
@@ -714,6 +717,10 @@ fuchsia.lowpan.bootstrap.Thread
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.hardware.radar.RadarBurstReaderProvider
+fuchsia.camera3.DeviceWatcher
+fuchsia.weave.Bootstrap
+fuchsia.weave.Stack
+fuchsia.weave.StackProvider
 dev-light
 class/light
 dev-class-radar
@@ -831,6 +838,7 @@ fuchsia-pkg://fuchsia.com/fuzz-registry#meta/fuzz-registry.cm
 fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
 fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
 fuchsia-pkg://fuchsia.com/zircon_guest_manager#meta/zircon_guest_manager.cm
+fuchsia-pkg://fuchsia.com/linux_runner#meta/linux_runner.cm
 fuchsia-pkg://fuchsia.com/intl-services-small#meta/intl.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
