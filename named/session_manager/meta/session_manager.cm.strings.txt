@@ -10,7 +10,6 @@ fuchsia.element.GraphicalPresenter
 fuchsia.element.Manager
 fuchsia.session.Launcher
 fuchsia.session.Restarter
-fuchsia.sessionmanager.Startup
 fuchsia.bluetooth.gatt.Server
 session
 fuchsia.bluetooth.le.Central
@@ -182,6 +181,7 @@ root-ssl-certificates
 tzdata
 tzdata-icu-44-le
 fuchsia.bluetooth.sys.HostWatcher
+fuchsia.diagnostics.ArchiveAccessor
 fuchsia.hardware.pty.Device
 fuchsia.logger.Log
 fuchsia.pkg.PackageResolverAdmin
@@ -190,6 +190,8 @@ fuchsia.pkg.rewrite.Engine
 fuchsia.process.Resolver
 fuchsia.space.Manager
 fuchsia.starnix.developer.Manager
+fuchsia.sys2.RealmExplorer.root
+fuchsia.sys2.RealmQuery.root
 fuchsia.virtualization.DebianGuestManager
 fuchsia.virtualization.LinuxManager
 fuchsia.virtualization.TerminaGuestManager
@@ -201,12 +203,15 @@ dev-light
 dev-power-sensor
 dev-temperature
 dev-thermal
+dev-block
+dev-nelson-emmc
+dev-sherlock-emmc
+dev-skip-block
+dev-sys
 full-resolver
-stopped_v2
 /svc/fuchsia.element.GraphicalPresenter
 /svc/fuchsia.element.Manager
 /svc/fuchsia.session.Launcher
 /svc/fuchsia.session.Restarter
-/svc/fuchsia.sessionmanager.Startup
 session_url
 meta/session_manager.cvf
