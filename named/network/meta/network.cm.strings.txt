@@ -26,9 +26,7 @@ fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.name.LookupAdmin
 fuchsia.net.debug.Interfaces
 fuchsia.net.filter.Filter
-netstack$
-fuchsia.posix.socket.packet.Provider
-fuchsia.net.neighbor.View
+fuchsia.net.neighbor.Controller
 dev-class-ethernet
 dev-class-network
 config-data
@@ -37,7 +35,7 @@ cache
 data
 test-components
 #meta/netcfg-basic.cm
-#meta/dhcpv4_server.cm
+#meta/dhcpd.cm
 #meta/dhcpv6-client.cm
 #meta/dns_resolver.cm
 #meta/http-client.cm
