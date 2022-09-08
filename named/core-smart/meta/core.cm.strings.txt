@@ -666,10 +666,8 @@ directory_ready_v2
 running_v2
 started_v2
 stopped_v2
-fuchsia.media.SessionAudioConsumerFactory
-fuchsia.sys.Environment
-fuchsia.sys.Loader
 fuchsia.component.resolution.Resolver
+fuchsia.media.SessionAudioConsumerFactory
 fuchsia.kernel.CpuResource
 fuchsia.sys2.SystemController
 dev-display-controller
@@ -689,7 +687,6 @@ class/tee
 dev-securemem
 class/securemem
 tzdata-provider
-tzdata
 tzdata-icu-44-le
 fuzz-manager
 fuzz-registry
@@ -699,6 +696,8 @@ fuchsia.fuzzer.Manager
 fuchsia.net.virtualization.Control
 durable
 factory
+fuchsia.sys.Environment
+fuchsia.sys.Loader
 bt-avrcp
 dev-class-block
 class/block
@@ -721,6 +720,7 @@ fuchsia.camera3.DeviceWatcher
 fuchsia.weave.Bootstrap
 fuchsia.weave.Stack
 fuchsia.weave.StackProvider
+tzdata
 dev-light
 class/light
 dev-class-radar
