@@ -618,6 +618,7 @@ dev-goldfish-sync
 class/goldfish-sync
 dev-rtc
 class/rtc
+sysmem_connector(
 sysmem_connector!
 fuchsia.tracing.perfetto.ProducerConnector
 feedback+
@@ -630,8 +631,9 @@ feedback!
 forensics
 boot
 fuchsia.kernel.RootJobForInspect
+dev-class
 dev-aml-ram
-class/aml-ram
+aml-ram
 dev-topological
 fuchsia.pkg.RetainedPackages
 system
@@ -693,7 +695,6 @@ fuchsia.fuzzer.Manager
 sshd-host
 svc_for_sys
 blob
-dev-class
 fuchsia.net.virtualization.Control
 durable
 factory
@@ -701,13 +702,11 @@ fuchsia.sys.Launcher
 fuchsia.sys.Environment
 fuchsia.sys.Loader
 bt-avrcp
+bt-avrcp(
 dev-class-block
-class/block
-dev-nelson-emmc
-nelson-emmc
-dev-sherlock-emmc
-sherlock-emmc
+block
 fuchsia.storage.ext4.Server
+media-codec
 mediasession-examples
 fuchsia.timezone.Timezone
 fuchsia.web.ContextProvider
@@ -738,6 +737,7 @@ fuchsia.ui.composition.Screenshot
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.session.scene.Manager
 flash_ts_service(
+class/block
 dev-class-skip-block
 class/skip-block
 feedback-id
