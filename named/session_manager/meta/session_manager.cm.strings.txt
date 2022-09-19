@@ -48,7 +48,6 @@ fuchsia.net.mdns.Publisher
 fuchsia.net.mdns.Subscriber
 fuchsia.net.routes.State
 fuchsia.netstack.Netstack
-fuchsia.nn.ModelExecutor
 fuchsia.paver.Paver
 fuchsia.power.battery.BatteryManager
 fuchsia.power.button.Monitor
@@ -75,8 +74,6 @@ fuchsia.thermal.ClientStateConnector
 fuchsia.timezone.Timezone
 fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.ultrasound.Factory
-fuchsia.update.config.OptOut
-fuchsia.update.config.OptOutAdmin
 fuchsia.weave.FactoryDataManager
 fuchsia.weave.Provisioner
 fuchsia.weave.Signer
@@ -107,6 +104,8 @@ fuchsia.update.Manager
 fuchsia.location.position.EmergencyProvider
 fuchsia.bluetooth.a2dp.AudioMode
 fuchsia.bluetooth.hfp.Hfp
+fuchsia.update.config.OptOut
+fuchsia.update.config.OptOutAdmin
 fuchsia.bluetooth.sys.Bootstrap
 fuchsia.weave.Bootstrap
 fuchsia.weave.Stack
@@ -178,7 +177,6 @@ config-data
 dev-class-radar
 dev-input-report
 root-ssl-certificates
-tzdata
 tzdata-icu-44-le
 fuchsia.bluetooth.sys.HostWatcher
 fuchsia.diagnostics.ArchiveAccessor
@@ -199,6 +197,7 @@ fuchsia.virtualization.ZirconGuestManager
 boot-bin
 pkgfs-packages
 dev-backlight
+dev-gpu
 dev-light
 dev-power-sensor
 dev-temperature
