@@ -30,6 +30,9 @@ data
 config-data
 /config/data
 basemgr
+cast_runner
+chromium.cast.DataReset
+/svc_for_v1_sessionmgr/chromium.cast.DataReset
 cast_assistant
 google.assistant.libassistantv2.CastAssistant
 /svc_for_v1_sessionmgr/google.assistant.libassistantv2.CastAssistant
@@ -45,7 +48,6 @@ fuchsia.component.Binder%
 platform-nest-metrics
 fuchsia.component.Binder3
 /svc/fuchsia.component.Binder.platform-nest-metrics
-cast_runner
 fuchsia.sys.Runner
 /svc_for_v1_sessionmgr/fuchsia.sys.Runner-cast
 fuchsia.logger.LogSink
@@ -54,6 +56,7 @@ fuchsia.modular.internal.BasemgrDebug
 fuchsia.modular.session.Launcher
 fuchsia.component.Binder
 diagnostics
+fuchsia.camera3.DeviceWatcher
 elements
 fuchsia.media.Audio
 fuchsia.sysmem.Allocator
@@ -69,7 +72,6 @@ cast_agent
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher-comms
-fuchsia.camera3.DeviceWatcher
 fuchsia.castsetup.ApiRegistry
 fuchsia.castsysteminfo.Provider
 fuchsia.device.NameProvider
