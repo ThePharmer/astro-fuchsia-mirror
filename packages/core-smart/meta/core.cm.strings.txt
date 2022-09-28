@@ -560,6 +560,7 @@ fuchsia.driver.playground.ToolRunner
 fuchsia.appmgr.Startup
 fuchsia.sys.internal.ComponentEventProvider
 fuchsia.sys.internal.LogConnector
+fuchsia.sys.Launcher
 hub-legacy
 cobalt_system_metrics
 dev-sysmem
@@ -655,7 +656,6 @@ stopped
 ffx-laboratory
 laboratory-data
 laboratory-cache
-perfetto_bridge
 fuchsia.ui.composition.Allocator
 fuchsia.boot.SvcStashProvider
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
@@ -667,6 +667,7 @@ started_v2
 stopped_v2
 fuchsia.component.resolution.Resolver
 fuchsia.media.SessionAudioConsumerFactory
+fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.kernel.CpuResource
 fuchsia.sys2.SystemController
 dev-display-controller
@@ -698,7 +699,6 @@ blob
 fuchsia.net.virtualization.Control
 durable
 factory
-fuchsia.sys.Launcher
 fuchsia.sys.Environment
 fuchsia.sys.Loader
 bt-avrcp
@@ -732,7 +732,6 @@ class/radar
 fuchsia.input.interaction.Notifier
 fuchsia.pkg.Cup
 omaha-client
-fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.policy.DeviceListenerRegistry
@@ -831,7 +830,6 @@ fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 process_explorerC
 fuchsia-pkg://fuchsia.com/process_explorer#meta/process_explorer.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
-fuchsia-pkg://fuchsia.com/perfetto-bridge#meta/perfetto-bridge.cm
 fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
