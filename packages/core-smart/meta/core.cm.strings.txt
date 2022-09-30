@@ -502,8 +502,6 @@ brightness_manager
 fuchsia.ui.brightness.Control
 /svc/fuchsia.ui.brightness.Control
 cobalt
-fuchsia.cobalt.LoggerFactory
-/svc/fuchsia.cobalt.LoggerFactory
 fuchsia.cobalt.SystemDataUpdater%
 /svc/fuchsia.cobalt.SystemDataUpdater
 fuchsia.metrics.MetricEventLoggerFactory-
@@ -735,12 +733,15 @@ fuchsia.accessibility.tts.EngineRegistry
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.session.scene.Manager
+context_provider
 fuchsia.web.ContextProvider
 google.device.key.encryptor.DeviceKeyEncryptor
 flash_ts_service(
 class/block
 dev-class-skip-block
 class/skip-block
+context_provider&
+context_provider.
 feedback-id
 waves_host
 google.wavesfx.ProcessorFactory
@@ -854,6 +855,8 @@ fuchsia-pkg://fuchsia.com/ui#meta/ui_with_root_presenter.cm
 flash_ts_serviceC
 fuchsia-pkg://fuchsia.com/flash_ts_service#meta/flash_ts_service.cm
 fuchsia-pkg://fuchsia.com/weave-auth#meta/weave_auth_server.cm
+context_provider=
+fuchsia-pkg://fuchsia.com/web_engine#meta/context_provider.cm
 fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
 fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
