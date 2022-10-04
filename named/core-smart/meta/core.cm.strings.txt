@@ -209,8 +209,6 @@ fuchsia.media.drm.Widevine
 cast_auth_server
 fuchsia.castauth.CastKeySigner
 /svc/fuchsia.castauth.CastKeySigner
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 bt-a2dp
 fuchsia.bluetooth.a2dp.AudioMode%
 /svc/fuchsia.bluetooth.a2dp.AudioMode
@@ -577,6 +575,7 @@ data
 full-resolver
 fuchsia.pkg.LocalMirror
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
+fuchsia.logger.LogSink
 debug-dash-launcher
 metrics-logger
 fuchsia.update.verify.BlobfsVerifier
@@ -603,6 +602,9 @@ root-ssl-certificates
 triage-detect
 fuchsia.sys2.LifecycleController.root
 fuchsia.sys2.RouteValidator.root
+dev-class
+dev-display-controller
+display-controller
 dev-gpu
 class/gpu
 dev-gpu-dependency-injection
@@ -630,7 +632,6 @@ feedback!
 forensics
 boot
 fuchsia.kernel.RootJobForInspect
-dev-class
 dev-aml-ram
 aml-ram
 dev-topological
@@ -670,7 +671,6 @@ fuchsia.session.scene.Manager
 fuchsia.ui.composition.Screenshot
 fuchsia.kernel.CpuResource
 fuchsia.sys2.SystemController
-dev-display-controller
 class/display-controller
 dev-mediacodec
 class/media-codec
