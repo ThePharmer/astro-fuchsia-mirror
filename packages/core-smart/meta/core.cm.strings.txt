@@ -197,6 +197,9 @@ fuchsia.weave.Provisioner
 /svc/fuchsia.weave.Provisioner
 fuchsia.weave.Signer
 /svc/fuchsia.weave.Signer
+context_provider
+fuchsia.web.ContextProvider
+/svc/fuchsia.web.ContextProvider
 feedback_id
 fuchsia.feedback.DeviceIdProvider
 /svc/fuchsia.feedback.DeviceIdProvider
@@ -670,6 +673,7 @@ fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.session.scene.Manager
 fuchsia.ui.composition.Screenshot
 fuchsia.kernel.CpuResource
+fuchsia.kernel.MexecResource
 fuchsia.sys2.SystemController
 class/display-controller
 dev-mediacodec
@@ -733,8 +737,6 @@ fuchsia.pkg.Cup
 omaha-client
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.ui.policy.DeviceListenerRegistry
-context_provider
-fuchsia.web.ContextProvider
 google.device.key.encryptor.DeviceKeyEncryptor
 flash_ts_service(
 class/block
@@ -764,7 +766,6 @@ fuchsia.audio.effects.ProcessorCreator
 /svc/fuchsia.timezone.Timezone
 /svc/google.cast.cryptokey.NamedKeyProvider
 /svc/google.cast.multizone.Leader
-/svc/fuchsia.web.ContextProvider
 persistent
 /svc_for_sys
 /svc/fuchsia.media.SessionAudioConsumerFactory
