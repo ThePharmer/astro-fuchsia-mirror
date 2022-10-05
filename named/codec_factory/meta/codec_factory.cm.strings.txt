@@ -1,13 +1,11 @@
 binary
 bin/codec_factory
-forward_stderr_to
-forward_stdout_to
 dev-mediacodec
 /dev/class/media-codec
 dev-gpu
 /dev/class/gpu
-fuchsia.cobalt.LoggerFactory
-/svc/fuchsia.cobalt.LoggerFactory
+fuchsia.metrics.MetricEventLoggerFactory-
+/svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.sysinfo.SysInfo
 /svc/fuchsia.sysinfo.SysInfo
 fuchsia.tracing.provider.Registry
@@ -17,7 +15,9 @@ fuchsia.component.Realm
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.mediacodec.CodecFactory
+diagnostics
 magma-codecs
 sw-codecs
 fuchsia.sysmem.Allocator
 /svc/fuchsia.mediacodec.CodecFactory
+/diagnostics
