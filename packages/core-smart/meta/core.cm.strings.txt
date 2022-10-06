@@ -423,9 +423,6 @@ fuchsia.hardware.serial.NewDeviceProxy
 system-metrics-logger
 fuchsia.systemmetrics.test.SystemMetricsLogger
 /svc/fuchsia.systemmetrics.test.SystemMetricsLogger
-temperature-logger
-fuchsia.thermal.test.TemperatureLogger
-/svc/fuchsia.thermal.test.TemperatureLogger
 fuchsia.pkg.PackageCache
 /svc/fuchsia.pkg.PackageCache
 fuchsia.space.Manager
@@ -571,6 +568,7 @@ sl4f_bridge_server
 config-data
 dev-class-ethernet
 class/ethernet
+metrics-logger
 dev-class-network
 class/network
 cache
@@ -580,13 +578,11 @@ fuchsia.pkg.LocalMirror
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 fuchsia.logger.LogSink
 debug-dash-launcher
-metrics-logger
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.overnet.ServicePublisher
 remote-diagnostics-bridge
 fonts
-fuchsia.developer.remotecontrol.RemoteDiagnosticsBridge
 fuchsia.sys2.RealmQuery
 fuchsia.ui.display.internal.DisplayPower
 dev-backlight
@@ -803,8 +799,6 @@ fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
 fuchsia-pkg://fuchsia.com/system-metrics-logger#meta/system-metrics-logger-component.cm
-core-env(
-fuchsia-pkg://fuchsia.com/temperature-logger#meta/temperature-logger.cm
 fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
@@ -828,6 +822,7 @@ fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
 fuchsia-pkg://fuchsia.com/debug_agent#meta/debug_agent.cm
+core-env(
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 process_explorerC
 fuchsia-pkg://fuchsia.com/process_explorer#meta/process_explorer.cm
