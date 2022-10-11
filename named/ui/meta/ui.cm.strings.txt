@@ -22,6 +22,11 @@ fuchsia.ui.lifecycle.LifecycleController
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.scenic.Scenic
 fuchsia.ui.views.ViewRefInstalled
+text_manager
+fuchsia.ui.input.ImeService
+fuchsia.ui.input3.Keyboard
+fuchsia.ui.input3.KeyEventInjector
+fuchsia.ui.keyboard.focus.Controller
 fuchsia.tracing.provider.Registry
 shortcut_manager!
 config-data
@@ -29,10 +34,6 @@ dev-display-controller
 dev-input-report
 fuchsia.settings.Keyboard
 fuchsia.sysmem.Allocator
-fuchsia.ui.input.ImeService
-fuchsia.ui.input3.Keyboard
-fuchsia.ui.input3.KeyEventInjector
-fuchsia.ui.keyboard.focus.Controller
 fuchsia.vulkan.loader.Loader
 fuchsia.feedback.LastRebootInfoProvider
 fuchsia.intl.PropertyProvider
@@ -51,5 +52,6 @@ shortcut_manager#
 fuchsia-pkg://fuchsia.com/a11y-manager#meta/a11y-manager.cm
 fuchsia-pkg://fuchsia.com/scene_manager#meta/scene_manager.cm
 fuchsia-pkg://fuchsia.com/scenic#meta/scenic.cm
+fuchsia-pkg://fuchsia.com/text_manager#meta/text_manager.cm
 shortcut_manager;
 fuchsia-pkg://fuchsia.com/shortcut#meta/shortcut_manager.cm
