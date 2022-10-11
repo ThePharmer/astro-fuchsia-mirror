@@ -71,6 +71,8 @@ fuchsia.media.sounds.Player
 trace_manager
 fuchsia.tracing.controller.Controller
 /svc/fuchsia.tracing.controller.Controller
+fuchsia.tracing.perfetto.ProducerConnector
+/svc/fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 test_manager
@@ -617,7 +619,6 @@ dev-rtc
 class/rtc
 sysmem_connector(
 sysmem_connector!
-fuchsia.tracing.perfetto.ProducerConnector
 feedback+
 feedback@
 fuchsia.sys.internal.CrashIntrospect
