@@ -6,8 +6,6 @@ lifecycle.stop_event
 notify
 config-data
 /config/data
-config-data-for-testing
-/config/data-for-testing
 fuchsia.accessibility.semantics.SemanticsManager5
 /svc/fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.buildinfo.Provider
@@ -26,6 +24,10 @@ fuchsia.input.virtualkeyboard.ControllerCreator
 /svc/fuchsia.input.virtualkeyboard.ControllerCreator
 fuchsia.intl.PropertyProvider
 /svc/fuchsia.intl.PropertyProvider
+fuchsia.kernel.VmexResource
+/svc/fuchsia.kernel.VmexResource
+fuchsia.legacymetrics.MetricsRecorder
+/svc/fuchsia.legacymetrics.MetricsRecorder
 fuchsia.media.AudioDeviceEnumerator
 /svc/fuchsia.media.AudioDeviceEnumerator
 fuchsia.media.ProfileProvider
@@ -58,10 +60,16 @@ fuchsia.ui.input3.Keyboard
 /svc/fuchsia.ui.input3.Keyboard
 fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.scenic.Scenic
+fuchsia.camera3.DeviceWatcher
+/svc/fuchsia.camera3.DeviceWatcher
+fuchsia.media.Audio
+/svc/fuchsia.media.Audio
 fuchsia.media.drm.PlayReady
 /svc/fuchsia.media.drm.PlayReady
 fuchsia.media.drm.Widevine
 /svc/fuchsia.media.drm.Widevine
+fuchsia.tracing.perfetto.ProducerConnector
+/svc/fuchsia.tracing.perfetto.ProducerConnector
 cache
 /cache
 fuchsia.logger.LogSink
