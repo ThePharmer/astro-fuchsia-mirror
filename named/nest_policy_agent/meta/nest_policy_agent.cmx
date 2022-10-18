@@ -4,9 +4,6 @@
         "args": [ "--nest-policy-agent" ]
     },
     "sandbox": {
-        "dev": [
-            "class/light"
-        ],
         "features": [
             "config-data",
             "isolated-persistent-storage"
@@ -37,6 +34,7 @@
             "fuchsia.settings.Input",
             "fuchsia.settings.Light",
             "fuchsia.settings.Privacy",
+            "fuchsia.session.Restarter",
             "fuchsia.ui.activity.Provider",
             "fuchsia.update.channel.Provider",
             "fuchsia.update.Manager",
@@ -45,6 +43,7 @@
             "google.camera.CameraInteropProvider",
             "google.camera.CameraStateController",
             "google.cast.ccsconfig.CcsConfigWatcher",
+            "google.cast.cloudsettings.CloudSettingsManager",
             "google.cast.setup.StateWatcher",
             "google.cast.feature.FeatureService",
             "google.cast.medialoudness.Provider",
@@ -60,7 +59,7 @@
             "google.policy.mlvision.MlVisionStateWriter",
             "google.policy.proximity.ProximityController",
             "google.policy.reconnect.ReconnectController",
-            "google.proximity.ProximityWatcher",
+            "google.proximity.ProximityService",
             "google.reconnect.ReconnectProvider"
         ]
     }
