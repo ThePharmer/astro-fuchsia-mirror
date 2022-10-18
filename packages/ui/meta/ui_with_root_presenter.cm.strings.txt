@@ -6,12 +6,6 @@ fuchsia.input.interaction.Notifier
 fuchsia.recovery.policy.Device
 fuchsia.recovery.ui.FactoryResetCountdown
 fuchsia.ui.policy.DeviceListenerRegistry
-root_presenter
-fuchsia.input.virtualkeyboard.ControllerCreator
-fuchsia.input.virtualkeyboard.Manager
-fuchsia.ui.brightness.ColorAdjustmentHandler
-fuchsia.ui.policy.DisplayBacklight
-fuchsia.ui.policy.Presenter
 text_manager
 fuchsia.ui.input.ImeService
 fuchsia.ui.input3.Keyboard
@@ -23,6 +17,12 @@ fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.accessibility.tts.TtsManager
 fuchsia.accessibility.virtualkeyboard.Registry
+root_presenter
+fuchsia.input.virtualkeyboard.ControllerCreator
+fuchsia.input.virtualkeyboard.Manager
+fuchsia.ui.brightness.ColorAdjustmentHandler
+fuchsia.ui.policy.DisplayBacklight
+fuchsia.ui.policy.Presenter
 scenic
 fuchsia.ui.composition.FlatlandDisplay
 fuchsia.ui.composition.Allocator
@@ -40,12 +40,9 @@ fuchsia.ui.views.ViewRefInstalled
 config-data
 input-pipeline
 dev-input-report
-data
 fuchsia.tracing.provider.Registry
 fuchsia.media.sounds.Player
 fuchsia.recovery.FactoryReset
-fuchsia.accessibility.ColorTransform
-fuchsia.accessibility.Magnifier
 fuchsia.ui.accessibility.view.Registry
 fuchsia.ui.pointerinjector.configuration.Setup
 fuchsia.ui.annotation.Registry
@@ -54,6 +51,9 @@ fuchsia.ui.observation.scope.Registry
 fuchsia.feedback.LastRebootInfoProvider
 fuchsia.intl.PropertyProvider
 fuchsia.settings.Accessibility
+data
+fuchsia.accessibility.ColorTransform
+fuchsia.accessibility.Magnifier
 fuchsia.scheduler.ProfileProvider
 fuchsia.stash.Store
 fuchsia.sysmem.Allocator
@@ -62,7 +62,7 @@ dev-display-controller
 fuchsia.media.ProfileProvider
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia-pkg://fuchsia.com/input-pipeline#meta/input-pipeline.cm
-fuchsia-pkg://fuchsia.com/root_presenter#meta/root_presenter.cm
 fuchsia-pkg://fuchsia.com/text_manager#meta/text_manager.cm
 fuchsia-pkg://fuchsia.com/a11y-manager#meta/a11y-manager.cm
+fuchsia-pkg://fuchsia.com/root_presenter#meta/root_presenter.cm
 fuchsia-pkg://fuchsia.com/scenic#meta/scenic.cm
