@@ -1,0 +1,27 @@
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--stellar-agent" ]
+  },
+  "sandbox": {
+    "features": ["config-data"],
+    "services": [
+      "fuchsia.buildinfo.Provider",
+      "fuchsia.castsetup.StateWatcher",
+      "fuchsia.hwinfo.Board",
+      "fuchsia.hwinfo.Device",
+      "fuchsia.hwinfo.Product",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.Audio",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.posix.socket.Provider",
+      "fuchsia.settings.Audio",
+      "fuchsia.settings.Input",
+      "fuchsia.update.channel.Provider",
+      "google.libinteraction.PerceptionAudioInput",
+      "google.libinteraction.PerceptionControl",
+      "google.libinteraction.PerceptionEventsWatcher",
+      "google.flashts.Reader"
+    ]
+  }
+}
