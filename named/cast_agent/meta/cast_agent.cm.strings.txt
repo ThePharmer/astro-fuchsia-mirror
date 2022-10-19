@@ -1,5 +1,6 @@
 args
 --cast-agent
+--use-cfv2
 binary
 cast_agent_exe
 chromium.cast.DataReset
@@ -192,6 +193,8 @@ google.nest.thread.Telemetry
 /svc/google.nest.thread.Telemetry
 google.session.DeviceModeControl%
 /svc/google.session.DeviceModeControl
+fuchsia.component.Realm
+/svc/fuchsia.component.Realm
 config-data
 /config/data
 data
@@ -222,6 +225,9 @@ google.cast.opal.SelinaService
 google.cast.UserAuthService
 google.cast.window.InteractionHandlerRegistry
 diagnostics
+multizone-follower-applications
+fuchsia.media.ProfileProvider
+fuchsia.tracing.provider.Registry
 /svc/chromium.cast.ApplicationConfigManager
 /svc/chromium.cast.CorsExemptHeaderProvider
 /svc/fuchsia.auth.oldtokens.CredentialsProducer
