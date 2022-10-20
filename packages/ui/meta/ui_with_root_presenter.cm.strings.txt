@@ -1,10 +1,5 @@
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
-text_manager
-fuchsia.ui.input.ImeService
-fuchsia.ui.input3.Keyboard
-fuchsia.ui.input3.KeyEventInjector
-fuchsia.ui.keyboard.focus.Controller
 a11y_manager
 fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.semantics.SemanticsManager
@@ -37,8 +32,13 @@ fuchsia.ui.pointer.augment.GlobalMouse
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.scenic.Scenic
 fuchsia.ui.views.ViewRefInstalled
-fuchsia.tracing.provider.Registry
+text_manager
+fuchsia.ui.input.ImeService
+fuchsia.ui.input3.Keyboard
+fuchsia.ui.input3.KeyEventInjector
+fuchsia.ui.keyboard.focus.Controller
 fuchsia.ui.accessibility.view.Registry
+fuchsia.tracing.provider.Registry
 fuchsia.ui.annotation.Registry
 fuchsia.ui.input.accessibility.PointerEventRegistry
 fuchsia.ui.observation.scope.Registry
@@ -61,8 +61,8 @@ fuchsia.vulkan.loader.Loader
 dev-display-controller
 fuchsia.media.ProfileProvider
 fuchsia.metrics.MetricEventLoggerFactory
-fuchsia-pkg://fuchsia.com/text_manager#meta/text_manager.cm
 fuchsia-pkg://fuchsia.com/a11y-manager#meta/a11y-manager.cm
 fuchsia-pkg://fuchsia.com/input-pipeline#meta/input-pipeline.cm
 fuchsia-pkg://fuchsia.com/root_presenter#meta/root_presenter.cm
 fuchsia-pkg://fuchsia.com/scenic#meta/scenic.cm
+fuchsia-pkg://fuchsia.com/text_manager#meta/text_manager.cm
