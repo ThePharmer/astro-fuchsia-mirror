@@ -188,6 +188,12 @@ fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.scenic.Scenic
 fuchsia.ui.views.ViewRefInstalled
 /svc/fuchsia.ui.views.ViewRefInstalled
+multizone_leader)
+fuchsia.media.SessionAudioConsumerFactory
+/svc/fuchsia.media.SessionAudioConsumerFactory
+multizone_leader
+google.cast.multizone.Leader
+/svc/google.cast.multizone.Leader
 flash_ts_service
 google.deviceproperty.Reader
 /svc/google.deviceproperty.Reader
@@ -655,6 +661,7 @@ stopped
 ffx-laboratory
 laboratory-data
 laboratory-cache
+fuchsia.driver.registrar.DriverRegistrar
 fuchsia.ui.composition.Allocator
 fuchsia.boot.SvcStashProvider
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
@@ -664,7 +671,6 @@ directory_ready_v2
 started_v2
 stopped_v2
 fuchsia.component.resolution.Resolver
-fuchsia.media.SessionAudioConsumerFactory
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.session.scene.Manager
 fuchsia.ui.composition.Screenshot
@@ -734,6 +740,8 @@ omaha-client
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.ui.policy.DeviceListenerRegistry
 google.device.key.encryptor.DeviceKeyEncryptor
+multizone_leader.
+multizone_leader!
 flash_ts_service(
 class/block
 dev-class-skip-block
@@ -754,7 +762,6 @@ audio-input
 audio-output
 light
 input-report
-google.cast.multizone.Leader
 audio_core_google
 fuchsia.audio.effects.ProcessorCreator
 /svc/fuchsia.sys.Environment
@@ -762,10 +769,8 @@ fuchsia.audio.effects.ProcessorCreator
 /svc/fuchsia.sys.Loader
 /svc/fuchsia.timezone.Timezone
 /svc/google.cast.cryptokey.NamedKeyProvider
-/svc/google.cast.multizone.Leader
 persistent
 /svc_for_sys
-/svc/fuchsia.media.SessionAudioConsumerFactory
 fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
 core-env(
 fuchsia-pkg://fuchsia.com/debug-dash-launcher#meta/debug_dash_launcher.cm
@@ -848,6 +853,8 @@ fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/mediasession#meta/mediasession.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui_with_root_presenter.cm
+multizone_leader=
+fuchsia-pkg://fuchsia.com/cast_agent#meta/multizone_leader.cm
 flash_ts_serviceC
 fuchsia-pkg://fuchsia.com/flash_ts_service#meta/flash_ts_service.cm
 fuchsia-pkg://fuchsia.com/weave-auth#meta/weave_auth_server.cm
