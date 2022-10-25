@@ -289,8 +289,6 @@ fuchsia.boot.RootResource
 /svc/fuchsia.boot.RootResource
 fuchsia.boot.WriteOnlyLog
 /svc/fuchsia.boot.WriteOnlyLog
-fuchsia.device.manager.Administrator
-/svc/fuchsia.device.manager.Administrator
 fuchsia.device.NameProvider
 /svc/fuchsia.device.NameProvider
 fuchsia.diagnostics.ArchiveAccessor
@@ -612,7 +610,7 @@ dev-display-controller
 display-controller
 dev-gpu
 dev-gpu-dependency-injection
-class/gpu-dependency-injection
+gpu-dependency-injection
 dev-goldfish-pipe
 class/goldfish-pipe
 dev-goldfish-control
@@ -677,7 +675,6 @@ fuchsia.sys2.SystemController
 class/display-controller
 dev-mediacodec
 class/media-codec
-class/gpu
 dev-gpu-performance-counters
 class/gpu-performance-counters
 dev-audio-input
@@ -731,6 +728,7 @@ dev-class-radar
 class/radar
 class/power-sensor
 class/temperature
+class/gpu
 fuchsia.input.interaction.Notifier
 fuchsia.pkg.Cup
 omaha-client
