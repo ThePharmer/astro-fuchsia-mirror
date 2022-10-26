@@ -34,9 +34,8 @@ cast.__platform__.PortConnector = new class {
     this.listener = this.onMessageEvent.bind(this);
 
     window.addEventListener(
-        'message',
-        this.listener,
-        true,  // Let the listener handle events before they hit the DOM tree.
+        'message', this.listener,
+        true  // Let the listener handle events before they hit the DOM tree.
     );
   }
 
