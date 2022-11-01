@@ -188,12 +188,6 @@ fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.scenic.Scenic
 fuchsia.ui.views.ViewRefInstalled
 /svc/fuchsia.ui.views.ViewRefInstalled
-multizone_leader)
-fuchsia.media.SessionAudioConsumerFactory
-/svc/fuchsia.media.SessionAudioConsumerFactory
-multizone_leader
-google.cast.multizone.Leader
-/svc/google.cast.multizone.Leader
 flash_ts_service
 google.deviceproperty.Reader
 /svc/google.deviceproperty.Reader
@@ -702,6 +696,8 @@ durable
 factory
 fuchsia.sys.Environment
 fuchsia.sys.Loader
+multizone_leader)
+fuchsia.media.SessionAudioConsumerFactory
 bt-avrcp
 bt-avrcp(
 dev-class-block
@@ -737,6 +733,8 @@ omaha-client
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.ui.policy.DeviceListenerRegistry
 input-report
+multizone_leader
+google.cast.multizone.Leader
 google.device.key.encryptor.DeviceKeyEncryptor
 multizone_leader.
 multizone_leader!
