@@ -1,6 +1,6 @@
 args
 --eager-child=cast_assistant
---eager-child=concierge_agent
+--eager-child=color_tint_service--eager-child=concierge_agent
 --eager-child=duocore
 --eager-child=fuchsia_perception_estelle_agent
 --eager-child=localhome_platform--eager-child=nest_policy_agent
@@ -37,6 +37,9 @@ basemgr
 cast_runner
 chromium.cast.DataReset
 /svc_for_v1_sessionmgr/chromium.cast.DataReset
+color_tint_service
+google.ambienteq.Listener
+/svc_for_v1_sessionmgr/google.ambienteq.Listener
 localhome_platform
 google.assistant.aoghGRPCProcess7
 /svc_for_v1_sessionmgr/google.assistant.aoghGRPCProcess
@@ -62,6 +65,8 @@ google.policy.opal.OpalCameraServiceProvider
 /svc_for_v1_sessionmgr/google.policy.opal.OpalCameraServiceProvider
 fuchsia.component.Binder,
 /svc/fuchsia.component.Binder.cast_assistant
+fuchsia.component.Binder0
+/svc/fuchsia.component.Binder.color_tint_service
 fuchsia.component.Binder-
 /svc/fuchsia.component.Binder.concierge_agent
 fuchsia.component.Binder%
@@ -69,7 +74,6 @@ fuchsia.component.Binder%
 fuchsia_perception_estelle_agent
 fuchsia.component.Binder>
 /svc/fuchsia.component.Binder.fuchsia_perception_estelle_agent
-fuchsia.component.Binder0
 /svc/fuchsia.component.Binder.localhome_platform
 fuchsia.component.Binder/
 /svc/fuchsia.component.Binder.nest_policy_agent
@@ -138,6 +142,7 @@ fuchsia.media.sessions2.Discovery
 fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
 fuchsia.memorypressure.Provider
+fuchsia.migration.DisplayProvider
 fuchsia.migration.ProductPolicyProvider
 fuchsia.modular.ComponentContext
 fuchsia.net.interfaces.State
@@ -157,9 +162,12 @@ fuchsia.thermal.ClientStateConnector
 fuchsia.timezone.Timezone
 fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.ui.activity.Provider
+fuchsia.ui.brightness.ColorAdjustmentHandler
+fuchsia.ui.brightness.Control
 fuchsia.ui.input.ImeService
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.policy.DeviceListenerRegistry
+fuchsia.ui.policy.DisplayBacklight
 fuchsia.update.Manager
 fuchsia.update.channel.Provider
 fuchsia.vulkan.loader.Loader
@@ -247,6 +255,7 @@ google.usonia.IpcHandler0
 /diagnostics
 fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_assistant.cm
 fuchsia-pkg://fuchsia.com/cast_runner#meta/cast_runner.cm
+fuchsia-pkg://fuchsia.com/color_tint_service#meta/color_tint_service.cm
 fuchsia-pkg://fuchsia.com/concierge_agent#meta/concierge_agent.cm
 fuchsia-pkg://fuchsia.com/duocore#meta/duocore.cm
 fuchsia-pkg://fuchsia.com/assistant_aot_product_runner#meta/assistant_aot_product_runner.cm
