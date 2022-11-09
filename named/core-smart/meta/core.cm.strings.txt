@@ -164,9 +164,6 @@ fuchsia.media.drm.PlayReady
 widevine_cdm
 fuchsia.media.drm.Widevine
 /svc/fuchsia.media.drm.Widevine
-amlogic_netflix_keys
-google.cast.cryptokey.NamedKeyProvider
-/svc/google.cast.cryptokey.NamedKeyProvider
 cast_auth_server
 fuchsia.castauth.CastKeySigner
 /svc/fuchsia.castauth.CastKeySigner
@@ -708,6 +705,7 @@ fuchsia.storage.ext4.Server
 media-codec
 mediasession-examples
 fuchsia.timezone.Timezone
+google.cast.cryptokey.NamedKeyProvider
 fuchsia.weave.FactoryDataManager
 fuchsia.bluetooth.hfp.Hfp
 fuchsia.update.config.OptOut
@@ -764,6 +762,7 @@ fuchsia.audio.effects.ProcessorCreator
 /svc/fuchsia.sys.Launcher
 /svc/fuchsia.sys.Loader
 /svc/fuchsia.timezone.Timezone
+/svc/google.cast.cryptokey.NamedKeyProvider
 persistent
 /svc_for_sys
 fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
@@ -858,7 +857,6 @@ fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
 fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
 fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
-fuchsia-pkg://fuchsia.com/amlogic-netflix-keys#meta/amlogic-netflix-keys.cm
 fuchsia-pkg://fuchsia.com/cast_auth#meta/cast_auth_server.cm
 fuchsia-pkg://fuchsia.com/waves_host#meta/waves_host.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
