@@ -103,6 +103,9 @@ svc_from_sys
 bt-avrcp#
 fuchsia.bluetooth.avrcp.PeerManager
 /svc/fuchsia.bluetooth.avrcp.PeerManager
+bt-hfp-audio-gateway
+fuchsia.bluetooth.hfp.Hfp
+/svc/fuchsia.bluetooth.hfp.Hfp
 emergency
 fuchsia.location.position.EmergencyProvider
 /svc/fuchsia.location.position.EmergencyProvider
@@ -656,6 +659,7 @@ laboratory-data
 laboratory-cache
 fuchsia.driver.registrar.DriverRegistrar
 fuchsia.ui.composition.Allocator
+fuchsia.posix.socket.raw.Provider
 fuchsia.boot.SvcStashProvider
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.sys2.EventSource
@@ -686,7 +690,6 @@ dev-tee
 class/tee
 dev-securemem
 class/securemem
-fuchsia.posix.socket.raw.Provider
 tzdata-provider
 tzdata-icu-44-le
 fuzz-registry
@@ -703,6 +706,9 @@ multizone_leader)
 fuchsia.media.SessionAudioConsumerFactory
 bt-avrcp
 bt-avrcp(
+dev-dai
+class/dai
+fuchsia.power.battery.BatteryManager
 dev-class-block
 block
 fuchsia.storage.ext4.Server
@@ -710,7 +716,6 @@ media-codec
 mediasession-examples
 fuchsia.timezone.Timezone
 fuchsia.weave.FactoryDataManager
-fuchsia.bluetooth.hfp.Hfp
 fuchsia.update.config.OptOut
 fuchsia.update.config.OptOutAdmin
 fuchsia.lowpan.bootstrap.Thread
@@ -751,7 +756,6 @@ widevine.oemcrypto.Provider
 cast_auth_server<
 cast_auth_server3
 cast_auth
-fuchsia.power.battery.BatteryManager
 fuchsia.bluetooth.a2dp.AudioMode
 audio-input
 audio-output
@@ -842,6 +846,7 @@ fuchsia-pkg://fuchsia.com/appmgr#meta/appmgr.cm
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 bt-avrcp3
 fuchsia-pkg://fuchsia.com/bt-avrcp#meta/bt-avrcp.cm
+fuchsia-pkg://fuchsia.com/bt-hfp-audio-gateway-default#meta/bt-hfp-audio-gateway.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
