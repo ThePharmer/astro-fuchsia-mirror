@@ -8,8 +8,6 @@ fuchsia.netstack.Netstack
 fuchsia.posix.socket.Provider
 netstack!
 fuchsia.posix.socket.raw.Provider
-fuchsia.net.debug.Interfaces
-fuchsia.net.debug.Interfaces_OnlyForWeavestack
 dns-resolver
 fuchsia.net.name.Lookup
 http-client
@@ -23,16 +21,12 @@ netcfg
 reachability
 fuchsia.stash.SecureStore
 fuchsia.tracing.provider.Registry
-fuchsia.diagnostics.persist.DataPersistence-netstack
-netstack4
 fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.name.LookupAdmin
+fuchsia.net.debug.Interfaces
 fuchsia.net.filter.Filter
-netstack$
-fuchsia.posix.socket.packet.Provider
-fuchsia.net.debug.Diagnostics
-fuchsia.net.neighbor.View
+fuchsia.net.neighbor.Controller
 dev-class-ethernet
 dev-class-network
 config-data
@@ -41,7 +35,7 @@ cache
 data
 test-components
 #meta/netcfg-basic.cm
-#meta/dhcpv4_server.cm
+#meta/dhcpd.cm
 #meta/dhcpv6-client.cm
 #meta/dns_resolver.cm
 #meta/http-client.cm
