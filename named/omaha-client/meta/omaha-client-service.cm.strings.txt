@@ -2,6 +2,8 @@ binary
 bin/omaha_client_service
 fuchsia.boot.Arguments
 /svc/fuchsia.boot.Arguments
+fuchsia.cobalt.LoggerFactory
+/svc/fuchsia.cobalt.LoggerFactory
 fuchsia.cobalt.SystemDataUpdater%
 /svc/fuchsia.cobalt.SystemDataUpdater
 fuchsia.feedback.ComponentDataRegister
@@ -10,14 +12,12 @@ fuchsia.feedback.CrashReporter
 /svc/fuchsia.feedback.CrashReporter
 fuchsia.hardware.power.statecontrol.Admin
 /svc/fuchsia.hardware.power.statecontrol.Admin
-fuchsia.input.interaction.Notifier
-/svc/fuchsia.input.interaction.Notifier
-fuchsia.metrics.MetricEventLoggerFactory-
-/svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.pkg.Cup
 /svc/fuchsia.pkg.Cup
 fuchsia.stash.Store2
 /svc/fuchsia.stash.Store2
+fuchsia.ui.activity.Provider
+/svc/fuchsia.ui.activity.Provider
 fuchsia.update.CommitStatusProvider
 /svc/fuchsia.update.CommitStatusProvider
 fuchsia.update.config.OptOut
