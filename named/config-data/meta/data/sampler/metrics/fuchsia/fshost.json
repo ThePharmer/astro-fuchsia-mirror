@@ -78,7 +78,7 @@
             ],
             "metric_id": 4008,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/fshost/minfs:root/minfs/fs.volume:out_of_space_events"
+            "selector": "bootstrap/fshost/minfs:root/minfs/fs.fvm:out_of_space_events"
         },
         {
             "event_codes": [
@@ -104,6 +104,15 @@
             "metric_id": 61,
             "metric_type": "String",
             "selector": "bootstrap/fshost/minfs:root/minfs/fs.info:oldest_version",
+            "upload_once": true
+        },
+        {
+            "event_codes": [
+                4
+            ],
+            "metric_id": 61,
+            "metric_type": "String",
+            "selector": "bootstrap/fshost/fxfs:root/fxfs/fs.info:current_version",
             "upload_once": true
         },
         {
