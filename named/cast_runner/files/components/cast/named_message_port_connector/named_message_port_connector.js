@@ -1,4 +1,4 @@
-// Copyright 2019 The Chromium Authors. All rights reserved.
+// Copyright 2019 The Chromium Authors
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -34,8 +34,9 @@ cast.__platform__.PortConnector = new class {
     this.listener = this.onMessageEvent.bind(this);
 
     window.addEventListener(
-        'message', this.listener,
-        true  // Let the listener handle events before they hit the DOM tree.
+        'message',
+        this.listener,
+        true,  // Let the listener handle events before they hit the DOM tree.
     );
   }
 
