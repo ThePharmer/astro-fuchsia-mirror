@@ -1,0 +1,43 @@
+{
+  "program": {
+    "args": [
+      "--factory-test"
+    ],
+    "binary": "cast_agent_exe"
+  },
+  "sandbox": {
+    "features": [
+      "deprecated-ambient-replace-as-executable",
+      "isolated-persistent-storage"
+    ],
+    "services": [
+      "fuchsia.accessibility.semantics.SemanticsManager",
+      "fuchsia.camera3.DeviceWatcher",
+      "fuchsia.device.NameProvider",
+      "fuchsia.feedback.CrashReportingProductRegister",
+      "fuchsia.feedback.LastRebootInfoProvider",
+      "fuchsia.fonts.Provider",
+      "fuchsia.hardware.power.statecontrol.Admin",
+      "fuchsia.intl.PropertyProvider",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.Audio",
+      "fuchsia.media.SessionAudioConsumerFactory",
+      "fuchsia.mediacodec.CodecFactory",
+      "fuchsia.memorypressure.Provider",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.modular.SessionShellContext",
+      "fuchsia.net.interfaces.State",
+      "fuchsia.net.name.Lookup",
+      "fuchsia.posix.socket.Provider",
+      "fuchsia.process.Launcher",
+      "fuchsia.settings.Audio",
+      "fuchsia.sysmem.Allocator",
+      "fuchsia.ui.input.ImeService",
+      "fuchsia.ui.input.ImeVisibilityService",
+      "fuchsia.ui.policy.Presenter",
+      "fuchsia.ui.scenic.Scenic",
+      "fuchsia.vulkan.loader.Loader",
+      "fuchsia.web.ContextProvider"
+    ]
+  }
+}
