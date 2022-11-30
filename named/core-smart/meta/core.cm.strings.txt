@@ -581,6 +581,7 @@ config-data
 dev-class-ethernet
 class/ethernet
 dev-class
+metrics-logger
 dev-class-network
 cache
 data
@@ -601,7 +602,12 @@ dev-backlight
 class/backlight
 dev-input-report
 class/input-report
+dev-temperature
+temperature
 dev-thermal
+thermal
+dev-power-sensor
+power-sensor
 class/thermal
 dev-misc
 misc
@@ -662,12 +668,6 @@ fuchsia.driver.registrar.DriverRegistrar
 fuchsia.ui.composition.Allocator
 fuchsia.posix.socket.raw.Provider
 fuchsia.power.battery.BatteryManager
-metrics-logger
-dev-temperature
-temperature
-thermal
-dev-power-sensor
-power-sensor
 fuchsia.boot.SvcStashProvider
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 capability_requested_v2
@@ -824,6 +824,7 @@ fuchsia-pkg://fuchsia.com/overnetstack#meta/overnetstack.cm
 fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
+fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
 fuchsia-pkg://fuchsia.com/ssh-key-manager#meta/ssh-key-manager.cm
@@ -853,7 +854,6 @@ fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
-fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/fuzz-manager#meta/fuzz-manager.cm
 fuchsia-pkg://fuchsia.com/fuzz-registry#meta/fuzz-registry.cm
