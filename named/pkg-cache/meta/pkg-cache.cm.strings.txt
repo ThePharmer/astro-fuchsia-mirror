@@ -4,12 +4,12 @@ blob-exec
 /blob
 fuchsia.boot.Arguments
 /svc/fuchsia.boot.Arguments
-fuchsia.cobalt.LoggerFactory
-/svc/fuchsia.cobalt.LoggerFactory
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
+fuchsia.metrics.MetricEventLoggerFactory-
+/svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.update.CommitStatusProvider
 /svc/fuchsia.update.CommitStatusProvider
+fuchsia.tracing.provider.Registry
+/svc/fuchsia.tracing.provider.Registry
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.pkg.PackageCache
@@ -35,3 +35,6 @@ diagnostics
 /pkgfs/packages/build-info/0/data
 /pkgfs/versions
 /diagnostics
+use_system_image
+D$eO.$
+meta/pkg-cache.cvf
