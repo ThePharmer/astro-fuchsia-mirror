@@ -141,8 +141,6 @@ fuchsia.update.Manager
 /svc/fuchsia.update.Manager
 fuchsia.ui.policy.Presenter
 /svc/fuchsia.ui.policy.Presenter
-fuchsia.lightsensor.Sensor
-/svc/fuchsia.lightsensor.Sensor
 multizone_leader)
 fuchsia.media.SessionAudioConsumerFactory
 /svc/fuchsia.media.SessionAudioConsumerFactory
@@ -581,6 +579,7 @@ config-data
 dev-class-ethernet
 class/ethernet
 dev-class
+metrics-logger
 dev-class-network
 cache
 data
@@ -588,6 +587,7 @@ full-resolver
 fuchsia.pkg.LocalMirror
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 fuchsia.diagnostics.persist.DataPersistence-netstack
+fuchsia.logger.LogSink
 debug-dash-launcher
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.factory.MiscFactoryStoreProvider
@@ -600,8 +600,15 @@ dev-backlight
 class/backlight
 dev-input-report
 class/input-report
+dev-temperature
+temperature
 dev-thermal
+thermal
+dev-power-sensor
+power-sensor
 class/thermal
+dev-misc
+misc
 root-ssl-certificates
 triage-detect
 fuchsia.sys2.LifecycleController.root
@@ -624,7 +631,6 @@ class/rtc
 sysmem_connector(
 boot
 sysmem_connector!
-fuchsia.logger.LogSink
 feedback+
 feedback@
 fuchsia.sys.internal.CrashIntrospect
@@ -659,13 +665,6 @@ laboratory-cache
 fuchsia.driver.registrar.DriverRegistrar
 fuchsia.ui.composition.Allocator
 fuchsia.posix.socket.raw.Provider
-fuchsia.power.battery.BatteryManager
-metrics-logger
-dev-temperature
-temperature
-thermal
-dev-power-sensor
-power-sensor
 fuchsia.boot.SvcStashProvider
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 capability_requested_v2
@@ -710,11 +709,13 @@ bt-avrcp
 bt-avrcp(
 dev-dai
 class/dai
+fuchsia.power.battery.BatteryManager
 dev-class-block
 block
 fuchsia.storage.ext4.Server
 media-codec
 mediasession-examples
+fuchsia.lightsensor.Sensor
 fuchsia.ui.pointer.augment.GlobalMouse
 fuchsia.ui.shortcut.Manager
 fuchsia.ui.shortcut2.Registry
@@ -745,7 +746,6 @@ cast_auth
 audio-input
 audio-output
 fuchsia.identity.account.AccountManager
-fuchsia.identity.account.DeprecatedAccountManager
 fuchsia.bluetooth.a2dp.AudioMode
 fuchsia.lowpan.device.CountersConnector
 fuchsia.lowpan.device.DeviceConnector
@@ -823,6 +823,7 @@ fuchsia-pkg://fuchsia.com/overnetstack#meta/overnetstack.cm
 fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
+fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
 fuchsia-pkg://fuchsia.com/ssh-key-manager#meta/ssh-key-manager.cm
@@ -852,7 +853,6 @@ fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
-fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/fuzz-manager#meta/fuzz-manager.cm
 fuchsia-pkg://fuchsia.com/fuzz-registry#meta/fuzz-registry.cm
