@@ -1,13 +1,12 @@
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
-input_pipeline
-fuchsia.lightsensor.Sensor
 a11y_manager
 fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.accessibility.tts.TtsManager
 fuchsia.accessibility.virtualkeyboard.Registry
+input_pipeline
 fuchsia.input.injection.InputDeviceRegistry
 fuchsia.input.interaction.Notifier
 fuchsia.recovery.policy.Device
@@ -39,9 +38,6 @@ fuchsia.ui.input3.Keyboard
 fuchsia.ui.input3.KeyEventInjector
 fuchsia.ui.keyboard.focus.Controller
 fuchsia.ui.accessibility.view.Registry
-fuchsia.factory.MiscFactoryStoreProvider
-fuchsia.settings.Light
-fuchsia.ui.brightness.Control
 fuchsia.tracing.provider.Registry
 fuchsia.ui.annotation.Registry
 fuchsia.ui.input.accessibility.PointerEventRegistry
@@ -50,7 +46,6 @@ fuchsia.feedback.LastRebootInfoProvider
 fuchsia.intl.PropertyProvider
 fuchsia.settings.Accessibility
 fuchsia.ui.pointerinjector.configuration.Setup
-sensor-config
 config-data
 input-pipeline
 dev-input-report
@@ -68,7 +63,6 @@ fuchsia.media.ProfileProvider
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia-pkg://fuchsia.com/a11y-manager#meta/a11y-manager.cm
 fuchsia-pkg://fuchsia.com/input-pipeline#meta/input-pipeline.cm
-fuchsia-pkg://fuchsia.com/sensor-config#meta/sensor-config.cm
 fuchsia-pkg://fuchsia.com/root_presenter#meta/root_presenter.cm
 fuchsia-pkg://fuchsia.com/scenic#meta/scenic.cm
 fuchsia-pkg://fuchsia.com/text_manager#meta/text_manager.cm
