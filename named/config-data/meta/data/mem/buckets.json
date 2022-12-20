@@ -169,7 +169,7 @@
     },
     {
         "name": "Feedback",
-        "process": "exceptions\\.cmx?|feedback\\.cm|system_log_recorder",
+        "process": "exceptions\\.cmx?|feedback\\.cm|log-stats\\.cm|system_log_recorder",
         "vmo": "",
         "event_code": 46
     },
@@ -253,7 +253,7 @@
     },
     {
         "name": "EngTools",
-        "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor\\.cm|overnetstack\\.cmx?|remote.*|sh:console|sshd-host\\.cmx?|log-stats\\.cm",
+        "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor\\.cm|overnetstack\\.cmx?|remote.*|sh:console|sshd-host\\.cmx?",
         "vmo": "",
         "event_code": 64
     },
@@ -268,11 +268,5 @@
         "process": "localhome_platform\\.cmx?",
         "vmo": "",
         "event_code": 67
-    },
-    {
-        "name": "Fxfs",
-        "process": "(fxfs|fxfs-crypt)\\.cm",
-        "vmo": "",
-        "event_code": 68
     }
 ]
