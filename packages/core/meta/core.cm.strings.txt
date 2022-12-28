@@ -470,9 +470,6 @@ fuchsia.cobalt.SystemDataUpdater%
 /svc/fuchsia.cobalt.SystemDataUpdater
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
-diagnostics-persistence
-fuchsia.diagnostics.persist.DataPersistence-wlan5
-/svc/fuchsia.diagnostics.persist.DataPersistence-wlan
 ssh-key-manager
 fuchsia.ssh.AuthorizedKeys
 /svc/fuchsia.ssh.AuthorizedKeys
@@ -559,15 +556,16 @@ fuchsia.sys.internal.LogConnector
 fuchsia.sys.Launcher
 fuchsia.component.Binder
 fuchsia.metrics.MetricEventLoggerFactory
+diagnostics-persistence
 fuchsia.component.PersistenceBinder
-log-stats
-fuchsia.component.LogStatsBinder
 detect
 fuchsia.component.DetectBinder
 diagnostics-kcounter
 fuchsia.component.KcounterBinder
 driver_playground
 fuchsia.driver.playground.ToolRunner
+log-stats
+fuchsia.component.LogStatsBinder
 sampler
 fuchsia.component.SamplerBinder
 oemcrypto
@@ -815,7 +813,6 @@ fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
 fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
-fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 fuchsia-pkg://fuchsia.com/starnix#meta/starnix_manager.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
@@ -850,6 +847,7 @@ fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
 fuchsia-pkg://fuchsia.com/fuzz-manager#meta/fuzz-manager.cm
 fuchsia-pkg://fuchsia.com/fuzz-registry#meta/fuzz-registry.cm
 fuchsia-pkg://fuchsia.com/intl-services-small#meta/intl.cm
+fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 fuchsia-pkg://fuchsia.com/mediasession#meta/mediasession.cm
 fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
 fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
