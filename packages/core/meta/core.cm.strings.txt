@@ -559,17 +559,17 @@ fuchsia.sys.internal.LogConnector
 fuchsia.sys.Launcher
 fuchsia.component.Binder
 fuchsia.metrics.MetricEventLoggerFactory
+fuchsia.component.PersistenceBinder
+log-stats
+fuchsia.component.LogStatsBinder
 detect
 fuchsia.component.DetectBinder
 diagnostics-kcounter
 fuchsia.component.KcounterBinder
-fuchsia.component.PersistenceBinder
-log-stats
-fuchsia.component.LogStatsBinder
-sampler
-fuchsia.component.SamplerBinder
 driver_playground
 fuchsia.driver.playground.ToolRunner
+sampler
+fuchsia.component.SamplerBinder
 oemcrypto
 widevine.oemcrypto.Provider
 fuchsia.logger.LogSink
@@ -613,7 +613,6 @@ ethernet
 dev-class-network
 full-resolver
 fuchsia.pkg.LocalMirror
-fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 fuchsia.diagnostics.persist.DataPersistence-netstack
 debug-dash-launcher
 fuchsia.update.verify.BlobfsVerifier
@@ -632,7 +631,6 @@ sysmem
 dev-thermal
 thermal
 root-ssl-certificates
-triage-detect
 fuchsia.sys2.LifecycleController.root
 fuchsia.sys2.RouteValidator.root
 dev-display-controller
@@ -657,6 +655,7 @@ fuchsia.ui.composition.Allocator
 debug_agent
 debug_started
 stopped
+triage-detect
 fuchsia.driver.registrar.DriverRegistrar
 fuchsia.fshost.Admin
 dev-class-block
@@ -666,6 +665,7 @@ flash_ts_service(
 dev-class-skip-block
 skip-block
 feedback+
+fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 feedback@
 fuchsia.sys.internal.CrashIntrospect
 feedback#
@@ -814,11 +814,8 @@ activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
-fuchsia-pkg://fuchsia.com/triage-detect#meta/triage-detect.cm
 fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
-fuchsia-pkg://fuchsia.com/diagnostics-kcounter#meta/diagnostics-kcounter.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
-fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/starnix#meta/starnix_manager.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
@@ -838,6 +835,8 @@ fuchsia-pkg://fuchsia.com/hwinfo#meta/hwinfo.cm
 fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
 fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
 fuchsia-pkg://fuchsia.com/debug_agent#meta/debug_agent.cm
+fuchsia-pkg://fuchsia.com/triage-detect#meta/triage-detect.cm
+fuchsia-pkg://fuchsia.com/diagnostics-kcounter#meta/diagnostics-kcounter.cm
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
@@ -862,6 +861,7 @@ process_explorerC
 fuchsia-pkg://fuchsia.com/process_explorer#meta/process_explorer.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
+fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
