@@ -556,12 +556,12 @@ fuchsia.sys.internal.LogConnector
 fuchsia.sys.Launcher
 fuchsia.component.Binder
 fuchsia.metrics.MetricEventLoggerFactory
-diagnostics-persistence
-fuchsia.component.PersistenceBinder
 detect
 fuchsia.component.DetectBinder
 diagnostics-kcounter
 fuchsia.component.KcounterBinder
+diagnostics-persistence
+fuchsia.component.PersistenceBinder
 driver_playground
 fuchsia.driver.playground.ToolRunner
 log-stats
@@ -601,6 +601,7 @@ cast_auth
 dev-mediacodec
 media-codec
 dev-gpu
+fuchsia.diagnostics.persist.DataPersistence-netstack
 cobalt_system_metrics
 fuchsia.pkg.FontResolver
 timekeeper
@@ -611,7 +612,6 @@ ethernet
 dev-class-network
 full-resolver
 fuchsia.pkg.LocalMirror
-fuchsia.diagnostics.persist.DataPersistence-netstack
 debug-dash-launcher
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.factory.MiscFactoryStoreProvider
@@ -704,6 +704,7 @@ sshd-host
 fuchsia.posix.socket.raw.Provider
 fuchsia.pkg.RetainedPackages
 pkgfs-system
+fuchsia.input.wayland.Keymap
 dev-null
 dev-zero
 fuchsia.boot.SvcStashProvider
@@ -812,7 +813,6 @@ activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
-fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
 fuchsia-pkg://fuchsia.com/starnix#meta/starnix_manager.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
@@ -834,6 +834,7 @@ fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
 fuchsia-pkg://fuchsia.com/debug_agent#meta/debug_agent.cm
 fuchsia-pkg://fuchsia.com/triage-detect#meta/triage-detect.cm
 fuchsia-pkg://fuchsia.com/diagnostics-kcounter#meta/diagnostics-kcounter.cm
+fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
