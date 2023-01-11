@@ -78,7 +78,7 @@
             ],
             "metric_id": 4008,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/fshost/minfs:root/minfs/fs.volume:out_of_space_events"
+            "selector": "bootstrap/fshost/minfs:root/minfs/fs.fvm:out_of_space_events"
         },
         {
             "event_codes": [
@@ -104,6 +104,15 @@
             "metric_id": 61,
             "metric_type": "String",
             "selector": "bootstrap/fshost/minfs:root/minfs/fs.info:oldest_version",
+            "upload_once": true
+        },
+        {
+            "event_codes": [
+                4
+            ],
+            "metric_id": 61,
+            "metric_type": "String",
+            "selector": "bootstrap/fshost/fxfs:root/fxfs/fs.info:current_version",
             "upload_once": true
         },
         {
@@ -431,6 +440,36 @@
             "metric_id": 70,
             "metric_type": "IntHistogram",
             "selector": "bootstrap/fshost/minfs:root/minfs/fs.opstats/write:latency"
+        },
+        {
+            "event_codes": [],
+            "metric_id": 8000,
+            "metric_type": "Integer",
+            "selector": "bootstrap/fshost/fxfs:root/fxfs/fs.detail/allocator:bytes_reserved"
+        },
+        {
+            "event_codes": [],
+            "metric_id": 8000,
+            "metric_type": "Integer",
+            "selector": "bootstrap/fshost/fxfs:root/fxfs/fs.detail/allocator:bytes_reserved_percent"
+        },
+        {
+            "event_codes": [],
+            "metric_id": 8002,
+            "metric_type": "Integer",
+            "selector": "bootstrap/fshost/fxfs:root/fxfs/fs.detail/object_manager:borrowed_to_required_reservation_percent"
+        },
+        {
+            "event_codes": [],
+            "metric_id": 8003,
+            "metric_type": "Integer",
+            "selector": "bootstrap/fshost/fxfs:root/fxfs/fs.detail/journal:journal_size"
+        },
+        {
+            "event_codes": [],
+            "metric_id": 8004,
+            "metric_type": "Integer",
+            "selector": "bootstrap/fshost/fxfs:root/fxfs/fs.detail/journal:journal_size_to_disk_size_percent"
         },
         {
             "event_codes": [
