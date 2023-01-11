@@ -14,8 +14,6 @@ fuchsia.scheduler.ProfileProvider
 /svc/fuchsia.scheduler.ProfileProvider
 fuchsia.sysinfo.SysInfo
 /svc/fuchsia.sysinfo.SysInfo
-fuchsia.ui.activity.Provider
-/svc/fuchsia.ui.activity.Provider
 fuchsia.settings.Privacy
 /svc/fuchsia.settings.Privacy
 fuchsia.tracing.provider.Registry
@@ -27,10 +25,12 @@ root-ssl-certificates
 config-data
 /config/data
 diagnostics
+fuchsia.cobalt.AggregateAndUpload
 fuchsia.cobalt.Controller
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.metrics.MetricEventLoggerFactory
 /diagnostics
+/svc/fuchsia.cobalt.AggregateAndUpload
 /svc/fuchsia.cobalt.Controller
 fuchsia.cobalt.SystemDataUpdater%
 /svc/fuchsia.cobalt.SystemDataUpdater
