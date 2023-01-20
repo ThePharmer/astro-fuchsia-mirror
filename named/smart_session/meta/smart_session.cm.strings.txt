@@ -25,12 +25,12 @@ fuchsia.sys.Launcher
 /svc/fuchsia.sys.Launcher
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
-fuchsia.ui.scenic.Scenic
-/svc/fuchsia.ui.scenic.Scenic
 fuchsia.session.scene.Manager
 /svc/fuchsia.session.scene.Manager
 fuchsia.ui.policy.Presenter
 /svc/fuchsia.ui.policy.Presenter
+fuchsia.ui.scenic.Scenic
+/svc/fuchsia.ui.scenic.Scenic
 /svc_for_v1_sessionmgr/fuchsia.session.Restarter
 data
 /data
@@ -44,6 +44,9 @@ chromium.cast.CorsExemptHeaderProvider
 /svc_for_v1_sessionmgr/chromium.cast.CorsExemptHeaderProvider
 fuchsia.legacymetrics.MetricsRecorder
 /svc_for_v1_sessionmgr/fuchsia.legacymetrics.MetricsRecorder
+cast_runner
+fuchsia.web.FrameHost
+/svc_for_v1_sessionmgr/fuchsia.web.FrameHost
 color_tint_service
 google.ambienteq.Listener
 /svc_for_v1_sessionmgr/google.ambienteq.Listener
@@ -122,8 +125,6 @@ fuchsia.component.Binder.
 fuchsia.modular.Agent
 /svc_for_v1_sessionmgr/fuchsia.modular.Agent.cast_agent
 /svc_for_v1_sessionmgr/fuchsia.modular.Agent.comms_agent
-/svc_for_v1_sessionmgr/fuchsia.modular.Agent.stellar_agent
-cast_runner
 fuchsia.sys.Runner
 /svc_for_v1_sessionmgr/fuchsia.sys.Runner-cast
 fuchsia.logger.LogSink
@@ -257,7 +258,6 @@ fuchsia.weave.Signer
 fuchsia.weave.Stack
 fuchsia.weave.StackProvider
 fuchsia.web.ContextProvider
-fuchsia.web.FrameHost
 fuchsia.wlan.policy.AccessPointProvider
 fuchsia.wlan.policy.ClientProvider
 fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
@@ -337,11 +337,9 @@ fuchsia.modular.SessionShellContext
 /svc_from_v1_sessionmgr/fuchsia.castsetup.StateWatcher
 /svc_from_v1_sessionmgr/fuchsia.castsysteminfo.Provider
 /svc_from_v1_sessionmgr/fuchsia.element.GraphicalPresenter
-/svc_from_v1_sessionmgr/fuchsia.web.FrameHost
 /svc_from_v1_sessionmgr/google.assistant.grpctransport.LibassistantService
 /svc_from_v1_sessionmgr/google.assistant.libassistant.AssistantState
 /svc_from_v1_sessionmgr/google.assistant.libassistantv2.Kronk
-/svc_from_v1_sessionmgr/google.assistant.soundsensing.SoundSensing
 /svc_from_v1_sessionmgr/google.cast.auth.AppCredentialProducer
 /svc_from_v1_sessionmgr/google.cast.ccsconfig.CcsConfigWatcher
 /svc_from_v1_sessionmgr/google.cast.cloudsettings.CloudSettingsManager
