@@ -1,7 +1,12 @@
 args
 --cast-agent
+--use-cfv2
 binary
 cast_agent_exe
+chromium.cast.DataReset
+/svc/chromium.cast.DataReset
+fuchsia.bluetooth.a2dp.AudioMode%
+/svc/fuchsia.bluetooth.a2dp.AudioMode
 fuchsia.bluetooth.gatt.Server
 /svc/fuchsia.bluetooth.gatt.Server
 fuchsia.bluetooth.le.Central
@@ -16,8 +21,6 @@ fuchsia.device.NameProvider
 /svc/fuchsia.device.NameProvider
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor5
 /svc/fuchsia.diagnostics.LegacyMetricsArchiveAccessor
-fuchsia.factory.MiscFactoryStoreProvider-
-/svc/fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.factory.WeaveFactoryStoreProvider
 /svc/fuchsia.factory.WeaveFactoryStoreProvider
 fuchsia.feedback.ComponentDataRegister
@@ -182,8 +185,6 @@ google.aurora.cast.PlatformController
 /svc/google.aurora.cast.PlatformController
 google.cast.pref_control.PrefControlService
 /svc/google.cast.pref_control.PrefControlService
-fuchsia.bluetooth.a2dp.AudioMode%
-/svc/fuchsia.bluetooth.a2dp.AudioMode
 google.comms.hfbluetooth.CallStateWatcher
 /svc/google.comms.hfbluetooth.CallStateWatcher
 google.comms.hfbluetooth.HfCallManager
@@ -194,8 +195,6 @@ google.nest.thread.Telemetry
 /svc/google.nest.thread.Telemetry
 google.session.DeviceModeControl%
 /svc/google.session.DeviceModeControl
-chromium.cast.DataReset
-/svc/chromium.cast.DataReset
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
 config-data
