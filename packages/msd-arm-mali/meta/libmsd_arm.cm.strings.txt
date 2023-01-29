@@ -1,6 +1,5 @@
 driver
-binary
-driver/compat.sobind
+bind
 meta/bind/msd_arm_bind.bindbc
 colocate
 true
@@ -9,6 +8,8 @@ driver/libmsd_arm.so
 default_dispatcher_opts
 allow_sync_callsfallback
 false
+binary
+driver/compat.so
 fuchsia.boot.RootResource
 /svc/fuchsia.boot.RootResource
 fuchsia.scheduler.ProfileProvider
