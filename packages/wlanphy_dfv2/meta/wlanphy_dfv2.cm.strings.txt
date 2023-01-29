@@ -1,6 +1,5 @@
 driver
-binary
-driver/compat.sobind
+bind
 meta/bind/wlanphy.bindbccolocate
 true
 compat
@@ -8,6 +7,8 @@ driver/wlanphy_dfv2.so
 default_dispatcher_opts
 allow_sync_callsfallback
 false
+binary
+driver/compat.so
 fuchsia.boot.Items
 /svc/fuchsia.boot.Items
 fuchsia.device.composite.DeprecatedCompositeCreator
