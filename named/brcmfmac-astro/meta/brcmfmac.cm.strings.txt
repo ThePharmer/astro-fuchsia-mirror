@@ -1,5 +1,6 @@
 driver
-bind
+binary
+driver/compat.sobind
 meta/bind/brcmfmac_sdio.bindbc
 colocate
 true
@@ -8,8 +9,6 @@ driver/brcmfmac.so
 default_dispatcher_opts
 allow_sync_callsfallback
 false
-binary
-driver/compat.so
 fuchsia.boot.Items
 /svc/fuchsia.boot.Items
 fuchsia.device.composite.DeprecatedCompositeCreator
