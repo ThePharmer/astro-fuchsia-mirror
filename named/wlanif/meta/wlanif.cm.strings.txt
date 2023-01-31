@@ -1,6 +1,5 @@
 driver
-binary
-driver/compat.sobind
+bind
 meta/bind/wlanif.bindbc
 colocate
 true
@@ -8,6 +7,8 @@ compat
 driver/wlanif.sodefault_dispatcher_opts
 allow_sync_callsfallback
 false
+binary
+driver/compat.so
 fuchsia.boot.Items
 /svc/fuchsia.boot.Items
 fuchsia.device.composite.DeprecatedCompositeCreator

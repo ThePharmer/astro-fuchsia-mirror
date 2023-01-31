@@ -1,6 +1,5 @@
 driver
-binary
-driver/compat.sobind
+bind
 meta/bind/bt_host_bind.bindbc
 colocate
 true
@@ -9,6 +8,8 @@ driver/bt-host.so
 default_dispatcher_opts
 allow_sync_callsfallback
 false
+binary
+driver/compat.so
 fuchsia.boot.Items
 /svc/fuchsia.boot.Items
 fuchsia.device.composite.DeprecatedCompositeCreator
