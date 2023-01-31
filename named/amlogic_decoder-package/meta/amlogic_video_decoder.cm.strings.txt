@@ -1,6 +1,5 @@
 driver
-binary
-driver/compat.sobind
+bind
 meta/bind/amlogic_video_bind.bindbc
 colocate
 true
@@ -9,6 +8,8 @@ driver/amlogic_video_decoder.so
 default_dispatcher_opts
 allow_sync_callsfallback
 false
+binary
+driver/compat.so
 fuchsia.scheduler.ProfileProvider
 /svc/fuchsia.scheduler.ProfileProvider
 fuchsia.boot.Items
