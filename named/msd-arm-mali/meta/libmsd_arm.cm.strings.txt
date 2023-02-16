@@ -1,6 +1,5 @@
 driver
-binary
-driver/compat.sobind
+bind
 meta/bind/msd_arm_bind.bindbc
 colocate
 true
@@ -9,6 +8,8 @@ driver/libmsd_arm.so
 default_dispatcher_opts
 allow_sync_callsfallback
 false
+binary
+driver/compat.so
 fuchsia.boot.RootResource
 /svc/fuchsia.boot.RootResource
 fuchsia.scheduler.ProfileProvider
@@ -19,8 +20,8 @@ fuchsia.device.composite.DeprecatedCompositeCreator
 /svc/fuchsia.device.composite.DeprecatedCompositeCreator
 fuchsia.device.fs.Exporter
 /svc/fuchsia.device.fs.Exporter
-fuchsia.driver.framework.NodeGroupManager
-/svc/fuchsia.driver.framework.NodeGroupManager
+fuchsia.driver.framework.CompositeNodeManager
+/svc/fuchsia.driver.framework.CompositeNodeManager
 fuchsia.driver.compat.Service
 /svc/fuchsia.driver.compat.Service
 fuchsia.logger.LogSink
