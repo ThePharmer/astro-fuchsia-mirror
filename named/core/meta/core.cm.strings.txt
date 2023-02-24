@@ -91,8 +91,12 @@ fuchsia.media.sessions2.Discovery
 fuchsia.media.sessions2.Publisher
 /svc/fuchsia.media.sessions2.Publisher
 memory_monitor
+fuchsia.memory.debug.MemoryPressure
+/svc/fuchsia.memory.debug.MemoryPressure
 fuchsia.memory.Debugger
 /svc/fuchsia.memory.Debugger
+fuchsia.memory.inspection.Collector
+/svc/fuchsia.memory.inspection.Collector
 fuchsia.memory.Monitor
 /svc/fuchsia.memory.Monitor
 fuchsia.memorypressure.Provider
@@ -132,13 +136,6 @@ fuchsia.test.manager.Query
 /svc/fuchsia.test.manager.Query
 fuchsia.test.manager.RunBuilder
 /svc/fuchsia.test.manager.RunBuilder
-trace_manager
-fuchsia.tracing.controller.Controller
-/svc/fuchsia.tracing.controller.Controller
-fuchsia.tracing.perfetto.ProducerConnector
-/svc/fuchsia.tracing.perfetto.ProducerConnector
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 fuchsia.ui.policy.Presenter
 /svc/fuchsia.ui.policy.Presenter
 fuchsia.lightsensor.Sensor
@@ -181,6 +178,13 @@ fuchsia.virtualization.ZirconGuestManager
 process_resolver
 fuchsia.process.Resolver
 /svc/fuchsia.process.Resolver
+trace_manager
+fuchsia.tracing.controller.Controller
+/svc/fuchsia.tracing.controller.Controller
+fuchsia.tracing.perfetto.ProducerConnector
+/svc/fuchsia.tracing.perfetto.ProducerConnector
+fuchsia.tracing.provider.Registry
+/svc/fuchsia.tracing.provider.Registry
 bt-a2dp
 fuchsia.bluetooth.a2dp.AudioMode%
 /svc/fuchsia.bluetooth.a2dp.AudioMode
@@ -866,7 +870,6 @@ fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
 fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
-fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui_with_root_presenter.cm
 fuchsia-pkg://fuchsia.com/waves_host#meta/waves_host.cm
@@ -884,6 +887,7 @@ fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
+fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 laboratory-env
