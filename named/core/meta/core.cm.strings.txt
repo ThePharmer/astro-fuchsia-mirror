@@ -561,8 +561,10 @@ fuchsia.driver.playground.ToolRunner
 fs_realm
 diagnostics-kcounter
 fuchsia.component.KcounterBinder
-diagnostics-persistence
+diagnostics
 fuchsia.component.PersistenceBinder
+fuchsia.diagnostics.persist.DataPersistence-netstack
+fuchsia.diagnostics.persist.DataPersistence-wlan
 log-stats
 fuchsia.component.LogStatsBinder
 sampler
@@ -734,13 +736,13 @@ context_provider&
 context_provider.
 config-data-for-web-instance
 web_engine
-fuchsia.diagnostics.persist.DataPersistence-wlan
 fuchsia.location.sensor.WlanBaseStationWatcher
 dev-wlanphy
 wlanphy
 dev-wlanif
 wlanif
-fuchsia.diagnostics.persist.DataPersistence-netstack
+diagnostics-persistence-config-data
+diagnostics-persistence
 fuchsia.net.mdns.ServiceInstanceResolver
 fuchsia.net.reachability.Monitor
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
@@ -877,7 +879,7 @@ fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
 fuchsia-pkg://fuchsia.com/zircon_guest_manager#meta/zircon_guest_manager.cm
 fuchsia-pkg://fuchsia.com/diagnostics-kcounter#meta/diagnostics-kcounter.cm
-fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
+fuchsia-pkg://fuchsia.com/diagnostics#meta/diagnostics.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
