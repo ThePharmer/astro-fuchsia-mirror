@@ -136,8 +136,8 @@ fuchsia.test.manager.Query
 /svc/fuchsia.test.manager.Query
 fuchsia.test.manager.RunBuilder
 /svc/fuchsia.test.manager.RunBuilder
-fuchsia.ui.policy.Presenter
-/svc/fuchsia.ui.policy.Presenter
+fuchsia.session.scene.Manager
+/svc/fuchsia.session.scene.Manager
 fuchsia.lightsensor.Sensor
 /svc/fuchsia.lightsensor.Sensor
 weave_auth
@@ -721,7 +721,7 @@ started
 fuchsia.component.resolution.Resolver
 fuchsia.sysmem2.Allocator
 fuchsia.accessibility.semantics.SemanticsManager
-fuchsia.session.scene.Manager
+fuchsia.ui.policy.Presenter
 fuchsia.kernel.CpuResource
 fuchsia.kernel.EnergyInfoResource
 fuchsia.kernel.MexecResource
@@ -871,7 +871,7 @@ fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
 fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
-fuchsia-pkg://fuchsia.com/ui#meta/ui_with_root_presenter.cm
+fuchsia-pkg://fuchsia.com/ui#meta/ui_minimal.cm
 fuchsia-pkg://fuchsia.com/waves_host#meta/waves_host.cm
 fuchsia-pkg://fuchsia.com/weave-auth#meta/weave_auth_server.cm
 context_provider=
