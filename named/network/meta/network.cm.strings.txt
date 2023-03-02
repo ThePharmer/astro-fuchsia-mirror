@@ -5,9 +5,8 @@ fuchsia.net.interfaces.State
 netstack6
 fuchsia.net.multicast.admin.Ipv6RoutingTableController
 fuchsia.net.routes.State
-fuchsia.net.routes.StateV4
-fuchsia.net.routes.StateV6
 fuchsia.net.stack.Stack
+fuchsia.netstack.Netstack
 fuchsia.posix.socket.Provider
 netstack!
 fuchsia.posix.socket.raw.Provider
@@ -31,7 +30,6 @@ fuchsia.stash.SecureStore
 fuchsia.tracing.provider.Registry
 fuchsia.diagnostics.persist.DataPersistence-netstack
 netstack4
-fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.name.LookupAdmin
@@ -51,6 +49,5 @@ test-components
 #meta/dhcpv6-client.cm
 #meta/dns_resolver.cm
 #meta/http-client.cm
-netstack3
-fuchsia-pkg://fuchsia.com/netstack#meta/netstack.cm
+#meta/netstack.cm
 #meta/reachability.cm
