@@ -24,9 +24,6 @@ fuchsia.castauth.CastKeySigner
 codec_factory
 fuchsia.mediacodec.CodecFactory
 /svc/fuchsia.mediacodec.CodecFactory
-debian-guest-manager
-fuchsia.virtualization.DebianGuestManager
-/svc/fuchsia.virtualization.DebianGuestManager
 emergency
 fuchsia.location.position.EmergencyProvider
 /svc/fuchsia.location.position.EmergencyProvider
@@ -126,11 +123,6 @@ fuchsia.media.sounds.Player
 system-updater
 fuchsia.update.installer.Installer
 /svc/fuchsia.update.installer.Installer
-termina-guest-manager
-fuchsia.virtualization.LinuxManager
-/svc/fuchsia.virtualization.LinuxManager
-fuchsia.virtualization.TerminaGuestManager
-/svc/fuchsia.virtualization.TerminaGuestManager
 test_manager
 fuchsia.test.manager.Query
 /svc/fuchsia.test.manager.Query
@@ -172,9 +164,6 @@ fuchsia.wlan.device.service.DeviceMonitor
 wlanstack
 fuchsia.wlan.device.service.DeviceService
 /svc/fuchsia.wlan.device.service.DeviceService
-zircon-guest-manager
-fuchsia.virtualization.ZirconGuestManager
-/svc/fuchsia.virtualization.ZirconGuestManager
 process_resolver
 fuchsia.process.Resolver
 /svc/fuchsia.process.Resolver
@@ -648,9 +637,6 @@ dev-bt-host
 bt-host
 dev-rtc
 sysmem_connector(
-fuchsia.net.virtualization.Control
-fuchsia.input.wayland.Keymap
-fuchsia.ui.composition.Allocator
 debug_agent
 debug_started
 stopped
@@ -704,6 +690,7 @@ fuchsia.sys.Environment
 fuchsia.sys.Loader
 google.device.key.encryptor.DeviceKeyEncryptor
 sshd-host
+fuchsia.ui.composition.Allocator
 fuchsia.posix.socket.raw.Provider
 fuchsia.pkg.RetainedPackages
 pkgfs-system
@@ -765,6 +752,7 @@ fuchsia.lowpan.device.DeviceExtraConnector
 fuchsia.lowpan.device.EnergyScanConnector
 fuchsia.lowpan.DeviceWatcher
 fuchsia.lowpan.thread.DatasetConnector
+fuchsia.lowpan.thread.FeatureConnector
 fuchsia.lowpan.thread.MeshcopConnector
 fuchsia.opencl.loader.Loader
 fuchsia.hardware.radar.RadarBurstReaderProvider
@@ -779,6 +767,10 @@ fuchsia.weave.StackProvider
 boot-bin
 pkgfs-packages
 packages
+fuchsia.virtualization.LinuxManager
+fuchsia.virtualization.DebianGuestManager
+fuchsia.virtualization.TerminaGuestManager
+fuchsia.virtualization.ZirconGuestManager
 audio_core_google
 fuchsia.audio.effects.ProcessorCreator
 activity*
@@ -860,7 +852,6 @@ fuchsia-pkg://fuchsia.com/full-resolver#meta/full-resolver.cm
 fuchsia-pkg://fuchsia.com/network#meta/network.cm
 fuchsia-pkg://fuchsia.com/hwinfo#meta/hwinfo.cm
 fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
-fuchsia-pkg://fuchsia.com/debian_guest_manager#meta/debian_guest_manager.cm
 fuchsia-pkg://fuchsia.com/debug_agent#meta/debug_agent.cm
 fuchsia-pkg://fuchsia.com/driver_playground#meta/driver_playground.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
@@ -890,7 +881,6 @@ fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
-fuchsia-pkg://fuchsia.com/termina_guest_manager#meta/termina_guest_manager.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui_minimal.cm
@@ -902,7 +892,6 @@ fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
 fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
-fuchsia-pkg://fuchsia.com/zircon_guest_manager#meta/zircon_guest_manager.cm
 fuchsia-pkg://fuchsia.com/diagnostics-kcounter#meta/diagnostics-kcounter.cm
 fuchsia-pkg://fuchsia.com/diagnostics#meta/diagnostics.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
