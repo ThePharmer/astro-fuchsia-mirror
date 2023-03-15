@@ -15,6 +15,9 @@ fuchsia.bluetooth.hfp.Hfp
 bt-snoop
 fuchsia.bluetooth.snoop.Snoop
 /svc/fuchsia.bluetooth.snoop.Snoop
+build-info
+fuchsia.buildinfo.Provider
+/svc/fuchsia.buildinfo.Provider
 cast_auth_server
 fuchsia.castauth.CastKeySigner
 /svc/fuchsia.castauth.CastKeySigner
@@ -171,9 +174,6 @@ fuchsia.tracing.perfetto.ProducerConnector
 /svc/fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
-build-info
-fuchsia.buildinfo.Provider
-/svc/fuchsia.buildinfo.Provider
 bt-a2dp
 fuchsia.bluetooth.a2dp.AudioMode%
 /svc/fuchsia.bluetooth.a2dp.AudioMode
@@ -813,9 +813,10 @@ core-env(
 fuchsia-pkg://fuchsia.com/bt-hfp-audio-gateway-default#meta/bt-hfp-audio-gateway.cm
 bt-snoop3
 fuchsia-pkg://fuchsia.com/bt-snoop#meta/bt-snoop.cm
+core-env 
+fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/cache_manager#meta/cache_manager.cm
 fuchsia-pkg://fuchsia.com/cast_auth#meta/cast_auth_server.cm
-core-env 
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/heapdump-collector#meta/heapdump-collector.cm
 fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
@@ -898,7 +899,6 @@ process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
-fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 laboratory-env
