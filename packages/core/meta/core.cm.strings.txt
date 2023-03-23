@@ -546,7 +546,6 @@ fuchsia.component.Binder
 fuchsia.metrics.MetricEventLoggerFactory
 driver_playground
 fuchsia.driver.playground.ToolRunner
-fs_realm
 diagnostics-kcounter
 fuchsia.component.KcounterBinder
 diagnostics
@@ -691,6 +690,7 @@ fuchsia.ui.composition.Allocator
 fuchsia.posix.socket.raw.Provider
 fuchsia.pkg.RetainedPackages
 pkgfs-system
+dev-builtin
 dev-null
 dev-zero
 fuchsia.boot.SvcStashProvider
@@ -777,7 +777,6 @@ cast_auth_server*
 context_provider*
 feedback*
 flash_ts_service*
-fs_realm*
 heapdump-collector
 multizone_leader*
 process_explorer*
@@ -789,7 +788,6 @@ bt-snoop!
 cast_auth_server!
 context_provider!
 flash_ts_service!
-fs_realm!
 process_explorer!
 process_resolver!
 sysmem_connector!
@@ -860,8 +858,6 @@ fuchsia-pkg://fuchsia.com/forensics#meta/exceptions.cm
 feedback4
 fuchsia-pkg://fuchsia.com/forensics#meta/feedback.cm
 fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
-fs_realm3
-fuchsia-pkg://fuchsia.com/fs_realm#meta/fs_realm.cm
 fuchsia-pkg://fuchsia.com/fuzz-manager#meta/fuzz-manager.cm
 fuchsia-pkg://fuchsia.com/fuzz-registry#meta/fuzz-registry.cm
 fuchsia-pkg://fuchsia.com/intl-services-small#meta/intl.cm
