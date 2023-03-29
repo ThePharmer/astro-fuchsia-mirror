@@ -674,6 +674,9 @@ fuchsia.input.interaction.Notifier
 fuchsia.pkg.Cup
 omaha-client
 fuchsia.ui.pointer.augment.GlobalMouse
+fuchsia.ui.shortcut.Manager
+fuchsia.ui.shortcut2.Registry
+fuchsia.timezone.Timezone
 fuchsia.camera3.DeviceWatcher
 fuchsia.bluetooth.sys.Bootstrap
 fuchsia.sys.Environment
@@ -788,8 +791,9 @@ sysmem_connector!
 /svc/fuchsia.sys.Environment
 /svc/fuchsia.sys.Launcher
 /svc/fuchsia.sys.Loader
-/svc/fuchsia.web.ContextProvider
 persistent
+/svc/fuchsia.timezone.Timezone
+/svc/fuchsia.web.ContextProvider
 /svc_for_sys
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
 fuchsia-pkg://fuchsia.com/amlogic-netflix-keys#meta/amlogic-netflix-keys.cm
@@ -888,6 +892,6 @@ fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 laboratory-env
-fuchsia-pkg
 stardroid
 starnix_chromiumos
+fuchsia-pkg
