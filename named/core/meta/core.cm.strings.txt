@@ -674,9 +674,6 @@ fuchsia.input.interaction.Notifier
 fuchsia.pkg.Cup
 omaha-client
 fuchsia.ui.pointer.augment.GlobalMouse
-fuchsia.ui.shortcut.Manager
-fuchsia.ui.shortcut2.Registry
-fuchsia.timezone.Timezone
 fuchsia.camera3.DeviceWatcher
 fuchsia.bluetooth.sys.Bootstrap
 fuchsia.sys.Environment
@@ -715,6 +712,7 @@ input
 dev-tee
 tzdata-provider
 tzdata-icu-44-le
+testing
 context_provider&
 context_provider.
 config-data-for-web-instance
@@ -792,8 +790,6 @@ sysmem_connector!
 /svc/fuchsia.sys.Launcher
 /svc/fuchsia.sys.Loader
 persistent
-/svc/fuchsia.timezone.Timezone
-/svc/fuchsia.web.ContextProvider
 /svc_for_sys
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
 fuchsia-pkg://fuchsia.com/amlogic-netflix-keys#meta/amlogic-netflix-keys.cm
@@ -872,6 +868,7 @@ fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
+fuchsia-pkg://fuchsia.com/testing#meta/test_realm.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui_minimal.cm
 fuchsia-pkg://fuchsia.com/waves_host#meta/waves_host.cm
@@ -892,6 +889,6 @@ fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 laboratory-env
+fuchsia-pkg
 stardroid
 starnix_chromiumos
-fuchsia-pkg
