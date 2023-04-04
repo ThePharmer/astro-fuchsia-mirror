@@ -1,0 +1,42 @@
+{
+  "program": {
+    "binary": "cast_agent_exe",
+    "args": [ "--ultrasound-agent" ]
+  },
+  "sandbox": {
+    "features": [
+      "config-data",
+      "isolated-persistent-storage"
+    ],
+    "services": [
+      "fuchsia.buildinfo.Provider",
+      "fuchsia.castsetup.ApiRegistry",
+      "fuchsia.feedback.CrashReportingProductRegister",
+      "fuchsia.hwinfo.Board",
+      "fuchsia.hwinfo.Device",
+      "fuchsia.hwinfo.Product",
+      "fuchsia.legacymetrics.MetricsRecorder",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.audio.VolumeControl",
+      "fuchsia.media.ProfileProvider",
+      "fuchsia.media.sessions2.ActiveSession",
+      "fuchsia.migration.UltrasoundProvider",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.power.profile.Watcher",
+      "fuchsia.settings.Audio",
+      "fuchsia.settings.Input",
+      "fuchsia.settings.Privacy",
+      "fuchsia.thermal.ClientStateConnector",
+      "fuchsia.ultrasound.Factory",
+      "fuchsia.update.channel.Provider",
+      "google.cast.cloudsettings.CloudSettingsManager",
+      "google.cast.feature.FeatureService",
+      "google.cast.pref_control.PrefControlService",
+      "google.cast.setup.EurekaInfoManager",
+      "google.flashts.Reader",
+      "google.mlframework.MlFrameworkOutputService",
+      "google.presence.TouchActivity",
+      "fuchsia.posix.socket.Provider"
+    ]
+  }
+}
