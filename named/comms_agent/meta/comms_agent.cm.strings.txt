@@ -1,7 +1,7 @@
-args
---comms
 binary
 cast_agent_exe
+args
+--comms
 config-data
 /config/data
 data
@@ -19,6 +19,8 @@ fuchsia.castsysteminfo.Provider
 /svc/fuchsia.castsysteminfo.Provider
 fuchsia.device.NameProvider
 /svc/fuchsia.device.NameProvider
+fuchsia.feedback.ComponentDataRegister
+/svc/fuchsia.feedback.ComponentDataRegister
 fuchsia.feedback.CrashReportingProductRegister
 /svc/fuchsia.feedback.CrashReportingProductRegister
 fuchsia.hwinfo.Board
@@ -113,6 +115,7 @@ google.comms.hfbluetooth.HfCallManager
 google.comms.listenlive.ListenLiveState
 google.comms.opal.CommunicationRequestService
 google.policy.comms.CommsProvider
+diagnostics
 /svc/fuchsia.camera3.DeviceWatcher
 /svc/fuchsia.modular.Agent
 /svc/google.assistant.libassistantv2.CommsAgent
@@ -125,3 +128,4 @@ google.comms.assistant.ExplicitAutomationHandler5
 /svc/google.comms.listenlive.ListenLiveState
 /svc/google.comms.opal.CommunicationRequestService
 /svc/google.policy.comms.CommsProvider
+/diagnostics
