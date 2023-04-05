@@ -48,10 +48,10 @@
         "event_code": 37
     },
     {
-        "name": "Storage",
-        "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm",
+        "name": "Fshost",
+        "process": "fshost\\.cm",
         "vmo": "",
-        "event_code": 72
+        "event_code": 21
     },
     {
         "name": "Minfs",
@@ -91,15 +91,9 @@
     },
     {
         "name": "Netstack",
-        "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|network-tun\\.cmx?|mdns\\.cmx?|dhcpv4_server\\.cm",
+        "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netsvc\\.cm|network-tun\\.cmx?|mdns\\.cmx?",
         "vmo": "",
         "event_code": 11
-    },
-    {
-        "name": "Netsvc",
-        "process": "netsvc\\.cm|device-name-provider\\.cm",
-        "vmo": "",
-        "event_code": 71
     },
     {
         "name": "Pkgfs",
@@ -109,7 +103,7 @@
     },
     {
         "name": "Cast",
-        "process": "cast_agent\\.cmx?|cast_assistant\\.cmx?|cast_auth_server\\.cmx?|multizone_leader\\.cmx?|multizone_follower\\.cmx",
+        "process": "cast_agent\\.cmx?|cast_assistant\\.cmx?|cast_auth_server\\.cmx?",
         "vmo": "",
         "event_code": 14
     },
@@ -127,7 +121,7 @@
     },
     {
         "name": "Audio",
-        "process": "audio_core\\.cmx?|soundplayer\\.cm",
+        "process": "audio_core\\.cmx?",
         "vmo": "",
         "event_code": 24
     },
@@ -162,6 +156,12 @@
         "event_code": 42
     },
     {
+        "name": "SoundPlayer",
+        "process": "soundplayer\\.cm",
+        "vmo": "",
+        "event_code": 43
+    },
+    {
         "name": "Ultrasound",
         "process": "ultrasound_agent\\.cmx?",
         "vmo": "",
@@ -169,7 +169,7 @@
     },
     {
         "name": "Feedback",
-        "process": "exceptions\\.cmx?|feedback\\.cm|system_log_recorder|feedback_id\\.cm",
+        "process": "exceptions\\.cmx?|feedback\\.cm|log-stats\\.cm|system_log_recorder",
         "vmo": "",
         "event_code": 46
     },
@@ -253,7 +253,7 @@
     },
     {
         "name": "EngTools",
-        "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor\\.cm|overnetstack\\.cmx?|remote.*|sh:console|sshd-host\\.cmx?|log-stats\\.cm",
+        "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor\\.cm|overnetstack\\.cmx?|remote.*|sh:console|sshd-host\\.cmx?",
         "vmo": "",
         "event_code": 64
     },
@@ -268,11 +268,5 @@
         "process": "localhome_platform\\.cmx?",
         "vmo": "",
         "event_code": 67
-    },
-    {
-        "name": "SceneManager",
-        "process": "input-pipeline\\.cm|scene_manager\\.cm",
-        "vmo": "",
-        "event_code": 69
     }
 ]
