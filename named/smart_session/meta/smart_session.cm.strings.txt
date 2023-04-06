@@ -25,6 +25,8 @@ fuchsia.session.Restarter
 /svc/fuchsia.session.Restarter
 fuchsia.sys.Launcher
 /svc/fuchsia.sys.Launcher
+fuchsia.tracing.provider.Registry
+/svc/fuchsia.tracing.provider.Registry
 fuchsia.session.scene.Manager
 /svc/fuchsia.session.scene.Manager
 fuchsia.ui.policy.Presenter
@@ -92,14 +94,13 @@ fuchsia.sys.Runner
 /svc_for_v1_sessionmgr/fuchsia.sys.Runner-cast
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 fuchsia.component.Binder
 diagnostics
 fuchsia.camera3.DeviceWatcher
 elements
 fuchsia.media.Audio
 fuchsia.sysmem.Allocator
+elements!
 fuchsia.ui.composition.Allocator
 elements 
 fuchsia.ui.composition.Flatland
@@ -345,8 +346,6 @@ google.reconnect.ReconnectProvider
 google.session.DeviceModeControl
 google.usonia.IpcHandler
 root-ssl-certificates
-fuchsia_perception_estelle_agent!
-elements!
 /svc_from_v1_sessionmgr/fuchsia.modular.PuppetMaster
 fuchsia.modular.ComponentContext8
 /svc_from_v1_sessionmgr/fuchsia.modular.ComponentContext
