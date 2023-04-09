@@ -155,9 +155,6 @@ fuchsia.wlan.device.service.DeviceMonitor
 wlanstack
 fuchsia.wlan.device.service.DeviceService
 /svc/fuchsia.wlan.device.service.DeviceService
-process_resolver
-fuchsia.process.Resolver
-/svc/fuchsia.process.Resolver
 trace_manager
 fuchsia.tracing.controller.Controller
 /svc/fuchsia.tracing.controller.Controller
@@ -168,6 +165,9 @@ fuchsia.tracing.provider.Registry
 build-info
 fuchsia.buildinfo.Provider
 /svc/fuchsia.buildinfo.Provider
+process_resolver
+fuchsia.process.Resolver
+/svc/fuchsia.process.Resolver
 bt-a2dp
 fuchsia.bluetooth.a2dp.AudioMode%
 /svc/fuchsia.bluetooth.a2dp.AudioMode
@@ -669,7 +669,6 @@ fuchsia.sys.Loader
 context_provider
 fuchsia.web.ContextProvider
 google.device.key.encryptor.DeviceKeyEncryptor
-sshd-host
 fuchsia.ui.composition.Allocator
 fuchsia.posix.socket.raw.Provider
 fuchsia.pkg.RetainedPackages
@@ -851,7 +850,6 @@ fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
 fuchsia-pkg://fuchsia.com/setui_service#meta/setui_service.cm
 fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
-fuchsia-pkg://fuchsia.com/sshd-host#meta/sshd-host.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/testing#meta/test_realm.cm
@@ -867,11 +865,11 @@ fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
 fuchsia-pkg://fuchsia.com/diagnostics#meta/diagnostics.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
-process_resolverC
-fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
+process_resolverC
+fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 stardroid
