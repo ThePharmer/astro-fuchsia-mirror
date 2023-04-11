@@ -1,0 +1,71 @@
+{
+  "program": {
+    "args": [
+      "--comms"
+    ],
+    "binary": "cast_agent_exe"
+  },
+  "sandbox": {
+    "features": [
+      "config-data",
+      "isolated-persistent-storage",
+      "isolated-temp",
+      "root-ssl-certificates",
+      "vulkan"
+    ],
+    "services": [
+      "fuchsia.auth.oldtokens.CredentialsProducer",
+      "fuchsia.buildinfo.Provider",
+      "fuchsia.castsetup.StateWatcher",
+      "fuchsia.castsysteminfo.Provider",
+      "fuchsia.device.NameProvider",
+      "fuchsia.feedback.CrashReportingProductRegister",
+      "fuchsia.hwinfo.Board",
+      "fuchsia.hwinfo.Device",
+      "fuchsia.hwinfo.Product",
+      "fuchsia.intl.PropertyProvider",
+      "fuchsia.legacymetrics.MetricsRecorder",
+      "fuchsia.location.position.EmergencyProvider",
+      "fuchsia.logger.LogSink",
+      "fuchsia.media.Audio",
+      "fuchsia.media.ProfileProvider",
+      "fuchsia.media.sounds.Player",
+      "fuchsia.mediacodec.CodecFactory",
+      "fuchsia.modular.ComponentContext",
+      "fuchsia.modular.PuppetMaster",
+      "fuchsia.net.http.Loader",
+      "fuchsia.net.interfaces.State",
+      "fuchsia.net.name.Lookup",
+      "fuchsia.posix.socket.Provider",
+      "fuchsia.process.Launcher",
+      "fuchsia.settings.Audio",
+      "fuchsia.settings.Input",
+      "fuchsia.settings.Privacy",
+      "fuchsia.sys.Environment",
+      "fuchsia.sys.Launcher",
+      "fuchsia.sys.Loader",
+      "fuchsia.sysmem.Allocator",
+      "fuchsia.tracing.provider.Provider",
+      "fuchsia.tracing.provider.Registry",
+      "fuchsia.update.channel.Provider",
+      "fuchsia.vulkan.loader.Loader",
+      "google.assistant.libassistant.AssistantState",
+      "google.assistant.libassistantv2.Kronk",
+      "google.camera.CameraStateProvider",
+      "google.cast.activityconfig.ActivityConfigManager",
+      "google.cast.auth.AppCredentialProducer",
+      "google.cast.ccsconfig.CcsConfigWatcher",
+      "google.cast.feature.FeatureService",
+      "google.cast.hds.HdsService",
+      "google.cast.multizone.Leader",
+      "google.cast.window.InteractionHandlerRegistry",
+      "google.duocore.DuoCore",
+      "google.flashts.Reader",
+      "google.mlframework.OutputManager",
+      "google.policy.comms.CommsARServiceController",
+      "google.policy.comms.CommsARServiceProvider",
+      "google.policy.comms.SmartFramingConnection",
+      "google.usonia.IpcHandler"
+    ]
+  }
+}
