@@ -3,6 +3,8 @@ bin/netcfg_basiclifecycle.stop_event
 notify
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
+fuchsia.net.debug.Interfaces
+/svc/fuchsia.net.debug.Interfaces
 fuchsia.net.dhcp.Server
 /svc/fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
@@ -17,11 +19,13 @@ fuchsia.net.name.LookupAdmin
 /svc/fuchsia.net.name.LookupAdmin
 fuchsia.net.stack.Stack
 /svc/fuchsia.net.stack.Stack
+fuchsia.netstack.Netstack
+/svc/fuchsia.netstack.Netstack
+dev-class-ethernet
+/dev/class/ethernet
 dev-class-network
 /dev/class/network
 data
 /data
 config-data
 /config/data
-fuchsia.net.dhcpv6.PrefixProvider
-/svc/fuchsia.net.dhcpv6.PrefixProvider
