@@ -351,7 +351,7 @@ fuchsia.hwinfo.Device
 /svc/fuchsia.hwinfo.Device
 fuchsia.hwinfo.Product
 /svc/fuchsia.hwinfo.Product
-system-update-committer
+system-update
 fuchsia.update.CommitStatusProvider
 /svc/fuchsia.update.CommitStatusProvider
 remote-control
@@ -608,6 +608,8 @@ sysmem
 dev-thermal
 thermal
 root-ssl-certificates
+system-update-committer-config-data
+system-update-committer
 fuchsia.sys2.RouteValidator.root
 dev-display-controller
 display-controller
@@ -766,7 +768,6 @@ flash_ts_service*
 multizone_leader*
 process_resolver*
 sysmem_connector*
-system-update
 activity!
 bt-avrcp!
 bt-snoop!
@@ -799,7 +800,6 @@ fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
 fuchsia-pkg://fuchsia.com/debug-dash-launcher#meta/debug_dash_launcher.cm
 fuchsia-pkg://fuchsia.com/session_manager#meta/session_manager.cm
 session-env
-fuchsia-pkg://fuchsia.com/system-update-committer#meta/system-update-committer.cm
 fuchsia-pkg://fuchsia.com/system-update-realm#meta/system-update-realm.cm
 fuchsia-pkg://fuchsia.com/mdns#meta/mdns.cm
 fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
@@ -873,4 +873,3 @@ fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 stardroid
-starnix_chromiumos
