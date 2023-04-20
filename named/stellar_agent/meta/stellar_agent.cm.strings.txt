@@ -1,9 +1,9 @@
-binary
-cast_agent_exe
 args
 --stellar-agent
 --libaa-classifiers-audio-gain-linear=4.2
 --tensorflow-classifiers-audio-gain-linear=16.8
+binary
+cast_agent_exe
 config-data
 /config/data
 fuchsia.buildinfo.Provider
@@ -39,5 +39,7 @@ fuchsia.posix.socket.Provider
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.component.Binder
+fuchsia.modular.Agent
 google.assistant.soundsensing.SoundSensing
+/svc/fuchsia.modular.Agent
 /svc/google.assistant.soundsensing.SoundSensing
