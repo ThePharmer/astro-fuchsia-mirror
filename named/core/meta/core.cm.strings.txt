@@ -152,6 +152,9 @@ fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 wlandevicemonitor
 fuchsia.wlan.device.service.DeviceMonitor
 /svc/fuchsia.wlan.device.service.DeviceMonitor
+wlanstack
+fuchsia.wlan.device.service.DeviceService
+/svc/fuchsia.wlan.device.service.DeviceService
 trace_manager
 fuchsia.tracing.controller.Controller
 /svc/fuchsia.tracing.controller.Controller
@@ -550,8 +553,6 @@ fuchsia.logger.LogSink
 dev-class
 dev-securemem
 securemem
-config-data
-amlogic-oemcrypto
 svc_for_sys
 blob
 boot
@@ -573,6 +574,7 @@ fuchsia.sys2.StorageAdmin
 storage_cache_manager
 cast_auth_server<
 cast_auth_server3
+config-data
 cast_auth
 dev-mediacodec
 media-codec
@@ -773,10 +775,10 @@ context_provider!
 flash_ts_service!
 process_resolver!
 sysmem_connector!
-persistent
 /svc/fuchsia.sys.Environment
 /svc/fuchsia.sys.Launcher
 /svc/fuchsia.sys.Loader
+persistent
 /svc_for_sys
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
 fuchsia-pkg://fuchsia.com/amlogic-netflix-keys#meta/amlogic-netflix-keys.cm
@@ -859,6 +861,7 @@ fuchsia-pkg://fuchsia.com/web_engine#meta/context_provider.cm
 fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
 fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
+fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
 fuchsia-pkg://fuchsia.com/diagnostics#meta/diagnostics.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
