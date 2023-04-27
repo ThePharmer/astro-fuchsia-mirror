@@ -1,7 +1,7 @@
-args
---nest-policy-agent
 binary
 cast_agent_exe
+args
+--nest-policy-agent
 config-data
 /config/data
 data
@@ -22,8 +22,10 @@ google.policy.concierge.ConciergeController
 /svc/google.policy.concierge.ConciergeController
 google.policy.concierge.ConciergeProvider
 /svc/google.policy.concierge.ConciergeProvider
-google.policy.federatedlearning.StateWriter
-/svc/google.policy.federatedlearning.StateWriter
+google.policy.FederatedLearningEventWriter
+/svc/google.policy.FederatedLearningEventWriter
+google.policy.FederatedLearningStateWriter
+/svc/google.policy.FederatedLearningStateWriter
 google.policy.mlframework.MlFrameworkStateWriter5
 /svc/google.policy.mlframework.MlFrameworkStateWriter
 google.policy.mlvision.MlVisionStateWriter
