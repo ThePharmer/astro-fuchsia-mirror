@@ -2,8 +2,6 @@ binary
 bin/archivist
 lifecycle.stop_event
 notify
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.diagnostics.ArchiveAccessor
@@ -19,10 +17,13 @@ enable_component_event_provider
 enable_event_source
 enable_klog
 enable_log_connector
-is_unattributed
+install_controller
+listen_to_lifecycle
 log_to_debuglog
 logs_max_cached_original_bytes
 maximum_concurrent_snapshots_per_reader
 num_threads
 pipelines_path
+serve_unattributed_logs
+TBZN
 meta/archivist-without-attribution.cvf
