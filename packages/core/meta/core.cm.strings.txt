@@ -351,9 +351,6 @@ fuchsia.hwinfo.Product
 system-update
 fuchsia.update.CommitStatusProvider
 /svc/fuchsia.update.CommitStatusProvider
-remote-control
-fuchsia.developer.remotecontrol.RemoteControl
-/svc/fuchsia.developer.remotecontrol.RemoteControl
 overnetstack
 fuchsia.overnet.MeshController
 /svc/fuchsia.overnet.MeshController
@@ -590,7 +587,6 @@ debug-dash-launcher
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.update.verify.NetstackVerifier
 fuchsia.factory.MiscFactoryStoreProvider
-fuchsia.overnet.ServicePublisher
 remote-diagnostics-bridge
 fonts
 fuchsia.sys2.RealmQuery
@@ -606,7 +602,6 @@ thermal
 root-ssl-certificates
 system-update-committer-config-data
 system-update-committer
-fuchsia.sys2.RouteValidator.root
 dev-display-controller
 display-controller
 dev-gpu-dependency-injection
@@ -723,6 +718,7 @@ radar
 dev-block
 dev-skip-block
 fuchsia.power.button.Monitor
+root-data
 fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 fuchsia.bluetooth.a2dp.AudioMode
@@ -815,7 +811,6 @@ fuchsia-pkg://fuchsia.com/stash#meta/stash_secure.cm
 fuchsia-pkg://fuchsia.com/regulatory_region#meta/regulatory_region.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
 fuchsia-pkg://fuchsia.com/overnetstack#meta/overnetstack.cm
-fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 core-env0
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
