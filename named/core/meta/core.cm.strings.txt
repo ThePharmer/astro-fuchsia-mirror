@@ -1,9 +1,5 @@
 binary
 bin/core_proxy
-fuchsia.session.scene.Manager
-/svc/fuchsia.session.scene.Manager
-fuchsia.lightsensor.Sensor
-/svc/fuchsia.lightsensor.Sensor
 amlogic_netflix_keys
 google.cast.cryptokey.NamedKeyProvider
 /svc/google.cast.cryptokey.NamedKeyProvider
@@ -165,6 +161,10 @@ fuchsia.buildinfo.Provider
 process_resolver
 fuchsia.process.Resolver
 /svc/fuchsia.process.Resolver
+fuchsia.session.scene.Manager
+/svc/fuchsia.session.scene.Manager
+fuchsia.lightsensor.Sensor
+/svc/fuchsia.lightsensor.Sensor
 bt-a2dp
 fuchsia.bluetooth.a2dp.AudioMode%
 /svc/fuchsia.bluetooth.a2dp.AudioMode
@@ -541,8 +541,6 @@ log-stats
 fuchsia.component.LogStatsBinder
 sampler
 fuchsia.component.SamplerBinder
-fuchsia.ui.policy.Presenter
-fuchsia.factory.MiscFactoryStoreProvider
 oemcrypto
 widevine.oemcrypto.Provider
 fuchsia.logger.LogSink
@@ -588,6 +586,7 @@ fuchsia.pkg.LocalMirror
 debug-dash-launcher
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.update.verify.NetstackVerifier
+fuchsia.factory.MiscFactoryStoreProvider
 remote-diagnostics-bridge
 fonts
 fuchsia.sys2.RealmQuery
@@ -681,6 +680,7 @@ stopped
 fuchsia.component.resolution.Resolver
 fuchsia.sysmem2.Allocator
 fuchsia.accessibility.semantics.SemanticsManager
+fuchsia.ui.policy.Presenter
 fuchsia.kernel.CpuResource
 fuchsia.kernel.EnergyInfoResource
 fuchsia.kernel.MexecResource
@@ -774,8 +774,6 @@ sysmem_connector!
 /svc/fuchsia.sys.Loader
 persistent
 /svc_for_sys
-fuchsia-pkg://fuchsia.com/ui#meta/ui_minimal.cm
-core-env 
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
 fuchsia-pkg://fuchsia.com/amlogic-netflix-keys#meta/amlogic-netflix-keys.cm
 fuchsia-pkg://fuchsia.com/appmgr#meta/appmgr.cm
@@ -789,6 +787,7 @@ bt-snoop3
 fuchsia-pkg://fuchsia.com/bt-snoop#meta/bt-snoop.cm
 fuchsia-pkg://fuchsia.com/cache_manager#meta/cache_manager.cm
 fuchsia-pkg://fuchsia.com/cast_auth#meta/cast_auth_server.cm
+core-env 
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
 fuchsia-pkg://fuchsia.com/debug-dash-launcher#meta/debug_dash_launcher.cm
@@ -861,6 +860,7 @@ fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
+fuchsia-pkg://fuchsia.com/ui#meta/ui_minimal.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 starnix
