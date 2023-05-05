@@ -122,6 +122,10 @@ fuchsia.test.manager.Query
 /svc/fuchsia.test.manager.Query
 fuchsia.test.manager.RunBuilder
 /svc/fuchsia.test.manager.RunBuilder
+fuchsia.session.scene.Manager
+/svc/fuchsia.session.scene.Manager
+fuchsia.lightsensor.Sensor
+/svc/fuchsia.lightsensor.Sensor
 weave_auth
 fuchsia.weave.FactoryDataManager%
 /svc/fuchsia.weave.FactoryDataManager
@@ -148,6 +152,9 @@ fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 wlandevicemonitor
 fuchsia.wlan.device.service.DeviceMonitor
 /svc/fuchsia.wlan.device.service.DeviceMonitor
+wlanstack
+fuchsia.wlan.device.service.DeviceService
+/svc/fuchsia.wlan.device.service.DeviceService
 trace_manager
 fuchsia.tracing.controller.Controller
 /svc/fuchsia.tracing.controller.Controller
@@ -161,10 +168,6 @@ fuchsia.buildinfo.Provider
 process_resolver
 fuchsia.process.Resolver
 /svc/fuchsia.process.Resolver
-fuchsia.session.scene.Manager
-/svc/fuchsia.session.scene.Manager
-fuchsia.lightsensor.Sensor
-/svc/fuchsia.lightsensor.Sensor
 bt-a2dp
 fuchsia.bluetooth.a2dp.AudioMode%
 /svc/fuchsia.bluetooth.a2dp.AudioMode
@@ -351,6 +354,9 @@ fuchsia.hwinfo.Product
 system-update
 fuchsia.update.CommitStatusProvider
 /svc/fuchsia.update.CommitStatusProvider
+remote-control
+fuchsia.developer.remotecontrol.RemoteControl
+/svc/fuchsia.developer.remotecontrol.RemoteControl
 overnetstack
 fuchsia.overnet.MeshController
 /svc/fuchsia.overnet.MeshController
@@ -360,6 +366,9 @@ fuchsia.overnet.ServiceConsumer
 /svc/fuchsia.overnet.ServiceConsumer
 fuchsia.overnet.ServicePublisher%
 /svc/fuchsia.overnet.ServicePublisher
+starnix_runner
+fuchsia.starnix.developer.Manager
+/svc/fuchsia.starnix.developer.Manager
 debug_serial
 fuchsia.hardware.serial.DeviceProxy
 /svc/fuchsia.hardware.serial.DeviceProxy
@@ -547,8 +556,6 @@ fuchsia.logger.LogSink
 dev-class
 dev-securemem
 securemem
-config-data
-amlogic-oemcrypto
 svc_for_sys
 blob
 boot
@@ -570,6 +577,7 @@ fuchsia.sys2.StorageAdmin
 storage_cache_manager
 cast_auth_server<
 cast_auth_server3
+config-data
 cast_auth
 dev-mediacodec
 media-codec
@@ -579,7 +587,6 @@ fuchsia.pkg.FontResolver
 agis
 timekeeper
 sl4f_bridge_server
-starnix_runner
 dev-class-network
 full-resolver
 fuchsia.pkg.LocalMirror
@@ -587,6 +594,7 @@ debug-dash-launcher
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.update.verify.NetstackVerifier
 fuchsia.factory.MiscFactoryStoreProvider
+fuchsia.overnet.ServicePublisher
 remote-diagnostics-bridge
 fonts
 fuchsia.sys2.RealmQuery
@@ -602,6 +610,7 @@ thermal
 root-ssl-certificates
 system-update-committer-config-data
 system-update-committer
+fuchsia.sys2.RouteValidator.root
 dev-display-controller
 display-controller
 dev-gpu-dependency-injection
@@ -718,7 +727,6 @@ radar
 dev-block
 dev-skip-block
 fuchsia.power.button.Monitor
-root-data
 fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 fuchsia.bluetooth.a2dp.AudioMode
@@ -811,6 +819,7 @@ fuchsia-pkg://fuchsia.com/stash#meta/stash_secure.cm
 fuchsia-pkg://fuchsia.com/regulatory_region#meta/regulatory_region.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
 fuchsia-pkg://fuchsia.com/overnetstack#meta/overnetstack.cm
+fuchsia-pkg://fuchsia.com/remote-control#meta/remote-control.cm
 core-env0
 fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
@@ -845,6 +854,8 @@ fuchsia-pkg://fuchsia.com/soundplayer#meta/soundplayer.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/testing#meta/test_realm.cm
+fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
+fuchsia-pkg://fuchsia.com/ui#meta/ui_minimal.cm
 fuchsia-pkg://fuchsia.com/waves_host#meta/waves_host.cm
 fuchsia-pkg://fuchsia.com/weave-auth#meta/weave_auth_server.cm
 context_provider=
@@ -852,15 +863,15 @@ fuchsia-pkg://fuchsia.com/web_engine#meta/context_provider.cm
 fuchsia-pkg://fuchsia.com/widevine-cdm#meta/widevine_cdm.cm
 fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
+fuchsia-pkg://fuchsia.com/wlanstack#meta/wlanstack.cm
 fuchsia-pkg://fuchsia.com/diagnostics#meta/diagnostics.cm
 fuchsia-pkg://fuchsia.com/log-stats#meta/log-stats.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
-fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
-fuchsia-pkg://fuchsia.com/ui#meta/ui_minimal.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
 starnix
+stardroid
