@@ -1,7 +1,7 @@
-binary
-cast_agent_exe
 args
 --nest-policy-agent
+binary
+cast_agent_exe
 config-data
 /config/data
 data
@@ -22,10 +22,8 @@ google.policy.concierge.ConciergeController
 /svc/google.policy.concierge.ConciergeController
 google.policy.concierge.ConciergeProvider
 /svc/google.policy.concierge.ConciergeProvider
-google.policy.FederatedLearningEventWriter
-/svc/google.policy.FederatedLearningEventWriter
-google.policy.FederatedLearningStateWriter
-/svc/google.policy.FederatedLearningStateWriter
+google.policy.federatedlearning.StateWriter
+/svc/google.policy.federatedlearning.StateWriter
 google.policy.mlframework.MlFrameworkStateWriter5
 /svc/google.policy.mlframework.MlFrameworkStateWriter
 google.policy.mlvision.MlVisionStateWriter
@@ -40,8 +38,6 @@ fuchsia.castsetup.ApiRegistry
 /svc/fuchsia.castsetup.ApiRegistry
 fuchsia.factory.MiscFactoryStoreProvider-
 /svc/fuchsia.factory.MiscFactoryStoreProvider
-fuchsia.feedback.CrashReportingProductRegister
-/svc/fuchsia.feedback.CrashReportingProductRegister
 fuchsia.hwinfo.Board
 /svc/fuchsia.hwinfo.Board
 fuchsia.hwinfo.Device
@@ -52,8 +48,6 @@ fuchsia.intl.PropertyProvider
 /svc/fuchsia.intl.PropertyProvider
 fuchsia.legacymetrics.MetricsRecorder
 /svc/fuchsia.legacymetrics.MetricsRecorder
-fuchsia.lightsensor.Sensor
-/svc/fuchsia.lightsensor.Sensor
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.media.ActivityReporter
@@ -124,7 +118,6 @@ google.policy.comms.CommsARServiceController
 google.policy.comms.CommsARServiceProvider
 google.policy.opal.OpalARServiceController
 google.policy.opal.OpalARServiceProvider
-diagnostics
 /svc/google.assistant.libassistantv2.NestPolicyAgent
 /svc/google.policy.comms.SmartFramingConnection
 /svc/google.policy.opal.OpalCameraServiceController
@@ -135,4 +128,3 @@ diagnostics
 /svc/google.policy.opal.OpalARServiceController
 google.policy.opal.OpalARServiceProvider-
 /svc/google.policy.opal.OpalARServiceProvider
-/diagnostics
