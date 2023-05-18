@@ -4,8 +4,6 @@ fuchsia.component.Realm
 /svc/fuchsia.component.Realm
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
-root-data
-/data
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.element.GraphicalPresenter
@@ -70,12 +68,14 @@ fuchsia.settings.Intl
 fuchsia.settings.Keyboard
 fuchsia.settings.Light
 fuchsia.settings.NightMode
+fuchsia.settings.policy.VolumePolicyController
 fuchsia.settings.Privacy
 fuchsia.settings.Setup
 fuchsia.ssh.AuthorizedKeys
 fuchsia.sys.Environment
 fuchsia.sys.Loader
 fuchsia.thermal.ClientStateConnector
+fuchsia.timezone.Timezone
 fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.ultrasound.Factory
 fuchsia.weave.FactoryDataManager
@@ -151,6 +151,8 @@ fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.ui.policy.DisplayBacklight
 fuchsia.ui.scenic.Scenic
+fuchsia.ui.shortcut.Manager
+fuchsia.ui.shortcut2.Registry
 fuchsia.ui.views.ViewRefInstalled
 fuchsia.session.scene.Manager
 fuchsia.ui.policy.Presenter
@@ -190,6 +192,7 @@ fuchsia.pkg.RepositoryManager
 fuchsia.pkg.rewrite.Engine
 fuchsia.process.Resolver
 fuchsia.space.Manager
+fuchsia.starnix.developer.Manager
 fuchsia.sys2.RealmExplorer.root
 fuchsia.sys2.RealmQuery.root
 fuchsia.virtualization.DebianGuestManager
@@ -212,6 +215,5 @@ full-resolver
 /svc/fuchsia.session.Launcher
 /svc/fuchsia.session.Restarter
 /diagnostics
-autolaunch
 session_url
 meta/session_manager.cvf
