@@ -99,7 +99,7 @@ fuchsia.media.SessionAudioConsumerFactory
 multizone_leader
 google.cast.multizone.Leader
 /svc/google.cast.multizone.Leader
-system-update
+system-update-checker
 fuchsia.update.channel.Provider
 /svc/fuchsia.update.channel.Provider
 fuchsia.update.channelcontrol.ChannelControl
@@ -217,8 +217,6 @@ fuchsia.settings.Privacy
 /svc/fuchsia.settings.Privacy
 fuchsia.settings.Setup
 /svc/fuchsia.settings.Setup
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 fuchsia.boot.Arguments
 /svc/fuchsia.boot.Arguments
 fuchsia.boot.FactoryItems
@@ -345,6 +343,7 @@ fuchsia.hwinfo.Device
 /svc/fuchsia.hwinfo.Device
 fuchsia.hwinfo.Product
 /svc/fuchsia.hwinfo.Product
+system-update
 fuchsia.update.CommitStatusProvider
 /svc/fuchsia.update.CommitStatusProvider
 overnetstack
@@ -584,6 +583,7 @@ sysmem_connector(
 boot
 oemcrypto
 widevine.oemcrypto.Provider
+fuchsia.logger.LogSink
 dev-securemem
 securemem
 amlogic-oemcrypto
@@ -640,7 +640,6 @@ multizone_leader!
 fuchsia.update.config.OptOut
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.pkg.Cup
-omaha-client-service-config-data
 omaha-client
 fuchsia.pkg.PackageResolver-base
 fuchsia.ui.pointer.augment.GlobalMouse
@@ -768,8 +767,8 @@ process_resolver!
 sysmem_connector*
 sysmem_connector!
 persistent
-svc_for_legacy_shell
-/svc_for_legacy_shell
+svc_for_sys
+/svc_for_sys
 fuchsia-pkg://fuchsia.com/sl4f-ffx-proxy-server#meta/sl4f_proxy_server.cm
 core-env(
 fuchsia-pkg://fuchsia.com/debug-dash-launcher#meta/debug_dash_launcher.cm
@@ -835,6 +834,7 @@ fuchsia-pkg://fuchsia.com/memory_monitor#meta/memory_monitor.cm
 fuchsia-pkg://fuchsia.com/metrics-logger#meta/metrics-logger.cm
 multizone_leader=
 fuchsia-pkg://fuchsia.com/cast_agent#meta/multizone_leader.cm
+fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
