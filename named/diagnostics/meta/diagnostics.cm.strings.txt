@@ -3,9 +3,16 @@ fuchsia.component.Binder
 fuchsia.component.PersistenceBinder
 fuchsia.diagnostics.persist.DataPersistence-netstack
 fuchsia.diagnostics.persist.DataPersistence-wlan
-fuchsia.logger.LogSink
+fuchsia.component.DetectBinder
+kcounter
+fuchsia.component.KcounterBinder
 fuchsia.diagnostics.FeedbackArchiveAccessor
 diagnostics-persistence-config-data
 config-data
 cache
+fuchsia.kernel.Counter
+fuchsia.logger.LogSink
+fuchsia.inspect.InspectSink
 fuchsia-pkg://fuchsia.com/diagnostics-persistence#meta/diagnostics-persistence.cm
+kcounterK
+fuchsia-pkg://fuchsia.com/diagnostics-kcounter#meta/diagnostics-kcounter.cm
