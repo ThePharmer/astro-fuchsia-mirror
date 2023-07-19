@@ -4,8 +4,6 @@ omaha-client-service
 fuchsia.update.channel.Provider
 fuchsia.update.channelcontrol.ChannelControl
 fuchsia.update.Manager
-system-updater
-fuchsia.update.installer.Installer
 fuchsia.hardware.power.statecontrol.Admin
 fuchsia.paver.Paver
 fuchsia.update.verify.BlobfsVerifier
@@ -13,6 +11,7 @@ fuchsia.update.verify.NetstackVerifier
 system-update-committer-config-data
 config-data
 fuchsia.update.config.OptOut
+fuchsia.update.installer.Installer
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.stash.Store2
@@ -27,13 +26,5 @@ fuchsia.pkg.Cup
 build-info
 omaha-client-service-config-data
 root-ssl-certificates
-fuchsia.pkg.PackageResolver
-fuchsia.pkg.PackageCache
-fuchsia.pkg.RetainedPackages
-fuchsia.space.Manager
-system
-pkgfs-system
-data
 fuchsia-pkg://fuchsia.com/system-update-committer#meta/system-update-committer.cm
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
-fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
