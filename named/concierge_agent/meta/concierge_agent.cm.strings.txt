@@ -2,8 +2,6 @@ binary
 cast_agent_exe
 args
 --concierge-agent
-lifecycle.stop_event
-notify
 config-data
 /config/data
 data
@@ -41,8 +39,8 @@ google.assistant.soundsensing.SoundSensing
 /svc/google.assistant.soundsensing.SoundSensing
 google.mlframework.OutputManager%
 /svc/google.mlframework.OutputManager
-google.policy.MlFrameworkStateWriter
-/svc/google.policy.MlFrameworkStateWriter
+google.policy.mlframework.MlFrameworkStateWriter5
+/svc/google.policy.mlframework.MlFrameworkStateWriter
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.component.Binder
