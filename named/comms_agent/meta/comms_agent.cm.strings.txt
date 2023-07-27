@@ -2,6 +2,8 @@ binary
 cast_agent_exe
 args
 --comms
+lifecycle.stop_event
+notify
 config-data
 /config/data
 data
@@ -9,6 +11,8 @@ data
 /tmp
 root-ssl-certificates
 /config/ssl
+fuchsia.component.Realm
+/svc/fuchsia.component.Realm
 fuchsia.auth.oldtokens.CredentialsProducer
 /svc/fuchsia.auth.oldtokens.CredentialsProducer
 fuchsia.buildinfo.Provider
@@ -43,8 +47,6 @@ fuchsia.media.sounds.Player
 /svc/fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
 /svc/fuchsia.mediacodec.CodecFactory
-fuchsia.modular.PuppetMaster
-/svc/fuchsia.modular.PuppetMaster
 fuchsia.net.http.Loader
 /svc/fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
@@ -61,12 +63,8 @@ fuchsia.settings.Privacy
 /svc/fuchsia.settings.Privacy
 fuchsia.sysmem.Allocator
 /svc/fuchsia.sysmem.Allocator
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 fuchsia.update.channel.Provider
 /svc/fuchsia.update.channel.Provider
-fuchsia.vulkan.loader.Loader
-/svc/fuchsia.vulkan.loader.Loader
 google.assistant.libassistant.AssistantState
 /svc/google.assistant.libassistant.AssistantState
 google.assistant.libassistantv2.Kronk
@@ -93,6 +91,8 @@ google.policy.comms.SmartFramingConnection
 /svc/google.policy.comms.SmartFramingConnection
 google.usonia.IpcHandler
 /svc/google.usonia.IpcHandler
+fuchsia.element.GraphicalPresenter
+/svc/fuchsia.element.GraphicalPresenter
 google.camera.CameraStateProvider
 /svc/google.camera.CameraStateProvider
 google.mlframework.OutputManager%
@@ -103,9 +103,12 @@ google.policy.comms.CommsARServiceProvider
 /svc/google.policy.comms.CommsARServiceProvider
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
+fuchsia.tracing.provider.Registry
+/svc/fuchsia.tracing.provider.Registry
+fuchsia.vulkan.loader.Loader
+/svc/fuchsia.vulkan.loader.Loader
 fuchsia.component.Binder
 fuchsia.camera3.DeviceWatcher
-fuchsia.modular.Agent
 google.assistant.libassistantv2.CommsAgent
 google.comms.assistant.ExplicitAutomationHandler
 google.comms.assistant.ShowSmartDeviceControlHandler
@@ -116,8 +119,9 @@ google.comms.listenlive.ListenLiveState
 google.comms.opal.CommunicationRequestService
 google.policy.comms.CommsProvider
 diagnostics
+fuchsia.inspect.InspectSink
+activities
 /svc/fuchsia.camera3.DeviceWatcher
-/svc/fuchsia.modular.Agent
 /svc/google.assistant.libassistantv2.CommsAgent
 google.comms.assistant.ExplicitAutomationHandler5
 /svc/google.comms.assistant.ExplicitAutomationHandler
@@ -128,4 +132,10 @@ google.comms.assistant.ExplicitAutomationHandler5
 /svc/google.comms.listenlive.ListenLiveState
 /svc/google.comms.opal.CommunicationRequestService
 /svc/google.policy.comms.CommsProvider
+for_dynamic_component_host
+/for_dynamic_component_host
 /diagnostics
+activities-env
+cast-runner
+cast-resolver
+cast
