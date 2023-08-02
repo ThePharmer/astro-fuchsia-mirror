@@ -2,6 +2,7 @@ binary
 bin/app
 forward_stdout_to
 forward_stderr_to
+/tmp
 config-data
 /config/data
 root-ssl-certificates
@@ -18,6 +19,8 @@ fuchsia.intl.PropertyProvider
 /svc/fuchsia.intl.PropertyProvider
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
+fuchsia.media.ProfileProvider
+/svc/fuchsia.media.ProfileProvider
 fuchsia.memorypressure.Provider
 /svc/fuchsia.memorypressure.Provider
 fuchsia.net.name.Lookup
@@ -26,8 +29,6 @@ fuchsia.posix.socket.Provider
 /svc/fuchsia.posix.socket.Provider
 fuchsia.sysmem.Allocator
 /svc/fuchsia.sysmem.Allocator
-fuchsia.timezone.Timezone
-/svc/fuchsia.timezone.Timezone
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 fuchsia.ui.composition.Allocator%
