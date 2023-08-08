@@ -1,5 +1,3 @@
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 http-client
 fuchsia.net.http.Loader
 netstack
@@ -38,10 +36,9 @@ fuchsia.device.NameProvider
 fuchsia.diagnostics.persist.DataPersistence-netstack
 netstack4
 fuchsia.scheduler.ProfileProvider
-test-components
 fuchsia.inspect.InspectSink
-fuchsia.logger.LogSink
 dhcpd
+fuchsia.logger.LogSink
 dhcpv6-client
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.debug.Diagnostics
@@ -55,11 +52,12 @@ fuchsia.net.name.LookupAdmin
 fuchsia.stash.SecureStore
 cache
 data
-#meta/dhcpv4_server.cm
-#meta/dhcpv6-client.cm
-#meta/dns_resolver.cm
-#meta/http-client.cm
-#meta/netcfg-basic.cm
+fuchsia.tracing.provider.Registry
+fuchsia-pkg://fuchsia.com/dhcpv4-server#meta/dhcpv4_server.cm
+fuchsia-pkg://fuchsia.com/dhcpv6-client#meta/dhcpv6-client.cm
+fuchsia-pkg://fuchsia.com/dns-resolver#meta/dns_resolver.cm
+fuchsia-pkg://fuchsia.com/http-client#meta/http-client.cm
+fuchsia-pkg://fuchsia.com/netcfg-basic#meta/netcfg-basic.cm
 netstack3
 fuchsia-pkg://fuchsia.com/netstack#meta/netstack.cm
-#meta/reachability.cm
+fuchsia-pkg://fuchsia.com/reachability#meta/reachability.cm
