@@ -161,6 +161,8 @@ dev-sysmem
 sysmem
 dev-thermal
 thermal
+vsock
+dev-vsock
 agis
 dev-display-coordinator
 display-coordinator
@@ -364,7 +366,6 @@ fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 multizone_leader
 fuchsia.intl.TimeZones
-debug_serial
 fuchsia.lightsensor.Sensor
 fuchsia.session.scene.Manager
 regulatory_region
@@ -476,6 +477,7 @@ fuchsia.update.channelcontrol.ChannelControl
 feedback,
 fuchsia.update.config.OptOut
 fuchsia.update.config.OptOutAdmin
+fuchsia.vsock.Connector
 fuchsia.vulkan.loader.Loader
 fuchsia.weave.Bootstrap
 fuchsia.weave.Stack
@@ -497,7 +499,6 @@ google.deviceproperty.Writer
 google.flashts.Reader
 google.wavesfx.ProcessorFactory
 widevine.oemcrypto.Provider
-overnetstack
 fuchsia.tracing.perfetto.ProducerConnector
 activity*
 activity!
@@ -538,7 +539,6 @@ fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
 fuchsia-pkg://fuchsia.com/cobalt_system_metrics#meta/cobalt_system_metrics.cm
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
 fuchsia-pkg://fuchsia.com/debug-dash-launcher#meta/debug_dash_launcher.cm
-fuchsia-pkg://fuchsia.com/debug-serial#meta/debug-serial.cm
 fuchsia-pkg://fuchsia.com/diagnostics#meta/diagnostics.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/forensics#meta/exceptions.cm
@@ -562,7 +562,6 @@ multizone_leader=
 fuchsia-pkg://fuchsia.com/cast_agent#meta/multizone_leader.cm
 fuchsia-pkg://fuchsia.com/network#meta/network.cm
 fuchsia-pkg://fuchsia.com/amlogic-oemcrypto#meta/amlogic-oemcrypto.cm
-fuchsia-pkg://fuchsia.com/overnetstack#meta/overnetstack.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
 process_resolverC
@@ -591,6 +590,7 @@ fuchsia-pkg://fuchsia.com/timekeeper#meta/timekeeper.cm
 fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui.cm
+fuchsia-pkg://fuchsia.com/vsock_service#meta/vsock_service.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
 fuchsia-pkg://fuchsia.com/waves_host#meta/waves_host.cm
 fuchsia-pkg://fuchsia.com/weave-auth#meta/weave_auth_server.cm
