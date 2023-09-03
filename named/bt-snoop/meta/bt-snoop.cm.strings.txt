@@ -2,11 +2,13 @@ binary
 bin/bt_snoop
 dev-bt-hci
 /dev/class/bt-hci
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
-fuchsia.bluetooth.snoop.Snoop
 diagnostics
-/svc/fuchsia.bluetooth.snoop.Snoop
+fuchsia.bluetooth.snoop.Snoop
 /diagnostics
+/svc/fuchsia.bluetooth.snoop.Snoop
