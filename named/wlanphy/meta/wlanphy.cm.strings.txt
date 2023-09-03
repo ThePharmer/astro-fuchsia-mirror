@@ -9,8 +9,6 @@ allow_sync_callsfallback
 false
 binary
 driver/compat.so
-fuchsia.wlan.phyimpl.Service
-/svc/fuchsia.wlan.phyimpl.Service
 fuchsia.boot.Arguments
 /svc/fuchsia.boot.Arguments
 fuchsia.boot.Items
@@ -21,9 +19,13 @@ fuchsia.device.manager.SystemStateTransition
 /svc/fuchsia.device.manager.SystemStateTransition
 fuchsia.driver.framework.CompositeNodeManager
 /svc/fuchsia.driver.framework.CompositeNodeManager
-fuchsia.driver.compat.Service
-/svc/fuchsia.driver.compat.Service
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
+fuchsia.driver.compat.Service
+/svc/fuchsia.driver.compat.Service
+fuchsia.wlan.phyimpl.Service
+/svc/fuchsia.wlan.phyimpl.Service
 diagnostics
 /diagnostics
