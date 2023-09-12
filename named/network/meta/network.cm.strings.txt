@@ -6,8 +6,6 @@ netstack
 fuchsia.net.interfaces.State
 netstack6
 fuchsia.net.multicast.admin.Ipv6RoutingTableController
-fuchsia.net.routes.admin.SetProviderV4
-fuchsia.net.routes.admin.SetProviderV6
 fuchsia.net.routes.State
 fuchsia.net.routes.StateV4
 fuchsia.net.routes.StateV6
@@ -18,10 +16,6 @@ fuchsia.posix.socket.raw.Provider
 fuchsia.update.verify.NetstackVerifier
 fuchsia.net.root.Interfaces
 fuchsia.net.root.Interfaces_OnlyForWeavestack
-fuchsia.net.root.Interfaces_OnlyForStarnix
-netstack$
-fuchsia.posix.socket.packet.Provider
-fuchsia.posix.socket.packet.Provider_OnlyForStarnix
 dns-resolver
 fuchsia.net.name.Lookup
 http-client
@@ -32,9 +26,8 @@ netcfg
 fuchsia.net.masquerade.Factory
 fuchsia.device.NameProvider
 fuchsia.scheduler.ProfileProvider
-fuchsia.inspect.InspectSink
-dhcpd
 fuchsia.logger.LogSink
+dhcpd
 dhcpv6-client
 fuchsia.stash.SecureStore
 fuchsia.diagnostics.persist.DataPersistence-netstack
@@ -45,6 +38,8 @@ fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.dhcp.ClientProvider
 fuchsia.net.name.LookupAdmin
 fuchsia.net.filter.Filter
+netstack$
+fuchsia.posix.socket.packet.Provider
 fuchsia.net.debug.Diagnostics
 fuchsia.net.debug.Interfaces
 fuchsia.net.neighbor.View
