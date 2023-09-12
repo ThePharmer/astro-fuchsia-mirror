@@ -1,12 +1,14 @@
 driver
-compat
-driver/brcmfmac.so
 bind
 meta/bind/brcmfmac_sdio.bindbc
 colocate
 true
+compat
+driver/brcmfmac.so
 binary
 driver/compat.so
+fuchsia.hardware.pci.Service
+/svc/fuchsia.hardware.pci.Service
 fuchsia.boot.Arguments
 /svc/fuchsia.boot.Arguments
 fuchsia.boot.Items
