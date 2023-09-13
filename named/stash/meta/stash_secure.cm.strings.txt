@@ -3,13 +3,11 @@ bin/stash
 args
 --secure--backing_file
 /data/stash_secure.store
-fuchsia.inspect.InspectSink
-/svc/fuchsia.inspect.InspectSink
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 data
 /data
-diagnostics
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.stash.SecureStore
-/diagnostics
+diagnostics
 /svc/fuchsia.stash.SecureStore
+/diagnostics
