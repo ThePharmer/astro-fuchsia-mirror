@@ -6,9 +6,6 @@ lifecycle.stop_event
 notify
 config-data
 /config/data
-data
-/data
-/tmp
 fuchsia.castsysteminfo.Provider
 /svc/fuchsia.castsysteminfo.Provider
 fuchsia.feedback.CrashReportingProductRegister
@@ -17,6 +14,8 @@ fuchsia.hwinfo.Product
 /svc/fuchsia.hwinfo.Product
 fuchsia.legacymetrics.MetricsRecorder
 /svc/fuchsia.legacymetrics.MetricsRecorder
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.media.ActivityReporter
 /svc/fuchsia.media.ActivityReporter
 fuchsia.media.Audio
@@ -41,10 +40,11 @@ google.assistant.soundsensing.SoundSensing
 /svc/google.assistant.soundsensing.SoundSensing
 google.mlframework.OutputManager%
 /svc/google.mlframework.OutputManager
-google.policy.mlframework.MlFrameworkStateWriter5
-/svc/google.policy.mlframework.MlFrameworkStateWriter
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
+google.policy.MlFrameworkStateWriter
+/svc/google.policy.MlFrameworkStateWriter
+data
+/data
+/tmp
 fuchsia.component.Binder
 google.cast.soundsensingstate.SoundSensingState
 google.policy.concierge.ConciergeController
