@@ -4,10 +4,6 @@ args
 --light-eq-agent
 config-data
 /config/data
-data
-/data
-fuchsia.migration.DisplayProvider
-/svc/fuchsia.migration.DisplayProvider
 fuchsia.castsetup.ApiRegistry
 /svc/fuchsia.castsetup.ApiRegistry
 fuchsia.factory.MiscFactoryStoreProvider-
@@ -20,6 +16,8 @@ fuchsia.legacymetrics.MetricsRecorder
 /svc/fuchsia.legacymetrics.MetricsRecorder
 fuchsia.lightsensor.Sensor
 /svc/fuchsia.lightsensor.Sensor
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.media.sessions2.Discovery
 /svc/fuchsia.media.sessions2.Discovery
 fuchsia.posix.socket.Provider
@@ -44,8 +42,10 @@ google.cast.setup.EurekaInfoManager
 /svc/google.cast.setup.EurekaInfoManager
 google.proximity.ProximityService
 /svc/google.proximity.ProximityService
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
+fuchsia.migration.DisplayProvider
+/svc/fuchsia.migration.DisplayProvider
+data
+/data
 fuchsia.component.Binder
 google.ambienteq.Listener
 /svc/google.ambienteq.Listener
