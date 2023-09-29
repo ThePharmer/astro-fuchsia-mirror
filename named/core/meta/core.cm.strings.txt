@@ -82,10 +82,8 @@ fuchsia.component.KcounterBinder
 fuchsia.component.PersistenceBinder
 fuchsia.diagnostics.persist.DataPersistence-netstack
 fuchsia.diagnostics.persist.DataPersistence-wlan
-fuchsia.dash.Launcher
 exceptions
 fuchsia.exception.Handler
-only_meant_for_outliving_certain_components
 feedback
 fuchsia.feedback.CrashReporter
 fuchsia.feedback.DataProvider
@@ -104,8 +102,8 @@ process_resolver
 fuchsia.process.Resolver
 setui_service
 fuchsia.settings.Input
+trace_manager
 fuchsia.tracing.controller.Controller
-fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.tracing.provider.Registry
 activity
 fuchsia.ui.activity.Provider
@@ -312,12 +310,12 @@ fuchsia.sys2.CrashIntrospect
 fuchsia.sysinfo.SysInfo
 fuchsia.tracing.kernel.Controller
 fuchsia.tracing.kernel.Reader
-feedback+
-fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
-feedback@
 fuchsia.boot.SvcStashProvider
 fuchsia.device.NameProvider
 fuchsia.inspect.InspectSink
+feedback+
+fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
+feedback@
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
 fuchsia.castauth.CastKeySigner
@@ -332,6 +330,7 @@ fuchsia.sys2.RealmExplorer.root
 fuchsia.sys2.RealmQuery.root
 fuchsia.thermal.ClientStateConnector
 fuchsia.time.Maintenance
+remote-diagnostics-bridge
 wlancfg
 fuchsia.element.GraphicalPresenter
 fuchsia.factory.AlphaFactoryStoreProvider
@@ -358,6 +357,7 @@ fuzz-registry
 fuchsia.fuzzer.Registrar
 fuchsia.fuzzer.Registry
 fuzz-manager
+debug-dash-launcher
 fuchsia.hardware.radar.RadarBurstReaderProvider
 fuchsia.hwinfo.Board
 fuchsia.hwinfo.Product
@@ -454,6 +454,7 @@ fuchsia.stash.Store
 stash2
 fuchsia.stash.Store2
 fuchsia.storage.ext4.Server
+fuchsia.sys2.RealmQuery
 cache
 fuchsia.sys2.StorageAdmin
 fuchsia.sysmem.Allocator
@@ -501,6 +502,7 @@ google.deviceproperty.Writer
 google.flashts.Reader
 google.wavesfx.ProcessorFactory
 widevine.oemcrypto.Provider
+fuchsia.tracing.perfetto.ProducerConnector
 activity*
 activity!
 bt-avrcp*
@@ -539,6 +541,7 @@ fuchsia-pkg://fuchsia.com/cast_auth#meta/cast_auth_server.cm
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
 fuchsia-pkg://fuchsia.com/cobalt_system_metrics#meta/cobalt_system_metrics.cm
 fuchsia-pkg://fuchsia.com/codec_factory#meta/codec_factory.cm
+fuchsia-pkg://fuchsia.com/debug-dash-launcher#meta/debug_dash_launcher.cm
 fuchsia-pkg://fuchsia.com/diagnostics#meta/diagnostics.cm
 fuchsia-pkg://fuchsia.com/emergency#meta/emergency.cm
 fuchsia-pkg://fuchsia.com/forensics#meta/exceptions.cm
@@ -567,6 +570,7 @@ fuchsia-pkg://fuchsia.com/playready-cdm#meta/playready-cdm.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
 fuchsia-pkg://fuchsia.com/regulatory_region#meta/regulatory_region.cm
+fuchsia-pkg://fuchsia.com/remote-diagnostics-bridge#meta/remote-diagnostics-bridge.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/session_manager#meta/session_manager.cm
 session-env
@@ -586,6 +590,7 @@ fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
 fuchsia-pkg://fuchsia.com/testing#meta/test_realm.cm
 fuchsia-pkg://fuchsia.com/timekeeper#meta/timekeeper.cm
+fuchsia-pkg://fuchsia.com/trace_manager#meta/trace_manager.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui.cm
 fuchsia-pkg://fuchsia.com/vsock_service#meta/vsock_service.cm
