@@ -68,8 +68,6 @@ fuchsia.media.UsageReporter
 /svc/fuchsia.media.UsageReporter
 fuchsia.media.audio.EffectsController
 /svc/fuchsia.media.audio.EffectsController
-fuchsia.ultrasound.Factory
-/svc/fuchsia.ultrasound.Factory
 tee_manager
 fuchsia.tee.DeviceInfo
 /svc/fuchsia.tee.DeviceInfo
@@ -148,7 +146,6 @@ feedback_id
 feedback-id
 omaha-client-service-config-data
 omaha-client
-audio_core_google
 data
 ssh-key-manager
 root-data
@@ -472,6 +469,7 @@ fuchsia.ui.activity.control.Control
 feedback#
 fuchsia.ui.brightness.Control
 fuchsia.ui.display.internal.DisplayPower
+fuchsia.ultrasound.Factory
 fuchsia.update.config.OptOut
 fuchsia.update.config.OptOutAdmin
 fuchsia.update.installer.Installer
@@ -522,7 +520,8 @@ fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
 core-env(
 fuchsia-pkg://fuchsia.com/amlogic-netflix-keys#meta/amlogic-netflix-keys.cm
-fuchsia-pkg://fuchsia.com/audio_core_google#meta/audio_core.cm
+fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core.cm
+core-env 
 fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
 core-env
@@ -532,7 +531,6 @@ fuchsia-pkg://fuchsia.com/bt-avrcp#meta/bt-avrcp.cm
 fuchsia-pkg://fuchsia.com/bt-hfp-audio-gateway-default#meta/bt-hfp-audio-gateway.cm
 bt-snoop3
 fuchsia-pkg://fuchsia.com/bt-snoop#meta/bt-snoop.cm
-core-env 
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/cast_auth#meta/cast_auth_server.cm
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
