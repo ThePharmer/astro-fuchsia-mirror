@@ -165,9 +165,8 @@ dev-vsock
 agis
 dev-display-coordinator
 display-coordinator
-starnix_runner
-dev-gpu
 vulkan_loader
+dev-gpu
 dev-gpu-dependency-injection
 gpu-dependency-injection
 dev-goldfish-pipe
@@ -187,9 +186,6 @@ dev-securemem
 securemem
 bt-hfp-audio-gateway
 dev-dai
-bt-snoop
-dev-bt-hci
-bt-hci
 codec_factory
 dev-mediacodec
 media-codec
@@ -228,6 +224,8 @@ dev-temperature
 temperature
 dev-block
 dev-skip-block
+dev-bt-hci
+bt-hci
 factory_reset
 factory
 pkgfs
@@ -244,6 +242,8 @@ started
 stopped
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.accessibility.tts.EngineRegistry
+fuchsia.element.GraphicalPresenter
+fuchsia.session.scene.Manager
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.policy.DeviceListenerRegistry
@@ -330,7 +330,6 @@ fuchsia.sys2.RealmQuery.root
 fuchsia.thermal.ClientStateConnector
 fuchsia.time.Maintenance
 wlancfg
-fuchsia.element.GraphicalPresenter
 fuchsia.factory.AlphaFactoryStoreProvider
 amlogic_netflix_keys
 fuchsia.factory.CastCredentialsFactoryStoreProvider
@@ -364,8 +363,8 @@ fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 multizone_leader
 fuchsia.intl.TimeZones
+fuchsia.memory.report.SnapshotProvider
 fuchsia.lightsensor.Sensor
-fuchsia.session.scene.Manager
 regulatory_region
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.location.namedplace.RegulatoryRegionWatcher
@@ -385,6 +384,7 @@ fuchsia.lowpan.thread.DatasetConnector
 fuchsia.lowpan.thread.FeatureConnector
 fuchsia.lowpan.thread.MeshcopConnector
 fuchsia.lowpan.bootstrap.Thread
+fuchsia.media.tuning.AudioTuner
 multizone_leader)
 fuchsia.media.SessionAudioConsumerFactory
 google.cast.multizone.Leader
@@ -492,12 +492,11 @@ google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
 widevine.oemcrypto.Provider
+starnix_runner
 activity*
 activity!
 bt-avrcp*
 bt-avrcp!
-bt-snoop*
-bt-snoop!
 cast_auth_server*
 cast_auth_server!
 feedback*
@@ -523,8 +522,6 @@ fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 bt-avrcp3
 fuchsia-pkg://fuchsia.com/bt-avrcp#meta/bt-avrcp.cm
 fuchsia-pkg://fuchsia.com/bt-hfp-audio-gateway-default#meta/bt-hfp-audio-gateway.cm
-bt-snoop3
-fuchsia-pkg://fuchsia.com/bt-snoop#meta/bt-snoop.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/cast_auth#meta/cast_auth_server.cm
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
