@@ -11,6 +11,10 @@
         "nat_rules": [],
         "rdr_rules": [],
         "rules": [
+            "pass in proto tcp to port 8008;",
+            "pass in proto tcp to port 8009;",
+            "pass in proto tcp to port 8443;",
+            "drop in proto tcp devclass ap to range 1:15999;",
             "pass in proto tcp to range 1024:65535;",
             "drop in proto tcp to range 1:65535;"
         ]
