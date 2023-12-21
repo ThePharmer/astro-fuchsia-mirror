@@ -140,10 +140,8 @@ diagnostics-persistence-config-data
 diagnostics-persistence
 emergency
 factory_store_providers
-flash_ts_service
+flash_ts_feedback_id
 forensics
-feedback_id
-feedback-id
 omaha-client-service-config-data
 omaha-client
 data
@@ -401,7 +399,6 @@ fuchsia.mediacodec.CodecFactory
 fuchsia.memory.Monitor
 sysmem_connector(
 bt-avrcp(
-flash_ts_service(
 feedback(
 fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
@@ -502,8 +499,6 @@ bt-avrcp!
 cast_auth_server*
 cast_auth_server!
 feedback*
-flash_ts_service*
-flash_ts_service!
 multizone_leader*
 process_resolver*
 process_resolver!
@@ -536,9 +531,7 @@ fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
 feedback4
 fuchsia-pkg://fuchsia.com/forensics#meta/feedback.cm
-fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
-flash_ts_serviceC
-fuchsia-pkg://fuchsia.com/flash_ts_service#meta/flash_ts_service.cm
+fuchsia-pkg://fuchsia.com/flash_ts_feedback_id#meta/flash_ts_feedback_id.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
 fuchsia-pkg://fuchsia.com/full-resolver#meta/full-resolver.cm
 fuchsia-pkg://fuchsia.com/fuzz-manager#meta/fuzz-manager.cm
