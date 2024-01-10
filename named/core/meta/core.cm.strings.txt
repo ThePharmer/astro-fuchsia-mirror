@@ -140,8 +140,10 @@ diagnostics-persistence-config-data
 diagnostics-persistence
 emergency
 factory_store_providers
-flash_ts_feedback_id
+flash_ts_service
 forensics
+feedback_id
+feedback-id
 omaha-client-service-config-data
 omaha-client
 data
@@ -212,6 +214,8 @@ codec
 wlandevicemonitor
 dev-wlanphy
 wlanphy
+dev-wlanif
+wlanif
 dev-light
 light
 dev-class-radar
@@ -228,7 +232,6 @@ pkgfs
 pkgfs-packages
 packages
 tzdata-provider
-tzdata-icu
 tzdata-icu-44-le
 capability_requested
 debug_started
@@ -287,16 +290,13 @@ fuchsia.kernel.Counter
 fuchsia.kernel.CpuResource
 fuchsia.kernel.DebugResource
 fuchsia.kernel.EnergyInfoResource
-fuchsia.kernel.FramebufferResource
 fuchsia.kernel.HypervisorResource
 fuchsia.kernel.InfoResource
-fuchsia.kernel.IommuResource
 fuchsia.kernel.IoportResource
 fuchsia.kernel.IrqResource
 fuchsia.kernel.MexecResource
 fuchsia.kernel.MmioResource
 fuchsia.kernel.PowerResource
-fuchsia.kernel.ProfileResource
 fuchsia.kernel.RootJob
 fuchsia.kernel.RootJobForInspect
 fuchsia.kernel.SmcResource
@@ -399,6 +399,7 @@ fuchsia.mediacodec.CodecFactory
 fuchsia.memory.Monitor
 sysmem_connector(
 bt-avrcp(
+flash_ts_service(
 feedback(
 fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
@@ -499,6 +500,8 @@ bt-avrcp!
 cast_auth_server*
 cast_auth_server!
 feedback*
+flash_ts_service*
+flash_ts_service!
 multizone_leader*
 process_resolver*
 process_resolver!
@@ -531,7 +534,9 @@ fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
 feedback4
 fuchsia-pkg://fuchsia.com/forensics#meta/feedback.cm
-fuchsia-pkg://fuchsia.com/flash_ts_feedback_id#meta/flash_ts_feedback_id.cm
+fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
+flash_ts_serviceC
+fuchsia-pkg://fuchsia.com/flash_ts_service#meta/flash_ts_service.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
 fuchsia-pkg://fuchsia.com/full-resolver#meta/full-resolver.cm
 fuchsia-pkg://fuchsia.com/fuzz-manager#meta/fuzz-manager.cm
