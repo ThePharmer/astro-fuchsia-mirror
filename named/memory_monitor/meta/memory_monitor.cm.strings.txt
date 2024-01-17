@@ -4,6 +4,8 @@ config-data
 /config/data
 dev-aml-ram
 /dev/class/aml-ram
+fuchsia.component.Introspector.root
+/svc/fuchsia.component.Introspector.root
 fuchsia.feedback.CrashReporter
 /svc/fuchsia.feedback.CrashReporter
 fuchsia.inspect.InspectSink
@@ -25,13 +27,11 @@ fuchsia.tracing.provider.Registry
 cache
 /cache
 diagnostics
-fuchsia.memory.Debugger
 fuchsia.memory.Monitor
 fuchsia.memory.debug.MemoryPressure
 fuchsia.memory.inspection.Collector
 fuchsia.memorypressure.Provider
 /diagnostics
-/svc/fuchsia.memory.Debugger
 /svc/fuchsia.memory.Monitor
 /svc/fuchsia.memory.debug.MemoryPressure
 /svc/fuchsia.memory.inspection.Collector
