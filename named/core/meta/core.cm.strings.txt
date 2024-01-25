@@ -16,8 +16,6 @@ fuchsia.recovery.policy.Device
 /svc/fuchsia.recovery.policy.Device
 fuchsia.recovery.ui.FactoryResetCountdown
 /svc/fuchsia.recovery.ui.FactoryResetCountdown
-fuchsia.ui.brightness.ColorAdjustment
-/svc/fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.ColorAdjustmentHandler
 /svc/fuchsia.ui.brightness.ColorAdjustmentHandler
 fuchsia.ui.composition.Allocator%
@@ -115,9 +113,7 @@ fuchsia.virtualization.DebianGuestManager
 fuchsia.virtualization.LinuxManager
 fuchsia.virtualization.TerminaGuestManager
 fuchsia.virtualization.ZirconGuestManager
-fuchsia.session.AutoLaunch
 session-manager
-fuchsia.session.SessionUrl
 config-data
 root-ssl-certificates
 boot
@@ -144,8 +140,10 @@ diagnostics-persistence-config-data
 diagnostics-persistence
 emergency
 factory_store_providers
-flash_ts_feedback_id
+flash_ts_service
 forensics
+feedback_id
+feedback-id
 omaha-client-service-config-data
 omaha-client
 data
@@ -216,6 +214,8 @@ codec
 wlandevicemonitor
 dev-wlanphy
 wlanphy
+dev-wlanif
+wlanif
 dev-light
 light
 dev-class-radar
@@ -232,7 +232,6 @@ pkgfs
 pkgfs-packages
 packages
 tzdata-provider
-tzdata-icu
 tzdata-icu-44-le
 capability_requested
 debug_started
@@ -284,23 +283,20 @@ fuchsia.boot.WriteOnlyLog
 fuchsia.diagnostics.ArchiveAccessor
 fuchsia.diagnostics.FeedbackArchiveAccessor
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
-fuchsia.driver.development.Manager
+fuchsia.driver.development.DriverDevelopment
 fuchsia.driver.registrar.DriverRegistrar
 fuchsia.hardware.pty.Device
 fuchsia.kernel.Counter
 fuchsia.kernel.CpuResource
 fuchsia.kernel.DebugResource
 fuchsia.kernel.EnergyInfoResource
-fuchsia.kernel.FramebufferResource
 fuchsia.kernel.HypervisorResource
 fuchsia.kernel.InfoResource
-fuchsia.kernel.IommuResource
 fuchsia.kernel.IoportResource
 fuchsia.kernel.IrqResource
 fuchsia.kernel.MexecResource
 fuchsia.kernel.MmioResource
 fuchsia.kernel.PowerResource
-fuchsia.kernel.ProfileResource
 fuchsia.kernel.RootJob
 fuchsia.kernel.RootJobForInspect
 fuchsia.kernel.SmcResource
@@ -323,8 +319,6 @@ fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
 fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
-fuchsia.component.Introspector.root
-fuchsia.memory.report.SnapshotProvider
 full-resolver
 fuchsia.component.resolution.Resolver
 fuchsia.diagnostics.LoWPANArchiveAccessor
@@ -369,6 +363,7 @@ fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 multizone_leader
 fuchsia.intl.TimeZones
+fuchsia.memory.report.SnapshotProvider
 fuchsia.lightsensor.Sensor
 regulatory_region
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
@@ -404,6 +399,7 @@ fuchsia.mediacodec.CodecFactory
 fuchsia.memory.Monitor
 sysmem_connector(
 bt-avrcp(
+flash_ts_service(
 feedback(
 fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
@@ -504,6 +500,8 @@ bt-avrcp!
 cast_auth_server*
 cast_auth_server!
 feedback*
+flash_ts_service*
+flash_ts_service!
 multizone_leader*
 process_resolver*
 process_resolver!
@@ -536,7 +534,9 @@ fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
 feedback4
 fuchsia-pkg://fuchsia.com/forensics#meta/feedback.cm
-fuchsia-pkg://fuchsia.com/flash_ts_feedback_id#meta/flash_ts_feedback_id.cm
+fuchsia-pkg://fuchsia.com/feedback-id#meta/feedback_id.cm
+flash_ts_serviceC
+fuchsia-pkg://fuchsia.com/flash_ts_service#meta/flash_ts_service.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
 fuchsia-pkg://fuchsia.com/full-resolver#meta/full-resolver.cm
 fuchsia-pkg://fuchsia.com/fuzz-manager#meta/fuzz-manager.cm
