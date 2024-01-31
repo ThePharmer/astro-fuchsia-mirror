@@ -1,5 +1,9 @@
 binary
 bin/session_manager
+fuchsia.session.AutoLaunch
+autolaunch
+fuchsia.session.SessionUrl
+session_url
 root-data
 /data
 fuchsia.component.Realm
@@ -33,6 +37,7 @@ dev-class-radar
 dev-input-report
 dev-skip-block
 root-ssl-certificates
+tzdata-icu
 tzdata-icu-44-le
 fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.semantics.SemanticsManager
@@ -114,6 +119,7 @@ fuchsia.media.sessions2.ActiveSession
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sessions2.Publisher
 fuchsia.media.sounds.Player
+fuchsia.media.tuning.AudioTuner
 fuchsia.mediacodec.CodecFactory
 fuchsia.memory.Monitor
 fuchsia.memorypressure.Provider
@@ -145,6 +151,7 @@ fuchsia.process.Resolver
 fuchsia.recovery.FactoryReset
 fuchsia.recovery.policy.Device
 fuchsia.recovery.ui.FactoryResetCountdown
+fuchsia.sensors.Manager
 fuchsia.session.scene.Manager
 fuchsia.settings.Accessibility
 fuchsia.settings.Audio
@@ -169,6 +176,7 @@ fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.tracing.provider.Registry
 fuchsia.ui.activity.Provider
 fuchsia.ui.activity.control.Control
+fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.ColorAdjustmentHandler
 fuchsia.ui.brightness.Control
 fuchsia.ui.composition.Allocator
@@ -228,6 +236,4 @@ data
 /svc/fuchsia.session.Lifecycle
 /svc/fuchsia.session.Restarter
 /svc_from_session/fuchsia.web.Debug
-autolaunch
-session_url
 meta/session_manager.cvf
