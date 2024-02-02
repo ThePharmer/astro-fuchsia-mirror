@@ -1,5 +1,5 @@
 binary
-bin/smart_session_bin
+bin/smart_session
 lifecycle.stop_event
 notify
 args
@@ -15,7 +15,6 @@ args
 --eager-child=presence_agent
 --eager-child=stellar_agent
 --eager-child=ultrasound_agent
---eager-child=usonia_agent
 cast_agent
 fuchsia.component.Binder(
 /svc/fuchsia.component.Binder.cast_agent
@@ -59,15 +58,8 @@ fuchsia.component.Binder+
 ultrasound_agent
 fuchsia.component.Binder.
 /svc/fuchsia.component.Binder.ultrasound_agent
-usonia_agent
-fuchsia.component.Binder*
-/svc/fuchsia.component.Binder.usonia_agent
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
-fuchsia.element.GraphicalPresenter
-/svc/fuchsia.element.GraphicalPresenter
-fuchsia.ui.scenic.Scenic
-/svc/fuchsia.ui.scenic.Scenic
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 fuchsia.logger.LogSink
@@ -76,12 +68,17 @@ fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.session.Restarter
 /svc/fuchsia.session.Restarter
+fuchsia.session.scene.Manager
+/svc/fuchsia.session.scene.Manager
+fuchsia.ui.scenic.Scenic
+/svc/fuchsia.ui.scenic.Scenic
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 fuchsia.ui.app.ViewProvider
 /svc/fuchsia.ui.app.ViewProvider
 diagnostics
 fuchsia.component.Binder
+fuchsia.element.GraphicalPresenter
 cast_runner
 fuchsia.web.Debug
 config-data
@@ -90,7 +87,6 @@ web_engine
 assistant_aot_product_runner
 fuchsia_perception_estelle_pkg
 root-ssl-certificates
-tzdata-icu
 tzdata-icu-44-le
 chromium.cast.ApplicationConfigManager
 chromium.cast.CorsExemptHeaderProvider
@@ -99,7 +95,7 @@ fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.virtualkeyboard.Registry
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.input.virtualkeyboard.Manager
-fuchsia.metrics.MetricEventLoggerFactory
+fuchsia.memory.Monitor
 fuchsia.ui.activity.control.Control
 fuchsia.ui.input3.KeyEventInjector
 fuchsia.ui.views.ViewRefInstalled
@@ -113,7 +109,6 @@ fuchsia.bluetooth.gatt.Server
 fuchsia.bluetooth.le.Central
 fuchsia.bluetooth.le.Peripheral
 fuchsia.bluetooth.sys.Access
-fuchsia.diagnostics.ArchiveAccessor
 fuchsia.factory.WeaveFactoryStoreProvider
 fuchsia.hardware.power.statecontrol.Admin
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
@@ -134,6 +129,7 @@ fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 google.cast.cryptokey.NamedKeyProvider
 fuchsia.bluetooth.hfp.Hfp
 fuchsia.castauth.CastKeySigner
+fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.update.config.OptOut
 fuchsia.update.config.OptOutAdmin
 fuchsia.weave.Stack
@@ -232,8 +228,6 @@ google.mlframework.MlFrameworkOutputService
 ultrasound_agent+
 fuchsia.net.mdns.ServiceInstanceResolver
 fuchsia.net.name.Lookup
-fuchsia.net.stackmigrationdeprecated.Control
-fuchsia.net.stackmigrationdeprecated.State
 fuchsia.posix.socket.Provider
 fuchsia.power.profile.Watcher
 fuchsia.thermal.ClientStateConnector
@@ -244,7 +238,6 @@ fuchsia.settings.Display
 fuchsia.settings.Input
 fuchsia.settings.Light
 fuchsia.settings.Privacy
-fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.ColorAdjustmentHandler
 fuchsia.ui.policy.DisplayBacklight
 fuchsia.ui.brightness.Control
@@ -256,7 +249,7 @@ fuchsia.vulkan.loader.Loader
 fuchsia.web.FrameHost
 google.ambienteq.Listener
 google.assistant.aoghGRPCPlatform
-google.cast.logexport.LogExportController
+google.usonia.IpcPlatformSupport
 google.assistant.aoghGRPCProcess
 google.assistant.grpctransport.LibassistantService
 google.assistant.libassistant.AssistantState
@@ -317,8 +310,6 @@ google.migration.DuoCoreProvider
 google.mlframework.OutputManager
 google.nest.thread.Telemetry
 google.policy.MlFrameworkStateWriter
-google.policy.NestCamStateWatcher
-google.reconnect.ReconnectProvider
 google.policy.comms.CommsARServiceController
 google.policy.comms.CommsARServiceProvider
 google.policy.comms.CommsProvider
@@ -331,8 +322,8 @@ google.policy.proximity.ProximityController
 google.presence.TouchActivity
 ultrasound_agent!
 google.proximity.ProximityService
+google.reconnect.ReconnectProvider
 google.usonia.IpcHandler
-google.usonia.IpcPlatformSupport
 cast-resolver
 cast-runner
 cache
@@ -360,7 +351,6 @@ fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cm
 fuchsia-pkg://fuchsia.com/stellar_agent#meta/stellar_agent.cm
 ultrasound_agentC
 fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cm
-fuchsia-pkg://fuchsia.com/usonia_agent#meta/usonia_agent.cm
 opal-env
 flutter_aot_product_runner
 documentation
