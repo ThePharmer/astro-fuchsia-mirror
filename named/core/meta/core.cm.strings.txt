@@ -73,6 +73,8 @@ fuchsia.media.audio.EffectsController
 tee_manager
 fuchsia.tee.DeviceInfo
 /svc/fuchsia.tee.DeviceInfo
+network
+netstack-diagnostics
 fuchsia.component.Binder
 sampler
 fuchsia.component.SamplerBinder
@@ -93,7 +95,6 @@ memory_monitor
 fuchsia.memorypressure.Provider
 cobalt
 fuchsia.metrics.MetricEventLoggerFactory
-network
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
 pkg-resolver
@@ -322,6 +323,8 @@ fuchsia.device.NameProvider
 fuchsia.inspect.InspectSink
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
+cast_auth_server)
+fuchsia.castauth.CastCertificateRetriever
 fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.component.Introspector.root
