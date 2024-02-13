@@ -73,8 +73,6 @@ fuchsia.media.audio.EffectsController
 tee_manager
 fuchsia.tee.DeviceInfo
 /svc/fuchsia.tee.DeviceInfo
-network
-netstack-diagnostics
 fuchsia.component.Binder
 sampler
 fuchsia.component.SamplerBinder
@@ -95,6 +93,7 @@ memory_monitor
 fuchsia.memorypressure.Provider
 cobalt
 fuchsia.metrics.MetricEventLoggerFactory
+network
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
 pkg-resolver
@@ -180,17 +179,17 @@ dev-goldfish-address-space
 goldfish-address-space
 dev-goldfish-sync
 goldfish-sync
+bluetooth-core
+dev-bt-host
+bt-host
+dev-bt-hci
+bt-hci
 timekeeper
 dev-rtc
 dev-securemem
 securemem
 bt-hfp-audio-gateway
 dev-dai
-bluetooth-core
-dev-bt-host
-bt-host
-dev-bt-hci
-bt-hci
 codec_factory
 dev-mediacodec
 media-codec
@@ -225,8 +224,6 @@ dev-power-sensor
 power-sensor
 dev-temperature
 temperature
-dev-trippoint
-trippoint
 dev-block
 dev-skip-block
 factory_reset
@@ -325,8 +322,6 @@ fuchsia.device.NameProvider
 fuchsia.inspect.InspectSink
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
-cast_auth_server)
-fuchsia.castauth.CastCertificateRetriever
 fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.component.Introspector.root
@@ -407,6 +402,7 @@ fuchsia.media.sessions2.Publisher
 multizone_leader!
 fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
+fuchsia.memory.Monitor
 sysmem_connector(
 bt-avrcp(
 feedback(
