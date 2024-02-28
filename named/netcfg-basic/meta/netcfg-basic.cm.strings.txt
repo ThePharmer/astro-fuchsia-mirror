@@ -1,10 +1,10 @@
 binary
 bin/netcfg_basiclifecycle.stop_event
 notify
-config-data
-/config/data
 dev-class-network
 /dev/class/network
+netcfg-config
+/netcfg-config
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.net.dhcp.Server
@@ -25,9 +25,8 @@ fuchsia.net.stack.Stack
 /svc/fuchsia.net.stack.Stack
 fuchsia.net.dhcp.ClientProvider
 /svc/fuchsia.net.dhcp.ClientProvider
-data
-/data
 fuchsia.net.dhcpv6.PrefixProvider
 fuchsia.net.masquerade.Factory
 /svc/fuchsia.net.dhcpv6.PrefixProvider
 /svc/fuchsia.net.masquerade.Factory
+fuchsia-pkg://fuchsia.com/netcfg-config#meta/netcfg-config.cm
