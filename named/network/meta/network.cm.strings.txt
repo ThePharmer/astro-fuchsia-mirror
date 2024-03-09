@@ -1,9 +1,6 @@
 netstack
 diagnostics
 netstack-diagnostics
-netcfg
-fuchsia.net.dhcpv6.PrefixProvider
-fuchsia.net.masquerade.Factory
 http-client
 fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
@@ -21,8 +18,8 @@ fuchsia.posix.socket.Provider
 netstack!
 fuchsia.posix.socket.raw.Provider
 fuchsia.update.verify.NetstackVerifier
-fuchsia.net.name.DnsServerWatcher
-fuchsia.net.name.DnsServerWatcher_OnlyForLowpan
+netcfg
+fuchsia.net.masquerade.Factory
 dns-resolver
 fuchsia.net.name.Lookup
 reachability
@@ -58,6 +55,7 @@ fuchsia.net.dhcp.ClientProvider
 fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.filter.deprecated.Filter
+fuchsia.net.name.DnsServerWatcher
 fuchsia.net.name.LookupAdmin
 netstack*
 fuchsia.stash.SecureStore
