@@ -1,6 +1,11 @@
+netstack
+diagnostics
+netstack-diagnostics
+netcfg
+fuchsia.net.dhcpv6.PrefixProvider
+fuchsia.net.masquerade.Factory
 http-client
 fuchsia.net.http.Loader
-netstack
 fuchsia.net.interfaces.State
 netstack&
 fuchsia.net.interfaces.admin.Installer
@@ -16,8 +21,8 @@ fuchsia.posix.socket.Provider
 netstack!
 fuchsia.posix.socket.raw.Provider
 fuchsia.update.verify.NetstackVerifier
-netcfg
-fuchsia.net.masquerade.Factory
+fuchsia.net.name.DnsServerWatcher
+fuchsia.net.name.DnsServerWatcher_OnlyForLowpan
 dns-resolver
 fuchsia.net.name.Lookup
 reachability
@@ -25,6 +30,7 @@ fuchsia.net.reachability.Monitor
 fuchsia.net.root.Interfaces
 fuchsia.net.root.Interfaces_OnlyForWeavestack
 fuchsia.net.root.Interfaces_OnlyForStarnix
+netstack-migration
 fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.net.stackmigrationdeprecated.State
 fuchsia.net.virtualization.Control
@@ -37,7 +43,9 @@ root-ssl-certificates
 fuchsia.device.NameProvider
 fuchsia.diagnostics.persist.DataPersistence-netstack
 netstack4
+fuchsia.process.Launcher
 fuchsia.scheduler.ProfileProvider
+fuchsia.scheduler.RoleManager
 fuchsia.inspect.InspectSink
 dhcpd
 fuchsia.logger.LogSink
@@ -50,8 +58,8 @@ fuchsia.net.dhcp.ClientProvider
 fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.filter.deprecated.Filter
-fuchsia.net.name.DnsServerWatcher
 fuchsia.net.name.LookupAdmin
+netstack*
 fuchsia.stash.SecureStore
 cache
 data
@@ -61,6 +69,7 @@ fuchsia-pkg://fuchsia.com/dhcpv6-client#meta/dhcpv6-client.cm
 fuchsia-pkg://fuchsia.com/dns-resolver#meta/dns_resolver.cm
 fuchsia-pkg://fuchsia.com/http-client#meta/http-client.cm
 fuchsia-pkg://fuchsia.com/netcfg-basic#meta/netcfg-basic.cm
-netstack3
-fuchsia-pkg://fuchsia.com/netstack#meta/netstack.cm
+netstackC
+fuchsia-pkg://fuchsia.com/netstack-migration#meta/netstack-proxy.cm
+fuchsia-pkg://fuchsia.com/netstack-migration#meta/stack-migration.cm
 fuchsia-pkg://fuchsia.com/reachability#meta/reachability.cm
