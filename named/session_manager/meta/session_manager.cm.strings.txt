@@ -1,5 +1,9 @@
 binary
 bin/session_manager
+fuchsia.session.AutoLaunch
+autolaunch
+fuchsia.session.SessionUrl
+session_url
 root-data
 /data
 fuchsia.component.Realm
@@ -25,6 +29,7 @@ dev-light
 dev-power-sensor
 dev-temperature
 dev-thermal
+dev-trippoint
 pkgfs-packages
 config-data
 dev-block
@@ -33,6 +38,7 @@ dev-class-radar
 dev-input-report
 dev-skip-block
 root-ssl-certificates
+tzdata-icu
 tzdata-icu-44-le
 fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.semantics.SemanticsManager
@@ -53,6 +59,7 @@ fuchsia.bluetooth.sys.HostWatcher
 fuchsia.bluetooth.sys.Pairing
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
+fuchsia.castauth.CastCertificateRetriever
 fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.device.NameProvider
@@ -96,6 +103,7 @@ fuchsia.lowpan.device.CountersConnector
 fuchsia.lowpan.device.DeviceConnector
 fuchsia.lowpan.device.DeviceExtraConnector
 fuchsia.lowpan.device.EnergyScanConnector
+fuchsia.lowpan.thread.CapabilitiesConnector
 fuchsia.lowpan.thread.DatasetConnector
 fuchsia.lowpan.thread.FeatureConnector
 fuchsia.lowpan.thread.MeshcopConnector
@@ -116,7 +124,6 @@ fuchsia.media.sessions2.Publisher
 fuchsia.media.sounds.Player
 fuchsia.media.tuning.AudioTuner
 fuchsia.mediacodec.CodecFactory
-fuchsia.memory.Monitor
 fuchsia.memorypressure.Provider
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.http.Loader
@@ -171,12 +178,14 @@ fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.tracing.provider.Registry
 fuchsia.ui.activity.Provider
 fuchsia.ui.activity.control.Control
+fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.ColorAdjustmentHandler
 fuchsia.ui.brightness.Control
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Flatland
 fuchsia.ui.composition.ScreenCapture
 fuchsia.ui.composition.internal.ScreenCapture
+fuchsia.ui.display.internal.DisplayPower
 fuchsia.ui.display.singleton.Info
 fuchsia.ui.focus.FocusChainListenerRegistry
 fuchsia.ui.input.ImeService
@@ -230,6 +239,3 @@ data
 /svc/fuchsia.session.Lifecycle
 /svc/fuchsia.session.Restarter
 /svc_from_session/fuchsia.web.Debug
-autolaunch
-session_url
-meta/session_manager.cvf
