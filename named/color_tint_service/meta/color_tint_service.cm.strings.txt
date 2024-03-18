@@ -6,10 +6,14 @@ config-data
 /config/data
 fuchsia.castsetup.ApiRegistry
 /svc/fuchsia.castsetup.ApiRegistry
+fuchsia.diagnostics.LegacyMetricsArchiveAccessor5
+/svc/fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.factory.MiscFactoryStoreProvider-
 /svc/fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.feedback.CrashReportingProductRegister
 /svc/fuchsia.feedback.CrashReportingProductRegister
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
 fuchsia.intl.PropertyProvider
 /svc/fuchsia.intl.PropertyProvider
 fuchsia.legacymetrics.MetricsRecorder
@@ -30,8 +34,8 @@ fuchsia.settings.Input
 /svc/fuchsia.settings.Input
 fuchsia.settings.Light
 /svc/fuchsia.settings.Light
-fuchsia.ui.brightness.ColorAdjustmentHandler
-/svc/fuchsia.ui.brightness.ColorAdjustmentHandler
+fuchsia.ui.brightness.ColorAdjustment
+/svc/fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.Control
 /svc/fuchsia.ui.brightness.Control
 fuchsia.ui.policy.DisplayBacklight
@@ -46,6 +50,8 @@ fuchsia.migration.DisplayProvider
 /svc/fuchsia.migration.DisplayProvider
 data
 /data
+diagnostics
 fuchsia.component.Binder
 google.ambienteq.Listener
+/diagnostics
 /svc/google.ambienteq.Listener
