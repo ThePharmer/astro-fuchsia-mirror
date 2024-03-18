@@ -12,6 +12,10 @@ fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.time.Maintenance
 /svc/fuchsia.time.Maintenance
+fuchsia.power.broker.Topology
+/svc/fuchsia.power.broker.Topology
+fuchsia.power.system.ActivityGovernor
+/svc/fuchsia.power.system.ActivityGovernor
 diagnostics
 root-ssl-certificates
 timesource
@@ -40,13 +44,14 @@ realm-builder
 back_off_time_between_pull_samples_sec
 disable_delays
 early_exit
+first_sampling_delay_sec
 initial_frequency_ppm
 max_frequency_error_ppm
 monitor_time_source_url
 monitor_uses_pull
 oscillator_error_std_dev_ppm
+power_topology_integration_enabled
 primary_time_source_url
 primary_uses_pull
 utc_start_at_startup
-%K3b
 meta/timekeeper.cvf
