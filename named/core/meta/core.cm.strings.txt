@@ -124,9 +124,6 @@ fuchsia.memory.WarningCaptureDelay
 fuchsia.session.AutoLaunch
 session-manager
 fuchsia.session.SessionUrl
-fuchsia.wlan.RecoveryEnabled
-wlancfg
-fuchsia.wlan.RecoveryProfile
 config-data
 root-ssl-certificates
 boot
@@ -195,6 +192,8 @@ securemem
 bt-hfp-audio-gateway
 dev-dai
 bluetooth-core
+dev-bt-host
+bt-host
 dev-bt-hci
 bt-hci
 codec_factory
@@ -256,7 +255,6 @@ fuchsia.element.GraphicalPresenter
 fuchsia.session.scene.Manager
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Screenshot
-fuchsia.ui.display.internal.DisplayPower
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.audio.device.ControlCreator
 fuchsia.audio.device.Provider
@@ -349,6 +347,7 @@ fuchsia.sys2.RealmExplorer.root
 fuchsia.sys2.RealmQuery.root
 fuchsia.thermal.ClientStateConnector
 fuchsia.time.Maintenance
+wlancfg
 fuchsia.factory.AlphaFactoryStoreProvider
 amlogic_netflix_keys
 fuchsia.factory.CastCredentialsFactoryStoreProvider
@@ -440,8 +439,6 @@ fuchsia.pkg.LocalMirror
 fuchsia.pkg.PackageResolver-base
 sl4f_bridge_server
 fuchsia.power.battery.BatteryManager
-fuchsia.power.broker.Topology
-fuchsia.power.system.ActivityGovernor
 fuchsia.process.explorer.Query
 fuchsia.recovery.FactoryReset
 fuchsia.sensors.Manager
@@ -481,6 +478,7 @@ activity#
 fuchsia.ui.activity.control.Control
 feedback#
 fuchsia.ui.brightness.Control
+fuchsia.ui.display.internal.DisplayPower
 fuchsia.ultrasound.Factory
 fuchsia.update.config.OptOut
 fuchsia.update.config.OptOutAdmin
