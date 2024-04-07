@@ -1,5 +1,7 @@
 binary
 bin/http_client
+lifecycle.stop_event
+notify
 fuchsia.http-client.StopOnIdleTimeoutMillis
 stop_on_idle_timeout_millis
 root-ssl-certificates
@@ -11,5 +13,6 @@ fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
 /svc/fuchsia.posix.socket.Provider
 fuchsia.net.http.Loader
+/escrow/fuchsia.net.http.Loader
 /svc/fuchsia.net.http.Loader
 meta/http-client.cvf
