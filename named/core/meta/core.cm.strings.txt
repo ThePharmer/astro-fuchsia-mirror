@@ -166,9 +166,6 @@ dev-backlight
 backlight
 dev-input-report
 input-report
-sysmem_connector
-dev-sysmem
-sysmem
 dev-thermal
 thermal
 vsock
@@ -218,6 +215,8 @@ dev-composite
 audio-composite
 dev-input
 input
+dev-sysmem
+sysmem
 dev-codec
 codec
 wlandevicemonitor
@@ -246,7 +245,6 @@ tzdata-icu-44-le
 capability_requested
 debug_started
 destroyed
-directory_ready
 discovered
 started
 stopped
@@ -296,7 +294,6 @@ fuchsia.diagnostics.FeedbackArchiveAccessor
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.driver.development.Manager
 fuchsia.driver.registrar.DriverRegistrar
-fuchsia.hardware.pty.Device
 fuchsia.kernel.Counter
 fuchsia.kernel.CpuResource
 fuchsia.kernel.DebugResource
@@ -319,8 +316,8 @@ fuchsia.kernel.Stats
 fuchsia.kernel.VmexResource
 fuchsia.logger.Log
 fuchsia.process.Launcher
-fuchsia.scheduler.ProfileProvider
 fuchsia.scheduler.RoleManager
+fuchsia.scheduler.deprecated.ProfileProvider
 fuchsia.sys2.CrashIntrospect
 fuchsia.sysinfo.SysInfo
 fuchsia.tracing.kernel.Controller
@@ -338,7 +335,6 @@ fuchsia.castauth.CastCertificateRetriever
 fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.component.Introspector.root
-fuchsia.memory.report.SnapshotProvider
 full-resolver
 fuchsia.component.resolution.Resolver
 fuchsia.diagnostics.LoWPANArchiveAccessor
@@ -347,6 +343,8 @@ fuchsia.power.profile.Watcher
 fuchsia.power.systemmode.ClientConfigurator
 fuchsia.sys2.RealmExplorer.root
 fuchsia.sys2.RealmQuery.root
+fuchsia.sysmem.Allocator
+fuchsia.sysmem2.Allocator
 fuchsia.thermal.ClientStateConnector
 fuchsia.time.Maintenance
 fuchsia.factory.AlphaFactoryStoreProvider
@@ -373,6 +371,7 @@ fuzz-registry
 fuchsia.fuzzer.Registrar
 fuchsia.fuzzer.Registry
 fuzz-manager
+fuchsia.hardware.pty.Device
 fuchsia.hardware.radar.RadarBurstReaderProvider
 fuchsia.hwinfo.Board
 fuchsia.hwinfo.Product
@@ -415,7 +414,6 @@ fuchsia.media.sessions2.Publisher
 multizone_leader!
 fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
-sysmem_connector(
 bt-avrcp(
 feedback(
 fuchsia.net.http.Loader
@@ -466,8 +464,6 @@ fuchsia.stash.Store2
 fuchsia.storage.ext4.Server
 cache
 fuchsia.sys2.StorageAdmin
-fuchsia.sysmem.Allocator
-fuchsia.sysmem2.Allocator
 fuchsia.tee.Application.808032e0-fd9e-4e6f-8896-544735c98480
 fuchsia.tee.Application.93a424e2-5608-4413-84a8-58b16a064dce
 cast_auth_server<
@@ -521,8 +517,6 @@ feedback*
 multizone_leader*
 process_resolver*
 process_resolver!
-sysmem_connector*
-sysmem_connector!
 persistent
 activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
@@ -581,8 +575,6 @@ fuchsia-pkg://fuchsia.com/stash#meta/stash.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash_secure.cm
 fuchsia-pkg://fuchsia.com/cache_manager#meta/cache_manager.cm
-sysmem_connectorC
-fuchsia-pkg://fuchsia.com/sysmem_connector#meta/sysmem_connector.cm
 fuchsia-pkg://fuchsia.com/system-update-realm#meta/system-update-realm.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/test_manager#meta/test_manager.cm
