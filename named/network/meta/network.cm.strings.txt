@@ -14,8 +14,9 @@ fuchsia.net.multicast.admin.Ipv6RoutingTableController
 fuchsia.net.routes.State
 fuchsia.net.routes.StateV4
 fuchsia.net.routes.StateV6
-fuchsia.net.routes.admin.SetProviderV4
-fuchsia.net.routes.admin.SetProviderV6
+netstack%
+fuchsia.net.routes.admin.RouteTableV4
+fuchsia.net.routes.admin.RouteTableV6
 fuchsia.net.stack.Stack
 fuchsia.posix.socket.Provider
 netstack!
@@ -56,9 +57,10 @@ fuchsia.net.debug.Diagnostics
 fuchsia.net.debug.Interfaces
 fuchsia.net.neighbor.View
 fuchsia.net.dhcp.ClientProvider
+fuchsia.net.filter.Control
+fuchsia.net.filter.deprecated.Filter
 fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
-fuchsia.net.filter.deprecated.Filter
 fuchsia.net.name.LookupAdmin
 netstack*
 fuchsia.stash.SecureStore
