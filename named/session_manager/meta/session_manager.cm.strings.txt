@@ -1,5 +1,7 @@
 binary
 bin/session_manager
+fuchsia.power.SuspendEnabled
+suspend_enabled
 fuchsia.session.AutoLaunch
 autolaunch
 fuchsia.session.SessionUrl
@@ -14,7 +16,10 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
-diagnostics
+fuchsia.power.broker.Topology
+/svc/fuchsia.power.broker.Topology
+fuchsia.power.system.ActivityGovernor
+/svc/fuchsia.power.system.ActivityGovernor
 fuchsia.element.GraphicalPresenter
 fuchsia.element.Manager
 fuchsia.session.Launcher
@@ -82,6 +87,7 @@ fuchsia.hardware.power.statecontrol.Admin
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 fuchsia.hardware.pty.Device
 fuchsia.hardware.radar.RadarBurstReaderProvider
+fuchsia.hardware.sensors.Playback
 fuchsia.hwinfo.Board
 fuchsia.hwinfo.Device
 fuchsia.hwinfo.Product
@@ -229,13 +235,14 @@ google.device.key.encryptor.DeviceKeyEncryptor
 google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
+fuchsia.session.power.Handoff
 full-resolver
 cache
 data
-/diagnostics
 /svc_from_session/fuchsia.element.GraphicalPresenter
 /svc_from_session/fuchsia.element.Manager
 /svc/fuchsia.session.Launcher
 /svc/fuchsia.session.Lifecycle
 /svc/fuchsia.session.Restarter
+/svc/fuchsia.session.power.Handoff
 /svc_from_session/fuchsia.web.Debug
