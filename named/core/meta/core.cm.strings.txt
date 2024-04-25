@@ -80,7 +80,6 @@ sampler
 fuchsia.component.SamplerBinder
 diagnostics
 fuchsia.component.DetectBinder
-fuchsia.component.KcounterBinder
 fuchsia.component.PersistenceBinder
 fuchsia.diagnostics.persist.DataPersistence-netstack
 fuchsia.diagnostics.persist.DataPersistence-wlan
@@ -129,6 +128,8 @@ fuchsia.session.SessionUrl
 fuchsia.wlan.RecoveryEnabled
 wlancfg
 fuchsia.wlan.RecoveryProfile
+smart-trusted-apps
+trusted-app-capabilities
 config-data
 root-ssl-certificates
 boot
@@ -333,7 +334,6 @@ fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 multizone_leader
 fuchsia.intl.TimeZones
-fuchsia.kernel.Counter
 fuchsia.lightsensor.Sensor
 regulatory_region
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
@@ -453,7 +453,6 @@ fuchsia.wlan.product.deprecatedclient.DeprecatedClient
 fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 fuchsia.wlan.wlanix.Wlanix
 google.cast.cryptokey.NamedKeyProvider
-smart-trusted-apps
 google.device.key.encryptor.DeviceKeyEncryptor
 google.deviceproperty.Reader
 google.deviceproperty.Writer
