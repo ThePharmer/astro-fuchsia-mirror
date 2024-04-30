@@ -301,7 +301,6 @@ fuchsia.sysmem2.Allocator
 fuchsia.thermal.ClientStateConnector
 fuchsia.time.Maintenance
 fuchsia.factory.AlphaFactoryStoreProvider
-amlogic_netflix_keys
 fuchsia.factory.CastCredentialsFactoryStoreProvider
 fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.factory.PlayReadyFactoryStoreProvider
@@ -451,7 +450,6 @@ fuchsia.wlan.policy.ClientProvider
 fuchsia.wlan.product.deprecatedclient.DeprecatedClient
 fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 fuchsia.wlan.wlanix.Wlanix
-google.cast.cryptokey.NamedKeyProvider
 google.device.key.encryptor.DeviceKeyEncryptor
 google.deviceproperty.Reader
 google.deviceproperty.Writer
@@ -473,11 +471,10 @@ persistent
 activity3
 fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
-core-env(
-fuchsia-pkg://fuchsia.com/amlogic-netflix-keys#meta/amlogic-netflix-keys.cm
-fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core.cm
 core-env 
+fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core.cm
 fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
+core-env(
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
 core-env
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
