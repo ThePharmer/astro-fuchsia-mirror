@@ -12,15 +12,13 @@ fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.time.Maintenance
 /svc/fuchsia.time.Maintenance
-fuchsia.power.broker.Topology
-/svc/fuchsia.power.broker.Topology
-fuchsia.power.system.ActivityGovernor
-/svc/fuchsia.power.system.ActivityGovernor
+diagnostics
 root-ssl-certificates
 timesource
 capability_requested
 realm_builder
 destroyed
+directory_ready
 running_v2
 started
 stopped
@@ -34,6 +32,7 @@ fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.interfaces.State
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
+/diagnostics
 #meta/realm_builder_server.cm
 realm_builder_env
 realm_builder_resolver
@@ -50,6 +49,5 @@ oscillator_error_std_dev_ppm
 power_topology_integration_enabled
 primary_time_source_url
 primary_uses_pull
-rtc_is_read_only
 utc_start_at_startup
 meta/timekeeper.cvf
