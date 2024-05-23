@@ -4,6 +4,8 @@ fuchsia.wlan.RecoveryEnabled
 recovery_enabled
 fuchsia.wlan.RecoveryProfile
 recovery_profile
+fuchsia.wlan.RoamingProfile
+roaming_profile
 fuchsia.diagnostics.persist.DataPersistence-wlan5
 /svc/fuchsia.diagnostics.persist.DataPersistence-wlan
 fuchsia.inspect.InspectSink
@@ -14,8 +16,6 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
-fuchsia.power.clientlevel.Connector
-/svc/fuchsia.power.clientlevel.Connector
 fuchsia.stash.SecureStore
 /svc/fuchsia.stash.SecureStore
 fuchsia.wlan.device.service.DeviceMonitor
@@ -26,14 +26,12 @@ fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 data
 /data
-diagnostics
 fuchsia.wlan.policy.AccessPointListener
 fuchsia.wlan.policy.AccessPointProvider
 fuchsia.wlan.policy.ClientListener
 fuchsia.wlan.policy.ClientProvider
 fuchsia.wlan.product.deprecatedclient.DeprecatedClient
 fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
-/diagnostics
 /svc/fuchsia.wlan.policy.AccessPointListener
 /svc/fuchsia.wlan.policy.AccessPointProvider
 /svc/fuchsia.wlan.policy.ClientListener
