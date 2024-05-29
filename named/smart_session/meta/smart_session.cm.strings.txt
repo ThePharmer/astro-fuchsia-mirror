@@ -80,7 +80,6 @@ fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 fuchsia.ui.app.ViewProvider
 /svc/fuchsia.ui.app.ViewProvider
-diagnostics
 fuchsia.component.Binder
 cast_runner
 fuchsia.web.Debug
@@ -141,6 +140,7 @@ fuchsia.weave.StackProvider
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
 elements
+elements"
 fuchsia.media.Audio
 fuchsia.sysmem.Allocator
 fuchsia.ui.composition.Allocator
@@ -214,9 +214,11 @@ google.assistant.libassistantv2.MlFrameworkAgent
 google.assistant.libassistantv2.MlVisionAgent
 google.assistant.libassistantv2.Pearl
 fuchsia.migration.ProductPolicyProvider
+google.cast.photon.MlConfigProvider
 google.policy.FederatedLearningEventWriter
 google.policy.FederatedLearningStateWriter
 google.policy.MlVisionStateWriter
+google.policy.NestCamStateController
 google.policy.reconnect.ReconnectController
 fuchsia.migration.State
 google.aurora.AuroraService
@@ -245,6 +247,7 @@ fuchsia.settings.Display
 fuchsia.settings.Input
 fuchsia.settings.Light
 fuchsia.settings.Privacy
+fuchsia.sysmem2.Allocator
 fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.ColorAdjustmentHandler
 fuchsia.ui.policy.DisplayBacklight
@@ -340,7 +343,6 @@ cache
 data
 fuchsia_perception_estelle_agent!
 elements!
-/diagnostics
 fuchsia-pkg://fuchsia.com/assistant_aot_product_runner#meta/assistant_aot_product_runner.cm
 fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cm
 fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_assistant.cm
