@@ -15,6 +15,7 @@ args
 --eager-child=presence_agent
 --eager-child=stellar_agent
 --eager-child=ultrasound_agent
+--eager-child=usonia_agent
 cast_agent
 fuchsia.component.Binder(
 /svc/fuchsia.component.Binder.cast_agent
@@ -58,6 +59,9 @@ fuchsia.component.Binder+
 ultrasound_agent
 fuchsia.component.Binder.
 /svc/fuchsia.component.Binder.ultrasound_agent
+usonia_agent
+fuchsia.component.Binder*
+/svc/fuchsia.component.Binder.usonia_agent
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
 fuchsia.element.GraphicalPresenter
@@ -76,7 +80,6 @@ fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 fuchsia.ui.app.ViewProvider
 /svc/fuchsia.ui.app.ViewProvider
-diagnostics
 fuchsia.component.Binder
 cast_runner
 fuchsia.web.Debug
@@ -86,6 +89,7 @@ web_engine
 assistant_aot_product_runner
 fuchsia_perception_estelle_pkg
 root-ssl-certificates
+tzdata-icu
 tzdata-icu-44-le
 chromium.cast.ApplicationConfigManager
 chromium.cast.CorsExemptHeaderProvider
@@ -94,7 +98,6 @@ fuchsia.accessibility.gesture.ListenerRegistry
 fuchsia.accessibility.virtualkeyboard.Registry
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.input.virtualkeyboard.Manager
-fuchsia.memory.Monitor
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.ui.activity.control.Control
 fuchsia.ui.input3.KeyEventInjector
@@ -130,7 +133,6 @@ fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 google.cast.cryptokey.NamedKeyProvider
 fuchsia.bluetooth.hfp.Hfp
 fuchsia.castauth.CastKeySigner
-fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.update.config.OptOut
 fuchsia.update.config.OptOutAdmin
 fuchsia.weave.Stack
@@ -138,6 +140,7 @@ fuchsia.weave.StackProvider
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
 elements
+elements"
 fuchsia.media.Audio
 fuchsia.sysmem.Allocator
 fuchsia.ui.composition.Allocator
@@ -201,6 +204,7 @@ fuchsia.mediacodec.CodecFactory
 fuchsia.migration.CastProvider
 google.aurora.cast.PlatformController
 google.nest.thread.Controller
+google.nest.thread.GcmReceiver
 fuchsia.migration.DisplayProvider
 fuchsia.migration.KronkProvider
 fuchsia.nn.ModelExecutor
@@ -210,9 +214,11 @@ google.assistant.libassistantv2.MlFrameworkAgent
 google.assistant.libassistantv2.MlVisionAgent
 google.assistant.libassistantv2.Pearl
 fuchsia.migration.ProductPolicyProvider
+google.cast.photon.MlConfigProvider
 google.policy.FederatedLearningEventWriter
 google.policy.FederatedLearningStateWriter
 google.policy.MlVisionStateWriter
+google.policy.NestCamStateController
 google.policy.reconnect.ReconnectController
 fuchsia.migration.State
 google.aurora.AuroraService
@@ -229,6 +235,8 @@ google.mlframework.MlFrameworkOutputService
 ultrasound_agent+
 fuchsia.net.mdns.ServiceInstanceResolver
 fuchsia.net.name.Lookup
+fuchsia.net.stackmigrationdeprecated.Control
+fuchsia.net.stackmigrationdeprecated.State
 fuchsia.posix.socket.Provider
 fuchsia.power.profile.Watcher
 fuchsia.thermal.ClientStateConnector
@@ -239,6 +247,8 @@ fuchsia.settings.Display
 fuchsia.settings.Input
 fuchsia.settings.Light
 fuchsia.settings.Privacy
+fuchsia.sysmem2.Allocator
+fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.ColorAdjustmentHandler
 fuchsia.ui.policy.DisplayBacklight
 fuchsia.ui.brightness.Control
@@ -251,7 +261,6 @@ fuchsia.web.FrameHost
 google.ambienteq.Listener
 google.assistant.aoghGRPCPlatform
 google.cast.logexport.LogExportController
-google.usonia.IpcPlatformSupport
 google.assistant.aoghGRPCProcess
 google.assistant.grpctransport.LibassistantService
 google.assistant.libassistant.AssistantState
@@ -300,6 +309,7 @@ google.comms.hfbluetooth.CallStateWatcher
 google.comms.hfbluetooth.HfCallManager
 google.comms.opal.CommunicationRequestService
 google.duocore.DuoCore
+google.ghp.InteractionService
 google.kronk.api.KronkControlService
 google.kronk.api.MediaFocus
 fuchsia_perception_estelle_agent*
@@ -312,6 +322,8 @@ google.migration.DuoCoreProvider
 google.mlframework.OutputManager
 google.nest.thread.Telemetry
 google.policy.MlFrameworkStateWriter
+google.policy.NestCamStateWatcher
+google.reconnect.ReconnectProvider
 google.policy.comms.CommsARServiceController
 google.policy.comms.CommsARServiceProvider
 google.policy.comms.CommsProvider
@@ -324,15 +336,14 @@ google.policy.proximity.ProximityController
 google.presence.TouchActivity
 ultrasound_agent!
 google.proximity.ProximityService
-google.reconnect.ReconnectProvider
 google.usonia.IpcHandler
+google.usonia.IpcPlatformSupport
 cast-resolver
 cast-runner
 cache
 data
 fuchsia_perception_estelle_agent!
 elements!
-/diagnostics
 fuchsia-pkg://fuchsia.com/assistant_aot_product_runner#meta/assistant_aot_product_runner.cm
 fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_agent.cm
 fuchsia-pkg://fuchsia.com/cast_agent#meta/cast_assistant.cm
@@ -353,12 +364,13 @@ fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cm
 fuchsia-pkg://fuchsia.com/stellar_agent#meta/stellar_agent.cm
 ultrasound_agentC
 fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cm
+fuchsia-pkg://fuchsia.com/usonia_agent#meta/usonia_agent.cm
 opal-env
 flutter_aot_product_runner
 documentation
 WARNING:This file was auto-generated by go/smart-session#generation
 why-not-json5?
-fxb/90455
+https://fxbug.dev/42171909
 generation-options
 product=estelle
 build_type=user
