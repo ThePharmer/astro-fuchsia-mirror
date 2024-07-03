@@ -145,6 +145,10 @@ fuchsia.ui.SupportedInputDevices
 fuchsia.ui.ViewingDistance
 session-manager
 fuchsia.session.SessionUrl
+fuchsia.ui.ManageDisplayPower
+brightness_manager
+fuchsia.ui.PowerOffDelayMillis
+fuchsia.ui.PowerOnDelayMillis
 fuchsia.wlan.RecoveryEnabled
 wlancfg
 fuchsia.wlan.RecoveryProfile
@@ -181,6 +185,10 @@ root-data
 dev-class
 dev-securemem
 securemem
+dev-backlight
+backlight
+dev-input-report
+input-report
 bt-hfp-audio-gateway
 dev-dai
 bluetooth-core
@@ -191,11 +199,6 @@ dev-mediacodec
 media-codec
 dev-gpu
 dev-class-network
-brightness_manager
-dev-backlight
-backlight
-dev-input-report
-input-report
 dev-thermal
 thermal
 agis
@@ -469,6 +472,7 @@ google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
 widevine.oemcrypto.Provider
+fuchsia.power.broker.ElementInfoProviderService
 fuchsia.inspect.InspectSink
 starnix_runner
 activity*
