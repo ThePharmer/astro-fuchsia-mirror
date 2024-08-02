@@ -1,7 +1,5 @@
 binary
 bin/scene_manager
-fuchsia.power.SuspendEnabled
-suspend_enabled
 fuchsia.scenic.DisplayRotation
 display_rotation
 fuchsia.ui.DisplayPixelDensity
@@ -10,6 +8,8 @@ fuchsia.ui.IdleThresholdMs
 idle_threshold_ms
 fuchsia.ui.SupportedInputDevices
 supported_input_devices
+fuchsia.ui.SuspendEnabled
+suspend_enabled
 fuchsia.ui.ViewingDistance
 viewing_distance
 config-data
@@ -64,8 +64,6 @@ fuchsia.factory.MiscFactoryStoreProvider-
 /svc/fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.media.sounds.Player
 /svc/fuchsia.media.sounds.Player
-fuchsia.power.system.ActivityGovernor
-/svc/fuchsia.power.system.ActivityGovernor
 fuchsia.settings.Light
 /svc/fuchsia.settings.Light
 fuchsia.tracing.provider.Registry
