@@ -2,8 +2,6 @@ binary
 cast_agent_exe
 args
 --cast-assistant
-data
-/data
 config-data
 /config/data
 fuchsia.buildinfo.Provider
@@ -30,8 +28,6 @@ fuchsia.media.AudioCore
 /svc/fuchsia.media.AudioCore
 fuchsia.media.sessions2.Discovery
 /svc/fuchsia.media.sessions2.Discovery
-fuchsia.modular.ComponentContext%
-/svc/fuchsia.modular.ComponentContext
 fuchsia.net.name.Lookup
 /svc/fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
@@ -62,6 +58,8 @@ google.cast.setup.ApiHandler
 /svc/google.cast.setup.ApiHandler
 google.flashts.Reader
 /svc/google.flashts.Reader
+data
+/data
 fuchsia.component.Binder
 google.assistant.libassistantv2.CastAssistant
 google.kronk.api.MediaFocus
