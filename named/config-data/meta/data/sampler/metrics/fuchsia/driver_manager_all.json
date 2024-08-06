@@ -1,6 +1,6 @@
 {
     "metrics": [
-        // TODO(fxbug.dev/120759): move to audio-drivers.json
+        // TODO(https://fxbug.dev/42071858): move to audio-drivers.json
         {
             "event_codes": [],
             "metric_id": 1,
@@ -30,7 +30,7 @@
             "project_id": 14
         },
 
-        // TODO(fxbug.dev/120759): move to bthost.json
+        // TODO(https://fxbug.dev/42071858): move to bthost.json
         {
             "event_codes": [
                 0,
@@ -372,7 +372,7 @@
             "project_id": 2322225253
         },
 
-        // TODO(fxbug.dev/120759): move to connectivity-wlan.json
+        // TODO(https://fxbug.dev/42071858): move to connectivity-wlan.json
         {
             "event_codes": [],
             "metric_id": 340,
@@ -381,29 +381,13 @@
             "project_id": 3708719327
         },
 
-        // TODO(fxbug.dev/120759): move to display.json
-        {
-            "event_codes": [],
-            "metric_id": 1,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/display:vsync_stalls",
-            "project_id": 10
-        },
-        {
-            "event_codes": [],
-            "metric_id": 2,
-            "metric_type": "Occurrence",
-            "selector": "bootstrap/driver_manager:root/amlogic-display/osd:rdma_stalls",
-            "project_id": 10
-        },
-
-        // TODO(fxbug.dev/120759): move to ftl.json
+        // TODO(https://fxbug.dev/42071858): move to ftl.json
         {
             "event_codes": [
                 1
             ],
-            "metric_id": 2004,
-            "metric_type": "Integer",
+            "metric_id": 2012,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.read.count",
             "project_id": 3676913920
         },
@@ -411,8 +395,8 @@
             "event_codes": [
                 2
             ],
-            "metric_id": 2004,
-            "metric_type": "Integer",
+            "metric_id": 2012,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.write.count",
             "project_id": 3676913920
         },
@@ -420,8 +404,8 @@
             "event_codes": [
                 3
             ],
-            "metric_id": 2004,
-            "metric_type": "Integer",
+            "metric_id": 2012,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.flush.count",
             "project_id": 3676913920
         },
@@ -429,8 +413,8 @@
             "event_codes": [
                 4
             ],
-            "metric_id": 2004,
-            "metric_type": "Integer",
+            "metric_id": 2012,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.trim.count",
             "project_id": 3676913920
         },
@@ -439,8 +423,8 @@
                 1,
                 1
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.read.issued_page_read.count",
             "project_id": 3676913920
         },
@@ -449,8 +433,8 @@
                 2,
                 1
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.read.issued_page_write.count",
             "project_id": 3676913920
         },
@@ -459,8 +443,8 @@
                 3,
                 1
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.read.issued_block_erase.count",
             "project_id": 3676913920
         },
@@ -469,8 +453,8 @@
                 1,
                 2
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.write.issued_page_read.count",
             "project_id": 3676913920
         },
@@ -479,8 +463,8 @@
                 2,
                 2
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.write.issued_page_write.count",
             "project_id": 3676913920
         },
@@ -489,8 +473,8 @@
                 3,
                 2
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.write.issued_block_erase.count",
             "project_id": 3676913920
         },
@@ -499,8 +483,8 @@
                 1,
                 3
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.flush.issued_page_read.count",
             "project_id": 3676913920
         },
@@ -509,8 +493,8 @@
                 2,
                 3
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.flush.issued_page_write.count",
             "project_id": 3676913920
         },
@@ -519,8 +503,8 @@
                 3,
                 3
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.flush.issued_block_erase.count",
             "project_id": 3676913920
         },
@@ -529,8 +513,8 @@
                 1,
                 4
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.trim.issued_page_read.count",
             "project_id": 3676913920
         },
@@ -539,8 +523,8 @@
                 2,
                 4
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.trim.issued_page_write.count",
             "project_id": 3676913920
         },
@@ -549,9 +533,16 @@
                 3,
                 4
             ],
-            "metric_id": 2005,
-            "metric_type": "Integer",
+            "metric_id": 2013,
+            "metric_type": "Occurrence",
             "selector": "bootstrap/driver_manager:root/ftl:block.trim.issued_block_erase.count",
+            "project_id": 3676913920
+        },
+        {
+            "event_codes": [],
+            "metric_id": 2003,
+            "metric_type": "Integer",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.erase_block.max_wear",
             "project_id": 3676913920
         },
         {
@@ -646,7 +637,7 @@
             "project_id": 3676913920
         },
 
-        // TODO(fxbug.dev/120759): move to fvm.json
+        // TODO(https://fxbug.dev/42071858): move to fvm.json
         {
             "event_codes": [
                 0
@@ -675,7 +666,7 @@
             "project_id": 3676913920
         },
 
-        // TODO(fxbug.dev/120759): move to radar.json
+        // TODO(https://fxbug.dev/42071858): move to radar.json
         {
             "event_codes": [],
             "metric_id": 1,
@@ -698,7 +689,7 @@
             "project_id": 12
         },
 
-        // TODO(fxbug.dev/120759): move to sdmmc.json
+        // TODO(https://fxbug.dev/42071858): move to sdmmc.json
         {
             "event_codes": [],
             "metric_id": 3,
@@ -742,7 +733,7 @@
             "project_id": 9
         },
 
-        // TODO(fxbug.dev/120759): move to sysmem.json
+        // TODO(https://fxbug.dev/42071858): move to sysmem.json
         {
             "event_codes": [
                 1
