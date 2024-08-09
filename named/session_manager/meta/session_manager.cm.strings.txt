@@ -40,6 +40,7 @@ config-data
 dev-block
 dev-bt-hci
 dev-class-radar
+dev-hrtimer
 dev-input-report
 dev-skip-block
 root-ssl-certificates
@@ -64,8 +65,6 @@ fuchsia.bluetooth.sys.HostWatcher
 fuchsia.bluetooth.sys.Pairing
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
-fuchsia.castauth.CastCertificateRetriever
-fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.device.NameProvider
 fuchsia.diagnostics.ArchiveAccessor
@@ -122,8 +121,6 @@ fuchsia.media.SessionAudioConsumerFactory
 fuchsia.media.UsageGainReporter
 fuchsia.media.UsageReporter
 fuchsia.media.audio.EffectsController
-fuchsia.media.drm.PlayReady
-fuchsia.media.drm.Widevine
 fuchsia.media.sessions2.ActiveSession
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sessions2.Publisher
@@ -135,6 +132,7 @@ fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
 fuchsia.net.mdns.Publisher
+fuchsia.net.mdns.ServiceInstancePublisher
 fuchsia.net.mdns.ServiceInstanceResolver
 fuchsia.net.mdns.ServiceSubscriber2
 fuchsia.net.mdns.Subscriber
@@ -175,6 +173,7 @@ fuchsia.settings.Privacy
 fuchsia.settings.Setup
 fuchsia.space.Manager
 fuchsia.ssh.AuthorizedKeys
+fuchsia.starnix.runner.Manager
 fuchsia.sys2.RealmExplorer.root
 fuchsia.sys2.RealmQuery.root
 fuchsia.sysmem.Allocator
@@ -231,11 +230,16 @@ google.device.key.encryptor.DeviceKeyEncryptor
 google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
-fuchsia.weave.FactoryDataManager
+fuchsia.castauth.CastCertificateRetriever
 trusted-app-capabilities
+fuchsia.castauth.CastKeySigner
+fuchsia.media.drm.PlayReady
+fuchsia.media.drm.Widevine
+fuchsia.weave.FactoryDataManager
 fuchsia.weave.Provisioner
 fuchsia.weave.Signer
 google.cast.cryptokey.NamedKeyProvider
+fuchsia.power.broker.ElementInfoProviderService
 cache
 data
 /svc_from_session/fuchsia.element.GraphicalPresenter
