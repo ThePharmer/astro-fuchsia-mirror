@@ -157,8 +157,8 @@ fuchsia.wlan.RecoveryEnabled
 wlancfg
 fuchsia.wlan.RecoveryProfile
 fuchsia.wlan.RoamingPolicy
-trusted-apps
-trusted-app-capabilities
+tee-clients
+tee-clients-capabilities
 config-data
 root-ssl-certificates
 boot
@@ -235,9 +235,9 @@ dev-block
 dev-skip-block
 dev-hrtimer
 hrtimer
-dev-tee
 dev-securemem
 securemem
+dev-tee
 wlandevicemonitor
 dev-wlanphy
 wlanphy
@@ -469,6 +469,7 @@ google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
 widevine.oemcrypto.Provider
+tee-client-capabilities
 fuchsia.power.broker.ElementInfoProviderService
 fuchsia.inspect.InspectSink
 activity*
@@ -531,9 +532,9 @@ fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash_secure.cm
 fuchsia-pkg://fuchsia.com/cache_manager#meta/cache_manager.cm
 fuchsia-pkg://fuchsia.com/system-update-realm#meta/system-update-realm.cm
+fuchsia-pkg://fuchsia.com/tee-clients#meta/tee-clients.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/timekeeper#meta/timekeeper.cm
-fuchsia-pkg://fuchsia.com/trusted-apps#meta/trusted-apps.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
