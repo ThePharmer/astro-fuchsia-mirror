@@ -157,8 +157,8 @@ fuchsia.wlan.RecoveryEnabled
 wlancfg
 fuchsia.wlan.RecoveryProfile
 fuchsia.wlan.RoamingPolicy
-trusted-apps
-trusted-app-capabilities
+tee-clients
+tee-clients-capabilities
 config-data
 root-ssl-certificates
 boot
@@ -235,9 +235,9 @@ dev-block
 dev-skip-block
 dev-hrtimer
 hrtimer
-dev-tee
 dev-securemem
 securemem
+dev-tee
 wlandevicemonitor
 dev-wlanphy
 wlanphy
@@ -355,11 +355,8 @@ fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.location.namedplace.RegulatoryRegionWatcher
 fuchsia.location.position.EmergencyProvider
 fuchsia.location.sensor.WlanBaseStationWatcher
-storage_cache_manager
-fuchsia.sys2.CrashIntrospect
 mediasession
 mediasession-examples
-soundplayer
 fuchsia.lowpan.DeviceWatcher
 fuchsia.lowpan.device.CountersConnector
 fuchsia.lowpan.device.DeviceConnector
@@ -372,6 +369,7 @@ fuchsia.lowpan.thread.MeshcopConnector
 fuchsia.lowpan.bootstrap.Thread
 fuchsia.media.tuning.AudioTuner
 fuchsia.ultrasound.Factory
+soundplayer
 multizone_leader)
 fuchsia.media.SessionAudioConsumerFactory
 google.cast.multizone.Leader
@@ -407,6 +405,7 @@ fuchsia.pkg.PackageResolver-base
 sl4f_bridge_server
 fuchsia.power.battery.BatteryManager
 fuchsia.scheduler.deprecated.ProfileProvider
+fuchsia.sys2.CrashIntrospect
 fuchsia.process.explorer.Query
 fuchsia.recovery.FactoryReset
 fuchsia.sensors.Manager
@@ -433,6 +432,7 @@ fuchsia.stash.Store2
 fuchsia.storage.ext4.Server
 cache
 fuchsia.sys2.StorageAdmin
+storage_cache_manager
 fuchsia.tee.Application.808032e0-fd9e-4e6f-8896-544735c98480
 fuchsia.tee.Application.93a424e2-5608-4413-84a8-58b16a064dce
 fuchsia.tee.Application.9a04f079-9840-4286-ab92-e65be0885f95
@@ -469,6 +469,7 @@ google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
 widevine.oemcrypto.Provider
+tee-client-capabilities
 fuchsia.power.broker.ElementInfoProviderService
 fuchsia.inspect.InspectSink
 activity*
@@ -531,9 +532,9 @@ fuchsia-pkg://fuchsia.com/stash#meta/stash2.cm
 fuchsia-pkg://fuchsia.com/stash#meta/stash_secure.cm
 fuchsia-pkg://fuchsia.com/cache_manager#meta/cache_manager.cm
 fuchsia-pkg://fuchsia.com/system-update-realm#meta/system-update-realm.cm
+fuchsia-pkg://fuchsia.com/tee-clients#meta/tee-clients.cm
 fuchsia-pkg://fuchsia.com/tee_manager#meta/tee_manager.cm
 fuchsia-pkg://fuchsia.com/timekeeper#meta/timekeeper.cm
-fuchsia-pkg://fuchsia.com/trusted-apps#meta/trusted-apps.cm
 fuchsia-pkg://fuchsia.com/tzdata-provider#meta/tzdata-provider.cm
 fuchsia-pkg://fuchsia.com/ui#meta/ui.cm
 fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
