@@ -10,8 +10,6 @@ root-data
 /data
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
-fuchsia.component.sandbox.CapabilityStore
-/svc/fuchsia.component.sandbox.CapabilityStore
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 fuchsia.logger.LogSink
@@ -123,6 +121,7 @@ fuchsia.media.SessionAudioConsumerFactory
 fuchsia.media.UsageGainReporter
 fuchsia.media.UsageReporter
 fuchsia.media.audio.EffectsController
+fuchsia.media.drm.PlayReady
 fuchsia.media.sessions2.ActiveSession
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sessions2.Publisher
@@ -233,9 +232,8 @@ google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
 fuchsia.castauth.CastCertificateRetriever
-tee-client-capabilities
+trusted-app-capabilities
 fuchsia.castauth.CastKeySigner
-fuchsia.media.drm.PlayReady
 fuchsia.media.drm.Widevine
 fuchsia.weave.FactoryDataManager
 fuchsia.weave.Provisioner
