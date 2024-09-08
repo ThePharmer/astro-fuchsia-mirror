@@ -10,6 +10,8 @@ root-data
 /data
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
+fuchsia.component.sandbox.CapabilityStore
+/svc/fuchsia.component.sandbox.CapabilityStore
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 fuchsia.logger.LogSink
@@ -40,6 +42,7 @@ config-data
 dev-block
 dev-bt-hci
 dev-class-radar
+dev-hrtimer
 dev-input-report
 dev-skip-block
 root-ssl-certificates
@@ -64,8 +67,6 @@ fuchsia.bluetooth.sys.HostWatcher
 fuchsia.bluetooth.sys.Pairing
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
-fuchsia.castauth.CastCertificateRetriever
-fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.device.NameProvider
 fuchsia.diagnostics.ArchiveAccessor
@@ -87,12 +88,12 @@ fuchsia.hardware.power.statecontrol.Admin
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 fuchsia.hardware.pty.Device
 fuchsia.hardware.radar.RadarBurstReaderProvider
-fuchsia.hardware.sensors.Playback
 fuchsia.hwinfo.Board
 fuchsia.hwinfo.Device
 fuchsia.hwinfo.Product
 fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
+fuchsia.input.interaction.Notifier
 fuchsia.input.virtualkeyboard.ControllerCreator
 fuchsia.input.virtualkeyboard.Manager
 fuchsia.intl.PropertyProvider
@@ -122,8 +123,6 @@ fuchsia.media.SessionAudioConsumerFactory
 fuchsia.media.UsageGainReporter
 fuchsia.media.UsageReporter
 fuchsia.media.audio.EffectsController
-fuchsia.media.drm.PlayReady
-fuchsia.media.drm.Widevine
 fuchsia.media.sessions2.ActiveSession
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sessions2.Publisher
@@ -160,6 +159,7 @@ fuchsia.process.Resolver
 fuchsia.recovery.FactoryReset
 fuchsia.recovery.policy.Device
 fuchsia.recovery.ui.FactoryResetCountdown
+fuchsia.scheduler.RoleManager
 fuchsia.sensors.Manager
 fuchsia.session.scene.Manager
 fuchsia.settings.Accessibility
@@ -176,6 +176,7 @@ fuchsia.settings.Privacy
 fuchsia.settings.Setup
 fuchsia.space.Manager
 fuchsia.ssh.AuthorizedKeys
+fuchsia.starnix.runner.Manager
 fuchsia.sys2.RealmExplorer.root
 fuchsia.sys2.RealmQuery.root
 fuchsia.sysmem.Allocator
@@ -232,11 +233,16 @@ google.device.key.encryptor.DeviceKeyEncryptor
 google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
+fuchsia.castauth.CastCertificateRetriever
+tee-client-capabilities
+fuchsia.castauth.CastKeySigner
+fuchsia.media.drm.PlayReady
+fuchsia.media.drm.Widevine
 fuchsia.weave.FactoryDataManager
-trusted-app-capabilities
 fuchsia.weave.Provisioner
 fuchsia.weave.Signer
 google.cast.cryptokey.NamedKeyProvider
+fuchsia.power.broker.ElementInfoProviderService
 cache
 data
 /svc_from_session/fuchsia.element.GraphicalPresenter
