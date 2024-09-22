@@ -1,35 +1,5 @@
 {
     "metrics": [
-        // TODO(https://fxbug.dev/42071858): move to audio-drivers.json
-        {
-            "event_codes": [],
-            "metric_id": 1,
-            "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/tas27xx:seconds_until_error",
-            "project_id": 14
-        },
-        {
-            "event_codes": [],
-            "metric_id": 2,
-            "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/tas27xx:seconds_until_interrupt",
-            "project_id": 14
-        },
-        {
-            "event_codes": [],
-            "metric_id": 3,
-            "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/tas27xx:seconds_until_first_error",
-            "project_id": 14
-        },
-        {
-            "event_codes": [],
-            "metric_id": 4,
-            "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/tas27xx:resets_count",
-            "project_id": 14
-        },
-
         // TODO(https://fxbug.dev/42071858): move to connectivity-wlan.json
         {
             "event_codes": [],
@@ -407,7 +377,7 @@
             ],
             "metric_id": 104,
             "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemContiguousPool:free_at_high_water_mark",
+            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemContiguousPool:free_at_high_water_mark",
             "project_id": 3509424520
         },
         {
@@ -416,7 +386,7 @@
             ],
             "metric_id": 105,
             "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemContiguousPool:used_size",
+            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemContiguousPool:used_size",
             "project_id": 3509424520
         },
         {
@@ -425,7 +395,7 @@
             ],
             "metric_id": 104,
             "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemAmlogicProtectedPool:free_at_high_water_mark",
+            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemAmlogicProtectedPool:free_at_high_water_mark",
             "project_id": 3509424520
         },
         {
@@ -434,7 +404,7 @@
             ],
             "metric_id": 105,
             "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemAmlogicProtectedPool:used_size",
+            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemAmlogicProtectedPool:used_size",
             "project_id": 3509424520
         },
         {
@@ -443,7 +413,7 @@
             ],
             "metric_id": 104,
             "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/sysmem/heaps/tee_secure:free_at_high_water_mark",
+            "selector": "bootstrap/sysmem:root/sysmem/heaps/tee_secure:free_at_high_water_mark",
             "project_id": 3509424520
         },
         {
@@ -452,7 +422,7 @@
             ],
             "metric_id": 105,
             "metric_type": "Integer",
-            "selector": "bootstrap/driver_manager:root/sysmem/heaps/tee_secure:used_size",
+            "selector": "bootstrap/sysmem:root/sysmem/heaps/tee_secure:used_size",
             "project_id": 3509424520
         }
     ],
