@@ -92,6 +92,7 @@ fuchsia.feedback.ComponentDataRegister
 feedback
 fuchsia.feedback.CrashReporter
 fuchsia.feedback.DataProvider
+fuchsia.input.interaction.observation.Aggregator
 memory_monitor
 fuchsia.memorypressure.Provider
 cobalt
@@ -106,6 +107,7 @@ process_resolver
 fuchsia.process.Resolver
 setui_service
 fuchsia.settings.Input
+fuchsia.tracing.controller.Controller
 fuchsia.tracing.controller.Provisioner
 fuchsia.tracing.controller.Session
 fuchsia.tracing.perfetto.ProducerConnector
@@ -118,8 +120,6 @@ fuchsia.virtualization.DebianGuestManager
 fuchsia.virtualization.LinuxManager
 fuchsia.virtualization.TerminaGuestManager
 fuchsia.virtualization.ZirconGuestManager
-fuchsia.bluetooth.LegacyPairing
-bluetooth-core
 fuchsia.fonts.FontManifest
 font_provider
 fuchsia.fonts.VerboseLogging
@@ -194,6 +194,7 @@ dev-input-report
 input-report
 bt-hfp-audio-gateway
 dev-dai
+bluetooth-core
 dev-bt-hci
 bt-hci
 codec_factory
@@ -257,7 +258,6 @@ tzdata-icu-44-le
 fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.element.GraphicalPresenter
-fuchsia.input.interaction.Notifier
 fuchsia.session.scene.Manager
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Screenshot
@@ -292,7 +292,6 @@ fuchsia.pkg.RetainedPackages
 fuchsia.space.Manager
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.boot.FactoryItems
-fuchsia.boot.Items
 fuchsia.boot.ReadOnlyLog
 fuchsia.diagnostics.FeedbackArchiveAccessor
 feedback+
@@ -355,6 +354,8 @@ fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.location.namedplace.RegulatoryRegionWatcher
 fuchsia.location.position.EmergencyProvider
 fuchsia.location.sensor.WlanBaseStationWatcher
+mediasession
+mediasession-examples
 fuchsia.lowpan.DeviceWatcher
 fuchsia.lowpan.device.CountersConnector
 fuchsia.lowpan.device.DeviceConnector
@@ -371,11 +372,9 @@ soundplayer
 multizone_leader)
 fuchsia.media.SessionAudioConsumerFactory
 google.cast.multizone.Leader
-mediasession
 fuchsia.media.sessions2.ActiveSession
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sessions2.Publisher
-mediasession-examples
 multizone_leader!
 fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
@@ -493,7 +492,7 @@ core-env
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
 bt-avrcp3
 fuchsia-pkg://fuchsia.com/bt-avrcp#meta/bt-avrcp.cm
-fuchsia-pkg://fuchsia.com/bt-hfp-audio-gateway#meta/bt-hfp-audio-gateway.cm
+fuchsia-pkg://fuchsia.com/bt-hfp-audio-gateway-default#meta/bt-hfp-audio-gateway.cm
 fuchsia-pkg://fuchsia.com/build-info-service#meta/build-info.cm
 fuchsia-pkg://fuchsia.com/cobalt#meta/cobalt.cm
 fuchsia-pkg://fuchsia.com/cobalt_system_metrics#meta/cobalt_system_metrics.cm
