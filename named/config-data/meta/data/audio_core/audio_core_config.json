@@ -57,7 +57,7 @@
       ],
       "supported_stream_types": [
         "render:background",
-        "render:communications",
+        "render:communication",
         "render:interruption",
         "render:media",
         "render:system_agent",
@@ -199,19 +199,19 @@
                 ]
               },
               {
-                "name": "communications",
+                "name": "communication",
                 "min_gain_db": -41,
                 "max_gain_db": -11,
                 "output_channels": 1,
                 "output_rate": 48000,
                 "streams": [
-                  "render:communications"
+                  "render:communication"
                 ],
                 "effects": [
                   {
                     "lib": "google_audio_effects.so",
                     "effect": "equalizer2",
-                    "name": "communications_eq",
+                    "name": "communication_eq",
                     "config": {
                       "first_channel": 0,
                       "num_channels": 1,
@@ -253,7 +253,7 @@
                   {
                     "lib": "google_audio_effects.so",
                     "effect": "bass_extender",
-                    "name": "comms bext",
+                    "name": "comm bext",
                     "config": {
                       "speaker_cutoff_hz": 260,
                       "quality": 0.85,
@@ -265,7 +265,7 @@
                   {
                     "lib": "google_audio_effects.so",
                     "effect": "saturated_gain",
-                    "name": "communications_saturated_gain",
+                    "name": "communication_saturated_gain",
                     "config": {
                       "gain_db": 3
                     }
@@ -273,7 +273,7 @@
                   {
                     "lib": "google_audio_effects.so",
                     "effect": "dynamic_range_control",
-                    "name": "communications_limiter",
+                    "name": "communication_limiter",
                     "_comment": "Limit output to -3dB due to added gain.",
                     "config": {
                       "dynamics_type": "limiter",
@@ -325,7 +325,7 @@
     {
       "device_id": "*",
       "supported_stream_types": [
-        "render:communications",
+        "render:communication",
         "render:media",
         "render:system_agent"
       ],
@@ -340,7 +340,7 @@
       ],
       "supported_stream_types": [
         "capture:background",
-        "capture:communications",
+        "capture:communication",
         "capture:foreground",
         "capture:system_agent",
         "capture:ultrasound"
@@ -356,7 +356,7 @@
       "device_id": "*",
       "supported_stream_types": [
         "capture:background",
-        "capture:communications",
+        "capture:communication",
         "capture:foreground",
         "capture:system_agent"
       ],
