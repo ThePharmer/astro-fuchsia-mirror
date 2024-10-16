@@ -24,7 +24,6 @@ fuchsia.bluetooth.sys.Bootstrap
 fuchsia.bluetooth.sys.Configuration
 fuchsia.bluetooth.sys.HostWatcher
 fuchsia.bluetooth.rfcomm.test.RfcommTest
-fuchsia.bluetooth.LegacyPairing
 bt-host-collection
 bt-rfcomm
 fuchsia.bluetooth.host.Receiver
@@ -35,7 +34,7 @@ data
 /svc/fuchsia.bluetooth.bredr.Profile
 /svc/fuchsia.bluetooth.sys.Pairing
 fuchsia-pkg://fuchsia.com/bt-fastpair-provider#meta/bt-fastpair-provider.cm
-#meta/bt-gap.cm
+fuchsia-pkg://fuchsia.com/bt-gap#meta/bt-gap.cm
 fuchsia-pkg://fuchsia.com/bt-rfcomm#meta/bt-rfcomm.cm
 autostart_snoop
 meta/bt-init.cvf
