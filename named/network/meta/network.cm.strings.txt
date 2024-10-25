@@ -37,10 +37,15 @@ netstack-migration
 fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.net.stackmigrationdeprecated.State
 fuchsia.net.virtualization.Control
+fuchsia.netpol.socketproxy.DnsServerWatcher
+fuchsia.netpol.socketproxy.StarnixNetworks
+fuchsia.posix.socket.Provider_PROXIED
 netstack$
 fuchsia.posix.socket.packet.Provider
 fuchsia.posix.socket.packet.Provider_OnlyForStarnix
+fuchsia.posix.socket.raw.Provider_PROXIED
 fuchsia.http-client.StopOnIdleTimeoutMillis
+fuchsia.power.SuspendEnabled
 config-data
 dev-class-network
 root-ssl-certificates
@@ -53,7 +58,6 @@ fuchsia.scheduler.deprecated.ProfileProvider
 netstack,
 fuchsia.inspect.InspectSink
 dhcpd
-fuchsia.logger.LogSink
 dhcpv6-client
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.debug.Diagnostics
@@ -65,9 +69,12 @@ fuchsia.net.dhcp.Server
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.name.LookupAdmin
 netstack*
+fuchsia.power.broker.Topology
+fuchsia.power.system.ActivityGovernor
 fuchsia.stash.SecureStore
 cache
 data
+fuchsia.logger.LogSink
 fuchsia.tracing.provider.Registry
 fuchsia-pkg://fuchsia.com/dhcpv4-server#meta/dhcpv4_server.cm
 fuchsia-pkg://fuchsia.com/dhcpv6-client#meta/dhcpv6-client.cm
