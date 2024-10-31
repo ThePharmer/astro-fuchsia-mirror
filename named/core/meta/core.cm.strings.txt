@@ -148,14 +148,10 @@ fuchsia.ui.DisplayPixelDensity
 fuchsia.ui.IdleThresholdMs
 fuchsia.ui.SupportedInputDevices
 fuchsia.ui.ViewingDistance
-fuchsia.ui.VisualDebuggingLevel
 fuchsia.recovery.UseFxBlob
 factory_reset
 session-manager
 fuchsia.session.SessionUrl
-fuchsia.session.window.Collection
-fuchsia.session.window.InitialElementUrl
-fuchsia.session.window.InitialViewIdAnnotation
 fuchsia.ui.ManageDisplayPower
 brightness_manager
 fuchsia.ui.PowerOffDelayMillis
@@ -166,14 +162,13 @@ fuchsia.wlan.RecoveryProfile
 fuchsia.wlan.RoamingPolicy
 tee-clients
 tee-client-capabilities
-base-bin
+config-data
+root-ssl-certificates
 boot
 mdns
 build-info
 boot-bin
-root-ssl-certificates
 system
-config-data
 hwinfo
 fonts
 system-update-committer-config-data
@@ -264,7 +259,6 @@ fuchsia.accessibility.semantics.SemanticsManager
 fuchsia.accessibility.tts.EngineRegistry
 fuchsia.element.GraphicalPresenter
 fuchsia.input.interaction.Notifier
-fuchsia.lightsensor.Sensor
 fuchsia.session.scene.Manager
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Screenshot
@@ -281,10 +275,8 @@ fuchsia.bluetooth.avrcp.PeerManager
 fuchsia.bluetooth.bredr.Profile
 bt-avrcp
 fuchsia.bluetooth.gatt.Server
-fuchsia.bluetooth.gatt2.Server
 fuchsia.bluetooth.le.Central
 fuchsia.bluetooth.le.Peripheral
-fuchsia.bluetooth.le.PrivilegedPeripheral
 fuchsia.bluetooth.sys.Access
 fuchsia.bluetooth.sys.Bootstrap
 fuchsia.bluetooth.sys.HostWatcher
@@ -300,6 +292,7 @@ fuchsia.pkg.RetainedPackages
 fuchsia.space.Manager
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.boot.FactoryItems
+fuchsia.logger.LogSink
 fuchsia.boot.Items
 fuchsia.boot.ReadOnlyLog
 fuchsia.diagnostics.FeedbackArchiveAccessor
@@ -358,6 +351,7 @@ fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 multizone_leader
 fuchsia.intl.TimeZones
+fuchsia.lightsensor.Sensor
 regulatory_region
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.location.namedplace.RegulatoryRegionWatcher
@@ -410,9 +404,6 @@ fuchsia.pkg.PackageResolver-ota
 fuchsia.pkg.FontResolver
 fuchsia.pkg.LocalMirror
 fuchsia.pkg.PackageResolver-base
-fuchsia.pkg.PackageResolver-pkg
-fuchsia.pkg.PackageResolver-boot
-process_resolver 
 sl4f_bridge_server
 fuchsia.power.battery.BatteryManager
 fuchsia.power.broker.Topology
@@ -483,7 +474,6 @@ google.flashts.Reader
 widevine.oemcrypto.Provider
 fuchsia.power.broker.ElementInfoProviderService
 fuchsia.inspect.InspectSink
-fuchsia.logger.LogSink
 activity*
 activity!
 bt-avrcp*
