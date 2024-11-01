@@ -1,12 +1,375 @@
 {
     "metrics": [
-        // TODO(https://fxbug.dev/42071858): move to connectivity-wlan.json
+        // TODO(https://fxbug.dev/42071858): move to audio-drivers.json
         {
             "event_codes": [],
-            "metric_id": 339,
+            "metric_id": 1,
+            "metric_type": "Integer",
+            "selector": "bootstrap/driver_manager:root/tas27xx:seconds_until_error",
+            "project_id": 14
+        },
+        {
+            "event_codes": [],
+            "metric_id": 2,
+            "metric_type": "Integer",
+            "selector": "bootstrap/driver_manager:root/tas27xx:seconds_until_interrupt",
+            "project_id": 14
+        },
+        {
+            "event_codes": [],
+            "metric_id": 3,
+            "metric_type": "Integer",
+            "selector": "bootstrap/driver_manager:root/tas27xx:seconds_until_first_error",
+            "project_id": 14
+        },
+        {
+            "event_codes": [],
+            "metric_id": 4,
+            "metric_type": "Integer",
+            "selector": "bootstrap/driver_manager:root/tas27xx:resets_count",
+            "project_id": 14
+        },
+
+        // TODO(https://fxbug.dev/42071858): move to bthost.json
+        {
+            "event_codes": [
+                0,
+                1
+            ],
+            "metric_id": 9,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=factory-broadcom]root/brcmfmac-phy:fw_recovery_triggered",
-            "project_id": 3708719327
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/le:outgoing_connection_requests",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                2
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/le:pair_requests",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                7
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/le:start_advertising_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                8
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/le:stop_advertising_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                9
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/le:start_discovery_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                0
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/bredr:open_l2cap_channel_requests",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                1
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/bredr:outgoing_connection_requests",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                2
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/bredr:pair_requests",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                3
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/bredr:request_discoverable_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                4
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/bredr:request_discovery_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                5
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/bredr:set_connectable_true_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                6
+            ],
+            "metric_id": 9,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/metrics/bredr:set_connectable_false_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                1
+            ],
+            "metric_id": 10,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/bredr:bond_failure_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                0
+            ],
+            "metric_id": 10,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/bredr:bond_success_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                1
+            ],
+            "metric_id": 10,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/le:bond_failure_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                0
+            ],
+            "metric_id": 10,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/peer_cache/metrics/le:bond_success_events",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                0,
+                1
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/incoming:successful_connections",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                1,
+                1
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/incoming:failed_connections",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                0,
+                2
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/outgoing:successful_connections",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                1,
+                2
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager/outgoing:failed_connections",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1,
+                2,
+                0
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:interrogation_complete_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                0,
+                1
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:incoming_connection_success_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                1,
+                1
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:incoming_connection_failure_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                0,
+                2
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:outgoing_connection_success_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                0,
+                1,
+                2
+            ],
+            "metric_id": 11,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:outgoing_connection_failure_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1
+            ],
+            "metric_id": 18,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_explicit_disconnect_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                2
+            ],
+            "metric_id": 18,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_link_error_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                3
+            ],
+            "metric_id": 18,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_zero_ref_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                4
+            ],
+            "metric_id": 18,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/low_energy_discovery_manager:disconnect_remote_disconnection_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                1
+            ],
+            "metric_id": 19,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_local_api_request_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                2
+            ],
+            "metric_id": 19,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_interrogation_failed_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                3
+            ],
+            "metric_id": 19,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_pairing_failed_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                4
+            ],
+            "metric_id": 19,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_acl_link_error_count",
+            "project_id": 2322225253
+        },
+        {
+            "event_codes": [
+                5
+            ],
+            "metric_id": 19,
+            "metric_type": "Occurrence",
+            "selector": "bootstrap/driver_manager:root/bt-host/adapter/bredr_connection_manager:disconnect_peer_disconnection_count",
+            "project_id": 2322225253
         },
 
         // TODO(https://fxbug.dev/42071858): move to connectivity-wlan.json
@@ -14,7 +377,7 @@
             "event_codes": [],
             "metric_id": 340,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=factory-broadcom]root/brcmfmac-phy:fw_recovered",
+            "selector": "bootstrap/driver_manager:root/brcmfmac-phy:fw_recovered",
             "project_id": 3708719327
         },
 
@@ -25,7 +388,7 @@
             ],
             "metric_id": 2012,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.read.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.read.count",
             "project_id": 3676913920
         },
         {
@@ -34,7 +397,7 @@
             ],
             "metric_id": 2012,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.write.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.write.count",
             "project_id": 3676913920
         },
         {
@@ -43,7 +406,7 @@
             ],
             "metric_id": 2012,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.flush.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.flush.count",
             "project_id": 3676913920
         },
         {
@@ -52,7 +415,7 @@
             ],
             "metric_id": 2012,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.trim.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.trim.count",
             "project_id": 3676913920
         },
         {
@@ -62,7 +425,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.read.issued_page_read.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.read.issued_page_read.count",
             "project_id": 3676913920
         },
         {
@@ -72,7 +435,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.read.issued_page_write.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.read.issued_page_write.count",
             "project_id": 3676913920
         },
         {
@@ -82,7 +445,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.read.issued_block_erase.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.read.issued_block_erase.count",
             "project_id": 3676913920
         },
         {
@@ -92,7 +455,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.write.issued_page_read.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.write.issued_page_read.count",
             "project_id": 3676913920
         },
         {
@@ -102,7 +465,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.write.issued_page_write.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.write.issued_page_write.count",
             "project_id": 3676913920
         },
         {
@@ -112,7 +475,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.write.issued_block_erase.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.write.issued_block_erase.count",
             "project_id": 3676913920
         },
         {
@@ -122,7 +485,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.flush.issued_page_read.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.flush.issued_page_read.count",
             "project_id": 3676913920
         },
         {
@@ -132,7 +495,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.flush.issued_page_write.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.flush.issued_page_write.count",
             "project_id": 3676913920
         },
         {
@@ -142,7 +505,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.flush.issued_block_erase.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.flush.issued_block_erase.count",
             "project_id": 3676913920
         },
         {
@@ -152,7 +515,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.trim.issued_page_read.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.trim.issued_page_read.count",
             "project_id": 3676913920
         },
         {
@@ -162,7 +525,7 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.trim.issued_page_write.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.trim.issued_page_write.count",
             "project_id": 3676913920
         },
         {
@@ -172,42 +535,42 @@
             ],
             "metric_id": 2013,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:block.trim.issued_block_erase.count",
+            "selector": "bootstrap/driver_manager:root/ftl:block.trim.issued_block_erase.count",
             "project_id": 3676913920
         },
         {
             "event_codes": [],
             "metric_id": 2003,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.erase_block.max_wear",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.erase_block.max_wear",
             "project_id": 3676913920
         },
         {
             "event_codes": [],
             "metric_id": 2006,
             "metric_type": "IntHistogram",
-            "selector": "bootstrap/*-drivers\\:*:[name=nand]root/nand:read_ecc_bit_flips",
+            "selector": "bootstrap/driver_manager:root/nand:read_ecc_bit_flips",
             "project_id": 3676913920
         },
         {
             "event_codes": [],
             "metric_id": 2007,
             "metric_type": "IntHistogram",
-            "selector": "bootstrap/*-drivers\\:*:[name=nand]root/nand:read_attempts",
+            "selector": "bootstrap/driver_manager:root/nand:read_attempts",
             "project_id": 3676913920
         },
         {
             "event_codes": [],
             "metric_id": 2008,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=nand]root/nand:read_internal_failure",
+            "selector": "bootstrap/driver_manager:root/nand:read_internal_failure",
             "project_id": 3676913920
         },
         {
             "event_codes": [],
             "metric_id": 2009,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=nand]root/nand:read_failure",
+            "selector": "bootstrap/driver_manager:root/nand:read_failure",
             "project_id": 3676913920
         },
         {
@@ -216,7 +579,7 @@
             ],
             "metric_id": 2010,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.initial_bad_blocks",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.initial_bad_blocks",
             "project_id": 3676913920
         },
         {
@@ -225,7 +588,7 @@
             ],
             "metric_id": 2010,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.running_bad_blocks",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.running_bad_blocks",
             "project_id": 3676913920
         },
         {
@@ -234,7 +597,7 @@
             ],
             "metric_id": 2011,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.map_block_end_page_failure_reason.0",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.map_block_end_page_failure_reason.0",
             "project_id": 3676913920
         },
         {
@@ -243,7 +606,7 @@
             ],
             "metric_id": 2011,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.map_block_end_page_failure_reason.1",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.map_block_end_page_failure_reason.1",
             "project_id": 3676913920
         },
         {
@@ -252,7 +615,7 @@
             ],
             "metric_id": 2011,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.map_block_end_page_failure_reason.2",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.map_block_end_page_failure_reason.2",
             "project_id": 3676913920
         },
         {
@@ -261,7 +624,7 @@
             ],
             "metric_id": 2011,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.map_block_end_page_failure_reason.3",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.map_block_end_page_failure_reason.3",
             "project_id": 3676913920
         },
         {
@@ -270,7 +633,7 @@
             ],
             "metric_id": 2011,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=ftl]root/ftl:nand.map_block_end_page_failure_reason.4",
+            "selector": "bootstrap/driver_manager:root/ftl:nand.map_block_end_page_failure_reason.4",
             "project_id": 3676913920
         },
 
@@ -281,7 +644,7 @@
             ],
             "metric_id": 3001,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=fvm]root/fvm/partitions/blobfs:total_slices_reserved",
+            "selector": "bootstrap/driver_manager:root/fvm/partitions/blobfs:total_slices_reserved",
             "project_id": 3676913920
         },
         {
@@ -290,7 +653,7 @@
             ],
             "metric_id": 3001,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=fvm]root/fvm/partitions/minfs:total_slices_reserved",
+            "selector": "bootstrap/driver_manager:root/fvm/partitions/minfs:total_slices_reserved",
             "project_id": 3676913920
         },
         {
@@ -299,7 +662,7 @@
             ],
             "metric_id": 61,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=fvm]root/fvm/mount_time/version_combo",
+            "selector": "bootstrap/driver_manager:root/fvm/mount_time/version_combo",
             "project_id": 3676913920
         },
 
@@ -308,21 +671,21 @@
             "event_codes": [],
             "metric_id": 1,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=selina]root/selina:timeout_error_rate",
+            "selector": "bootstrap/driver_manager:root/selina:timeout_error_rate",
             "project_id": 12
         },
         {
             "event_codes": [],
             "metric_id": 2,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=selina]root/selina:fifo_overflow_error_rate",
+            "selector": "bootstrap/driver_manager:root/selina:fifo_overflow_error_rate",
             "project_id": 12
         },
         {
             "event_codes": [],
             "metric_id": 3,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=selina]root/selina:other_error_rate",
+            "selector": "bootstrap/driver_manager:root/selina:other_error_rate",
             "project_id": 12
         },
 
@@ -331,42 +694,42 @@
             "event_codes": [],
             "metric_id": 3,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=sdmmc-sdio]root/sdio_core:tx_errors",
+            "selector": "bootstrap/driver_manager:root/sdio_core:tx_errors",
             "project_id": 9
         },
         {
             "event_codes": [],
             "metric_id": 4,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=sdmmc-sdio]root/sdio_core:rx_errors",
+            "selector": "bootstrap/driver_manager:root/sdio_core:rx_errors",
             "project_id": 9
         },
         {
             "event_codes": [],
             "metric_id": 5,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=sdmmc-sd, name=sdmmc-mmc]root/sdmmc_core:io_errors",
+            "selector": "bootstrap/driver_manager:root/sdmmc_core:io_errors",
             "project_id": 9
         },
         {
             "event_codes": [],
             "metric_id": 6,
             "metric_type": "Occurrence",
-            "selector": "bootstrap/*-drivers\\:*:[name=sdmmc-sd, name=sdmmc-mmc]root/sdmmc_core:io_retries",
+            "selector": "bootstrap/driver_manager:root/sdmmc_core:io_retries",
             "project_id": 9
         },
         {
             "event_codes": [],
             "metric_id": 7,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=sdmmc-sd, name=sdmmc-mmc]root/sdmmc_core:type_a_lifetime_used",
+            "selector": "bootstrap/driver_manager:root/sdmmc_core:type_a_lifetime_used",
             "project_id": 9
         },
         {
             "event_codes": [],
             "metric_id": 8,
             "metric_type": "Integer",
-            "selector": "bootstrap/*-drivers\\:*:[name=sdmmc-sd, name=sdmmc-mmc]root/sdmmc_core:type_b_lifetime_used",
+            "selector": "bootstrap/driver_manager:root/sdmmc_core:type_b_lifetime_used",
             "project_id": 9
         },
 
@@ -377,7 +740,7 @@
             ],
             "metric_id": 104,
             "metric_type": "Integer",
-            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemContiguousPool:free_at_high_water_mark",
+            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemContiguousPool:free_at_high_water_mark",
             "project_id": 3509424520
         },
         {
@@ -386,7 +749,7 @@
             ],
             "metric_id": 105,
             "metric_type": "Integer",
-            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemContiguousPool:used_size",
+            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemContiguousPool:used_size",
             "project_id": 3509424520
         },
         {
@@ -395,7 +758,7 @@
             ],
             "metric_id": 104,
             "metric_type": "Integer",
-            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemAmlogicProtectedPool:free_at_high_water_mark",
+            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemAmlogicProtectedPool:free_at_high_water_mark",
             "project_id": 3509424520
         },
         {
@@ -404,7 +767,7 @@
             ],
             "metric_id": 105,
             "metric_type": "Integer",
-            "selector": "bootstrap/sysmem:root/sysmem/heaps/SysmemAmlogicProtectedPool:used_size",
+            "selector": "bootstrap/driver_manager:root/sysmem/heaps/SysmemAmlogicProtectedPool:used_size",
             "project_id": 3509424520
         },
         {
@@ -413,7 +776,7 @@
             ],
             "metric_id": 104,
             "metric_type": "Integer",
-            "selector": "bootstrap/sysmem:root/sysmem/heaps/tee_secure:free_at_high_water_mark",
+            "selector": "bootstrap/driver_manager:root/sysmem/heaps/tee_secure:free_at_high_water_mark",
             "project_id": 3509424520
         },
         {
@@ -422,7 +785,7 @@
             ],
             "metric_id": 105,
             "metric_type": "Integer",
-            "selector": "bootstrap/sysmem:root/sysmem/heaps/tee_secure:used_size",
+            "selector": "bootstrap/driver_manager:root/sysmem/heaps/tee_secure:used_size",
             "project_id": 3509424520
         }
     ],
