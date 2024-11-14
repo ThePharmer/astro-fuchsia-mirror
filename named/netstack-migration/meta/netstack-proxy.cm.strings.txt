@@ -1,9 +1,15 @@
 binary
 bin/netstack_proxy
+fuchsia.power.SuspendEnabled
+suspend_enabled
 config-data
 /config/data
 fuchsia.diagnostics.persist.DataPersistence-netstack
 /svc/fuchsia.diagnostics.persist.DataPersistence-netstack
+fuchsia.power.broker.Topology
+/svc/fuchsia.power.broker.Topology
+fuchsia.power.system.ActivityGovernor
+/svc/fuchsia.power.system.ActivityGovernor
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 fuchsia.inspect.InspectSink
