@@ -26,8 +26,6 @@ fuchsia.scenic.PointerAutoFocus
 pointer_auto_focus
 fuchsia.scenic.Renderer
 renderer
-fuchsia.ui.VisualDebuggingLevel
-visual_debugging_level
 config-data
 /config/data
 fuchsia.hardware.display.Provider
@@ -36,6 +34,8 @@ fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
+fuchsia.media.ProfileProvider
+/svc/fuchsia.media.ProfileProvider
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.scheduler.RoleManager
@@ -72,7 +72,6 @@ fuchsia.ui.pointer.augment.LocalHit
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.scenic.Scenic
 fuchsia.ui.views.ViewRefInstalled
-diagnostics
 /svc/fuchsia.ui.annotation.Registry
 fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.Allocator
@@ -98,3 +97,4 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
+GdDG-
