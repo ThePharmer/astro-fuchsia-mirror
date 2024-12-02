@@ -16,9 +16,7 @@ fuchsia.power.broker.Topology
 /svc/fuchsia.power.broker.Topology
 fuchsia.power.system.ActivityGovernor
 /svc/fuchsia.power.system.ActivityGovernor
-data
-/data
-fuchsia.time.test.Rtc
+fuchsia.time.test.RTC
 root-ssl-certificates
 timesource
 capability_requested
@@ -37,7 +35,7 @@ fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.interfaces.State
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
-/svc/fuchsia.time.test.Rtc
+/svc/fuchsia.time.test.RTC
 #meta/realm_builder_server.cm
 realm_builder_env
 realm_builder_resolver
@@ -57,5 +55,4 @@ primary_time_source_url
 primary_uses_pull
 serve_test_protocols
 utc_start_at_startup
-utc_start_at_startup_when_invalid_rtc
 meta/timekeeper.cvf
