@@ -10,8 +10,8 @@ config-data
 /config/data
 fuchsia.boot.ReadOnlyLog
 /svc/fuchsia.boot.ReadOnlyLog
-fuchsia.diagnostics.FeedbackArchiveAccessor
-/svc/fuchsia.diagnostics.FeedbackArchiveAccessor
+fuchsia.diagnostics.ArchiveAccessor.feedback
+/svc/fuchsia.diagnostics.ArchiveAccessor.feedback
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegisterE
 /svc/fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 fuchsia.hwinfo.Board
@@ -20,8 +20,6 @@ fuchsia.hwinfo.Product
 /svc/fuchsia.hwinfo.Product
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.http.Loader
@@ -42,10 +40,11 @@ fuchsia.settings.Privacy
 /svc/fuchsia.settings.Privacy
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
-fuchsia.ui.composition.Screenshot
-/svc/fuchsia.ui.composition.Screenshot
 fuchsia.update.channelcontrol.ChannelControl
 /svc/fuchsia.update.channelcontrol.ChannelControl
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
+diagnostics
 cache
 /cache
 data
