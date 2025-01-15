@@ -1,308 +1,332 @@
 [
   {
+    "event_code": 1,
     "name": "ZBI Buffer",
     "process": "",
-    "vmo": "uncompressed-bootfs",
-    "event_code": 1
+    "vmo": "uncompressed-bootfs"
   },
   {
+    "event_code": 2,
     "name": "Graphics",
     "process": "",
-    "vmo": "magma_create_buffer|Mali .*|Magma.*|ImagePipe2Surface.*|GFXBufferCollection.*|ScenicImageMemory|Display.*|CompactImage.*|GFX Device Memory.*|FlatlandImageMemory.*",
-    "event_code": 2
+    "vmo": "magma_create_buffer|Mali .*|Magma.*|ImagePipe2Surface.*|GFXBufferCollection.*|ScenicImageMemory|Display.*|CompactImage.*|GFX Device Memory.*|FlatlandImageMemory.*"
   },
   {
-    "name": "BlobfsInactive",
-    "process": "/pkg/bin/blobfs|blobfs\\.cm",
-    "vmo": "inactive-blob-.*",
-    "event_code": 29
-  },
-  {
-    "name": "Blobfs",
-    "process": "/pkg/bin/blobfs|blobfs\\.cm",
-    "vmo": "",
-    "event_code": 5
-  },
-  {
+    "event_code": 27,
     "name": "ProtectedPoolUnallocated",
     "process": "driver_host:pdev:00:00:1b",
-    "vmo": "SysmemAmlogicProtectedPool",
-    "event_code": 27
+    "vmo": "SysmemAmlogicProtectedPool"
   },
   {
+    "event_code": 26,
     "name": "ContiguousPoolUnallocated",
     "process": "driver_host:pdev:00:00:1b",
-    "vmo": "SysmemContiguousPool",
-    "event_code": 26
+    "vmo": "SysmemContiguousPool"
   },
   {
-    "name": "FlutterApps",
-    "process": "io\\.flutter\\..*",
-    "vmo": "dart.*",
-    "event_code": 28
+    "event_code": 29,
+    "name": "BlobfsInactive",
+    "process": "/pkg/bin/blobfs|blobfs\\.cm",
+    "vmo": "inactive-blob-.*"
   },
   {
-    "name": "Storage",
-    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm",
-    "vmo": "",
-    "event_code": 72
+    "event_code": 5,
+    "name": "Blobfs",
+    "process": "/pkg/bin/blobfs|blobfs\\.cm",
+    "vmo": ""
   },
   {
-    "name": "Scenic",
-    "process": "root_presenter\\.cm|scenic\\.cm",
-    "vmo": "",
-    "event_code": 9
+    "event_code": 38,
+    "name": "Camera",
+    "process": "camera_device.*\\.cm|driver_host:pdev:05:04:15",
+    "vmo": ""
   },
   {
-    "name": "Netstack",
-    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|stack_migration\\.cm|netstack-proxy\\.cm|/pkg/bin/netstack|/pkg/bin/netstack3|dhcp-client\\.cm",
-    "vmo": "",
-    "event_code": 11
+    "event_code": 56,
+    "name": "Thread",
+    "process": "lowpan.*|ot-stack.*",
+    "vmo": ""
   },
   {
-    "name": "Netsvc",
-    "process": "netsvc\\.cm|device-name-provider\\.cm",
-    "vmo": "",
-    "event_code": 71
-  },
-  {
-    "name": "Archivist",
-    "process": "archivist\\.cm|sampler\\.cm|diagnostics-persistence\\.cm",
-    "vmo": "",
-    "event_code": 22
-  },
-  {
-    "name": "Cobalt",
-    "process": "cobalt\\.cm|cobalt_system_metrics\\.cm",
-    "vmo": "",
-    "event_code": 23
-  },
-  {
-    "name": "Audio",
-    "process": "audio_core\\.cm|audio_device_registry\\.cm|soundplayer\\.cm",
-    "vmo": "",
-    "event_code": 24
-  },
-  {
-    "name": "Context",
-    "process": "context_provider\\.cm",
-    "vmo": "",
-    "event_code": 25
-  },
-  {
-    "name": "ComponentManager",
-    "process": "bin/bootsvc|bin/component_manager|miscsvc\\.cm|svchost\\.cm|sysmgr\\.cm",
-    "vmo": "",
-    "event_code": 40
-  },
-  {
-    "name": "Resolvers",
-    "process": ".*-resolver\\.cm.*",
-    "vmo": "",
-    "event_code": 42
-  },
-  {
-    "name": "Feedback",
-    "process": "exceptions\\.cm|feedback\\.cm|system_log_recorder|feedback_id\\.cm",
-    "vmo": "",
-    "event_code": 46
-  },
-  {
-    "name": "CompositeDrivers",
-    "process": "driver_host:composite-device",
-    "vmo": "",
-    "event_code": 47
-  },
-  {
-    "name": "OtherDrivers",
-    "process": "driver_host.*|pwrbtn-monitor\\.cm",
-    "vmo": "",
-    "event_code": 48
-  },
-  {
-    "name": "A11y",
-    "process": "a11y-manager\\.cm",
-    "vmo": "",
-    "event_code": 50
-  },
-  {
-    "name": "Bluetooth",
-    "process": "bt-.*",
-    "vmo": "",
-    "event_code": 51
-  },
-  {
-    "name": "HCI",
-    "process": "activity\\.cm|text_manager\\.cm|text_manager\\.cm",
-    "vmo": "",
-    "event_code": 52
-  },
-  {
-    "name": "I18N",
-    "process": "httpsdate_time_source\\.cm|fonts\\.cm|intl\\.cm|intl_services\\.cm|timezone\\.cm|time-zone-info-service\\.cm",
-    "vmo": "",
-    "event_code": 53
-  },
-  {
-    "name": "SoftwareDelivery",
-    "process": "omaha-client-service\\.cm|pkg-cache\\.cm|system-update.*",
-    "vmo": "",
-    "event_code": 55
-  },
-  {
-    "name": "WLAN",
-    "process": "emergency\\.cm|regulatory_region\\.cm|wlan.*",
-    "vmo": "",
-    "event_code": 58
-  },
-  {
-    "name": "NetworkPolicy",
-    "process": "http-client\\.cm|netcfg.*\\.cm|reachability\\.cm",
-    "vmo": "",
-    "event_code": 59
-  },
-  {
-    "name": "DriverFramework",
-    "process": "driver-index\\.cm|driver_manager\\.cm|sysinfo\\.cm",
-    "vmo": "",
-    "event_code": 63
-  },
-  {
-    "name": "EngTools",
-    "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor\\.cm|overnetstack\\.cm|memory_pressure_signaler\\.cm|remote.*|sh:console|sshd-host\\.cm",
-    "vmo": "",
-    "event_code": 64
-  },
-  {
-    "name": "Power",
-    "process": "power-manager\\.cm|shutdown-shim\\.cm",
-    "vmo": "",
-    "event_code": 65
-  },
-  {
-    "name": "SceneManager",
-    "process": "input-pipeline\\.cm|scene_manager\\.cm",
-    "vmo": "",
-    "event_code": 69
-  },
-  {
-    "name": "Minfs",
-    "process": "/pkg/bin/minfs",
-    "vmo": "",
-    "event_code": 4
-  },
-  {
-    "name": "SetUI",
-    "process": "setui_service\\.cm|setui_service_with_camera\\.cm",
-    "vmo": "",
-    "event_code": 54
-  },
-  {
-    "name": "Amlogic",
-    "process": "driver_host:pdev:05:00:f",
-    "vmo": "",
-    "event_code": 10
-  },
-  {
-    "name": "Perception",
-    "process": "concierge_agent\\.cm|fuchsia_perception_estelle_agent|fuchsia_perception_newman_agent|fuchsia_perception_elaine_agent|ml_framework_agent\\.cm|openvx_nn_server\\.cm|fuchsia_selina_agent\\.cm",
-    "vmo": "",
-    "event_code": 37
-  },
-  {
-    "name": "Vision",
-    "process": "ml_vision_agent\\.cm",
-    "vmo": "",
-    "event_code": 45
-  },
-  {
-    "name": "FederatedLearning",
-    "process": "federated_learning_agent\\.cm",
-    "vmo": "",
-    "event_code": 49
-  },
-  {
-    "name": "Reconnect",
-    "process": "reconnect-agent\\.cm",
-    "vmo": "",
-    "event_code": 60
-  },
-  {
-    "name": "Code66",
-    "process": "aurora_agent\\.cm|pref_control_agent\\.cm",
-    "vmo": "",
-    "event_code": 66
-  },
-  {
-    "name": "Flutter",
-    "process": "io\\.flutter\\..*",
-    "vmo": "",
-    "event_code": 20
-  },
-  {
-    "name": "Web",
-    "process": "cast_runner\\.cm|web_instance\\.cm|web_engine_exe:.*",
-    "vmo": "",
-    "event_code": 7
-  },
-  {
-    "name": "Kronk",
-    "process": "kronk\\.cm|kronk_for_testing\\.cm",
-    "vmo": "",
-    "event_code": 8
-  },
-  {
-    "name": "Cast",
-    "process": "cast_agent\\.cm|cast_assistant\\.cm|cast_auth_server\\.cm|multizone_leader\\.cm|multizone_follower\\.cm",
-    "vmo": "",
-    "event_code": 14
-  },
-  {
-    "name": "Comms",
-    "process": "comms_agent\\.cm|duocore\\.cm",
-    "vmo": "",
-    "event_code": 41
-  },
-  {
-    "name": "Ultrasound",
-    "process": "ultrasound_agent\\.cm",
-    "vmo": "",
-    "event_code": 44
-  },
-  {
+    "event_code": 57,
     "name": "Weave",
     "process": "weave.*",
-    "vmo": "",
-    "event_code": 57
+    "vmo": ""
   },
   {
-    "name": "SmartDisplaySession",
-    "process": "session.*|smart_session\\.cm",
-    "vmo": "",
-    "event_code": 61
+    "event_code": 73,
+    "name": "Fxblob",
+    "process": "fxfs\\.cm",
+    "vmo": "blob-.*"
   },
   {
+    "event_code": 72,
+    "name": "Storage",
+    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 4,
+    "name": "Minfs",
+    "process": "/pkg/bin/minfs",
+    "vmo": ""
+  },
+  {
+    "event_code": 9,
+    "name": "Scenic",
+    "process": "root_presenter\\.cm|scenic\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 11,
+    "name": "Netstack",
+    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|stack_migration\\.cm|netstack-proxy\\.cm|/pkg/bin/netstack|/pkg/bin/netstack3|dhcp-client\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 71,
+    "name": "Netsvc",
+    "process": "netsvc\\.cm|device-name-provider\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 13,
+    "name": "Pkgfs",
+    "process": "pkgfs",
+    "vmo": ""
+  },
+  {
+    "event_code": 22,
+    "name": "Archivist",
+    "process": "archivist\\.cm|sampler\\.cm|diagnostics-persistence\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 23,
+    "name": "Cobalt",
+    "process": "cobalt\\.cm|cobalt_system_metrics\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 24,
+    "name": "Audio",
+    "process": "audio_core\\.cm|audio_device_registry\\.cm|soundplayer\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 25,
+    "name": "Context",
+    "process": "context_provider\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 40,
+    "name": "ComponentManager",
+    "process": "bin/bootsvc|bin/component_manager|miscsvc\\.cm|svchost\\.cm|sysmgr\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 42,
+    "name": "Resolvers",
+    "process": ".*-resolver\\.cm.*",
+    "vmo": ""
+  },
+  {
+    "event_code": 46,
+    "name": "Feedback",
+    "process": "exceptions\\.cm|feedback\\.cm|system_log_recorder|feedback_id\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 47,
+    "name": "CompositeDrivers",
+    "process": "driver_host:composite-device",
+    "vmo": ""
+  },
+  {
+    "event_code": 48,
+    "name": "OtherDrivers",
+    "process": "driver_host.*|pwrbtn-monitor\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 50,
+    "name": "A11y",
+    "process": "a11y-manager\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 51,
+    "name": "Bluetooth",
+    "process": "bt-.*",
+    "vmo": ""
+  },
+  {
+    "event_code": 52,
+    "name": "HCI",
+    "process": "activity\\.cm|text_manager\\.cm|text_manager\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 53,
+    "name": "I18N",
+    "process": "httpsdate_time_source\\.cm|fonts\\.cm|intl\\.cm|intl_services\\.cm|timezone\\.cm|time-zone-info-service\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 54,
+    "name": "SetUI",
+    "process": "setui_service\\.cm|setui_service_with_camera\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 55,
+    "name": "SoftwareDelivery",
+    "process": "omaha-client-service\\.cm|pkg-cache\\.cm|system-update.*",
+    "vmo": ""
+  },
+  {
+    "event_code": 58,
+    "name": "WLAN",
+    "process": "emergency\\.cm|regulatory_region\\.cm|wlan.*",
+    "vmo": ""
+  },
+  {
+    "event_code": 59,
+    "name": "NetworkPolicy",
+    "process": "http-client\\.cm|netcfg.*\\.cm|reachability\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 62,
     "name": "OtherProductComponents",
     "process": "brightness_manager\\.cm|color_tint_service\\.cm|nest_policy_agent\\.cm|presence_agent\\.cm",
-    "vmo": "",
-    "event_code": 62
+    "vmo": ""
   },
   {
+    "event_code": 63,
+    "name": "DriverFramework",
+    "process": "driver-index\\.cm|driver_manager\\.cm|sysinfo\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 64,
+    "name": "EngTools",
+    "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor\\.cm|overnetstack\\.cm|remote.*|sh:console|sshd-host\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 65,
+    "name": "Power",
+    "process": "power-manager\\.cm|shutdown-shim\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 69,
+    "name": "SceneManager",
+    "process": "input-pipeline\\.cm|scene_manager\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 10,
+    "name": "Amlogic",
+    "process": "driver_host:pdev:05:00:f",
+    "vmo": ""
+  },
+  {
+    "event_code": 37,
+    "name": "Perception",
+    "process": "concierge_agent\\.cm|fuchsia_perception_estelle_agent|fuchsia_perception_newman_agent|fuchsia_perception_elaine_agent|ml_framework_agent\\.cm|openvx_nn_server\\.cm|fuchsia_selina_agent\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 45,
+    "name": "Vision",
+    "process": "ml_vision_agent\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 49,
+    "name": "FederatedLearning",
+    "process": "federated_learning_agent\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 60,
+    "name": "Reconnect",
+    "process": "reconnect-agent\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 66,
+    "name": "Code66",
+    "process": "aurora_agent\\.cm|pref_control_agent\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 28,
+    "name": "FlutterApps",
+    "process": "io\\.flutter\\..*",
+    "vmo": "dart.*"
+  },
+  {
+    "event_code": 20,
+    "name": "Flutter",
+    "process": "io\\.flutter\\..*",
+    "vmo": ""
+  },
+  {
+    "event_code": 7,
+    "name": "Web",
+    "process": "cast_runner\\.cm|web_instance\\.cm|web_engine_exe:.*",
+    "vmo": ""
+  },
+  {
+    "event_code": 8,
+    "name": "Kronk",
+    "process": "kronk\\.cm|kronk_for_testing\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 14,
+    "name": "Cast",
+    "process": "cast_agent\\.cm|cast_assistant\\.cm|cast_auth_server\\.cm|multizone_leader\\.cm|multizone_follower\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 41,
+    "name": "Comms",
+    "process": "comms_agent\\.cm|duocore\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 44,
+    "name": "Ultrasound",
+    "process": "ultrasound_agent\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 61,
+    "name": "SmartDisplaySession",
+    "process": "session.*|smart_session\\.cm",
+    "vmo": ""
+  },
+  {
+    "event_code": 67,
     "name": "LocalHomePlatform",
     "process": "localhome_platform\\.cm",
-    "vmo": "",
-    "event_code": 67
+    "vmo": ""
   },
   {
+    "event_code": 74,
     "name": "PhotonAgent",
     "process": "photon_agent\\.cm",
-    "vmo": "",
-    "event_code": 74
+    "vmo": ""
   },
   {
+    "event_code": 75,
     "name": "UsoniaAgent",
     "process": "usonia_agent\\.cm",
-    "vmo": "",
-    "event_code": 75
+    "vmo": ""
   }
 ]
