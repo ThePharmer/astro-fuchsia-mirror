@@ -15,6 +15,7 @@ args
 --eager-child=presence_agent
 --eager-child=stellar_agent
 --eager-child=ultrasound_agent
+--eager-child=usonia_agent
 cast_agent
 fuchsia.component.Binder(
 /svc/fuchsia.component.Binder.cast_agent
@@ -58,6 +59,9 @@ fuchsia.component.Binder+
 ultrasound_agent
 fuchsia.component.Binder.
 /svc/fuchsia.component.Binder.ultrasound_agent
+usonia_agent
+fuchsia.component.Binder*
+/svc/fuchsia.component.Binder.usonia_agent
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
 fuchsia.element.GraphicalPresenter
@@ -79,11 +83,10 @@ fuchsia.ui.app.ViewProvider
 fuchsia.component.Binder
 cast_runner
 fuchsia.web.Debug
-diagnostics
-assistant_aot_product_runner
 config-data
 config-data-for-web-instance
 web_engine
+assistant_aot_product_runner
 fuchsia_perception_estelle_pkg
 root-ssl-certificates
 tzdata-icu
@@ -110,6 +113,7 @@ fuchsia.bluetooth.gatt.Server
 fuchsia.bluetooth.le.Central
 fuchsia.bluetooth.le.Peripheral
 fuchsia.bluetooth.sys.Access
+fuchsia.diagnostics.ArchiveAccessor
 fuchsia.factory.WeaveFactoryStoreProvider
 fuchsia.hardware.power.statecontrol.Admin
 fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
@@ -147,9 +151,6 @@ fuchsia.castsetup.ApiRegistry
 fuchsia.castsetup.StateWatcher
 fuchsia.castsysteminfo.Provider
 fuchsia.device.NameProvider
-fuchsia.diagnostics.ArchiveAccessor
-diagnostics-accessors
-fuchsia.diagnostics.ArchiveAccessor.legacy_metrics
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.feedback.ComponentDataRegister
@@ -260,7 +261,6 @@ fuchsia.web.FrameHost
 google.ambienteq.Listener
 google.assistant.aoghGRPCPlatform
 google.cast.logexport.LogExportController
-google.usonia.IpcPlatformSupport
 google.assistant.aoghGRPCProcess
 google.assistant.grpctransport.LibassistantService
 google.assistant.libassistant.AssistantState
@@ -337,6 +337,7 @@ google.presence.TouchActivity
 ultrasound_agent!
 google.proximity.ProximityService
 google.usonia.IpcHandler
+google.usonia.IpcPlatformSupport
 cast-resolver
 cast-runner
 cache
@@ -363,6 +364,7 @@ fuchsia-pkg://fuchsia.com/presence_agent#meta/presence_agent.cm
 fuchsia-pkg://fuchsia.com/stellar_agent#meta/stellar_agent.cm
 ultrasound_agentC
 fuchsia-pkg://fuchsia.com/ultrasound_agent#meta/ultrasound_agent.cm
+fuchsia-pkg://fuchsia.com/usonia_agent#meta/usonia_agent.cm
 opal-env
 flutter_aot_product_runner
 documentation
