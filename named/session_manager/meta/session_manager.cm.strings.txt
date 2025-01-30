@@ -12,6 +12,7 @@ fuchsia.component.sandbox.CapabilityStore
 /svc/fuchsia.component.sandbox.CapabilityStore
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
+diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
@@ -28,6 +29,7 @@ fuchsia.session.Launcher
 fuchsia.session.Lifecycle
 fuchsia.session.Restarter
 fuchsia.session.power.Handoff
+fuchsia.session.window.Manager
 fuchsia.web.Debug
 fuchsia.session.window.Collection
 session
@@ -151,6 +153,7 @@ fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.net.stackmigrationdeprecated.State
 fuchsia.paver.Paver
 fuchsia.posix.socket.Provider
+fuchsia.power.CollaborativeRebootInitiator
 fuchsia.power.battery.BatteryManager
 fuchsia.power.button.Monitor
 fuchsia.power.profile.Watcher
@@ -238,14 +241,15 @@ fuchsia.weave.Signer
 google.cast.cryptokey.NamedKeyProvider
 fuchsia.fxfs.CryptManagement
 fuchsia.pkg.PackageCache
+fuchsia.hardware.gnss.Service
 fuchsia.power.broker.ElementInfoProviderService
 cache
 data
-diagnostics
 /svc_from_session/fuchsia.element.GraphicalPresenter
 /svc_from_session/fuchsia.element.Manager
 /svc/fuchsia.session.Launcher
 /svc/fuchsia.session.Lifecycle
 /svc/fuchsia.session.Restarter
 /svc/fuchsia.session.power.Handoff
+/svc_from_session/fuchsia.session.window.Manager
 /svc_from_session/fuchsia.web.Debug
