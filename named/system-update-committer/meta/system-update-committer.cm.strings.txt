@@ -1,7 +1,13 @@
 binary
 bin/system_update_committer
+lifecycle.stop_event
+notify
+fuchsia.system-update-committer.StopOnIdleTimeoutMillis
+stop_on_idle_timeout_millis
 config-data
 /config/data
+fuchsia.component.sandbox.CapabilityStore
+/svc/fuchsia.component.sandbox.CapabilityStore
 fuchsia.hardware.power.statecontrol.Admin
 /svc/fuchsia.hardware.power.statecontrol.Admin
 fuchsia.paver.Paver
@@ -16,4 +22,5 @@ diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.update.CommitStatusProvider
+/escrow/fuchsia.update.CommitStatusProvider
 /svc/fuchsia.update.CommitStatusProvider
