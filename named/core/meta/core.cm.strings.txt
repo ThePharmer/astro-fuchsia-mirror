@@ -176,6 +176,7 @@ build-info
 boot-bin
 root-ssl-certificates
 system
+audio_core_pkg_config
 config-data
 hwinfo
 fonts
@@ -271,6 +272,7 @@ fuchsia.session.scene.Manager
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.display.internal.DisplayPower
+fuchsia.ui.display.singleton.DisplayPower
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.audio.device.ControlCreator
 fuchsia.audio.device.Provider
@@ -487,7 +489,9 @@ google.deviceproperty.Writer
 google.flashts.Reader
 widevine.oemcrypto.Provider
 fuchsia.hardware.gnss.Service
+fuchsia.hardware.nfc.Service
 fuchsia.power.broker.ElementInfoProviderService
+fuchsia.storage.ftl.Service
 activity*
 activity!
 bt-avrcp*
@@ -507,8 +511,9 @@ fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
 core-env 
 fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core.cm
-fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
 core-env(
+fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core_pkg_config.cm
+fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
 core-env
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
