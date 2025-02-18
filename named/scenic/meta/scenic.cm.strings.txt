@@ -26,14 +26,12 @@ fuchsia.scenic.PointerAutoFocus
 pointer_auto_focus
 fuchsia.scenic.Renderer
 renderer
+fuchsia.ui.VisualDebuggingLevel
+visual_debugging_level
 config-data
 /config/data
 fuchsia.hardware.display.Provider
 /svc/fuchsia.hardware.display.Provider
-fuchsia.inspect.InspectSink
-/svc/fuchsia.inspect.InspectSink
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.scheduler.RoleManager
@@ -44,6 +42,11 @@ fuchsia.sysmem2.Allocator
 /svc/fuchsia.sysmem2.Allocator
 fuchsia.vulkan.loader.Loader
 /svc/fuchsia.vulkan.loader.Loader
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
+diagnostics
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 image-compression
@@ -60,6 +63,7 @@ fuchsia.ui.composition.internal.DisplayOwnership
 fuchsia.ui.composition.internal.ScreenCapture
 fuchsia.ui.display.color.Converter
 fuchsia.ui.display.internal.DisplayPower
+fuchsia.ui.display.singleton.DisplayPower
 fuchsia.ui.display.singleton.Info
 fuchsia.ui.focus.FocusChainListenerRegistry
 fuchsia.ui.input.accessibility.PointerEventRegistry
@@ -83,6 +87,7 @@ fuchsia.ui.composition.internal.DisplayOwnership5
 /svc/fuchsia.ui.display.color.Converter
 fuchsia.ui.display.internal.DisplayPower-
 /svc/fuchsia.ui.display.internal.DisplayPower
+/svc/fuchsia.ui.display.singleton.DisplayPower
 /svc/fuchsia.ui.display.singleton.Info
 /svc/fuchsia.ui.focus.FocusChainListenerRegistry
 /svc/fuchsia.ui.input.accessibility.PointerEventRegistry
@@ -95,4 +100,3 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
-GdDG-
