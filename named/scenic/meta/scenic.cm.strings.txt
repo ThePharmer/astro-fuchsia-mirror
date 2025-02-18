@@ -26,12 +26,14 @@ fuchsia.scenic.PointerAutoFocus
 pointer_auto_focus
 fuchsia.scenic.Renderer
 renderer
-fuchsia.ui.VisualDebuggingLevel
-visual_debugging_level
 config-data
 /config/data
 fuchsia.hardware.display.Provider
 /svc/fuchsia.hardware.display.Provider
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.scheduler.RoleManager
@@ -42,11 +44,6 @@ fuchsia.sysmem2.Allocator
 /svc/fuchsia.sysmem2.Allocator
 fuchsia.vulkan.loader.Loader
 /svc/fuchsia.vulkan.loader.Loader
-fuchsia.inspect.InspectSink
-/svc/fuchsia.inspect.InspectSink
-diagnostics
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 image-compression
@@ -98,3 +95,4 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
+GdDG-
