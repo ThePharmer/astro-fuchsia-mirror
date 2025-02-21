@@ -176,6 +176,7 @@ build-info
 boot-bin
 root-ssl-certificates
 system
+audio_core_pkg_config
 config-data
 hwinfo
 fonts
@@ -248,6 +249,8 @@ dev-trippoint
 trippoint
 dev-block
 dev-skip-block
+dev-battery
+battery
 dev-securemem
 securemem
 dev-tee
@@ -271,6 +274,7 @@ fuchsia.session.scene.Manager
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.display.internal.DisplayPower
+fuchsia.ui.display.singleton.DisplayPower
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.audio.device.ControlCreator
 fuchsia.audio.device.Provider
@@ -299,6 +303,8 @@ fuchsia.hardware.power.statecontrol.Admin
 fuchsia.paver.Paver
 fuchsia.pkg.PackageCache
 fuchsia.pkg.RetainedPackages
+fuchsia.power.CollaborativeRebootInitiator
+fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.space.Manager
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.boot.FactoryItems
@@ -346,7 +352,7 @@ fuchsia.feedback.DeviceIdProvider
 feedback!
 fuchsia.fonts.Provider
 fuchsia.fshost.Admin
-fuchsia.fxfs.CryptManagement
+fuchsia.fshost.StarnixVolumeProvider
 fuchsia.hardware.pty.Device
 fuchsia.power.system.ActivityGovernor
 fuchsia.power.system.BootControl
@@ -357,6 +363,7 @@ fuchsia.hwinfo.Device
 fuchsia.identity.account.AccountManager
 fuchsia.identity.account.DeprecatedAccountManager
 fuchsia.inspect.InspectSink
+fuchsia.logger.LogSink
 multizone_leader
 fuchsia.intl.TimeZones
 memory_pressure_signaler 
@@ -483,8 +490,10 @@ google.deviceproperty.Reader
 google.deviceproperty.Writer
 google.flashts.Reader
 widevine.oemcrypto.Provider
+fuchsia.hardware.gnss.Service
+fuchsia.hardware.nfc.Service
 fuchsia.power.broker.ElementInfoProviderService
-fuchsia.logger.LogSink
+fuchsia.storage.ftl.Service
 activity*
 activity!
 bt-avrcp*
@@ -504,8 +513,9 @@ fuchsia-pkg://fuchsia.com/activity#meta/activity.cm
 fuchsia-pkg://fuchsia.com/agis#meta/agis.cm
 core-env 
 fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core.cm
-fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
 core-env(
+fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core_pkg_config.cm
+fuchsia-pkg://fuchsia.com/bt-init#meta/bt-init.cm
 fuchsia-pkg://fuchsia.com/brightness_manager#meta/brightness_manager.cm
 core-env
 fuchsia-pkg://fuchsia.com/bt-a2dp#meta/bt-a2dp.cm
