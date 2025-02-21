@@ -66,7 +66,6 @@ fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.scenic.Scenic
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
-diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
@@ -80,7 +79,7 @@ fuchsia.ui.app.ViewProvider
 fuchsia.component.Binder
 cast_runner
 fuchsia.web.Debug
-elements
+diagnostics
 assistant_aot_product_runner
 config-data
 config-data-for-web-instance
@@ -137,6 +136,7 @@ fuchsia.weave.Stack
 fuchsia.weave.StackProvider
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
+elements
 elements"
 fuchsia.media.Audio
 fuchsia.sysmem.Allocator
@@ -339,7 +339,6 @@ google.proximity.ProximityService
 google.usonia.IpcHandler
 cast-resolver
 cast-runner
-fuchsia.storage.ftl.Service
 cache
 data
 fuchsia_perception_estelle_agent!
