@@ -25,7 +25,6 @@ data
 /data
 fuchsia.time.alarms.Wake
 fuchsia.time.test.Rtc
-fuchsia.time.external.Adjust
 root-ssl-certificates
 timesource
 fuchsia.metrics.MetricEventLoggerFactory
@@ -33,13 +32,11 @@ fuchsia.net.interfaces.State
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
 /svc/fuchsia.time.alarms.Wake
-/svc/fuchsia.time.external.Adjust
 /svc/fuchsia.time.test.Rtc
 back_off_time_between_pull_samples_sec
 disable_delays
 early_exit
 first_sampling_delay_sec
-has_always_on_counter
 has_real_time_clock
 initial_frequency_ppm
 max_frequency_error_ppm
@@ -50,7 +47,6 @@ power_topology_integration_enabled
 primary_time_source_url
 primary_uses_pull
 serve_fuchsia_time_alarms
-serve_fuchsia_time_external_adjust
 serve_test_protocols
 utc_start_at_startup
 utc_start_at_startup_when_invalid_rtc
