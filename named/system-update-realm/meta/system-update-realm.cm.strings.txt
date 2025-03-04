@@ -9,6 +9,8 @@ fuchsia.update.config.OptOut
 fuchsia.update.config.OptOutAdmin
 system-updater
 fuchsia.update.installer.Installer
+fuchsia.system-update-committer.StopOnIdleTimeoutMillis
+diagnostics
 build-info
 root-ssl-certificates
 system
@@ -17,15 +19,17 @@ config-data
 system-update-committer-config-data
 fuchsia.boot.Arguments
 fuchsia.cobalt.SystemDataUpdater
-fuchsia.hardware.power.statecontrol.Admin
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.name.Lookup
 fuchsia.paver.Paver
 fuchsia.pkg.Cup
 fuchsia.posix.socket.Provider
+fuchsia.power.CollaborativeRebootInitiator
+fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.stash.Store2
 fuchsia.feedback.ComponentDataRegister
 fuchsia.feedback.CrashReporter
+fuchsia.hardware.power.statecontrol.Admin
 fuchsia.update.verify.BlobfsVerifier
 fuchsia.update.verify.NetstackVerifier
 fuchsia.pkg.PackageCache
@@ -34,8 +38,6 @@ fuchsia.space.Manager
 fuchsia.pkg.PackageResolver-ota
 fuchsia.pkg.PackageResolver
 data
-fuchsia.inspect.InspectSink
-fuchsia.logger.LogSink
 fuchsia-pkg://fuchsia.com/omaha-client#meta/omaha-client-service.cm
 fuchsia-pkg://fuchsia.com/system-update-committer#meta/system-update-committer.cm
 fuchsia-pkg://fuchsia.com/system-updater#meta/system-updater.cm
