@@ -10,7 +10,8 @@ fuchsia.hardware.audio.CodecConnectorService
 fuchsia.hardware.audio.CompositeConnectorService
 fuchsia.hardware.audio.DaiConnectorService
 fuchsia.hardware.audio.Device
-fuchsia.hardware.audio.StreamConfigConnectorService
+fuchsia.hardware.audio.StreamConfigConnectorInputService
+fuchsia.hardware.audio.StreamConfigConnectorOutputService
 fuchsia.hardware.ax88179.Service
 fuchsia.hardware.backlight.Service
 fuchsia.hardware.bluetooth.EmulatorService
@@ -63,7 +64,9 @@ fuchsia.hardware.audio.CompositeConnectorService5
 /svc/fuchsia.hardware.audio.CompositeConnectorService
 /svc/fuchsia.hardware.audio.DaiConnectorService
 /svc/fuchsia.hardware.audio.Device
-/svc/fuchsia.hardware.audio.StreamConfigConnectorService
+fuchsia.hardware.audio.StreamConfigConnectorInputService=
+/svc/fuchsia.hardware.audio.StreamConfigConnectorInputService
+/svc/fuchsia.hardware.audio.StreamConfigConnectorOutputService
 fuchsia.hardware.ax88179.Service%
 /svc/fuchsia.hardware.ax88179.Service
 /svc/fuchsia.hardware.backlight.Service
