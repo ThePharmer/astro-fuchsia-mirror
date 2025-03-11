@@ -9,7 +9,15 @@ driver/driver-test-realm-fake-driver.so
 colocate
 true
 binary
-driver/compat.so
+driver/compat.somodules
+loader_overrides
+from
+libdriver.so
+driver/compat.somodule_name
+#program.compat
+symbols
+__zircon_driver_note__
+__zircon_driver_rec__
 fuchsia.boot.Arguments
 /svc/fuchsia.boot.Arguments
 fuchsia.boot.Items
