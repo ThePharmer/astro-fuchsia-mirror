@@ -3,6 +3,10 @@ binary
 driver/msd_arm.so
 bind
 meta/bind/msd_arm_bind.bindbc
+allowed_scheduler_roles
+fuchsia.graphics.drivers.msd-arm-mali.device
+fuchsia.graphics.drivers.msd-arm-mali.gpu-interrupt
+fuchsia.graphics.drivers.msd-arm-mali.mmu-interrupt
 colocate
 true
 default_dispatcher_opts
@@ -28,5 +32,7 @@ fuchsia.hardware.gpu.mali.Service
 fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
 fuchsia.gpu.magma.Service
+fuchsia.hardware.gpu.mali.UtilsService
 /svc/fuchsia.gpu.magma.Service
+/svc/fuchsia.hardware.gpu.mali.UtilsService
 Qe'?7
