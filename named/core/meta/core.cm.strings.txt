@@ -304,7 +304,6 @@ fuchsia.pkg.RetainedPackages
 fuchsia.power.CollaborativeRebootInitiator
 fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.space.Manager
-fuchsia.update.verify.BlobfsVerifier
 fuchsia.update.verify.HealthVerification
 fuchsia.boot.FactoryItems
 fuchsia.boot.Items
@@ -396,6 +395,7 @@ multizone_leader!
 fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
 bt-avrcp(
+storage_cache_manager
 feedback(
 fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
@@ -406,7 +406,6 @@ fuchsia.net.mdns.ServiceInstancePublisher
 fuchsia.net.mdns.ServiceInstanceResolver
 fuchsia.net.mdns.ServiceSubscriber2
 fuchsia.net.mdns.Subscriber
-fuchsia.update.verify.NetstackVerifier
 fuchsia.net.routes.StateV4
 fuchsia.net.routes.StateV6
 fuchsia.net.stack.Stack
@@ -452,7 +451,6 @@ fuchsia.stash.Store2
 fuchsia.storage.ext4.Server
 cache
 fuchsia.sys2.StorageAdmin
-storage_cache_manager
 fuchsia.tee.Application.808032e0-fd9e-4e6f-8896-544735c98480
 fuchsia.tee.Application.93a424e2-5608-4413-84a8-58b16a064dce
 fuchsia.tee.Application.9a04f079-9840-4286-ab92-e65be0885f95
@@ -515,8 +513,10 @@ fuchsia.hardware.gnss.Service
 fuchsia.hardware.nfc.Service
 fuchsia.power.broker.ElementInfoProviderService
 fuchsia.storage.ftl.Service
+fuchsia.hardware.rtc.Service
 fuchsia.hardware.network.Service
 fuchsia.hardware.ram.metrics.Service
+fuchsia.hardware.securemem.Service
 fuchsia.wlan.device.Service
 activity*
 activity!
