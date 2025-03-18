@@ -12,8 +12,6 @@ fuchsia.memory.WarningCaptureDelay
 warning_capture_delay_s
 config-data
 /config/data
-dev-aml-ram
-/dev/class/aml-ram
 fuchsia.component.Introspector.root
 /svc/fuchsia.component.Introspector.root
 fuchsia.kernel.RootJobForInspect%
@@ -33,6 +31,8 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
+fuchsia.hardware.ram.metrics.Service
+/svc/fuchsia.hardware.ram.metrics.Service
 cache
 /cache
 fuchsia.memory.inspection.Collector
