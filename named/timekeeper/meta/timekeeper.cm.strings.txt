@@ -1,7 +1,5 @@
 binary
 bin/timekeeper
-fuchsia.time.config.WritableUTCTime
-serve_fuchsia_time_external_adjust
 dev-hrtimer
 /dev/class/hrtimer
 dev-rtc
@@ -23,15 +21,10 @@ fuchsia.power.system.ActivityGovernor
 /svc/fuchsia.power.system.ActivityGovernor
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
-fuchsia.hardware.hrtimer.Service%
-/svc/fuchsia.hardware.hrtimer.Service
-fuchsia.hardware.rtc.Service
-/svc/fuchsia.hardware.rtc.Service
 data
 /data
 fuchsia.time.alarms.Wake
 fuchsia.time.test.Rtc
-fuchsia.time.external.Adjust
 root-ssl-certificates
 timesource
 fuchsia.metrics.MetricEventLoggerFactory
@@ -39,13 +32,11 @@ fuchsia.net.interfaces.State
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
 /svc/fuchsia.time.alarms.Wake
-/svc/fuchsia.time.external.Adjust
 /svc/fuchsia.time.test.Rtc
 back_off_time_between_pull_samples_sec
 disable_delays
 early_exit
 first_sampling_delay_sec
-has_always_on_counter
 has_real_time_clock
 initial_frequency_ppm
 max_frequency_error_ppm
@@ -57,8 +48,6 @@ primary_time_source_url
 primary_uses_pull
 serve_fuchsia_time_alarms
 serve_test_protocols
-utc_max_allowed_delta_future_sec
-utc_max_allowed_delta_past_sec
 utc_start_at_startup
 utc_start_at_startup_when_invalid_rtc
 meta/timekeeper.cvf
