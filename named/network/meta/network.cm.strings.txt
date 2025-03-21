@@ -13,6 +13,8 @@ netstack&
 fuchsia.net.interfaces.admin.Installer
 netstack6
 fuchsia.net.multicast.admin.Ipv6RoutingTableController
+netstack8
+fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider
 fuchsia.net.routes.State
 fuchsia.net.routes.StateV4
 fuchsia.net.routes.StateV6
@@ -29,8 +31,6 @@ fuchsia.net.stack.Stack
 fuchsia.posix.socket.Provider
 netstack!
 fuchsia.posix.socket.raw.Provider
-fuchsia.update.verify.ComponentOtaHealthCheck
-fuchsia.update.verify.NetstackVerifier
 fuchsia.net.name.DnsServerWatcher
 fuchsia.net.name.DnsServerWatcher_OnlyForLowpan
 dns-resolver
@@ -63,6 +63,7 @@ fuchsia.scheduler.RoleManager
 fuchsia.scheduler.deprecated.ProfileProvider
 netstack,
 fuchsia.metrics.MetricEventLoggerFactory
+fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.net.debug.Diagnostics
 fuchsia.net.debug.Interfaces
 fuchsia.net.neighbor.View
@@ -77,9 +78,9 @@ netstack*
 fuchsia.power.broker.Topology
 fuchsia.power.system.ActivityGovernor
 fuchsia.stash.SecureStore
+fuchsia.hardware.network.Service
 cache
 data
-fuchsia.logger.LogSink
 fuchsia.tracing.provider.Registry
 fuchsia-pkg://fuchsia.com/dhcpv4-server#meta/dhcpv4_server.cm
 fuchsia-pkg://fuchsia.com/dhcpv6-client#meta/dhcpv6-client.cm
