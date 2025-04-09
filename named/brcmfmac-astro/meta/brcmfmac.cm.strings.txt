@@ -6,7 +6,9 @@ meta/bind/brcmfmac_sdio.bindbc
 colocate
 true
 default_dispatcher_opts
-allow_sync_calls
+allow_sync_callsallowed_scheduler_roles
+fuchsia.devices.wlan.drivers.brcmf.sdio.oob-interrupt
+fuchsia.devices.wlan.drivers.brcmf.workqueue.runner
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
