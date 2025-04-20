@@ -73,16 +73,15 @@ fuchsia.media.audio.EffectsController
 tee_manager
 fuchsia.tee.DeviceInfo
 /svc/fuchsia.tee.DeviceInfo
+diagnostics
+diagnostics-persist-capabilities
 network
 netstack-diagnostics
 fuchsia.component.Binder
 sampler
 fuchsia.component.SamplerBinder
-diagnostics
 fuchsia.component.DetectBinder
 fuchsia.component.PersistenceBinder
-fuchsia.diagnostics.persist.DataPersistence-netstack
-fuchsia.diagnostics.persist.DataPersistence-wlan
 fuchsia.dash.Launcher
 exceptions
 fuchsia.exception.Handler
@@ -335,6 +334,8 @@ fuchsia.thermal.ClientStateConnector
 fuchsia.diagnostics.ArchiveAccessor
 fuchsia.diagnostics.ArchiveAccessor.feedback
 feedback,
+fuchsia.diagnostics.persist.DataPersistence-wlan
+fuchsia.diagnostics.persist.DataPersistence
 fuchsia.driver.crash.CrashIntrospect
 fuchsia.sys2.CrashIntrospect
 fuchsia.factory.AlphaFactoryStoreProvider
