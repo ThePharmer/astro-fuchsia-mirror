@@ -6,6 +6,8 @@ environ
 SCUDO_OPTIONS=release_to_os_interval_ms=0
 config-data
 /config/data
+fuchsia.component.sandbox.CapabilityStore
+/svc/fuchsia.component.sandbox.CapabilityStore
 fuchsia.diagnostics.ArchiveAccessor.feedback
 /svc/fuchsia.diagnostics.ArchiveAccessor.feedback
 fuchsia.update.Listener
@@ -17,9 +19,7 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 cache
 /cache
+diagnostics-persist-capabilities
 fuchsia.component.Binder
-fuchsia.diagnostics.persist.DataPersistence-netstack
-fuchsia.diagnostics.persist.DataPersistence-wlan
-/svc/fuchsia.diagnostics.persist.DataPersistence-netstack
-fuchsia.diagnostics.persist.DataPersistence-wlan5
-/svc/fuchsia.diagnostics.persist.DataPersistence-wlan
+diagnostics-persist-capabilities/
+/svc/fuchsia.component.sandbox.DictionaryRouter
