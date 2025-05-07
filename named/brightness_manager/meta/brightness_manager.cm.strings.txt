@@ -6,6 +6,8 @@ fuchsia.ui.PowerOffDelayMillis
 power_off_delay_millis
 fuchsia.ui.PowerOnDelayMillis
 power_on_delay_millis
+dev-backlight
+/dev/class/backlight
 dev-input-report
 /dev/class/input-report
 fuchsia.inspect.InspectSink
@@ -13,12 +15,8 @@ fuchsia.inspect.InspectSink
 diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
-fuchsia.ui.display.singleton.DisplayPower
-/svc/fuchsia.ui.display.singleton.DisplayPower
-fuchsia.hardware.backlight.Service
-/svc/fuchsia.hardware.backlight.Service
-fuchsia.input.report.Service
-/svc/fuchsia.input.report.Service
+fuchsia.ui.display.internal.DisplayPower-
+/svc/fuchsia.ui.display.internal.DisplayPower
 data
 /data
 fuchsia.ui.brightness.Control
