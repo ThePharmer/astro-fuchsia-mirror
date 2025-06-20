@@ -1,5 +1,7 @@
 binary
 bin/netstack_proxy
+lifecycle.stop_event
+notify
 fuchsia.power.SuspendEnabled
 suspend_enabled
 config-data
@@ -35,6 +37,7 @@ data
 fuchsia.net.debug.Diagnostics
 fuchsia.net.debug.Interfaces
 fuchsia.net.filter.Control
+fuchsia.net.filter.SocketControl
 fuchsia.net.filter.State
 fuchsia.net.filter.deprecated.Filter
 fuchsia.net.interfaces.State
@@ -68,6 +71,8 @@ fuchsia.update.verify.ComponentOtaHealthCheck
 /svc/fuchsia.net.debug.Diagnostics
 /svc/fuchsia.net.debug.Interfaces
 /svc/fuchsia.net.filter.Control
+fuchsia.net.filter.SocketControl%
+/svc/fuchsia.net.filter.SocketControl
 /svc/fuchsia.net.filter.State
 /svc/fuchsia.net.filter.deprecated.Filter
 /svc/fuchsia.net.interfaces.State
