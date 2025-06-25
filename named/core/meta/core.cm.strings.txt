@@ -82,6 +82,9 @@ sampler
 fuchsia.component.SamplerBinder
 fuchsia.component.DetectBinder
 fuchsia.component.PersistenceBinder
+pkg-resolver
+fuchsia.component.resolution.Resolver
+fuchsia.component.resolution.Resolver-full
 fuchsia.dash.Launcher
 exceptions
 fuchsia.exception.Handler
@@ -97,9 +100,9 @@ cobalt
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
-pkg-resolver
 fuchsia.pkg.PackageResolver
 fuchsia.pkg.RepositoryManager
+fuchsia.pkg.resolution.PackageResolver
 fuchsia.pkg.rewrite.Engine
 process_resolver
 fuchsia.process.Resolver
@@ -117,7 +120,7 @@ fuchsia.virtualization.DebianGuestManager
 fuchsia.virtualization.LinuxManager
 fuchsia.virtualization.TerminaGuestManager
 fuchsia.virtualization.ZirconGuestManager
-fuchsia.bluetooth.LegacyPairing
+fuchsia.bluetooth.ScoOffloadPathIndex
 bluetooth-core
 fuchsia.diagnostics.sampler.ProjectConfigs
 fuchsia.fonts.FontManifest
@@ -131,6 +134,7 @@ fuchsia.memory.ImminentOomCaptureDelay
 fuchsia.memory.NormalCaptureDelay
 fuchsia.memory.WarningCaptureDelay
 fuchsia.power.SuspendEnabled
+fuchsia.bluetooth.LegacyPairing
 fuchsia.scenic.DisplayComposition
 fuchsia.scenic.DisplayRotation
 fuchsia.scenic.FramePredictionMarginInUs
@@ -173,6 +177,9 @@ tee-clients
 diagnostics-accessors
 tee-client-capabilities
 base-bin
+block
+flash_ts_feedback_id
+block-fts
 boot
 mdns
 build-info
@@ -190,7 +197,6 @@ diagnostics-persistence-config-data
 diagnostics-persistence
 emergency
 factory_store_providers
-flash_ts_feedback_id
 forensics
 omaha-client-service-config-data
 omaha-client
@@ -232,7 +238,6 @@ dev-rtc
 dev-hrtimer
 hrtimer
 dev-class-block
-block
 dev-class-skip-block
 skip-block
 dev-backlight
@@ -257,6 +262,7 @@ dev-wlanphy
 wlanphy
 dev-topological
 factory
+feedback-config
 pkgfs
 pkgfs-packages
 packages
@@ -461,6 +467,7 @@ fuchsia.tee.Application.af1ae3a4-888b-4e11-b4ab-1c2b972d1c11
 fuchsia.tee.Application.d83c3c4a-9e8d-4e4e-ad30-9d40e137f689
 fuchsia.tee.Application.e043cde0-61d0-11e5-9c26-0002a5d5c51b
 fuchsia.time.Maintenance
+fuchsia.time.alarms.WakeAlarms
 activity#
 fuchsia.ui.activity.control.Control
 feedback#
@@ -491,6 +498,7 @@ google.flashts.Reader
 widevine.oemcrypto.Provider
 fuchsia.gpu.magma.DependencyInjectionService
 fuchsia.gpu.magma.Service
+fuchsia.gpu.magma.TrustedService
 fuchsia.hardware.goldfish.AddressSpaceService
 fuchsia.hardware.goldfish.ControlService
 fuchsia.hardware.goldfish.ControllerService
@@ -498,6 +506,7 @@ fuchsia.hardware.goldfish.SyncService
 fuchsia.hardware.mediacodec.Service
 fuchsia.hardware.backlight.Service
 fuchsia.hardware.bluetooth.Service
+fuchsia.hardware.haptics.Service
 fuchsia.hardware.hrtimer.Service
 fuchsia.hardware.light.LightService
 fuchsia.hardware.power.sensor.Service
@@ -506,19 +515,21 @@ fuchsia.hardware.temperature.Service
 fuchsia.hardware.thermal.Service
 fuchsia.hardware.trippoint.TripPointService
 fuchsia.input.report.Service
-fuchsia.power.battery.InfoService
 fuchsia.hardware.audio.DaiConnectorService
 fuchsia.hardware.audio.StreamConfigConnectorInputService
 fuchsia.hardware.audio.StreamConfigConnectorOutputService
 fuchsia.hardware.display.service
 fuchsia.hardware.gnss.Service
 fuchsia.hardware.nfc.Service
+fuchsia.power.battery.InfoService
 fuchsia.power.broker.ElementInfoProviderService
 fuchsia.storage.ftl.Service
+google.powerstats.state.residency.Service
 fuchsia.hardware.rtc.Service
 fuchsia.hardware.network.Service
 fuchsia.hardware.ram.metrics.Service
 fuchsia.hardware.securemem.Service
+fuchsia.vulkan.loader.TrustedService
 fuchsia.wlan.device.Service
 activity*
 activity!
@@ -559,6 +570,7 @@ fuchsia-pkg://fuchsia.com/factory_reset#meta/factory_reset.cm
 fuchsia-pkg://fuchsia.com/factory_store_providers#meta/factory_store_providers.cm
 feedback4
 fuchsia-pkg://fuchsia.com/forensics#meta/feedback.cm
+fuchsia-pkg://fuchsia.com/feedback-config#meta/feedback-config.cm
 fuchsia-pkg://fuchsia.com/flash_ts_feedback_id#meta/flash_ts_feedback_id.cm
 fuchsia-pkg://fuchsia.com/fonts#meta/fonts.cm
 fuchsia-pkg://fuchsia.com/hwinfo#meta/hwinfo.cm
@@ -597,5 +609,7 @@ fuchsia-pkg://fuchsia.com/vulkan_loader#meta/vulkan_loader.cm
 fuchsia-pkg://fuchsia.com/wlancfg#meta/wlancfg.cm
 fuchsia-pkg://fuchsia.com/wlandevicemonitor#meta/wlandevicemonitor.cm
 starnix
+builtin_dispatcher
 base_resolver
 fuchsia-pkg
+fuchsia-builtin
