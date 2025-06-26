@@ -47,6 +47,7 @@ dev-power-sensor
 dev-temperature
 dev-thermal
 dev-trippoint
+block
 config-data
 dev-bt-hci
 dev-class-radar
@@ -182,6 +183,7 @@ fuchsia.starnix.runner.Manager
 fuchsia.sysmem.Allocator
 fuchsia.sysmem2.Allocator
 fuchsia.thermal.ClientStateConnector
+fuchsia.time.alarms.WakeAlarms
 fuchsia.tracing.perfetto.ProducerConnector
 fuchsia.tracing.provider.Registry
 fuchsia.ui.activity.Provider
@@ -246,6 +248,7 @@ fuchsia.gpu.magma.Service
 fuchsia.hardware.backlight.Service
 fuchsia.hardware.bluetooth.Service
 fuchsia.hardware.gnss.Service
+fuchsia.hardware.haptics.Service
 fuchsia.hardware.hrtimer.Service
 fuchsia.hardware.light.LightService
 fuchsia.hardware.nfc.Service
@@ -258,6 +261,7 @@ fuchsia.input.report.Service
 fuchsia.power.battery.InfoService
 fuchsia.power.broker.ElementInfoProviderService
 fuchsia.storage.ftl.Service
+google.powerstats.state.residency.Service
 cache
 data
 /svc_from_session/fuchsia.element.GraphicalPresenter
