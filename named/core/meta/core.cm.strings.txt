@@ -180,15 +180,16 @@ driver-services-for-session
 driver-services
 tee-client-capabilities
 base-bin
+blob
+build-info
+root-ssl-certificates
+system
 block
 flash_ts_feedback_id
 block-fts
 boot
 mdns
-build-info
 boot-bin
-root-ssl-certificates
-system
 audio_core_pkg_config
 config-data
 hwinfo
@@ -309,6 +310,7 @@ fuchsia.boot.Arguments
 fuchsia.hardware.power.statecontrol.Admin
 fuchsia.paver.Paver
 fuchsia.pkg.PackageCache
+fuchsia.pkg.RetainedBlobs
 fuchsia.pkg.RetainedPackages
 fuchsia.power.CollaborativeRebootInitiator
 fuchsia.power.internal.CollaborativeRebootScheduler
@@ -426,6 +428,7 @@ fuchsia.net.stackmigrationdeprecated.State
 fuchsia.opencl.loader.Loader
 fuchsia.pkg.Cup
 fuchsia.pkg.PackageResolver-ota
+fuchsia.pkg.internal.OtaDownloader
 fuchsia.pkg.FontResolver
 fuchsia.pkg.LocalMirror
 fuchsia.pkg.PackageResolver-base
