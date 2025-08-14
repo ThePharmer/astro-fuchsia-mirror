@@ -17,8 +17,6 @@ fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.time.Maintenance
 /svc/fuchsia.time.Maintenance
-fuchsia.net.reachability.Monitor%
-/svc/fuchsia.net.reachability.Monitor
 fuchsia.power.broker.Topology
 /svc/fuchsia.power.broker.Topology
 fuchsia.power.system.ActivityGovernor
@@ -31,7 +29,7 @@ fuchsia.hardware.rtc.Service
 /svc/fuchsia.hardware.rtc.Service
 data
 /data
-fuchsia.time.alarms.WakeAlarms
+fuchsia.time.alarms.Wake
 fuchsia.time.test.Rtc
 fuchsia.time.external.Adjust
 root-ssl-certificates
@@ -40,7 +38,7 @@ fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.interfaces.State
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
-/svc/fuchsia.time.alarms.WakeAlarms
+/svc/fuchsia.time.alarms.Wake
 /svc/fuchsia.time.external.Adjust
 /svc/fuchsia.time.test.Rtc
 back_off_time_between_pull_samples_sec
@@ -59,7 +57,6 @@ primary_time_source_url
 primary_uses_pull
 serve_fuchsia_time_alarms
 serve_test_protocols
-use_connectivity
 utc_max_allowed_delta_future_sec
 utc_max_allowed_delta_past_sec
 utc_start_at_startup
