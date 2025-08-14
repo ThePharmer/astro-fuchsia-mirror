@@ -4,6 +4,8 @@ fuchsia.scenic.DisplayComposition
 display_composition
 fuchsia.scenic.DisplayRotation
 display_rotation
+fuchsia.scenic.FrameCounterOverlay
+enable_frame_counter_overlay
 fuchsia.scenic.FramePredictionMarginInUs
 frame_prediction_margin_in_us
 fuchsia.scenic.FrameSchedulerMinPredictedFrameDurationInUs
@@ -32,8 +34,11 @@ fuchsia.ui.VisualDebuggingLevel
 visual_debugging_level
 config-data
 /config/data
-fuchsia.hardware.display.Provider
-/svc/fuchsia.hardware.display.Provider
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
+diagnostics
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.scheduler.RoleManager
@@ -44,16 +49,15 @@ fuchsia.sysmem2.Allocator
 /svc/fuchsia.sysmem2.Allocator
 fuchsia.vulkan.loader.Loader
 /svc/fuchsia.vulkan.loader.Loader
-fuchsia.inspect.InspectSink
-/svc/fuchsia.inspect.InspectSink
-diagnostics
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 image-compression
 fuchsia.ui.compression.internal.ImageCompressor
 /svc/fuchsia.ui.compression.internal.ImageCompressor
+fuchsia.hardware.display.Service%
+/svc/fuchsia.hardware.display.Service
+fuchsia.vulkan.loader.TrustedService
+/svc/fuchsia.vulkan.loader.TrustedService
 /tmp
 fuchsia.ui.annotation.Registry
 fuchsia.ui.composition.Allocator
@@ -61,6 +65,7 @@ fuchsia.ui.composition.Flatland
 fuchsia.ui.composition.FlatlandDisplay
 fuchsia.ui.composition.ScreenCapture
 fuchsia.ui.composition.Screenshot
+fuchsia.ui.composition.TrustedFlatlandFactory
 fuchsia.ui.composition.internal.DisplayOwnership
 fuchsia.ui.composition.internal.ScreenCapture
 fuchsia.ui.display.color.Converter
@@ -74,7 +79,6 @@ fuchsia.ui.observation.scope.Registry
 fuchsia.ui.observation.test.Registry
 fuchsia.ui.pointer.augment.LocalHit
 fuchsia.ui.pointerinjector.Registry
-fuchsia.ui.scenic.Scenic
 fuchsia.ui.views.ViewRefInstalled
 /svc/fuchsia.ui.annotation.Registry
 fuchsia.ui.composition.Allocator%
@@ -83,6 +87,7 @@ fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.FlatlandDisplay
 /svc/fuchsia.ui.composition.ScreenCapture
 /svc/fuchsia.ui.composition.Screenshot
+/svc/fuchsia.ui.composition.TrustedFlatlandFactory
 fuchsia.ui.composition.internal.DisplayOwnership5
 /svc/fuchsia.ui.composition.internal.DisplayOwnership
 /svc/fuchsia.ui.composition.internal.ScreenCapture
@@ -99,6 +104,6 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.observation.test.Registry
 /svc/fuchsia.ui.pointer.augment.LocalHit
 /svc/fuchsia.ui.pointerinjector.Registry
-/svc/fuchsia.ui.scenic.Scenic
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
+"=)k?
