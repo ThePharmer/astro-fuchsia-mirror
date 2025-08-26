@@ -29,6 +29,8 @@ fuchsia.gpu.magma.DependencyInjectionService
 /svc/fuchsia.gpu.magma.DependencyInjectionService
 fuchsia.gpu.magma.Service
 /svc/fuchsia.gpu.magma.Service
+fuchsia.gpu.magma.TrustedService%
+/svc/fuchsia.gpu.magma.TrustedService
 fuchsia.hardware.goldfish.AddressSpaceService
 /svc/fuchsia.hardware.goldfish.AddressSpaceService
 fuchsia.hardware.goldfish.ControlService-
@@ -38,10 +40,12 @@ fuchsia.hardware.goldfish.ControllerService
 fuchsia.hardware.goldfish.SyncService
 /svc/fuchsia.hardware.goldfish.SyncService
 fuchsia.vulkan.loader.Loader
+fuchsia.vulkan.loader.TrustedService
 icd-loaders
 /svc/fuchsia.vulkan.loader.Loader
 icd_runner
 /svc/fuchsia.component.runner.ComponentRunner
+/svc/fuchsia.vulkan.loader.TrustedService
 icd-loader-env
 allow_goldfish_icd
 allow_lavapipe_icd
