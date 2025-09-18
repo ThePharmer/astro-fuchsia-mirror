@@ -1,5 +1,7 @@
 binary
 bin/netstack_proxy
+lifecycle.stop_event
+notify
 fuchsia.power.SuspendEnabled
 suspend_enabled
 config-data
@@ -35,6 +37,7 @@ data
 fuchsia.net.debug.Diagnostics
 fuchsia.net.debug.Interfaces
 fuchsia.net.filter.Control
+fuchsia.net.filter.SocketControl
 fuchsia.net.filter.State
 fuchsia.net.filter.deprecated.Filter
 fuchsia.net.interfaces.State
@@ -45,6 +48,7 @@ fuchsia.net.name.DnsServerWatcher
 fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider
 fuchsia.net.neighbor.Controller
 fuchsia.net.neighbor.View
+fuchsia.net.power.WakeGroupProvider
 fuchsia.net.root.Filter
 fuchsia.net.root.Interfaces
 fuchsia.net.root.RoutesV4
@@ -58,6 +62,8 @@ fuchsia.net.routes.admin.RouteTableV4
 fuchsia.net.routes.admin.RouteTableV6
 fuchsia.net.routes.admin.RuleTableV4
 fuchsia.net.routes.admin.RuleTableV6
+fuchsia.net.settings.Control
+fuchsia.net.settings.State
 fuchsia.net.stack.Log
 fuchsia.net.stack.Stack
 fuchsia.posix.socket.Provider
@@ -68,6 +74,8 @@ fuchsia.update.verify.ComponentOtaHealthCheck
 /svc/fuchsia.net.debug.Diagnostics
 /svc/fuchsia.net.debug.Interfaces
 /svc/fuchsia.net.filter.Control
+fuchsia.net.filter.SocketControl%
+/svc/fuchsia.net.filter.SocketControl
 /svc/fuchsia.net.filter.State
 /svc/fuchsia.net.filter.deprecated.Filter
 /svc/fuchsia.net.interfaces.State
@@ -79,6 +87,7 @@ fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider=
 /svc/fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider
 /svc/fuchsia.net.neighbor.Controller
 /svc/fuchsia.net.neighbor.View
+/svc/fuchsia.net.power.WakeGroupProvider
 /svc/fuchsia.net.root.Filter
 /svc/fuchsia.net.root.Interfaces
 /svc/fuchsia.net.root.RoutesV4
@@ -92,6 +101,8 @@ fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider=
 /svc/fuchsia.net.routes.admin.RouteTableV6
 /svc/fuchsia.net.routes.admin.RuleTableV4
 /svc/fuchsia.net.routes.admin.RuleTableV6
+/svc/fuchsia.net.settings.Control
+/svc/fuchsia.net.settings.State
 /svc/fuchsia.net.stack.Log
 /svc/fuchsia.net.stack.Stack
 /svc/fuchsia.posix.socket.Provider
