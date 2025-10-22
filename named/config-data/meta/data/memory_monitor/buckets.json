@@ -12,6 +12,18 @@
     "event_code": 2
   },
   {
+    "name": "BlobfsInactive",
+    "process": "/pkg/bin/blobfs|blobfs\\.cm",
+    "vmo": "inactive-blob-.*",
+    "event_code": 29
+  },
+  {
+    "name": "Blobfs",
+    "process": "/pkg/bin/blobfs|blobfs\\.cm",
+    "vmo": "",
+    "event_code": 5
+  },
+  {
     "name": "FlutterApps",
     "process": "io\\.flutter\\..*",
     "vmo": "dart.*",
@@ -154,6 +166,12 @@
     "process": "input-pipeline\\.cm|scene_manager\\.cm",
     "vmo": "",
     "event_code": 69
+  },
+  {
+    "name": "Minfs",
+    "process": "/pkg/bin/minfs",
+    "vmo": "",
+    "event_code": 4
   },
   {
     "name": "SetUI",
