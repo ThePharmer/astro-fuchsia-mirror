@@ -38,6 +38,7 @@ http-client
 fuchsia.net.http.Loader
 dns-resolver
 fuchsia.net.name.Lookup
+fuchsia.net.policy.properties.DefaultNetworkWatcher
 fuchsia.net.policy.socketproxy.DnsServerWatcher
 fuchsia.net.policy.socketproxy.FuchsiaNetworks
 fuchsia.net.policy.socketproxy.StarnixNetworks
@@ -47,8 +48,8 @@ fuchsia.net.reachability.Monitor
 netstack-migration
 fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.net.stackmigrationdeprecated.State
-fuchsia.posix.socket.Provider_PROXIED
-fuchsia.posix.socket.raw.Provider_PROXIED
+fuchsia.posix.socket.Provider_Unproxied
+fuchsia.posix.socket.raw.Provider_Unproxied
 fuchsia.http-client.StopOnIdleTimeoutMillis
 fuchsia.power.SuspendEnabled
 config-data
@@ -58,6 +59,7 @@ fuchsia.diagnostics.persist.DataPersistence-netstack
 netstack+
 fuchsia.diagnostics.persist.DataPersistence
 diagnostics-persist-capabilities
+fuchsia.feedback.CrashReporter
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.net.debug.Diagnostics
