@@ -1,263 +1,131 @@
 {
-  "version": "28.20250723.103.2100202",
+  "version": "28.20250723.103.2100300",
   "milestone": 28,
   "branch_date": "2025-07-23",
   "line": "28.20250723.103",
-  "first_published": 1761349136,
+  "first_published": 1762836164,
   "first_published_note": "inferred: targets.json expiry minus 50 years",
   "pinned_packages": 106,
   "channels": [
     {
-      "channel": "user-with-ota-dogfood-minor-release-signed",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-dogfood-minor-release-signed/0",
-      "update_merkle": "0b82691d9e2debd04e445ca9c0d1552b1c3164645d2aba5ba41f965531a41aec",
-      "tuf_version_first_seen": 9946,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "9c90c37a3f16a544e492136ad8b9e11689b3287a4015de24cfc207b87aa7d38d",
-        "update_images_recovery": "b6e6e82d7a4f42469d03d08ec1299396f9ecbd0c555f7ef7de905d72407290e0"
-      }
-    },
-    {
-      "channel": "user-with-ota-dogfood-minor-test-signed",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-dogfood-minor-test-signed/0",
-      "update_merkle": "092864f0998dde42ee14dc783800b422dddc9c3ecb05f97ccb11e222e213f45f",
-      "tuf_version_first_seen": 9920,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "33c599cebc70f9171749e47b21927c56a0179f6a51ae90b1e98325557779df85",
-        "update_images_recovery": "d18e465e20f9b3213594a58addd7f5a67ef2896795efd4d78bf8410b84edfffc"
-      }
-    },
-    {
-      "channel": "user-with-ota-dogfood-release-signed",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-dogfood-release-signed/0",
-      "update_merkle": "060e1b063ba0f5602949c6436166475a6914c4775c59e2865fa640fba032025e",
-      "tuf_version_first_seen": 9949,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "76c885556acc434a01c7408bcb7558e8bf5609bf120ed622abc3392eecfa882b",
-        "update_images_recovery": "758855f608879d309c40704259800c4fd244d04ec5edc44c500d8f80b4820e26"
-      }
-    },
-    {
-      "channel": "user-with-ota-dogfood-release-signed-gia",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-dogfood-release-signed-gia/0",
-      "update_merkle": "4db011a8c8d9a7a3a827fdebd6e4821838a118e1ef8bee6858817ca9a9cfe046",
-      "tuf_version_first_seen": 9950,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "d81279709a4b93c8ca86859f9d85dbb7850884c2cd05e2238d9f12bff0806091",
-        "update_images_recovery": "806868e143b3a132c36441164811cecbc0b7894e646093a0f7e1d2b670b0c571"
-      }
-    },
-    {
-      "channel": "user-with-ota-dogfood-release-signed-i18n",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-dogfood-release-signed-i18n/0",
-      "update_merkle": "f95bb93810ce87934004a752764285d6806aa4056762b3958f17bd1705bd294f",
-      "tuf_version_first_seen": 9951,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "30ca2c60a3ac051198eeda416d3efd62cbe57207334a39f6665ef1287e962239",
-        "update_images_recovery": "50cd1250c7fb9c1e750a48c66a66599c50e1c31e315b68938e3be5120904b003"
-      }
-    },
-    {
-      "channel": "user-with-ota-dogfood-release-signed-i18n-gia",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-dogfood-release-signed-i18n-gia/0",
-      "update_merkle": "5717a916d18c90960a17d0dc0f21c1601ff83782dcaaab05fc708af848208eb3",
-      "tuf_version_first_seen": 9952,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "446d9e279c7948aa0f4ffdfad8a07160f6701a32ce2911e6609faf9516c0ff89",
-        "update_images_recovery": "9a9f3beaadefb3657d69fd95b68b9bc428f719ed38666430d8cd74fdaffa8f3a"
-      }
-    },
-    {
       "channel": "user-with-ota-partner-prodfood-hotpatch-release",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-partner-prodfood-hotpatch-release/0",
-      "update_merkle": "77c6d579fc377d6eaf018c3f4b4d6f24ecc08ae06d70e04a70f645ca8dbd6019",
-      "tuf_version_first_seen": 10058,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-partner-prodfood-hotpatch-release/0",
+      "update_merkle": "1e7fdbdd364e60778b9ae55777774cdba2a171990c501187018fdcad4746f451",
+      "tuf_version_first_seen": 10074,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "26fbbcfead2fe6d7eae7fd5464dd5148ed26dea0a35e17036b7ecb36d2f0ba7b",
-        "update_images_recovery": "983a04bbf38a0f4efa84c74750e3c8f74776299ee3887315be9778a507ef2a15"
+        "update_images_fuchsia": "c846d6b6d38f9530625e2a709ffbce44538d87d4bb16d84dc3bf514b39b588ab",
+        "update_images_recovery": "b3c11956465f3d7e709fc6cb6fb8f4b44281d1d86ce7555ad37573df5ca2d715"
       }
     },
     {
       "channel": "user-with-ota-partner-prodfood-release",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-partner-prodfood-release/0",
-      "update_merkle": "26cdab684c05720f04df852bbf5e25ddce5daf210438834b6520d40e6c8171a0",
-      "tuf_version_first_seen": 9978,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-partner-prodfood-release/0",
+      "update_merkle": "28f4ae0c91d785145ce164b7eacf9cb6cbf024cd6015c2d14bf7f8dc12e46e47",
+      "tuf_version_first_seen": 10076,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "9c3c90d20ad91469060ed6e3639255bd1e5b7528fd6c8bf61becfbb56bad3311",
-        "update_images_recovery": "c240b4a161c2c959822f7b7eb4b506caa6149d4081c490e94dcbc2e7bc84d44b"
+        "update_images_fuchsia": "e1556f99b9eacba7099d7af8f24fd95aaa864c648d7cee72a227e1f35c703be7",
+        "update_images_recovery": "cde9473e365e6ed4d57f417389a68c2ea6f0b817454b2f75e2a9e748eea47a9c"
       }
     },
     {
       "channel": "user-with-ota-preview-joining-stable-channel",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-preview-joining-stable-channel/0",
-      "update_merkle": "0718d6da61f939e32407dc4683b677c8dbca9b45bbb1d91ee20d2d74aa24e7ac",
-      "tuf_version_first_seen": 10069,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-preview-joining-stable-channel/0",
+      "update_merkle": "c48cdc2983da513263741edb091d4082d25dfd0fc9869947ed2ad5a12866cb95",
+      "tuf_version_first_seen": 10093,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "4db9659f5392739d17540c563bc898d9cf0dbbf4ab50aaec201fc86e996f3672",
-        "update_images_recovery": "ff0020a7cc3a9c5c20b0dbb60da37076215830da778d0b1a51b05fe318070833"
+        "update_images_fuchsia": "f1e2eecb78257e078816a076ffaea4f709abbbd96c5c8ef1d1066ae2db529e04",
+        "update_images_recovery": "d93b805d058d58c22e95eebadf1a3fdf46c6188649c64d6024fab9ce78aefdb5"
+      }
+    },
+    {
+      "channel": "user-with-ota-preview-leaving-stable-channel",
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-preview-leaving-stable-channel/0",
+      "update_merkle": "a275422d67b680521d8da45d1fb2d18ad93f07006ecd57db6fafbce2300e5620",
+      "tuf_version_first_seen": 10165,
+      "image_packages": {
+        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
+        "update_images_fuchsia": "2e38adc5ab69b189bc8f29c2dff9d473fd6613038307ac34fc6f994dc9e67a50",
+        "update_images_recovery": "64adcae134fbbf21597dbfa78d5afe3c71545af626ce6bf11bd38fe322154bd4"
       }
     },
     {
       "channel": "user-with-ota-preview-stable-channel",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-preview-stable-channel/0",
-      "update_merkle": "46abc346748fb488ff67af5bc015cc706f7cf465a216162feb163f2c2866f916",
-      "tuf_version_first_seen": 10070,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-preview-stable-channel/0",
+      "update_merkle": "92bc2297a1882dfe4ff7c79ce2870f22f5c42a3d70d074005b4eb062baffa2f0",
+      "tuf_version_first_seen": 10094,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "8d9dfa0cc1d6dfb85bfb20316d198b1bb4cf16b2bc84c425b9b74e9474a2677e",
-        "update_images_recovery": "f1087152bfba716947295c6573c2799f10bc06f2a612521aa4bc812b49363391"
+        "update_images_fuchsia": "7a83032f2ee29112b47f2266d8b6079e8a218569168ec7caa1ea7566f6f77eb4",
+        "update_images_recovery": "c7976fe8d5022506ae7a8916d368a9be26ba08f52be047d3920c4f18ac676b2c"
       }
     },
     {
       "channel": "user-with-ota-prodfood-hotpatch-release",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-hotpatch-release/0",
-      "update_merkle": "c2f6c28e6dfe4d67ae7742a1df878accc636c2d41c298e2f566f4fada23acd43",
-      "tuf_version_first_seen": 10059,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-prodfood-hotpatch-release/0",
+      "update_merkle": "184e4a17a1712f00447473c190139b32183a469c617fd82f01e968a2cf46c44b",
+      "tuf_version_first_seen": 10075,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "e68c335390904af61ba5c2e9e72752680bebd133424a65e43a8a34b77f5b39e9",
-        "update_images_recovery": "8c5ed72abb001185210c302a63585de194dc4ab7a03f9f0df9ab84f68a55487b"
+        "update_images_fuchsia": "6e0d7dbc0ed01b8fbee055ed2d505cc2a9ad28237ab6b28db39e23b70e9d6bcc",
+        "update_images_recovery": "43600a9da3cd49009870c32a80c0b6afa1cc4c615c8b4a8dde67f6f9f15e8344"
       }
     },
     {
       "channel": "user-with-ota-prodfood-hotpatch-test",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-hotpatch-test/0",
-      "update_merkle": "049e518b0ba9c32a519b7fab90993eb8b2691b831ee5c8d67d1a87fb54d5afce",
-      "tuf_version_first_seen": 10053,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-prodfood-hotpatch-test/0",
+      "update_merkle": "255c38ab1cc1702098192e6f8fcc18faa329df61591efb37b5ffa0031075c44d",
+      "tuf_version_first_seen": 10060,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "3aac69f611f5638a45fbd9248de654f4cfb0aba1887f7dce3d8b28fe12993774",
-        "update_images_recovery": "0cd05f505a2a3b9d37a4245599d9e1739c0df9b4124ae0045ba801da4dcb2f6e"
-      }
-    },
-    {
-      "channel": "user-with-ota-prodfood-minor-release",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-minor-release/0",
-      "update_merkle": "99339c92f1c0bc38bd53ffb3f87ed051d30d09d1f0c3e7a5e50406d4176846ef",
-      "tuf_version_first_seen": 9943,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "1bbe471f2c41094e9a73ef89dec76671276e50c81c10a0da33c665457e23ed3b",
-        "update_images_recovery": "b2f176409491e1035f815156ae8e4da632345213fee47b2a08c632acbfcbc71b"
-      }
-    },
-    {
-      "channel": "user-with-ota-prodfood-minor-release-gia",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-minor-release-gia/0",
-      "update_merkle": "6d355a666780f13d199eff6ab39047e426ee981929d593ffcb54c2c1cd7ee95b",
-      "tuf_version_first_seen": 9981,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "c3c4f7223c5392bc981398c3e420d156e43ce4178e42893515d705a3e2140b93",
-        "update_images_recovery": "29ddc6c957b60f3a8e8515ad052236d781f7f17e7ed1aa11a7d435df152ceaae"
-      }
-    },
-    {
-      "channel": "user-with-ota-prodfood-minor-release-signed-gia",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-minor-release-signed-gia/0",
-      "update_merkle": "0a28da4a581b4cdd16627ff9f86c981c98d073c41a1e0cb048cd7dadcf5c57b7",
-      "tuf_version_first_seen": 9982,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "7fe5dd887155be623f29229a35b888a76e10000f91abafb30766f3316c22e608",
-        "update_images_recovery": "92ea808e8d6958454c9222c79e03a53b17d34cf2eb4e89d0311aa0bf121e63d9"
-      }
-    },
-    {
-      "channel": "user-with-ota-prodfood-minor-test",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-minor-test/0",
-      "update_merkle": "ac30d6b52cb70f01aaba7e479984ffbbd3af95561980dff7d85c79bdd0f85b5a",
-      "tuf_version_first_seen": 9924,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "6a8617faae00a59066fed53905c55cf56047e1856fe98f397c7186dec0b808a3",
-        "update_images_recovery": "b08126c29dacb1ecaf1735efc0f8cdb14c635b236f0f6684f52cdc09fe28adfc"
+        "update_images_fuchsia": "a2d6773acce2bb28da05ce43cbc0d0508780f7c37b3e62f4ed98bba6127e8d6f",
+        "update_images_recovery": "96e3eb4f75724f1bdf2674d4eae8e89d10246e2df333272644696f9f938907f2"
       }
     },
     {
       "channel": "user-with-ota-prodfood-release",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-release/0",
-      "update_merkle": "326358d83bf41cd0e2d0cfd4a0a3f3fa2bdbd12cb2e8d3b49501df5382dd8fec",
-      "tuf_version_first_seen": 9983,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-prodfood-release/0",
+      "update_merkle": "cc1171a99f435205fc904796b8b759f61b16dffb2ec68c84f0c5547e92416091",
+      "tuf_version_first_seen": 10078,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "22a7c4f4cbe5bd4943dbe6cc7a2137fd2eaeb1e4969e07d5867dbbae413c4532",
-        "update_images_recovery": "c2051c972b26f9342904c79a84c09bb0b9089dc3ffb7e052ff8807cf07775dcf"
-      }
-    },
-    {
-      "channel": "user-with-ota-prodfood-release-gia",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-release-gia/0",
-      "update_merkle": "8e3237d273a35244619bb6f9542c0bb36485542ce8924c6152c912492abd5a1d",
-      "tuf_version_first_seen": 9984,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "ba7347977d543fbd0ac14909116347a06f32a3579c0c4cb133c41ef0c50a526b",
-        "update_images_recovery": "0fc4308af3926e57e97b59f44b1155314fd33ceb259d7687bf6daccf721ba4f1"
-      }
-    },
-    {
-      "channel": "user-with-ota-prodfood-release-signed-gia",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-release-signed-gia/0",
-      "update_merkle": "5188ed76daf421414065f9209b6bb176684b8c7f9ab7ec072e87d85aee954d68",
-      "tuf_version_first_seen": 9979,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "6aef0f86bca5f160a64099ef1ed1dc6e15416f251ffb25843072623ccfc993dd",
-        "update_images_recovery": "1eeaf019623efb38533567129c9b331b739766fbb3c38d2013638e230e9c5a69"
+        "update_images_fuchsia": "d4b150463b899624673766d36c34da9644bf336ab27cc6274f50c8f554c98fd4",
+        "update_images_recovery": "051d44f260173d75cd7ae39a470b0821b74c2d1dc332ec8df34964200c290a12"
       }
     },
     {
       "channel": "user-with-ota-prodfood-test",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-prodfood-test/0",
-      "update_merkle": "b164aadc9b3afb98e3a2fe2f733d7115f27684cd55fe1f519f1051a0b9f5ab79",
-      "tuf_version_first_seen": 10009,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-prodfood-test/0",
+      "update_merkle": "cc8109f77f0aafe852a5cfce392252362b989a888461999f52cc624511445e03",
+      "tuf_version_first_seen": 10061,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "3cda4f1d574bc4f51e24a11d1229ed78ac47ce96c76c21cb178bca4ef9c89ee8",
-        "update_images_recovery": "4b2dd7b2faf9340702dc7c43c7cb77674fede95eb5cf7b1fd290804b418a3771"
+        "update_images_fuchsia": "1abf7fcda981b2b0162731584918eb6cd3923e30d3e30cee4005ba9ea9c3fb15",
+        "update_images_recovery": "e964ddc2566cf375d3cc60a46df4f07e6ecbf29bfa2d722111d509d4958787e4"
       }
     },
     {
       "channel": "user-with-ota-stable-channel",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-stable-channel/0",
-      "update_merkle": "72c66a83883ea5d82af765949bd9f7c029c64425840a030445f1046bd6e78bf0",
-      "tuf_version_first_seen": 10095,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-stable-channel/0",
+      "update_merkle": "7181d65827b52f3be44589e38e0411f39e03c36f520539a952e189d3e1c1101b",
+      "tuf_version_first_seen": 10129,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "88a347e70332bf428bbd258b5609667cde70ddbb8212a42745c80baeb5e2ff24",
-        "update_images_recovery": "d7874f116567426da7c550fd3ad81257862905d50a8baa0010a0bf2e8d0c5939"
-      }
-    },
-    {
-      "channel": "user-with-ota-teamfood-release-signed-gia",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-teamfood-release-signed-gia/0",
-      "update_merkle": "176678c4c56a611f8d843edc69128898e3d1d991b40a29a13ce0e7579967c735",
-      "tuf_version_first_seen": 9939,
-      "image_packages": {
-        "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "2f694ad97151f1b63eb43c65dd8b038e0f1f05da3a7b275abe011d4447390bf4",
-        "update_images_recovery": "931d4cb5d11c354f8df8f3a92071b9f884befa7aeeeb8e10fde55f89058de4a0"
+        "update_images_fuchsia": "7ca5271ae0a3b97a38f8747bc5ce2aaba05562dc4cc4690a02f34d090b95896a",
+        "update_images_recovery": "76536fa069943b8bd93bdbf9fa2416864fbfea165be62d183501a336e9aa9c0e"
       }
     },
     {
       "channel": "user-with-ota-teamfood-test-signed",
-      "target": "update-smart-display-user-with-ota-28.20250723.103.2100202-teamfood-test-signed/0",
-      "update_merkle": "be2d37e9334f07f216a624ebbb658b3789ae6f8b432e0618ca11ce9a249b6374",
-      "tuf_version_first_seen": 9955,
+      "target": "update-smart-display-user-with-ota-28.20250723.103.2100300-teamfood-test-signed/0",
+      "update_merkle": "964b88a2f92daadf28ab8d636b22da878441a149baedb54a26d5df132945c2df",
+      "tuf_version_first_seen": 10067,
       "image_packages": {
         "update_images_firmware": "1c2ce0fcb684922e8b9cc997ff301ecc3b3f1b57d5579c014d57965bc25e0575",
-        "update_images_fuchsia": "ef6f64ea17298ca0119a6ab0f33329c616aeac7defa8b9a1cb2a344217dadecb",
-        "update_images_recovery": "0dff000e30de7dd58478cfb5e1f525fdbdb5e1a76f55898c6b53d32969b692d8"
+        "update_images_fuchsia": "ae202de88c5748808b6c7dfc7be61cfe1c89f17b576fdbb4104da4dddea7e6ee",
+        "update_images_recovery": "de21bc8ae68855d886d88a34a598698dd224dc016e455822070858af17d50c6e"
       }
     }
   ]
