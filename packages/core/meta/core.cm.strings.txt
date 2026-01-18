@@ -54,13 +54,12 @@ fuchsia.intl.PropertyProvider
 tee_manager
 fuchsia.tee.DeviceInfo
 /svc/fuchsia.tee.DeviceInfo
-diagnostics
-diagnostics-persist-capabilities
 network
 netstack-diagnostics
 fuchsia.component.Binder
 sampler
 fuchsia.component.SamplerBinder
+diagnostics
 fuchsia.component.DetectBinder
 fuchsia.component.PersistenceBinder
 pkg-resolver
@@ -183,6 +182,7 @@ fuchsia.wlan.RecoveryProfile
 fuchsia.wlan.RoamingPolicy
 tee-clients
 diagnostics-accessors
+diagnostics-persist-capabilities
 driver-services-for-session
 driver-services
 tee-client-capabilities
@@ -346,8 +346,6 @@ fuchsia.thermal.SensorManager
 fuchsia.diagnostics.ArchiveAccessor.feedback
 feedback,
 fuchsia.diagnostics.Sample
-fuchsia.diagnostics.persist.DataPersistence-wlan
-fuchsia.diagnostics.persist.DataPersistence
 fuchsia.driver.crash.CrashIntrospect
 fuchsia.sys2.CrashIntrospect
 fuchsia.factory.AlphaFactoryStoreProvider
