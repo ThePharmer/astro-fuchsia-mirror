@@ -6,11 +6,8 @@ fuchsia.wlan.RecoveryProfile
 recovery_profile
 fuchsia.wlan.RoamingPolicy
 roaming_policy
-fuchsia.inspect.InspectSink
-/svc/fuchsia.inspect.InspectSink
-diagnostics
-fuchsia.logger.LogSink
-/svc/fuchsia.logger.LogSink
+fuchsia.diagnostics.persist.DataPersistence
+/svc/fuchsia.diagnostics.persist.DataPersistence
 fuchsia.location.namedplace.RegulatoryRegionWatcher
 /svc/fuchsia.location.namedplace.RegulatoryRegionWatcher
 fuchsia.metrics.MetricEventLoggerFactory-
@@ -19,6 +16,11 @@ fuchsia.stash.SecureStore
 /svc/fuchsia.stash.SecureStore
 fuchsia.wlan.device.service.DeviceMonitor
 /svc/fuchsia.wlan.device.service.DeviceMonitor
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
+diagnostics
+fuchsia.logger.LogSink
+/svc/fuchsia.logger.LogSink
 fuchsia.location.sensor.WlanBaseStationWatcher
 /svc/fuchsia.location.sensor.WlanBaseStationWatcher
 fuchsia.tracing.provider.Registry
