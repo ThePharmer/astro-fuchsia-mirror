@@ -199,6 +199,7 @@ fuchsia.ultrasound.Factory
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
+fuchsia.memory.sampler.Sampler
 fuchsia.migration.CastProvider
 google.aurora.cast.PlatformController
 google.nest.thread.Controller
@@ -338,7 +339,6 @@ google.proximity.ProximityService
 google.usonia.IpcHandler
 cast-resolver
 cast-runner
-fuchsia.storage.ftl.Service
 cache
 data
 fuchsia_perception_estelle_agent!
@@ -373,3 +373,7 @@ generation-options
 product=estelle
 build_type=user
 is_migration_mode=False
+bazel-out/fuchsia_arm64-opt-ST-76a94b47dcd5/bin/vendor/google-smart/products/smart/generated/estelle_user_with_ota_config/astro/smart_session.cml
+external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/client.shard.cml
+external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/offer.shard.cml
+external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/use.shard.cml
