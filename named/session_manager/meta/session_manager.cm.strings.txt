@@ -4,12 +4,14 @@ fuchsia.power.SuspendEnabled
 suspend_enabled
 fuchsia.session.AutoLaunch
 autolaunch
+fuchsia.session.EnableDebugShortcut
+enable_debug_shortcut
 fuchsia.session.SessionUrl
 session_url
 fuchsia.component.Realm
 /svc/fuchsia.component.Realm
-fuchsia.component.sandbox.CapabilityStore
-/svc/fuchsia.component.sandbox.CapabilityStore
+fuchsia.component.runtime.Capabilities
+/svc/fuchsia.component.runtime.Capabilities
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -23,6 +25,8 @@ fuchsia.power.system.ActivityGovernor
 /svc/fuchsia.power.system.ActivityGovernor
 fuchsia.power.system.BootControl%
 /svc/fuchsia.power.system.BootControl
+fuchsia.ui.policy.DeviceListenerRegistry-
+/svc/fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.element.GraphicalPresenter
 fuchsia.element.Manager
 fuchsia.session.Launcher
@@ -40,6 +44,7 @@ fuchsia.time.config.WritableUTCTime
 fuchsia.ui.VisualDebuggingLevel
 diagnostics-accessors
 driver-services
+starnix-volume
 tee_session
 boot-bin
 dev-backlight
@@ -254,7 +259,6 @@ fuchsia.weave.FactoryDataManager
 fuchsia.weave.Provisioner
 fuchsia.weave.Signer
 google.cast.cryptokey.NamedKeyProvider
-fuchsia.fshost.StarnixVolumeProvider
 fuchsia.pkg.PackageCache
 fuchsia.power.broker.ElementInfoProviderService
 cache
@@ -267,3 +271,9 @@ data
 /svc/fuchsia.session.power.Handoff
 /svc_from_session/fuchsia.session.window.Manager
 /svc_from_session/fuchsia.web.Debug
+XxiI
+src/session/bin/session_manager/meta/session_manager.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
