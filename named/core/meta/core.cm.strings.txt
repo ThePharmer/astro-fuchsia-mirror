@@ -109,8 +109,7 @@ bluetooth-core
 fuchsia.bluetooth.OverrideVendorCapabilitiesVersion
 fuchsia.bluetooth.FastPairProvider
 fuchsia.bluetooth.Rfcomm
-fuchsia.diagnostics.persist.SkipUpdateCheck
-fuchsia.diagnostics.persist.StopOnIdleTimeoutMillis
+fuchsia.diagnostics.PersistenceSkipUpdateCheck
 fuchsia.diagnostics.sampler.ProjectConfigs
 fuchsia.fonts.FontManifest
 font_provider
@@ -167,7 +166,6 @@ fuchsia.power.cpu.BoostEnabled
 session-manager
 fuchsia.recovery.UseFxBlob
 factory_reset
-fuchsia.session.EnableDebugShortcut
 fuchsia.session.SessionUrl
 fuchsia.session.window.Collection
 fuchsia.session.window.InitialElementUrl
@@ -187,7 +185,6 @@ diagnostics-accessors
 diagnostics-persist-capabilities
 driver-services-for-session
 driver-services
-starnix-volume
 tee-client-capabilities
 base-bin
 blob
@@ -366,15 +363,16 @@ fuchsia.feedback.DeviceIdProvider
 feedback!
 fuchsia.fonts.Provider
 fuchsia.fshost.Admin
+fuchsia.fshost.StarnixVolumeProvider
+fuchsia.hardware.pty.Device
+fuchsia.power.system.ActivityGovernor
+fuchsia.power.system.BootControl
 fuchsia.fxfs.BlobReader
 fuchsia.pkg.PackageCache
 fuchsia.pkg.RetainedBlobs
 fuchsia.pkg.RetainedPackages
 fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.update.verify.HealthVerification
-fuchsia.hardware.pty.Device
-fuchsia.power.system.ActivityGovernor
-fuchsia.power.system.BootControl
 fuchsia.hardware.radar.RadarBurstReaderProvider
 fuchsia.hardware.sensors.Playback
 fuchsia.hwinfo.Board
@@ -459,7 +457,6 @@ fuchsia.power.battery.BatteryManager
 fuchsia.power.broker.Topology
 fuchsia.power.cpu.DomainController
 fuchsia.power.cpu.manager.Boost
-fuchsia.storage.blobfs.OverwriteConfiguration
 fuchsia.scheduler.deprecated.ProfileProvider
 fuchsia.process.explorer.Query
 fuchsia.recovery.FactoryReset
@@ -630,10 +627,3 @@ builtin_dispatcher
 base_resolver
 fuchsia-pkg
 fuchsia-builtin
-bazel-out/fuchsia_arm64-opt/bin/vendor/google-smart/products/smart/generated/estelle_user_with_ota_config/astro/smart_product_image_product_assembly_out/core/core/core.cml
-external/gn_targets+/bundles/assembly/_files/obj/bundles/assembly/user/platform_artifacts/core_realm/compiled_packages/include/inspect/offer.shard.cml
-external/gn_targets+/bundles/assembly/_files/obj/bundles/assembly/user/platform_artifacts/core_realm/compiled_packages/include/src/connectivity/bluetooth/profiles/bt-a2dp/meta/bt-a2dp-common.core_shard.cml
-external/gn_targets+/bundles/assembly/_files/obj/bundles/assembly/user/platform_artifacts/core_realm/compiled_packages/include/src/intl/intl_services/meta/intl.core_shard.base.cml
-external/gn_targets+/bundles/assembly/_files/obj/bundles/assembly/user/platform_artifacts/core_realm/compiled_packages/include/src/settings/service/meta/setui_service_base.core_shard.cml
-external/gn_targets+/bundles/assembly/_files/obj/bundles/assembly/user/platform_artifacts/core_realm/compiled_packages/include/src/ui/meta/ui_routes_base.shard.cml
-external/gn_targets+/bundles/assembly/_files/obj/bundles/assembly/user/platform_artifacts/core_realm/compiled_packages/include/syslog/offer.shard.cml
