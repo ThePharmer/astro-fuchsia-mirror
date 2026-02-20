@@ -32,10 +32,10 @@ fuchsia.system.state.SystemStateTransition
 fuchsia.component.resolution.Resolver
 fuchsia.component.resolver.RealmBuilder
 fuchsia.component.resolution.Resolver-hermetic
-fuchsia.diagnostics.ArchiveAccessor
-fuchsia.inspect.InspectSink
 fuchsia.component.runner.ComponentRunner
 fuchsia.component.runner.RealmBuilder
+fuchsia.diagnostics.ArchiveAccessor
+fuchsia.inspect.InspectSink
 data
 /base_drivers
 /boot
@@ -60,3 +60,13 @@ realm-builder
 tunnel_boot_items
 r_uS
 meta/driver_test_realm.cvf
+sdk/lib/driver_test_realm/meta/driver_test_realm.cml
+sdk/lib/sys/component/realm_builder.shard.cml
+sdk/lib/sys/component/realm_builder_base_no_diagnostics.shard.cml
+sdk/lib/sys/component/realm_builder_no_diagnostics.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
+sdk/lib/trace/client.shard.cml
+sdk/lib/trace/offer.shard.cml
+sdk/lib/trace/use.shard.cml
