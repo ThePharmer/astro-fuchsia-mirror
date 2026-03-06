@@ -120,6 +120,7 @@ fuchsia.net.mdns.Subscriber
 fuchsia.net.reachability.Monitor
 fuchsia.power.systemmode.ClientConfigurator
 fuchsia.recovery.FactoryReset
+fuchsia.storage.blobfs.OverwriteConfiguration
 fuchsia.weave.FactoryDataManager
 fuchsia.weave.Provisioner
 fuchsia.weave.Signer
@@ -157,12 +158,12 @@ ultrasound_agent.
 fuchsia.feedback.DataProvider
 fuchsia.settings.Accessibility
 fuchsia.settings.Setup
+fuchsia.update.Manager
 fuchsia.update.channelcontrol.ChannelControl
 fuchsia.feedback.LastRebootInfoProvider
 fuchsia.fonts.Provider
 fuchsia.memorypressure.Provider
 fuchsia.hwinfo.Board
-fuchsia.update.channel.Provider
 fuchsia.hwinfo.Device
 google.flashts.Reader
 fuchsia.hwinfo.Product
@@ -254,7 +255,7 @@ fuchsia.ui.brightness.Control
 fuchsia.ui.input.ImeService
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.policy.DeviceListenerRegistry
-fuchsia.update.Manager
+fuchsia.update.channel.Provider
 fuchsia.vulkan.loader.Loader
 fuchsia.web.FrameHost
 google.ambienteq.Listener
@@ -339,7 +340,6 @@ google.proximity.ProximityService
 google.usonia.IpcHandler
 cast-resolver
 cast-runner
-fuchsia.storage.ftl.Service
 cache
 data
 fuchsia_perception_estelle_agent!
@@ -374,3 +374,7 @@ generation-options
 product=estelle
 build_type=user
 is_migration_mode=False
+bazel-out/fuchsia_arm64-opt-ST-76a94b47dcd5/bin/vendor/google-smart/products/smart/generated/estelle_user_with_ota_config/astro/smart_session.cml
+external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/client.shard.cml
+external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/offer.shard.cml
+external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/use.shard.cml

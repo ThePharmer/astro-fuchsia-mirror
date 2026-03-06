@@ -4,12 +4,12 @@ fuchsia.system-updater.ManifestPublicKeys
 manifest_public_keys
 fuchsia.system-updater.VerifyExistingBlobs
 verify_existing_blobs
-blob
-/blob
 build-info
 /config/build-info
 system
 /system
+fuchsia.fxfs.BlobCreator
+/svc/fuchsia.fxfs.BlobCreator
 fuchsia.fxfs.BlobReader
 /svc/fuchsia.fxfs.BlobReader
 fuchsia.hardware.power.statecontrol.Admin
@@ -45,3 +45,10 @@ concurrent_blob_fetches
 concurrent_package_resolves
 %Q$UE'
 meta/system-updater.cvf
+src/sys/pkg/bin/system-updater/meta/system-updater.cml
+sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
+src/sys/pkg/bin/system-updater/meta/system-updater-common.shard.cml
