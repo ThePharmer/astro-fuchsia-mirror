@@ -3,8 +3,6 @@ fuchsia.inspect.InspectSink
 diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
-fuchsia.tracing.provider.Registry
-/svc/fuchsia.tracing.provider.Registry
 devfs
 dev-class
 dev-topological
@@ -23,6 +21,7 @@ fuchsia.driver.manager.EnableTestShutdownDelays
 fuchsia.power.SuspendEnabled
 boot-drivers
 fuchsia.usb.PeripheralConfig.Functions
+fuchsia.boot.Arguments
 fuchsia.boot.Items
 fuchsia.kernel.RootJob
 fuchsia.system.state.SystemStateTransition
@@ -35,6 +34,7 @@ fuchsia.component.resolution.Resolver-base
 fuchsia.component.resolution.Resolver-boot
 fuchsia.component.resolution.Resolver-full
 fuchsia.component.resolution.Resolver-hermetic
+fuchsia.driver.test.Internal
 fuchsia.pkg.PackageResolver-hermetic
 fuchsia.device.fs.lifecycle.Lifecycle
 base-drivers
@@ -42,10 +42,9 @@ full-drivers
 fuchsia.driver.index.DevelopmentManager
 fuchsia.driver.index.DriverIndex
 fuchsia.driver.test.DriverLists
-fuchsia.driver.test.Internal
 fuchsia.kernel.MexecResource
-fuchsia.kernel.PowerResource
 fuchsia.scheduler.RoleManager
+fuchsia.tracing.provider.Registry
 #meta/devfs.cm
 #meta/driver-index.cm
 #meta/driver_manager_test.cm
