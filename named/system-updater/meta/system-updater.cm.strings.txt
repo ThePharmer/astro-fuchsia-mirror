@@ -2,8 +2,6 @@ binary
 bin/system_updater
 fuchsia.system-updater.ManifestPublicKeys
 manifest_public_keys
-fuchsia.system-updater.VerifyExistingBlobs
-verify_existing_blobs
 blob
 /blob
 build-info
@@ -28,10 +26,10 @@ fuchsia.pkg.RetainedBlobs
 /svc/fuchsia.pkg.RetainedBlobs
 fuchsia.pkg.RetainedPackages
 /svc/fuchsia.pkg.RetainedPackages
-fuchsia.pkg.garbagecollector.Manager
-/svc/fuchsia.pkg.garbagecollector.Manager
 fuchsia.pkg.internal.OtaDownloader
 /svc/fuchsia.pkg.internal.OtaDownloader
+fuchsia.space.Manager
+/svc/fuchsia.space.Manager
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -41,7 +39,8 @@ data
 /data
 fuchsia.update.installer.Installer
 /svc/fuchsia.update.installer.Installer
+allow_packageless_update
 concurrent_blob_fetches
 concurrent_package_resolves
-%Q$UE'
+SA~FE
 meta/system-updater.cvf
