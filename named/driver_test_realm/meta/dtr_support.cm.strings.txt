@@ -2,10 +2,16 @@ binary
 bin/dtr_support
 fuchsia.driver.testrealm.BoardName
 board_name
+fuchsia.driver.testrealm.PlatformPid
+platform_pid
+fuchsia.driver.testrealm.PlatformVid
+platform_vid
 fuchsia.driver.testrealm.TunnelBootItems
 tunnel_boot_items
 fuchsia.boot.Items
 /svc/fuchsia.boot.Items
+fuchsia.driver.test.ResourceProvider
+/svc/fuchsia.driver.test.ResourceProvider
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 diagnostics
@@ -13,3 +19,7 @@ fuchsia.kernel.RootJob
 fuchsia.system.state.SystemStateTransition
 /svc/fuchsia.kernel.RootJob
 /svc/fuchsia.system.state.SystemStateTransition
+sdk/lib/driver_test_realm/meta/dtr_support.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
