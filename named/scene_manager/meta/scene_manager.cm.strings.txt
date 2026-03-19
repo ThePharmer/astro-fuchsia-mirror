@@ -10,8 +10,6 @@ fuchsia.ui.DisplayPixelDensity
 display_pixel_density
 fuchsia.ui.EnableButtonBatonPassing
 enable_button_baton_passing
-fuchsia.ui.EnableMergeTouchEvents
-enable_merge_touch_events
 fuchsia.ui.EnableMouseBatonPassing
 enable_mouse_baton_passing
 fuchsia.ui.EnableTouchBatonPassing
@@ -87,6 +85,7 @@ fuchsia.input.report.Service
 /svc/fuchsia.input.report.Service
 fuchsia.element.GraphicalPresenter
 fuchsia.input.injection.InputDeviceRegistry
+fuchsia.input.interaction.Notifier
 fuchsia.input.wayland.Keymap
 fuchsia.lightsensor.Sensor
 fuchsia.recovery.policy.Device
@@ -100,6 +99,7 @@ fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.ui.policy.DisplayBacklight
 /svc/fuchsia.element.GraphicalPresenter
 /svc/fuchsia.input.injection.InputDeviceRegistry
+/svc/fuchsia.input.interaction.Notifier
 /svc/fuchsia.input.wayland.Keymap
 /svc/fuchsia.lightsensor.Sensor
 /svc/fuchsia.recovery.policy.Device
@@ -113,13 +113,4 @@ fuchsia.ui.input.config.Features%
 fuchsia.ui.policy.DeviceListenerRegistry-
 /svc/fuchsia.ui.policy.DeviceListenerRegistry
 /svc/fuchsia.ui.policy.DisplayBacklight
-src/ui/bin/scene_manager/meta/scene_manager.bin.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
-sdk/lib/trace/use.shard.cml
-src/ui/bin/scene_manager/meta/scene_manager-impl.shard.cml
-src/ui/lib/focus_chain_provider/meta/client.shard.cml
-src/ui/lib/input_pipeline/meta/client.shard.cml
+e'?e
