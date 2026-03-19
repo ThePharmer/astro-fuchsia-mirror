@@ -95,6 +95,7 @@ fuchsia.accessibility.virtualkeyboard.Registry
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.input.virtualkeyboard.Manager
 fuchsia.metrics.MetricEventLoggerFactory
+fuchsia.power.CollaborativeRebootInitiator
 fuchsia.ui.activity.control.Control
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.input3.KeyEventInjector
@@ -111,7 +112,7 @@ fuchsia.bluetooth.le.Peripheral
 fuchsia.bluetooth.sys.Access
 fuchsia.factory.WeaveFactoryStoreProvider
 fuchsia.hardware.power.statecontrol.Admin
-fuchsia.hardware.power.statecontrol.ShutdownWatcherRegister
+fuchsia.hardware.power.statecontrol.RebootMethodsWatcherRegister
 fuchsia.location.namedplace.RegulatoryRegionConfigurator
 fuchsia.media.sessions2.Publisher
 fuchsia.net.mdns.Publisher
@@ -120,7 +121,6 @@ fuchsia.net.mdns.Subscriber
 fuchsia.net.reachability.Monitor
 fuchsia.power.systemmode.ClientConfigurator
 fuchsia.recovery.FactoryReset
-fuchsia.storage.blobfs.OverwriteConfiguration
 fuchsia.weave.FactoryDataManager
 fuchsia.weave.Provisioner
 fuchsia.weave.Signer
@@ -152,18 +152,19 @@ fuchsia.diagnostics.ArchiveAccessor.legacy_metrics
 fuchsia.diagnostics.LegacyMetricsArchiveAccessor
 fuchsia.factory.MiscFactoryStoreProvider
 fuchsia.feedback.ComponentDataRegister
+fuchsia.net.interfaces.State
 fuchsia.feedback.CrashReporter
 fuchsia.feedback.CrashReportingProductRegister
 ultrasound_agent.
 fuchsia.feedback.DataProvider
 fuchsia.settings.Accessibility
 fuchsia.settings.Setup
-fuchsia.update.Manager
 fuchsia.update.channelcontrol.ChannelControl
 fuchsia.feedback.LastRebootInfoProvider
 fuchsia.fonts.Provider
 fuchsia.memorypressure.Provider
 fuchsia.hwinfo.Board
+fuchsia.update.channel.Provider
 fuchsia.hwinfo.Device
 google.flashts.Reader
 fuchsia.hwinfo.Product
@@ -200,7 +201,6 @@ fuchsia.ultrasound.Factory
 fuchsia.media.sessions2.Discovery
 fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
-fuchsia.memory.sampler.Sampler
 fuchsia.migration.CastProvider
 google.aurora.cast.PlatformController
 google.nest.thread.Controller
@@ -230,14 +230,12 @@ fuchsia.migration.UltrasoundProvider
 ultrasound_agent$
 google.mlframework.MlFrameworkOutputService
 ultrasound_agent+
-fuchsia.net.interfaces.State
 fuchsia.net.mdns.ServiceInstancePublisher
 fuchsia.net.mdns.ServiceInstanceResolver
 fuchsia.net.name.Lookup
 fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.net.stackmigrationdeprecated.State
 fuchsia.posix.socket.Provider
-fuchsia.power.CollaborativeRebootInitiator
 fuchsia.power.profile.Watcher
 fuchsia.thermal.ClientStateConnector
 fuchsia.process.Launcher
@@ -255,7 +253,7 @@ fuchsia.ui.brightness.Control
 fuchsia.ui.input.ImeService
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.policy.DeviceListenerRegistry
-fuchsia.update.channel.Provider
+fuchsia.update.Manager
 fuchsia.vulkan.loader.Loader
 fuchsia.web.FrameHost
 google.ambienteq.Listener
@@ -340,6 +338,7 @@ google.proximity.ProximityService
 google.usonia.IpcHandler
 cast-resolver
 cast-runner
+fuchsia.storage.ftl.Service
 cache
 data
 fuchsia_perception_estelle_agent!
@@ -374,7 +373,3 @@ generation-options
 product=estelle
 build_type=user
 is_migration_mode=False
-bazel-out/fuchsia_arm64-opt-ST-76a94b47dcd5/bin/vendor/google-smart/products/smart/generated/estelle_user_with_ota_config/astro/smart_session.cml
-external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/client.shard.cml
-external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/offer.shard.cml
-external/rules_fuchsia++fuchsia_sdk_ext+fuchsia_sdk/pkg/trace/use.shard.cml
