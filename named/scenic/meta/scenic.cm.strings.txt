@@ -32,6 +32,8 @@ fuchsia.scenic.Renderer
 renderer
 fuchsia.ui.VisualDebuggingLevel
 visual_debugging_level
+config-data
+/config/data
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -108,14 +110,3 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
 "=)k?
-src/ui/scenic/bin/meta/scenic.bin.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
-sdk/lib/trace/client.shard.cml
-sdk/lib/trace/offer.shard.cml
-sdk/lib/trace/use.shard.cml
-sdk/lib/vulkan/client.shard.cml
-src/ui/scenic/bin/meta/scenic-impl.shard.cml
