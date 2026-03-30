@@ -198,8 +198,14 @@
     "event_code": 48
   },
   {
+    "name": "MemoryTooling",
+    "process": "memory_monitor2?\\.cm|memory_pressure_signaler\\.cm",
+    "vmo": "",
+    "event_code": 86
+  },
+  {
     "name": "EngTools",
-    "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor2?\\.cm|overnetstack\\.cm|memory_pressure_signaler\\.cm|remote.*|sh:console|sshd-host\\.cm",
+    "process": "/boot/bin/sh|/pkg/bin/sshd|overnetstack\\.cm|remote.*|sh:console|sshd-host\\.cm",
     "vmo": "",
     "event_code": 64
   },
@@ -301,7 +307,7 @@
   },
   {
     "name": "OtherProductComponents",
-    "process": "brightness_manager\\.cm|color_tint_service\\.cm|nest_policy_agent\\.cm|presence_agent\\.cm",
+    "process": "brightness_manager\\.cm|color_tint_service\\.cm|nest_policy_agent\\.cm|presence_agent\\.cm|platform-nest-metrics\\.cm",
     "vmo": "",
     "event_code": 62
   },
