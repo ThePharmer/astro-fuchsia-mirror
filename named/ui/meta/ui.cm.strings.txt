@@ -10,7 +10,6 @@ fuchsia.accessibility.virtualkeyboard.Registry
 scene_manager
 fuchsia.element.GraphicalPresenter
 fuchsia.input.injection.InputDeviceRegistry
-fuchsia.input.interaction.Notifier
 fuchsia.input.wayland.Keymap
 fuchsia.lightsensor.Sensor
 fuchsia.recovery.policy.Device
@@ -52,6 +51,7 @@ fuchsia.scenic.DisplayRotation
 fuchsia.ui.AttachA11yView
 fuchsia.ui.DisplayPixelDensity
 fuchsia.ui.EnableButtonBatonPassing
+fuchsia.ui.EnableMergeTouchEvents
 fuchsia.ui.EnableMouseBatonPassing
 fuchsia.ui.EnableTouchBatonPassing
 fuchsia.ui.IdleThresholdMs
@@ -113,3 +113,17 @@ fuchsia-pkg://fuchsia.com/sensor-config#meta/sensor-config.cm
 fuchsia-pkg://fuchsia.com/text_manager#meta/text_manager.cm
 virtual_keyboard_managerS
 fuchsia-pkg://fuchsia.com/virtual_keyboard_manager#meta/virtual_keyboard_manager.cm
+src/ui/meta/ui.cml
+sdk/lib/inspect/offer.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
+src/ui/meta/a11y_base_routes.shard.cml
+src/ui/meta/a11y_routes.shard.cml
+src/ui/meta/scene_manager_base_routes.shard.cml
+src/ui/meta/scene_manager_routes.shard.cml
+src/ui/meta/scenic_base_routes.shard.cmlsrc/ui/meta/scenic_routes.shard.cml
+src/ui/meta/text_manager_base_routes.shard.cml
+src/ui/meta/text_manager_routes.shard.cml
+src/ui/meta/virtual_keyboard_manager_base_routes.shard.cml
+src/ui/meta/virtual_keyboard_manager_routes.shard.cml
