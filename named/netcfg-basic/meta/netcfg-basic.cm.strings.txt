@@ -5,9 +5,11 @@ dev-class-network
 /dev/class/network
 netcfg-config
 /netcfg-config
+fuchsia.inspect.InspectSink
+/svc/fuchsia.inspect.InspectSink
+diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
-diagnostics
 fuchsia.net.dhcp.ClientProvider
 /svc/fuchsia.net.dhcp.ClientProvider
 fuchsia.net.dhcp.Server
@@ -58,6 +60,8 @@ fuchsia.net.policy.socketproxy.NetworkRegistry
 /svc/fuchsia.net.policy.socketproxy.NetworkRegistry
 fuchsia-pkg://fuchsia.com/netcfg-config#meta/netcfg-config.cm
 src/connectivity/policy/netcfg/meta/netcfg-basic.cml
+sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
 sdk/lib/syslog/offer.shard.cml
 sdk/lib/syslog/use.shard.cml
