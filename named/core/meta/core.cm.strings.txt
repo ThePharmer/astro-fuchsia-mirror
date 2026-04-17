@@ -139,7 +139,6 @@ fuchsia.ota_realm
 fuchsia.product_id
 fuchsia.pkgresolver.BlobNetworkBodyTimeoutSeconds
 fuchsia.pkgresolver.BlobNetworkHeaderTimeoutSeconds
-fuchsia.pkgresolver.TufNetworkHeaderTimeoutSeconds
 session-manager
 fuchsia.session.AutoLaunch
 fuchsia.session.EnableDebugShortcut
@@ -435,7 +434,6 @@ bt-avrcp(
 storage_cache_manager
 feedback(
 fuchsia.net.http.Loader
-fuchsia.pkg.http.Client
 fuchsia.net.interfaces.State
 fuchsia.net.reachability.Monitor
 fuchsia.net.routes.State
@@ -454,10 +452,12 @@ fuchsia.pkg.Cup
 fuchsia.pkg.PackageResolver-ota
 fuchsia.pkg.internal.OtaDownloader
 fuchsia.pkg.FontResolver
+fuchsia.pkg.LocalMirror
 fuchsia.pkg.PackageResolver-base
 fuchsia.pkg.PackageResolver-pkg
 fuchsia.pkg.PackageResolver-boot
 process_resolver 
+fuchsia.pkg.http.Client
 sl4f_bridge_server
 fuchsia.scheduler.deprecated.ProfileProvider
 fuchsia.process.explorer.Query
