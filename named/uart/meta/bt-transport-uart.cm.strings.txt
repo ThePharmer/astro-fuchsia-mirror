@@ -10,8 +10,6 @@ allow_sync_callsfallback
 false
 default_dispatcher_scheduler_role
 fuchsia.devices.bt.drivers.bt-transport-uart
-fuchsia.power.SuspendEnabled
-enable_suspend
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -19,17 +17,8 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.boot.metadata.MacAddressMetadata-
 /svc/fuchsia.boot.metadata.MacAddressMetadata
-fuchsia.hardware.power.PowerTokenService-
-/svc/fuchsia.hardware.power.PowerTokenService
 fuchsia.hardware.serialimpl.Service
 /svc/fuchsia.hardware.serialimpl.Service
 fuchsia.boot.metadata.MacAddressMetadata
 fuchsia.hardware.bluetooth.HciService
-fuchsia.hardware.power.PowerTokenService
 /svc/fuchsia.hardware.bluetooth.HciService
-Qe'?7
-src/connectivity/bluetooth/hci/transport/uart/meta/bt-transport-uart.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
