@@ -9,8 +9,6 @@ default_dispatcher_opts
 allow_sync_callsdefault_dispatcher_scheduler_role
 fuchsia.graphics.display.drivers.display.coordinator
 allowed_scheduler_roles
-memory_priority_role
-fuchsia.display.driver.memory
 fallback
 false
 fuchsia.inspect.InspectSink
@@ -22,9 +20,3 @@ fuchsia.driver.compat.Service
 /svc/fuchsia.driver.compat.Service
 fuchsia.hardware.display.engine.Service
 /svc/fuchsia.hardware.display.engine.Service
-src/graphics/display/drivers/coordinator/meta/display-coordinator.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
