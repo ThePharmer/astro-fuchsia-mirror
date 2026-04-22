@@ -6,7 +6,9 @@ meta/bind/bt-transport-uart.bindbc
 colocate
 true
 default_dispatcher_opts
-allow_sync_callsdefault_dispatcher_scheduler_role
+allow_sync_callsfallback
+false
+default_dispatcher_scheduler_role
 fuchsia.devices.bt.drivers.bt-transport-uart
 fuchsia.power.SuspendEnabled
 enable_suspend
