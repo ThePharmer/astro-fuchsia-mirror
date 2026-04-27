@@ -31,11 +31,13 @@ fuchsia.bluetooth.sys.Bootstrap
 fuchsia.bluetooth.sys.Configuration
 fuchsia.bluetooth.sys.HostWatcher
 fuchsia.bluetooth.rfcomm.test.RfcommTest
-fuchsia.bluetooth.ScoOffloadPathIndex
+fuchsia.bluetooth.HciCommandTimeout
 bt-host-collection
 fuchsia.bluetooth.OverrideVendorCapabilitiesVersion
-fuchsia.power.SuspendEnabled
+fuchsia.bluetooth.ScoOffloadPathIndex
 fuchsia.bluetooth.LegacyPairing
+fuchsia.power.SuspendEnabled
+bluetooth-le-config
 bt-rfcomm
 fuchsia.bluetooth.host.Receiver
 fuchsia.device.NameProvider
@@ -52,3 +54,9 @@ fuchsia-pkg://fuchsia.com/bt-rfcomm#meta/bt-rfcomm.cm
 autostart_snoop
 rfcomm_enabled
 meta/bt-init.cvf
+src/connectivity/bluetooth/core/bt-init/meta/bt-init.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
+src/connectivity/bluetooth/core/bt-init/meta/bt-init.shard.cml
