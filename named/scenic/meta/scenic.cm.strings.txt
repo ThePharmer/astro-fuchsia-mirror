@@ -32,8 +32,6 @@ fuchsia.scenic.Renderer
 renderer
 fuchsia.ui.VisualDebuggingLevel
 visual_debugging_level
-config-data
-/config/data
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -80,6 +78,7 @@ fuchsia.ui.observation.scope.Registry
 fuchsia.ui.observation.test.Registry
 fuchsia.ui.pointer.augment.LocalHit
 fuchsia.ui.pointerinjector.Registry
+fuchsia.ui.pointerinjector.dso.Registry
 fuchsia.ui.views.ViewRefInstalled
 /svc/fuchsia.ui.annotation.Registry
 fuchsia.ui.composition.Allocator%
@@ -107,6 +106,18 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.observation.test.Registry
 /svc/fuchsia.ui.pointer.augment.LocalHit
 /svc/fuchsia.ui.pointerinjector.Registry
+/svc/fuchsia.ui.pointerinjector.dso.Registry
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
 "=)k?
+src/ui/scenic/bin/meta/scenic.bin.cml
+sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
+sdk/lib/trace/client.shard.cml
+sdk/lib/trace/offer.shard.cml
+sdk/lib/trace/use.shard.cml
+sdk/lib/vulkan/client.shard.cml
+src/ui/scenic/bin/meta/scenic-impl.shard.cml
