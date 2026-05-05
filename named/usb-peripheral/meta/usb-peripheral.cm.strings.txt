@@ -5,9 +5,8 @@ meta/bind/usb-peripheral.bindbc
 colocate
 true
 default_dispatcher_opts
-allow_sync_calls
-fuchsia.driver.usb.peripheral
-kboot_functions
+allow_sync_callsfallback
+false
 fuchsia.usb.PeripheralConfig.Functions
 functions
 fuchsia.inspect.InspectSink
@@ -31,9 +30,3 @@ fuchsia.hardware.usb.peripheral.Service
 fuchsia.hardware.usb.function.UsbFunctionService5
 /svc/fuchsia.hardware.usb.function.UsbFunctionService
 /svc/fuchsia.hardware.usb.peripheral.Service
-src/devices/usb/drivers/usb-peripheral/meta/usb-peripheral.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
