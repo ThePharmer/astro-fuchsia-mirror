@@ -4,9 +4,7 @@ meta/bind/aml-g12-tdm.bindbc
 compat
 driver/aml-g12-tdm.so
 default_dispatcher_opts
-allow_sync_callsfallback
-false
-binary
+allow_sync_callsbinary
 driver/compat.somodules
 loader_overrides
 from
@@ -35,3 +33,9 @@ fuchsia.hardware.gpio.Service
 /svc/fuchsia.hardware.gpio.Service
 fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
+src/media/audio/drivers/aml-g12-tdm/meta/aml-g12-tdm.cmlsdk/lib/driver/compat/compat.shard.cml
+sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
