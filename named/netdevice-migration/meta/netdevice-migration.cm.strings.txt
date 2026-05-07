@@ -6,7 +6,8 @@ meta/bind/netdevice-migration-bind.bindbc
 colocate
 true
 default_dispatcher_opts
-allow_sync_calls
+allow_sync_callsfallback
+false
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -16,10 +17,3 @@ fuchsia.driver.compat.Service
 /svc/fuchsia.driver.compat.Service
 fuchsia.hardware.network.driver.Service
 /svc/fuchsia.hardware.network.driver.Service
-src/connectivity/ethernet/drivers/ethernet/netdevice-migration/meta/netdevice-migration.cml
-sdk/lib/driver_component/driver.shard.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
