@@ -81,6 +81,8 @@ cobalt
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
+paver
+fuchsia.paver.Paver
 fuchsia.pkg.PackageResolver
 fuchsia.pkg.RepositoryManager
 fuchsia.pkg.resolution.PackageResolver
@@ -105,6 +107,11 @@ fuchsia.virtualization.DebianGuestManager
 fuchsia.virtualization.LinuxManager
 fuchsia.virtualization.TerminaGuestManager
 fuchsia.virtualization.ZirconGuestManager
+fuchsia.androidboot.slot_suffix
+boot_args
+fuchsia.astro.sysconfig.abr-wear-leveling
+fuchsia.zvb.boot-partition-uuid
+fuchsia.zvb.current_slot
 fuchsia.bluetooth.FastPairProvider
 bluetooth-core
 fuchsia.bluetooth.HciCommandTimeout
@@ -119,6 +126,7 @@ fuchsia.diagnostics.sampler.ProjectConfigs
 fuchsia.fonts.FontManifest
 font_provider
 fuchsia.fonts.VerboseLogging
+fuchsia.fshost.MergeSuperAndUserdata
 fuchsia.http-client.StopOnIdleTimeoutMillis
 fuchsia.memory.CaptureOnPressureChange
 memory_monitor
@@ -133,7 +141,6 @@ fuchsia.omaha.RetryDelaySeconds
 fuchsia.omaha.StartupDelaySeconds
 fuchsia.system-updater.ManifestPublicKeys
 fuchsia.omaha_app_id
-boot_args
 fuchsia.omaha_url
 fuchsia.ota_channel
 fuchsia.ota_realm
@@ -195,9 +202,12 @@ base-bin
 block
 flash_ts_feedback_id
 block-fts
+dev-topological
 boot
 mdns
 build-info
+boot-config
+config
 boot-bin
 root-ssl-certificates
 system
@@ -269,7 +279,6 @@ dev-tee
 wlandevicemonitor
 dev-wlanphy
 wlanphy
-dev-topological
 factory
 feedback-config
 pkgfs
@@ -321,6 +330,9 @@ fuchsia.hardware.power.statecontrol.ShutdownWatcherRegister
 feedback;
 fuchsia.process.Launcher
 fuchsia.sysinfo.SysInfo
+fuchsia.boot.WriteOnlyLog
+fuchsia.fshost.Admin
+fuchsia.system.state.SystemStateTransition
 fuchsia.buildinfo.Provider
 fuchsia.camera3.DeviceWatcher
 fuchsia.castauth.CastCertificateRetriever
@@ -334,7 +346,6 @@ fuchsia.device.NameProvider
 agis
 fuchsia.hardware.power.statecontrol.Admin
 fuchsia.kernel.VmexResource
-fuchsia.paver.Paver
 fuchsia.pkg.garbagecollector.Manager
 fuchsia.power.CollaborativeRebootInitiator
 fuchsia.power.button.Monitor
@@ -372,7 +383,9 @@ fuchsia.power.cpu.DomainController
 fuchsia.power.cpu.manager.Boost
 fuchsia.storage.blobfs.OverwriteConfiguration
 fuchsia.fonts.Provider
-fuchsia.fshost.Admin
+fuchsia.fshost.Recovery
+fuchsia.storage.partitions.PartitionsAdmin
+fuchsia.storage.partitions.PartitionsManager
 fuchsia.fxfs.BlobCreator
 fuchsia.fxfs.BlobReader
 fuchsia.pkg.PackageCache
@@ -546,8 +559,10 @@ fuchsia.hardware.light.LightService
 fuchsia.hardware.network.Service
 fuchsia.hardware.ram.metrics.Service
 fuchsia.hardware.securemem.Service
+fuchsia.hardware.skipblock.Service
 fuchsia.hardware.thermal.Service
 fuchsia.power.broker.ElementInfoProviderService
+fuchsia.storage.partitions.PartitionService
 fuchsia.vulkan.loader.TrustedService
 fuchsia.wlan.device.Service
 data
@@ -603,6 +618,7 @@ fuchsia-pkg://fuchsia.com/memory_pressure_signaler#meta/memory_pressure_signaler
 multizone_leader=
 fuchsia-pkg://fuchsia.com/cast_agent#meta/multizone_leader.cm
 fuchsia-pkg://fuchsia.com/network#meta/network.cm
+fuchsia-pkg://fuchsia.com/paver#meta/paver.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
 process_resolverC
 fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
