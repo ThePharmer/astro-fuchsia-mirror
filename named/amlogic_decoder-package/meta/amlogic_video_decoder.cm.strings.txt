@@ -1,8 +1,6 @@
 driver
 bind
 meta/bind/amlogic_video_bind.bindbc
-colocate
-false
 compat
 driver/amlogic_video_decoder.so
 default_dispatcher_opts
@@ -12,8 +10,7 @@ fuchsia.media.drivers.amlogic-decoder.parser-irqfuchsia.media.drivers.amlogic-de
 fuchsia.media.drivers.amlogic-decoder.h264-core
 fuchsia.media.drivers.amlogic-decoder.h264-stream-control
 fuchsia.media.drivers.amlogic-decoder.vp9-input-processing
-fuchsia.media.drivers.amlogic-decoder.vp9-stream-controlfallback
-binary
+fuchsia.media.drivers.amlogic-decoder.vp9-stream-controlbinary
 driver/compat.somodules
 loader_overrides
 from
@@ -46,3 +43,10 @@ fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
 fuchsia.hardware.tee.Service
 /svc/fuchsia.hardware.tee.Service
+src/media/drivers/amlogic_decoder/meta/amlogic_video_decoder-component.cml
+sdk/lib/driver/compat/compat.shard.cml
+sdk/lib/driver/platform-device.shard.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
