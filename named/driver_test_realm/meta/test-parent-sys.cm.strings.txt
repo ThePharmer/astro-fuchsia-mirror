@@ -4,8 +4,7 @@ driver/test-parent-sys.so
 bind
 meta/bind/test-parent-bind.bindbc
 default_dispatcher_opts
-allow_sync_callsfallback
-false
+allow_sync_calls
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -13,3 +12,10 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.driver.compat.Service
 /svc/fuchsia.driver.compat.Service
+src/devices/misc/drivers/test-parent/meta/test-parent-sys.cml
+sdk/lib/driver_component/driver.shard.cml
+sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
