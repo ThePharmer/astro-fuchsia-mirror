@@ -1,9 +1,12 @@
 driver
 bind
-meta/bind/aml-ram.bindbccompat
+meta/bind/aml-ram.bindbccolocate
+false
+compat
 driver/aml-ram.so
 default_dispatcher_opts
-allow_sync_callsbinary
+allow_sync_callsfallback
+binary
 driver/compat.somodules
 loader_overrides
 from
@@ -28,9 +31,3 @@ fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
 fuchsia.hardware.ram.metrics.Service
 /svc/fuchsia.hardware.ram.metrics.Service
-src/devices/ram/drivers/aml-ram/meta/aml-ram.cmlsdk/lib/driver/compat/compat.shard.cml
-sdk/lib/driver/platform-device.shard.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
