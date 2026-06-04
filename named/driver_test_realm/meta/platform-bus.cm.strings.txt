@@ -34,6 +34,8 @@ fuchsia.kernel.IommuResource
 /svc/fuchsia.kernel.IommuResource
 fuchsia.driver.compat.Service
 /svc/fuchsia.driver.compat.Service
+fuchsia.hardware.platform.device.Service-
+/svc/fuchsia.hardware.platform.device.Service
 fuchsia.boot.metadata.MacAddressMetadata
 fuchsia.boot.metadata.PartitionMap
 fuchsia.boot.metadata.SerialNumberMetadata
@@ -47,12 +49,10 @@ fuchsia.boot.metadata.MacAddressMetadata-
 /svc/fuchsia.boot.metadata.SerialNumberMetadata
 /svc/fuchsia.hardware.platform.bus.ObservabilityService
 /svc/fuchsia.hardware.platform.bus.Service
-fuchsia.hardware.platform.device.Service-
-/svc/fuchsia.hardware.platform.device.Service
 /svc/fuchsia.sysinfo.Service
 KuBb
 src/devices/bus/drivers/platform/meta/platform-bus.cml
-sdk/lib/driver_component/driver.shard.cml
+sdk/lib/driver/platform-device.shard.cmlsdk/lib/driver_component/driver.shard.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
