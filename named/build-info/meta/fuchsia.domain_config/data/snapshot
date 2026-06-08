@@ -1,8 +1,8 @@
 <manifest version="1.1" attributes="debug-symbols-arm64">
   <projects>
-    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="5701dd0d6369a79f4d5b8dd835da23c2cb9fc382" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
+    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="324bc09d01f8994ec8ccb0a38070ae893f78b30f" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
     <project name="protobuf-gn" path="build/secondary/third_party/protobuf" remote="https://fuchsia.googlesource.com/protobuf-gn" revision="7a066f6b629bf3dc1145684e2ed91b1bbe0e100a" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
-    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="c5a79f5ebc0a7897cf1754e71f7d629a4513a60c" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
+    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="b8cc4ef4d55ee78dd287f6f2a30aacd0da53afb2" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
     <project name="third_party/OpenCL-Headers" path="third_party/OpenCL-Headers" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-Headers" revision="755ae0abe204b1821117e61645c5a3579a4a0dcd" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/OpenCL-ICD-Loader" path="third_party/OpenCL-ICD-Loader" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-ICD-Loader" revision="9ef8b1f3d66a491335863f490c07d0f8d9d1ac9b" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/Vulkan-Headers" path="third_party/Vulkan-Headers/src" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Headers" revision="c7ee01bfac7178848c45a12c9af141c3c3ed4b4c" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
@@ -167,7 +167,7 @@
     <project name="vendor/amlogic/drivers" path="vendor/amlogic/drivers" remote="sso://partner-fuchsia/vendor/amlogic/drivers" revision="b82de9c6351b89ef34ed547f158d7af904f32b4e" gerrithost="https://partner-fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="amlogic,google,projects,smart,smart-integration_71b323a395619e11"/>
     <project name="vendor/arm/camera" path="vendor/arm/camera" remote="sso://turquoise-internal/vendor/arm/camera" revision="b4f51dd56ffa4706c9da1834fa10f8ffe7de0383" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google,smart,smart-integration_71b323a395619e11"/>
     <project name="smart" path="vendor/google-smart" remote="sso://turquoise-internal/smart" revision="9751d2684b38d11da9830c5c89eb9bea6f911e82" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="smart,smart-integration_71b323a395619e11"/>
-    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="6b210926c19d2be7d6f9298802bb9293a659d829" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google,smart,smart-integration_71b323a395619e11"/>
+    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="52f694ba82ff93e99d4c4ced1ee9bb0679673859" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google,smart,smart-integration_71b323a395619e11"/>
     <project name="android/platform/external/uwb" path="vendor/google/connectivity/uwb/third_party/android/platform/external/uwb/src" remote="sso://turquoise-internal/third_party/googleplex-android/platform/external/uwb" revision="ab8022ab18fc741dee6e46886421e2f28278deea" gerrithost="https://googleplex-android-review.googlesource.com" githooks="integration/git-hooks" git_attributes="connectivity,google,smart,smart-integration_71b323a395619e11"/>
     <project name="vendor/google/eval" path="vendor/google/eval" remote="sso://turquoise-internal/fx-eval" revision="b3be451d0ada00097ca7d9d8c4859334309b6ad0" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="eval,google,smart,smart-integration_71b323a395619e11"/>
     <project name="third_party/github.com/axboe/liburing" path="vendor/google/starnix/third_party/github.com/axboe/liburing/src" remote="sso://turquoise-internal/third_party/github.com/axboe/liburing" revision="e755a5f8614add34f44f0e89d1d1c1b2d21f1384" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google,smart,smart-integration_71b323a395619e11,starnix_projects"/>
@@ -195,13 +195,13 @@
     <package name="chrome_internal/fuchsia_nest_sd/web_engine/arm64/debug-symbols" version="version:150.0.7862.0" path="prebuilt/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
       <instance name="chrome_internal/fuchsia_nest_sd/web_engine/arm64/debug-symbols" id="m-ba5KLymwbOt8f3Fbq6mAWNxqNUDEBOKbNRJGhIboIC"></instance>
     </package>
-    <package name="chromecast/fuchsia/debug-symbols-arm64" version="version:540057" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
+    <package name="chromecast/fuchsia/debug-symbols-arm64" version="version:540024" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
       <instance name="chromecast/fuchsia/debug-symbols-arm64" id="7AWNZp_fznAKjE2MKIl_wu91zUePjT0QLWCVrmT4Hy4C"></instance>
     </package>
-    <package name="chromecast/fuchsia/debug-symbols-eng-arm64" version="version:540057" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
+    <package name="chromecast/fuchsia/debug-symbols-eng-arm64" version="version:540024" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
       <instance name="chromecast/fuchsia/debug-symbols-eng-arm64" id="dE5SFGK1Lm8S-sC-AVHgicLwcrRW0hfFr8r9ur1wpzkC"></instance>
     </package>
-    <package name="chromecast/fuchsia/debug-symbols-userdebug-arm64" version="version:540057" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
+    <package name="chromecast/fuchsia/debug-symbols-userdebug-arm64" version="version:540024" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
       <instance name="chromecast/fuchsia/debug-symbols-userdebug-arm64" id="vcjTQyOHf4xUr9BaF3ReX0ubwxxi6KSZMyFKYCqssZIC"></instance>
     </package>
     <package name="chromium/fuchsia/web_engine/arm64/debug-symbols" version="version:149.0.7826.0" path="prebuilt/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
@@ -297,11 +297,11 @@
     <package name="turquoise_internal/libinteraction/perception/elaine/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-elaine">
       <instance name="turquoise_internal/libinteraction/perception/elaine/debug-symbols-arm64" id="8qpGTGveCJkBn-XyVoWI8-W0SwMQr5v-Hd8H5Rghlm4C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle-ml-framework">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" id="u3GIu6TRJZuCEVF2W9ACwBf_Pbg_mTXiU0-TZMOGbLsC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL4_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle-ml-framework">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" id="w690CqKww47NR6XsXYmSMVKHed_uwV0dyAKsRsGo4UYC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" id="D1vELqg3-kWq6qWpxMkhU1bs1Vh42IlWL-bj0HWKk0cC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL4_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" id="cPcg1zV7TBrIPgoEWoFJD2ZDVfroHfnPBuI9QcEV490C"></instance>
     </package>
     <package name="turquoise_internal/libinteraction/perception/newman/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-newman">
       <instance name="turquoise_internal/libinteraction/perception/newman/debug-symbols-arm64" id="HqTQ_B50RnZfrStbNBNwCR-sVqP0WrZm7CUEJgx3oasC"></instance>
@@ -321,17 +321,17 @@
     <package name="turquoise_internal/ml/openvx_nn_server/openvx_nn_server-debug-symbols-arm64" version="version:F28.202506271628" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-openvx_nn_server">
       <instance name="turquoise_internal/ml/openvx_nn_server/openvx_nn_server-debug-symbols-arm64" id="1A8tmHy75I_4n41V_5NmHbW4LQ43BIcVIjnqMjvyqoQC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" id="9l7Dc2zJXacye6Ybwtapu3fXDC5iIDHlaPUAdJDxDJIC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" id="UmU_zcmh1-fhinuH9MWHk5gkJEZ9m5aXfoJB8v9kgRgC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" id="59t4RjpAppl4nyX8KVL5QmeZOVLj8mavVlTX-mlcHmcC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" id="QcPINHqQ7QiBru10Y-DBkOwnY__nUCbvQs9O8QDBLo8C"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" id="oTOQIJRr48QJpqrW3a2sReDVMZGm4fcPOgd7WG_BA2IC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" id="lP_HVuKCy9tNLEGgCEYFjXmaTXo-bJSN2qxc_9ALSv0C"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" id="HqdvgPRLYVPABJapw5CQwmWs3xCHP4kjTb4VsypS02QC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" id="7Bk7a8Kj7dDl711ZyCsLJDbGxKt55pBc1XoHFofq8aEC"></instance>
     </package>
     <package name="turquoise_internal/nest_thread_controller_agent/release/debug-symbols-arm64" version="g3-revision:nest_thread_controller_agent_20260605_0100_B01" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-nest-thread-controller-agent">
       <instance name="turquoise_internal/nest_thread_controller_agent/release/debug-symbols-arm64" id="kP4kgOOhBx2GugzgmT5Lb6N05yaWeT3nwnFoRkFuqBoC"></instance>
@@ -485,29 +485,29 @@
     <package name="turquoise_internal/ml/tests_cfv2/ml_fct-arm64" version="version:1.49_202209291931" path="prebuilt/ml/tests_cfv2/arm64" internal="true">
       <instance name="turquoise_internal/ml/tests_cfv2/ml_fct-arm64" id="DM_MuqBAc7pJ2osXaXGiUGVXDGZ3Ggdh7WmPemvMGGAC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3/elaine/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/arm64" id="Ld-oIZl0QCTT_FOCpcXvA9OmAQdwWabzFFfmFIvK_6QC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3/elaine/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/arm64" id="KTHIjkLCNCOCa4gFGBH4xqhNgzw3xiGRFm4_bGntBcYC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/x64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3/elaine/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/x64" id="vSv01847clUjDQ1Fx8jOwTAL0XspKh6n7ds8y2cdTvsC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/x64" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3/elaine/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/x64" id="F4ZU2fQ8OonEp0k6xuIxMdB-QcCxLj3-B6FQPvL-nhwC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3/newman/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/arm64" id="8jCwitFfJE8_xG6WY3Db4iOaF8AOXiXl-DDU9Rf9RFEC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3/newman/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/arm64" id="_SemCho2iuZRE1OD65mgVpTnuykSchGDNv--Eac89kEC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/x64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3/newman/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/x64" id="IWf-WsRP_sW5tQE4vDQ9SLT8ls9so1_JDOwI1mP7c2wC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/x64" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3/newman/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/x64" id="OwkNIsS0GKab_ZjG5gCSpjM4IXZ8ZyIsuGafEywV5xkC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3_eng/elaine/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/arm64/eng" id="ox5SsVoq10315vZ0vDM9335QTczrWNnv4S-9hL33PTQC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3_eng/elaine/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/arm64/eng" id="YIPHBC8e7sge67s09rcAOFhUWN4uJY-KUdk6S_AEUhcC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/x64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3_eng/elaine/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/x64/eng" id="nbalkHBavqvS-ij0IConuEGDklqFx6IpdYWNFaQJRBsC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/x64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3_eng/elaine/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/x64/eng" id="utGprdGNizSf2WMMtOcRS3c0jG9Q9kT6HZVumNF_cCYC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3_eng/newman/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/arm64/eng" id="-FbykKcNzKWHi3lIKajZBnBy8bXSyKKtbb1Hur8QFAQC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/arm64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3_eng/newman/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/arm64/eng" id="Z0DuYtURP7TPzgfb2WS8vYuVGXG859Ye2phSfPRVCUYC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/x64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/ml_framework_google3_eng/newman/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/x64/eng" id="ccEBDGt1M6SKxnx310vZRr90vPeglYbHgbbXw1rmRuoC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/x64/eng" version="g3-revision:turquoise_libinteraction_20260607_RL1_RC0" path="prebuilt/ml_framework_google3_eng/newman/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/x64/eng" id="m08PWsvBZM1ZV3m9CQZpnXE1P2p9FR3AYI9LfWLjhuEC"></instance>
     </package>
     <package name="turquoise_internal/nest_thread_controller_agent/release/arm64" version="g3-revision:nest_thread_controller_agent_20260605_0100_B01" path="prebuilt/nest_thread_controller_agent/release/arm64" internal="true">
       <instance name="turquoise_internal/nest_thread_controller_agent/release/arm64" id="8ub212BtPnEWkQE571AtHFXvyp5pOE3zkZ_ul74TxDIC"></instance>
@@ -524,17 +524,17 @@
     <package name="turquoise_internal/libinteraction/perception/elaine/x64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/perception/perception_elaine/x64" internal="true">
       <instance name="turquoise_internal/libinteraction/perception/elaine/x64" id="5n9v4J8teBmcUCFtLzK4RVIXPmLBcVUsYjbZX22nNFMC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/perception/perception_estelle/arm64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/arm64" id="xm8AIAZFI9l3h5XExd6P6J-IxzkO3g3_dRt1jQlmmCoC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL4_RC0" path="prebuilt/perception/perception_estelle/arm64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/arm64" id="tSVolzVQLp5lyaGI7AuYWRFw_BgYIH7fzfM4s00zDdIC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/perception/perception_estelle/ml_framework/arm64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" id="yvh2OORWxR1hrCUUYFcJX33l5gdvZ1OZP-jbG0w956YC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" version="g3-revision:turquoise_libinteraction_20260607_RL4_RC0" path="prebuilt/perception/perception_estelle/ml_framework/arm64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" id="TpbCJxNYJ6zi3ScqX24rrFvOpN2YVPRG-ny2qNxGPv4C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/perception/perception_estelle/ml_framework/x64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" id="tyPWJ97OX8LWCDWRKT0_H32aAUTNlbmupUNM7XFtDs8C"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" version="g3-revision:turquoise_libinteraction_20260607_RL4_RC0" path="prebuilt/perception/perception_estelle/ml_framework/x64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" id="QXKjx1vm_tL_wSFqpTdK1mTMH7AwRbN0T1AWTmb7kH0C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/x64" version="g3-revision:turquoise_libinteraction_20260607_RL6_RC0" path="prebuilt/perception/perception_estelle/x64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/x64" id="AGWatddnv0TZNJYEhn3l9qXQGytjY_Dll_z9A1Hg-REC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/x64" version="g3-revision:turquoise_libinteraction_20260607_RL4_RC0" path="prebuilt/perception/perception_estelle/x64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/x64" id="jzH7bfGxGgor8I4-e-pNHQrzYVjm-6CVoEV_J7clTKAC"></instance>
     </package>
     <package name="turquoise_internal/libinteraction/perception/newman/arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/perception/perception_newman/arm64" internal="true">
       <instance name="turquoise_internal/libinteraction/perception/newman/arm64" id="xRiXEuhGT_h6LcYtYRdqBRv8lxNASRbHUwY6qw331scC"></instance>
@@ -690,47 +690,47 @@
     <package name="chrome_internal/fuchsia/nest_sd/perf/web_engine/arm64/cast_runner" version="version:150.0.7862.0" path="prebuilt/third_party/cast_runner_nest_sd_perf/arch/arm64">
       <instance name="chrome_internal/fuchsia/nest_sd/perf/web_engine/arm64/cast_runner" id="tlhvNFMxICkuN2GhH0K2b3G9Ur1FGWkedStntLx2yugC"></instance>
     </package>
-    <package name="chromecast/fuchsia/ambienttempagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/ambienttempagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/ambienttempagent-arm64" id="NCuT3duDnR70AadrePZjFYpK9W-zvmxZjUh5q69_x3EC"></instance>
+    <package name="chromecast/fuchsia/ambienttempagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/ambienttempagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/ambienttempagent-arm64" id="NFQt78GC8iyaSFMNhXeHAkulJm7Z7JHjp-dU-PyROaIC"></instance>
     </package>
-    <package name="chromecast/fuchsia/ambienttempagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/ambienttempagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/ambienttempagent-amd64" id="Wn1imLmLQoOX7betBxoC_3F56Qj8w3RawCNrP4MP-sAC"></instance>
+    <package name="chromecast/fuchsia/ambienttempagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/ambienttempagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/ambienttempagent-amd64" id="8ZB9NcubbBvYmNWPasdBvmZDbGVAPRa8ePLT87WrmcAC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/castagent-arm64" id="j2RsmUZ-09zlUVyWCfnaWacoFLZJ1GAtHYB_SydXkrIC"></instance>
+    <package name="chromecast/fuchsia/castagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/castagent-arm64" id="XmyqXzBdFrok0154ExdOqP9dniHC2oXzspqG3STZyRoC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/castagent-amd64" id="ytLQlacB2Vva-Kqca3kPevNZeeQe6QSvzfEHuXFaNtsC"></instance>
+    <package name="chromecast/fuchsia/castagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/castagent-amd64" id="bQl026WevJFZhXVDIJ1qTMcJbDFnzi5ZqzPTGsxJKmoC"></instance>
     </package>
-    <package name="chromecast/fuchsia/auroraagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/auroraagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/auroraagent-arm64" id="fiQpw1QMVOFU6YhLTucdeD3-brlgw88lXHq_s588TsoC"></instance>
+    <package name="chromecast/fuchsia/auroraagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/auroraagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/auroraagent-arm64" id="w548-iOfEUkzUMBPfGfV9JkdOwmNc_zMCKdf3WwTQCUC"></instance>
     </package>
-    <package name="chromecast/fuchsia/auroraagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/auroraagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/auroraagent-amd64" id="QOZOOlvPCPWyFle1DAIsdd4Az7Hjk6W5RQGnON-DD80C"></instance>
+    <package name="chromecast/fuchsia/auroraagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/auroraagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/auroraagent-amd64" id="UrL1nlbjNYzQWFZCgGYBI7G5BoHw7Kk-U_9N3dcRO_QC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castaudioeffects-arm64" version="version:540057" path="prebuilt/third_party/chromecast/castaudioeffects/arch/arm64" internal="true">
+    <package name="chromecast/fuchsia/castaudioeffects-arm64" version="version:540024" path="prebuilt/third_party/chromecast/castaudioeffects/arch/arm64" internal="true">
       <instance name="chromecast/fuchsia/castaudioeffects-arm64" id="oY9lPUdTAFGZWpwY4DOa4JihpglOGQOs9QTgskAS-mUC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castaudioeffects-amd64" version="version:540057" path="prebuilt/third_party/chromecast/castaudioeffects/arch/x64" internal="true">
+    <package name="chromecast/fuchsia/castaudioeffects-amd64" version="version:540024" path="prebuilt/third_party/chromecast/castaudioeffects/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/castaudioeffects-amd64" id="2SlSqyFl1B_U5fJnP4xwBMR-J393v65w662LToDE7b4C"></instance>
     </package>
-    <package name="chromecast/fuchsia/colortintservice-arm64" version="version:540057" path="prebuilt/third_party/chromecast/colortintservice/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/colortintservice-arm64" id="kZJvyL7yiXOgQzVFGU2JqjkZ0GaZ4RTVfjr9k99CgoAC"></instance>
+    <package name="chromecast/fuchsia/colortintservice-arm64" version="version:540024" path="prebuilt/third_party/chromecast/colortintservice/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/colortintservice-arm64" id="zUDcKv39LOlBJiwCFI4qT-cUuh3UC0S3KIgT87Y7SEYC"></instance>
     </package>
-    <package name="chromecast/fuchsia/colortintservice-amd64" version="version:540057" path="prebuilt/third_party/chromecast/colortintservice/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/colortintservice-amd64" id="U6k_eRqnSY7ainsvFUwsscixOhBC30VvhiHxLuY8I70C"></instance>
+    <package name="chromecast/fuchsia/colortintservice-amd64" version="version:540024" path="prebuilt/third_party/chromecast/colortintservice/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/colortintservice-amd64" id="yEkBQrXtguttcABxL4riMp761uYtKmtvKK6KPB7KeuIC"></instance>
     </package>
-    <package name="chromecast/fuchsia/commsagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/commsagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/commsagent-arm64" id="peykQf9_V9r7yOdL0609DoUwgW3vCW4STj2tpt3XwO0C"></instance>
+    <package name="chromecast/fuchsia/commsagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/commsagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/commsagent-arm64" id="OYztooaIDaDCtQrgtSEuFiY5CvcknyNRVmhj01IIWxkC"></instance>
     </package>
-    <package name="chromecast/fuchsia/commsagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/commsagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/commsagent-amd64" id="dxxeQmpPwLtcAHtXU3fNjoKGvyjGDzQbb-Pv3jyhplAC"></instance>
+    <package name="chromecast/fuchsia/commsagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/commsagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/commsagent-amd64" id="lbpMAkmdoUpug8YFNvZQIB5pwZzGYnfSBPhcSAhFnawC"></instance>
     </package>
-    <package name="chromecast/fuchsia/conciergeagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/conciergeagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/conciergeagent-arm64" id="wNexVMSPdWySduVh7ao6oNPkC4Tt3tDFmG-z6TN7gVEC"></instance>
+    <package name="chromecast/fuchsia/conciergeagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/conciergeagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/conciergeagent-arm64" id="2PUdUsAannMscBQ3GCgIFwSHehrKF6CX1goPGvc9rv0C"></instance>
     </package>
-    <package name="chromecast/fuchsia/conciergeagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/conciergeagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/conciergeagent-amd64" id="N3QVNbPEbaPqBidsF4YfQvdVRjfSBNlBH66o3rWVEG4C"></instance>
+    <package name="chromecast/fuchsia/conciergeagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/conciergeagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/conciergeagent-amd64" id="uwHDEHDDD2_vbzHaBSWCxwnvhyDNEqv2FvlK1nFgjMgC"></instance>
     </package>
     <package name="chromecast/fuchsia/datacollection-arm64" version="version:468758" path="prebuilt/third_party/chromecast/datacollection/arch/arm64" internal="true">
       <instance name="chromecast/fuchsia/datacollection-arm64" id="2WyULEvhvNV6KByB5OtQb_4jWnlH9bxnr0zTcRHHyPMC"></instance>
@@ -738,92 +738,92 @@
     <package name="chromecast/fuchsia/datacollection-amd64" version="version:468758" path="prebuilt/third_party/chromecast/datacollection/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/datacollection-amd64" id="9i9GzIKYAYppdhTqHXbBH_9rAoNqcswFXwaOGg4tvTMC"></instance>
     </package>
-    <package name="chromecast/fuchsia/fuchsiaselinaagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/fuchsiaselinaagent/arch/arm64" internal="true">
+    <package name="chromecast/fuchsia/fuchsiaselinaagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/fuchsiaselinaagent/arch/arm64" internal="true">
       <instance name="chromecast/fuchsia/fuchsiaselinaagent-arm64" id="aTEpY6XGnkIfMnPI1ak-83uKeUt3LnKtPNjFOgtpb4YC"></instance>
     </package>
-    <package name="chromecast/fuchsia/fuchsiaselinaagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/fuchsiaselinaagent/arch/x64" internal="true">
+    <package name="chromecast/fuchsia/fuchsiaselinaagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/fuchsiaselinaagent/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/fuchsiaselinaagent-amd64" id="v_0axzF-VdOtajtlBD_w-QlMV9Au2UPSazRolOnECuoC"></instance>
     </package>
-    <package name="chromecast/fuchsia/nestpolicyagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/nestpolicyagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/nestpolicyagent-arm64" id="KupotUbGbOOn_2nvmHdhrrdqBF6AU7ASHXvcjjxIA8AC"></instance>
+    <package name="chromecast/fuchsia/nestpolicyagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/nestpolicyagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/nestpolicyagent-arm64" id="xkgZFEp09wZrG_m2fdLObsR_6gC2x8TPMiellhxEiYMC"></instance>
     </package>
-    <package name="chromecast/fuchsia/nestpolicyagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/nestpolicyagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/nestpolicyagent-amd64" id="RV7fVIYQ5Dnq_XJ2yDGOeBAvo54MFLVUrDmmgGsR7ucC"></instance>
+    <package name="chromecast/fuchsia/nestpolicyagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/nestpolicyagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/nestpolicyagent-amd64" id="dAtHy05rSl0P9qLJHNsjYwaI-5kvi3PnMf-v0e2iXHoC"></instance>
     </package>
-    <package name="chromecast/fuchsia/prefcontrolagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/prefcontrolagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/prefcontrolagent-arm64" id="9zHsMUpmRT0W30mEfP300mOtJdfysPVBZqUTMKPhJbEC"></instance>
+    <package name="chromecast/fuchsia/prefcontrolagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/prefcontrolagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/prefcontrolagent-arm64" id="lfK1t-ab-w62yW0drvZ-sQHOJhiA0nPfiwKpf4k1Xm4C"></instance>
     </package>
-    <package name="chromecast/fuchsia/prefcontrolagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/prefcontrolagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/prefcontrolagent-amd64" id="GfCpXJPVFsel7f4sWuPLR1kPuebr7hPwsk8rWN04xFIC"></instance>
+    <package name="chromecast/fuchsia/prefcontrolagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/prefcontrolagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/prefcontrolagent-amd64" id="ayeenc9Ft8teWB_j7IeBqVqV1yxIDc33hFqkdLkIT9AC"></instance>
     </package>
-    <package name="chromecast/fuchsia/presenceagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/presenceagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/presenceagent-arm64" id="s3JiX-xdYWa2fCnE11hl3g8z0Q-mlczLYfyx3W55EI4C"></instance>
+    <package name="chromecast/fuchsia/presenceagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/presenceagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/presenceagent-arm64" id="NukLk2MML0wZLchCTs5VU-l2r28ylOYUMD7CvbrVacQC"></instance>
     </package>
-    <package name="chromecast/fuchsia/presenceagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/presenceagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/presenceagent-amd64" id="aZfhzzC44tmt18fGa7_i83fem9zC02vFKWmt-5rhPbkC"></instance>
+    <package name="chromecast/fuchsia/presenceagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/presenceagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/presenceagent-amd64" id="y2Sl99AMghoISlUu_skBbKDk-l2iTIsoI-pcxnzC1AYC"></instance>
     </package>
-    <package name="chromecast/fuchsia/reconnectagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/reconnectagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/reconnectagent-arm64" id="U0PZ5_S7_SR8ir9F3h7IwO1-02MwsGB3y5RJxe7uXNgC"></instance>
+    <package name="chromecast/fuchsia/reconnectagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/reconnectagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/reconnectagent-arm64" id="-jlccrzP3G9OQaXJGDcjCApdHPmxvZEZlnk2rz8p3PMC"></instance>
     </package>
-    <package name="chromecast/fuchsia/reconnectagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/reconnectagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/reconnectagent-amd64" id="nnUjmybU0EmbQenjBL_ddpj9K3oVGkmsaYqD4_wxss4C"></instance>
+    <package name="chromecast/fuchsia/reconnectagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/reconnectagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/reconnectagent-amd64" id="vwfoJJQnxO9Cybd6JtRJdJxAoeVrIt-VXJ3Vi0I6MwkC"></instance>
     </package>
     <package name="chromecast/fuchsia/sounds" version="version:5" path="prebuilt/third_party/chromecast/sounds" internal="true">
       <instance name="chromecast/fuchsia/sounds" id="znM2My5IrwUqhG7ZkCtz4M5gVJ9VJz2uCpjKzvDE6SYC"></instance>
     </package>
-    <package name="chromecast/fuchsia/stellaragent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/stellaragent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/stellaragent-arm64" id="n6hwnQfaXm38F5QBQx6nTCoXQzEKZj3DmkNgNNxrqrEC"></instance>
+    <package name="chromecast/fuchsia/stellaragent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/stellaragent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/stellaragent-arm64" id="ikJrF6Vw3LtvAQjWtsIxfdFjtnFLwne6M9TUEwOqGQoC"></instance>
     </package>
-    <package name="chromecast/fuchsia/stellaragent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/stellaragent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/stellaragent-amd64" id="w7l82iGLzL5ylT17zvTDrPcSsCU2QlvweLUfBcpW53kC"></instance>
+    <package name="chromecast/fuchsia/stellaragent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/stellaragent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/stellaragent-amd64" id="BtGonWn4IcXmEPR8TBKTp3D5m2Ejj5FY8s-0igAbGuQC"></instance>
     </package>
-    <package name="chromecast/fuchsia/ultrasoundagent-arm64" version="version:540057" path="prebuilt/third_party/chromecast/ultrasoundagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/ultrasoundagent-arm64" id="bEPqzoyO1IE3nQ8VvMWHWX3AsZCkgF6x8tyGDpLECfwC"></instance>
+    <package name="chromecast/fuchsia/ultrasoundagent-arm64" version="version:540024" path="prebuilt/third_party/chromecast/ultrasoundagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/ultrasoundagent-arm64" id="WYyT60xHybB399l1evSoLnV3fPVvQ2GTspuYnRdS3xcC"></instance>
     </package>
-    <package name="chromecast/fuchsia/ultrasoundagent-amd64" version="version:540057" path="prebuilt/third_party/chromecast/ultrasoundagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/ultrasoundagent-amd64" id="wP02jY0rU9oe69emh0aqMo8O8Hikr5ymdCXthWF-gSUC"></instance>
+    <package name="chromecast/fuchsia/ultrasoundagent-amd64" version="version:540024" path="prebuilt/third_party/chromecast/ultrasoundagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/ultrasoundagent-amd64" id="Mm4CCAzsIZrfiFUihRWEnokMtW_s0fJGWM9FqqAQS6kC"></instance>
     </package>
-    <package name="chromecast/fuchsia/ambienttempagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/ambienttempagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/ambienttempagent-eng-arm64" id="rkaoQjxK0DxL0qzJLIJ9HPgRDU_q5Zr8kQdHViDqWqgC"></instance>
+    <package name="chromecast/fuchsia/ambienttempagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/ambienttempagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/ambienttempagent-eng-arm64" id="P9mpcyBYmDhPM9xklVsof2ONTJeeAdoUIHTZEbKnWYIC"></instance>
     </package>
-    <package name="chromecast/fuchsia/ambienttempagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/ambienttempagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/ambienttempagent-eng-amd64" id="iyZj4SHUCIkwWVab2kG970DYmgJjAztnLgdPwAxGrP8C"></instance>
+    <package name="chromecast/fuchsia/ambienttempagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/ambienttempagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/ambienttempagent-eng-amd64" id="-ya5Xzrx36y6irgvIpQKv5pTJVOoyQsnBxcHMOnfEewC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/castagent-eng-arm64" id="Zs-_F3b4xK0qrYxZRdV5-5AT0whMGXGzY3lCHUv4PA4C"></instance>
+    <package name="chromecast/fuchsia/castagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/castagent-eng-arm64" id="BfbsClOXgtPwtV7raoCyQIDpHRvvkISHQfLk4MUxybUC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/castagent-eng-amd64" id="tfswbxUq3AeMZG-YkCqQG8ZAIHsRMdxQyLvOdjcDqtMC"></instance>
+    <package name="chromecast/fuchsia/castagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/castagent-eng-amd64" id="KR53kNo7I-k4WirScrg5mLkMgcYT3J2JX9S3HAThuvsC"></instance>
     </package>
-    <package name="chromecast/fuchsia/auroraagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/auroraagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/auroraagent-eng-arm64" id="4Td8sf8Q74O8DmFFj3NrOMITsOet2Wq02TDCF-j7w6oC"></instance>
+    <package name="chromecast/fuchsia/auroraagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/auroraagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/auroraagent-eng-arm64" id="gBpBpweWXELAFDoVclTu2olj37yOco5SIWGoOnMvrMgC"></instance>
     </package>
-    <package name="chromecast/fuchsia/auroraagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/auroraagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/auroraagent-eng-amd64" id="GsdYmr42VTif6AB1g8NFtXDGCHJ1Kom1ArnYyEdkYJMC"></instance>
+    <package name="chromecast/fuchsia/auroraagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/auroraagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/auroraagent-eng-amd64" id="tLr0Vpe2fQzxy8WM01NfpNExfwdutc7jaCXd3hUC-xAC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castaudioeffects-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/castaudioeffects/arch/arm64" internal="true">
+    <package name="chromecast/fuchsia/castaudioeffects-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/castaudioeffects/arch/arm64" internal="true">
       <instance name="chromecast/fuchsia/castaudioeffects-eng-arm64" id="lzppEa3tpVSYXMQtvW6eoX-XNe5Tew6Pgf5kl36mcmIC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castaudioeffects-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/castaudioeffects/arch/x64" internal="true">
+    <package name="chromecast/fuchsia/castaudioeffects-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/castaudioeffects/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/castaudioeffects-eng-amd64" id="mBf6SSHExjlgmfj7QVRVOhj06u5VrJmYChfYzsJruvEC"></instance>
     </package>
-    <package name="chromecast/fuchsia/colortintservice-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/colortintservice/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/colortintservice-eng-arm64" id="VMB8Z1LSYrdh9EDagdd76UTkXnHk_90_OYojFvt5hugC"></instance>
+    <package name="chromecast/fuchsia/colortintservice-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/colortintservice/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/colortintservice-eng-arm64" id="0Zps3dQI7GLWdm-8lVw5gfJYKg4JyKj7rnYK8_9zacAC"></instance>
     </package>
-    <package name="chromecast/fuchsia/colortintservice-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/colortintservice/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/colortintservice-eng-amd64" id="hOqKZ4TvsA3QroSfQnUyMX92VGS9LFb2l6xSBt7zyRwC"></instance>
+    <package name="chromecast/fuchsia/colortintservice-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/colortintservice/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/colortintservice-eng-amd64" id="K7SzMrvWNf24YggqqKua2USky9AulDyTuHaCHoM-Ns8C"></instance>
     </package>
-    <package name="chromecast/fuchsia/commsagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/commsagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/commsagent-eng-arm64" id="0x1XSw8qenFRb-NjQVm-BXouyR0DHy_2BQRAK_gZI50C"></instance>
+    <package name="chromecast/fuchsia/commsagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/commsagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/commsagent-eng-arm64" id="o1Y5wTGKyvgA9DivSDk03R0WPYnwbJSP8Vh7405Drn0C"></instance>
     </package>
-    <package name="chromecast/fuchsia/commsagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/commsagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/commsagent-eng-amd64" id="R-4VVLKCANiDky643MWoS9CKiOUab6yd6MZKFP8PxXAC"></instance>
+    <package name="chromecast/fuchsia/commsagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/commsagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/commsagent-eng-amd64" id="tC5npKJZvFykjfZX06jn7fqrYjUQXKddeARzzw57Hf0C"></instance>
     </package>
-    <package name="chromecast/fuchsia/conciergeagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/conciergeagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/conciergeagent-eng-arm64" id="BvjQrBqZ6_C0YK56KhZ3mcVJacFW3jUGw9UYz3N-AbkC"></instance>
+    <package name="chromecast/fuchsia/conciergeagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/conciergeagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/conciergeagent-eng-arm64" id="GyM7POS21foUDx8jEDRx7lDwd7_cOiAdV51UX59uCzsC"></instance>
     </package>
-    <package name="chromecast/fuchsia/conciergeagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/conciergeagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/conciergeagent-eng-amd64" id="UdZ3qrP6hHLZD-FauURlJkY2GdDlCZ6QQFPLO3dW7qgC"></instance>
+    <package name="chromecast/fuchsia/conciergeagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/conciergeagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/conciergeagent-eng-amd64" id="S6wL2j2NNp9XVH6KNIyz-JuyWX1vMiHpwvJLxjUP5UcC"></instance>
     </package>
     <package name="chromecast/fuchsia/datacollection-eng-arm64" version="version:468758" path="prebuilt/third_party/chromecast_eng/datacollection/arch/arm64" internal="true">
       <instance name="chromecast/fuchsia/datacollection-eng-arm64" id="zJ-7iJGADfasM9_ANoS7KIR4XczUrWSLBx1lJhhJKSoC"></instance>
@@ -831,53 +831,53 @@
     <package name="chromecast/fuchsia/datacollection-eng-amd64" version="version:468758" path="prebuilt/third_party/chromecast_eng/datacollection/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/datacollection-eng-amd64" id="gUYAL_h4H6Mvd3oYbuKbxvQ78_D-9FLENUphqtc1WLwC"></instance>
     </package>
-    <package name="chromecast/fuchsia/fuchsiaselinaagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/fuchsiaselinaagent/arch/arm64" internal="true">
+    <package name="chromecast/fuchsia/fuchsiaselinaagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/fuchsiaselinaagent/arch/arm64" internal="true">
       <instance name="chromecast/fuchsia/fuchsiaselinaagent-eng-arm64" id="55EQNCt3W6fk4xpWbMIPJgzTLaHfs-FMAcZZHpdB654C"></instance>
     </package>
-    <package name="chromecast/fuchsia/fuchsiaselinaagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/fuchsiaselinaagent/arch/x64" internal="true">
+    <package name="chromecast/fuchsia/fuchsiaselinaagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/fuchsiaselinaagent/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/fuchsiaselinaagent-eng-amd64" id="7WROyHprHAif9m87s1J4ZAVw07WZa5DDK_ofCI7yh44C"></instance>
     </package>
-    <package name="chromecast/fuchsia/nestpolicyagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/nestpolicyagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/nestpolicyagent-eng-arm64" id="0Doxt7RKWL6OBPlMmmL-OBZ-slPrEsrRPnx9uu6b2F8C"></instance>
+    <package name="chromecast/fuchsia/nestpolicyagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/nestpolicyagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/nestpolicyagent-eng-arm64" id="GHtjydAPxGJ6MIcjCr0UcbZfr9LIfavUg_aUNPkPvRYC"></instance>
     </package>
-    <package name="chromecast/fuchsia/nestpolicyagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/nestpolicyagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/nestpolicyagent-eng-amd64" id="hhk03vaFUYrR_TSKY244jER9-bn2utzaeXloD2N3YvkC"></instance>
+    <package name="chromecast/fuchsia/nestpolicyagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/nestpolicyagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/nestpolicyagent-eng-amd64" id="S-lCo5-QOJ7S0NDqfsK1TKSITQEmfPbMfVHohWICUpsC"></instance>
     </package>
-    <package name="chromecast/fuchsia/prefcontrolagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/prefcontrolagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/prefcontrolagent-eng-arm64" id="v7zzei35xJWbAu1g8uhzVgCKotwYgvdHQugTFLiXV5wC"></instance>
+    <package name="chromecast/fuchsia/prefcontrolagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/prefcontrolagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/prefcontrolagent-eng-arm64" id="i33KMHr50-uSqTL_Qs104y7BSv8NV2_yfT2VBN69ZbsC"></instance>
     </package>
-    <package name="chromecast/fuchsia/prefcontrolagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/prefcontrolagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/prefcontrolagent-eng-amd64" id="7U9a5F25PlPioGNbh5EUmL-qgqn2AXgpqR3fx8BwYxQC"></instance>
+    <package name="chromecast/fuchsia/prefcontrolagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/prefcontrolagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/prefcontrolagent-eng-amd64" id="W97qW9moZ0FZ2ogv9iWtw-Dwig3XEFRT8rSF9dzqyVgC"></instance>
     </package>
-    <package name="chromecast/fuchsia/presenceagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/presenceagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/presenceagent-eng-arm64" id="PjKXZ-5vKHrj5LI2vBqOmPYmJApBW6y1NOFe0cvvl2EC"></instance>
+    <package name="chromecast/fuchsia/presenceagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/presenceagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/presenceagent-eng-arm64" id="1hb2way00951MY8vYbutTUFLPZYSBx87fdWtm2Nn_TIC"></instance>
     </package>
-    <package name="chromecast/fuchsia/presenceagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/presenceagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/presenceagent-eng-amd64" id="WhmnTWlULCoRzkpUjl2XC3liKpfvcye8hPLZ9xMGEDgC"></instance>
+    <package name="chromecast/fuchsia/presenceagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/presenceagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/presenceagent-eng-amd64" id="4E_nRwAKjLMsEZBnX4hzcFT0x5GJtqj9I5bBifBq0TcC"></instance>
     </package>
-    <package name="chromecast/fuchsia/reconnectagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/reconnectagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/reconnectagent-eng-arm64" id="tXvNtm5qRbz-VRoEX3ZETv81YUa27wL_EdwEIAN6YSEC"></instance>
+    <package name="chromecast/fuchsia/reconnectagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/reconnectagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/reconnectagent-eng-arm64" id="tZraaaGS_4-7wgwOCa8IfN5Az6fb9YiL342eyFOo4zQC"></instance>
     </package>
-    <package name="chromecast/fuchsia/reconnectagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/reconnectagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/reconnectagent-eng-amd64" id="sCq-hu4ezSjNB9h2S49URtE0CUJkqEOw9uurGbDNqWUC"></instance>
+    <package name="chromecast/fuchsia/reconnectagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/reconnectagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/reconnectagent-eng-amd64" id="jFTDhCzuEJhP3T59zyWd-ugsuEjnMSaLEpipdiLyoqQC"></instance>
     </package>
-    <package name="chromecast/fuchsia/stellaragent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/stellaragent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/stellaragent-eng-arm64" id="7KoKUIrze3pUsS4pbdL1eOa5o-ba-Et9tnfwfDTuXXkC"></instance>
+    <package name="chromecast/fuchsia/stellaragent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/stellaragent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/stellaragent-eng-arm64" id="P3NZdfSF1LKRIrtZJ-6-PwGPGwqbCxLAmI_MF4btJEoC"></instance>
     </package>
-    <package name="chromecast/fuchsia/stellaragent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/stellaragent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/stellaragent-eng-amd64" id="1y4DGO-_zw0XkdGGVXwxAjxn1fFzQKckx1nY1CWRiAoC"></instance>
+    <package name="chromecast/fuchsia/stellaragent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/stellaragent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/stellaragent-eng-amd64" id="97QI4PDup1WpA2A7QQ0afOJLbokjc1xfsLrOqGaviCEC"></instance>
     </package>
-    <package name="chromecast/fuchsia/ultrasoundagent-eng-arm64" version="version:540057" path="prebuilt/third_party/chromecast_eng/ultrasoundagent/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/ultrasoundagent-eng-arm64" id="dREx2LjTKKB0XQm7mXoPB4R4ccCb342xoMk1rb_nTGkC"></instance>
+    <package name="chromecast/fuchsia/ultrasoundagent-eng-arm64" version="version:540024" path="prebuilt/third_party/chromecast_eng/ultrasoundagent/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/ultrasoundagent-eng-arm64" id="r-L-2DG9tOyKfJ7JhRHbxXZILvgY0Cr40fVpRCEs0I4C"></instance>
     </package>
-    <package name="chromecast/fuchsia/ultrasoundagent-eng-amd64" version="version:540057" path="prebuilt/third_party/chromecast_eng/ultrasoundagent/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/ultrasoundagent-eng-amd64" id="hkju1VMPizpHtya9O-9L1fn4WkF5WGy5GAe4FFMesGEC"></instance>
+    <package name="chromecast/fuchsia/ultrasoundagent-eng-amd64" version="version:540024" path="prebuilt/third_party/chromecast_eng/ultrasoundagent/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/ultrasoundagent-eng-amd64" id="hDaGqLFIDQVa9op3-ufTw594Bj9p7fFRFEPkPXWH76QC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castagent-userdebug-arm64" version="version:540057" path="prebuilt/third_party/chromecast_userdebug/arch/arm64" internal="true">
-      <instance name="chromecast/fuchsia/castagent-userdebug-arm64" id="TTSA5Zf_x7I6LIb62IwAd__sn9xIAJmX8DDvwwEShTkC"></instance>
+    <package name="chromecast/fuchsia/castagent-userdebug-arm64" version="version:540024" path="prebuilt/third_party/chromecast_userdebug/arch/arm64" internal="true">
+      <instance name="chromecast/fuchsia/castagent-userdebug-arm64" id="xSKw1vyZhDJaRQjQpLQaLt_XQ4qVndNw31KMf-CNDVgC"></instance>
     </package>
-    <package name="chromecast/fuchsia/castagent-userdebug-amd64" version="version:540057" path="prebuilt/third_party/chromecast_userdebug/arch/x64" internal="true">
-      <instance name="chromecast/fuchsia/castagent-userdebug-amd64" id="VMhGUfHyL2uL2UTFZzQeKja36fydksGH49Us9VxH3Q4C"></instance>
+    <package name="chromecast/fuchsia/castagent-userdebug-amd64" version="version:540024" path="prebuilt/third_party/chromecast_userdebug/arch/x64" internal="true">
+      <instance name="chromecast/fuchsia/castagent-userdebug-amd64" id="CuLhgrheBL-Rf6NDnUy11tQfV6qutG9jVGc3zUZm_tUC"></instance>
     </package>
     <package name="chromium/fuchsia/host_tools/linux/amd64/chromedriver" version="version:149.0.7826.0" path="prebuilt/third_party/chromedriver_latest/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
       <instance name="chromium/fuchsia/host_tools/linux/amd64/chromedriver" id="XpNySgIZGJjqoMMVC8cftejOF7zUyO5xdViTi2l9iDkC"></instance>
@@ -1048,8 +1048,8 @@
     <package name="fuchsia/third_party/openssh-portable/linux-amd64" version="version:2@9.1" path="prebuilt/third_party/openssh-portable/linux-x64">
       <instance name="fuchsia/third_party/openssh-portable/linux-amd64" id="shdUvkWq4PwSHlMJtlf9W3tbxh_rUomHSbhwk6_UoUAC"></instance>
     </package>
-    <package name="turquoise_internal/ospo/licenseclassifier" version="g3-revision:identify_license_fuchsia_20260607_RC00" path="prebuilt/third_party/ospo/licenseclassifier/linux-x64" internal="true">
-      <instance name="turquoise_internal/ospo/licenseclassifier" id="O56csOKmtEuAjBBKtu_s8JHKIwA1IA9yJTRXOQJ4yssC"></instance>
+    <package name="turquoise_internal/ospo/licenseclassifier" version="g3-revision:identify_license_fuchsia_20260606_RC00" path="prebuilt/third_party/ospo/licenseclassifier/linux-x64" internal="true">
+      <instance name="turquoise_internal/ospo/licenseclassifier" id="96NOViauy7abWLGNRGi2jSBnnXL9lLJSA9geu3WGoWMC"></instance>
     </package>
     <package name="perfetto/trace_processor_shell/${platform}" version="git_tag:v56.0" path="prebuilt/third_party/perfetto/trace_processor_shell/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
       <instance name="perfetto/trace_processor_shell/linux-amd64" id="RaE8ii3FQEScZmRc0eItALb_sIcEgH_53ckKLIjW0DwC"></instance>
