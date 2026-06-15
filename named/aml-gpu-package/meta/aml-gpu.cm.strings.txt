@@ -2,7 +2,9 @@ driver
 binary
 driver/aml-gpu.so
 bind
-meta/bind/aml-gpu.bindbcdefault_dispatcher_opts
+meta/bind/aml-gpu.bindbccolocate
+false
+default_dispatcher_opts
 allow_sync_callsallowed_scheduler_roles
 fuchsia.graphics.drivers.aml-gpuservice_connect_validation
 true
@@ -24,7 +26,7 @@ fuchsia.hardware.registers.Service
 fuchsia.hardware.gpu.mali.Service
 /svc/fuchsia.hardware.gpu.mali.Service
 src/graphics/drivers/aml-gpu/meta/aml-gpu.cml
-sdk/lib/driver/platform-device.shard.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
 sdk/lib/syslog/offer.shard.cml
