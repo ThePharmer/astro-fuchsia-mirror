@@ -6,6 +6,12 @@
     "event_code": 1
   },
   {
+    "name": "Graphics",
+    "process": "",
+    "vmo": "magma_create_buffer|Mali .*|Magma.*|ImagePipe2Surface.*|GFXBufferCollection.*|ScenicImageMemory|Display.*|CompactImage.*|GFX Device Memory.*|FlatlandImageMemory.*",
+    "event_code": 2
+  },
+  {
     "name": "BlobfsInactive",
     "process": "/pkg/bin/blobfs|blobfs\\.cm",
     "vmo": "inactive-blob-.*",
@@ -18,32 +24,14 @@
     "event_code": 5
   },
   {
-    "name": "ProtectedPoolUnallocated",
-    "process": "sysmem\\.cm",
-    "vmo": "SysmemProtectedPool",
-    "event_code": 27
-  },
-  {
-    "name": "ContiguousPoolUnallocated",
-    "process": "sysmem\\.cm",
-    "vmo": "SysmemContiguousPool",
-    "event_code": 26
-  },
-  {
     "name": "FlutterApps",
     "process": "io\\.flutter\\..*",
     "vmo": "dart.*",
     "event_code": 28
   },
   {
-    "name": "Graphics",
-    "process": "driver-host-#display|driver-host-#gpu|aml-gpu\\.cm.*|vulkan_loader\\.cm",
-    "vmo": "",
-    "event_code": 2
-  },
-  {
     "name": "Storage",
-    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage",
+    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm",
     "vmo": "",
     "event_code": 72
   },
@@ -79,7 +67,7 @@
   },
   {
     "name": "Audio",
-    "process": "audio_core\\.cm|audio_device_registry\\.cm|soundplayer\\.cm|driver-host-#audio-and-haptics|virtual-audio(-legacy)?-driver\\.cm",
+    "process": "audio_core\\.cm|audio_device_registry\\.cm|soundplayer\\.cm",
     "vmo": "",
     "event_code": 24
   },
@@ -108,6 +96,12 @@
     "event_code": 46
   },
   {
+    "name": "OtherDrivers",
+    "process": "driver_host.*|pwrbtn-monitor\\.cm|aml-rawnand\\.cm.*|aml-gpu\\.cm.*|aml-sdmmc\\.cm.*|aml-usb-phy\\.cm|platform-bus\\.cm.*|aml-uart\\.cm.*|amlogic-display\\.cm|aml-gpio\\.cm.*|aml-meson-power\\.cm.*|xhci.cm\\.*|aml-i2c\\.cm.*|optee\\.cm.*|aml-pwm\\.cm.*|amlogic_video_decoder\\.cm.*|aml-g12-tdm\\.cm.*|tas27xx\\.cm.*|ams-light\\.cm.*|aml-securemem\\.cm.*|aml-g12-pdm\\.cm.*|aml-ram\\.cm.*|aml-thermistor\\.cm.*|aml-canvas\\.cm.*|focaltech\\.cm.*|aml-thermal\\.cm.*|buttons\\.cm.*|aml-light\\.cm.*|ti-lp8556\\.cm.*|aml-g12-tdm-dai\\.cm.*|registers\\.cm.*|aml-pwm-init\\.cm.*|aml_mipicsi\\.cm.*|lowpan-ot-driver\\.cm.*|aml-thermal-s905d2g-legacy\\.cm.*|amlogic_h264_encoder_driver\\.cm.*|focaltech-sherlock\\.cm.*|tas5720\\.cm.*|camera_device\\.cm.*|aml-nna\\.cm.*|gt6853\\.cm.*|ti-ina231\\.cm.*|nelson-brownout-protection\\.cm.*|shtv3\\.cm.*",
+    "vmo": "",
+    "event_code": 48
+  },
+  {
     "name": "A11y",
     "process": "a11y-manager\\.cm",
     "vmo": "",
@@ -115,13 +109,13 @@
   },
   {
     "name": "Bluetooth",
-    "process": "bt-.*|driver-host-#bluetooth",
+    "process": "bt-.*",
     "vmo": "",
     "event_code": 51
   },
   {
     "name": "HCI",
-    "process": "activity\\.cm|text_manager\\.cm|text_manager\\.cm|driver-host-#input",
+    "process": "activity\\.cm|text_manager\\.cm|text_manager\\.cm",
     "vmo": "",
     "event_code": 52
   },
@@ -139,7 +133,7 @@
   },
   {
     "name": "WLAN",
-    "process": "emergency\\.cm|regulatory_region\\.cm|wlan.*|driver-host-#wlan",
+    "process": "emergency\\.cm|regulatory_region\\.cm|wlan.*",
     "vmo": "",
     "event_code": 58
   },
@@ -156,8 +150,14 @@
     "event_code": 63
   },
   {
+    "name": "EngTools",
+    "process": "/boot/bin/sh|/pkg/bin/sshd|memory_monitor(2?)\\.cm|overnetstack\\.cm|memory_pressure_signaler\\.cm|remote.*|sh:console|sshd-host\\.cm",
+    "vmo": "",
+    "event_code": 64
+  },
+  {
     "name": "Power",
-    "process": "power-broker\\.cm|power-manager\\.cm|shutdown-shim\\.cm|system-activity-governor\\.cm",
+    "process": "power-manager\\.cm|shutdown-shim\\.cm",
     "vmo": "",
     "event_code": 65
   },
@@ -168,50 +168,8 @@
     "event_code": 69
   },
   {
-    "name": "PlatformDrivers",
-    "process": "driver-host-#battery|driver-host-#cpu-and-suspend|driver-host-#gpio|driver-host-#pmic|driver-host-#power-and-clocks|driver-host-#qcom-shared|driver-host-#root|driver-host-#smmu|driver-host-#temperature-sensor|driver-host-#usb",
-    "vmo": "",
-    "event_code": 82
-  },
-  {
-    "name": "MCU",
-    "process": "driver-host-#mcu",
-    "vmo": "",
-    "event_code": 83
-  },
-  {
-    "name": "ConnectivityDrivers",
-    "process": "driver-host-#modem|driver-host-#nfc|driver-host-#uwb",
-    "vmo": "",
-    "event_code": 84
-  },
-  {
-    "name": "SecurityDrivers",
-    "process": "driver-host-#tee",
-    "vmo": "",
-    "event_code": 85
-  },
-  {
-    "name": "OtherDrivers",
-    "process": "driver_host.*|driver-host-.*|pwrbtn-monitor\\.cm|aml-rawnand\\.cm.*|aml-sdmmc\\.cm.*|aml-usb-phy\\.cm|platform-bus\\.cm.*|aml-uart\\.cm.*|amlogic-display\\.cm|aml-gpio\\.cm.*|aml-meson-power\\.cm.*|xhci.cm\\.*|aml-i2c\\.cm.*|optee\\.cm.*|aml-pwm\\.cm.*|amlogic_video_decoder\\.cm.*|aml-g12-tdm\\.cm.*|tas27xx\\.cm.*|ams-light\\.cm.*|aml-securemem\\.cm.*|aml-g12-pdm\\.cm.*|aml-ram\\.cm.*|aml-thermistor\\.cm.*|aml-canvas\\.cm.*|focaltech\\.cm.*|aml-thermal\\.cm.*|buttons\\.cm.*|aml-light\\.cm.*|ti-lp8556\\.cm.*|aml-g12-tdm-dai\\.cm.*|registers\\.cm.*|aml-pwm-init\\.cm.*|aml_mipicsi\\.cm.*|lowpan-ot-driver\\.cm.*|aml-thermal-s905d2g-legacy\\.cm.*|amlogic_h264_encoder_driver\\.cm.*|focaltech-sherlock\\.cm.*|tas5720\\.cm.*|camera_device\\.cm.*|aml-nna\\.cm.*|gt6853\\.cm.*|ti-ina231\\.cm.*|nelson-brownout-protection\\.cm.*|shtv3\\.cm.*",
-    "vmo": "",
-    "event_code": 48
-  },
-  {
-    "name": "MemoryTooling",
-    "process": "memory_monitor2?\\.cm|memory_pressure_signaler\\.cm",
-    "vmo": "",
-    "event_code": 86
-  },
-  {
-    "name": "EngTools",
-    "process": "/boot/bin/sh|/pkg/bin/sshd|developer-console\\.cm|overnetstack\\.cm|remote.*|sh:console|sshd-host\\.cm",
-    "vmo": "",
-    "event_code": 64
-  },
-  {
     "name": "Minfs",
-    "process": "/pkg/bin/minfs|minfs\\.cm",
+    "process": "/pkg/bin/minfs",
     "vmo": "",
     "event_code": 4
   },
@@ -307,7 +265,7 @@
   },
   {
     "name": "OtherProductComponents",
-    "process": "brightness_manager\\.cm|color_tint_service\\.cm|nest_policy_agent\\.cm|presence_agent\\.cm|platform-nest-metrics\\.cm",
+    "process": "brightness_manager\\.cm|color_tint_service\\.cm|nest_policy_agent\\.cm|presence_agent\\.cm",
     "vmo": "",
     "event_code": 62
   },
