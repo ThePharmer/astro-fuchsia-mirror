@@ -1,8 +1,6 @@
 driver
 bind
 meta/bind/fake_driver.bindbc
-fallback
-false
 default_dispatcher_opts
 allow_sync_callscompat
 driver/driver-test-realm-fake-driver.so
@@ -29,3 +27,9 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.driver.compat.Service
 /svc/fuchsia.driver.compat.Service
+sdk/lib/driver_test_realm/fake_driver/meta/component.cmlsdk/lib/driver/compat/compat.shard.cml
+sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/use.shard.cml
+sdk/lib/syslog/client.shard.cml
+sdk/lib/syslog/offer.shard.cml
+sdk/lib/syslog/use.shard.cml
