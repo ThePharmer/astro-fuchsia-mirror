@@ -8,6 +8,8 @@ default_dispatcher_opts
 allow_sync_callsallowed_scheduler_roles
 fuchsia.devices.network.core.rx
 fuchsia.devices.network.core.tx
+fallback
+false
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -15,9 +17,3 @@ fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.hardware.network.driver.Service
 /svc/fuchsia.hardware.network.driver.Service
-src/connectivity/network/drivers/network-device/meta/network-device.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
-sdk/lib/inspect/use.shard.cml
-sdk/lib/syslog/client.shard.cml
-sdk/lib/syslog/offer.shard.cml
-sdk/lib/syslog/use.shard.cml
