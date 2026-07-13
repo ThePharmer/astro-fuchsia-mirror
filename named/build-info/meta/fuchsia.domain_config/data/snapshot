@@ -1,8 +1,8 @@
 <manifest version="1.1" attributes="debug-symbols-arm64">
   <projects>
-    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="95b58af62327d1b3079c3675cecfca9e3fc263fd" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
+    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="1af6005dc14852a2275df85535e9ba7eac9c7b2a" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
     <project name="protobuf-gn" path="build/secondary/third_party/protobuf" remote="https://fuchsia.googlesource.com/protobuf-gn" revision="6486fcc7ef42bf35c877cdcaab17f69895076e73" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
-    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="bedafbb963f43720ef683b308f19f61d3154ef4c" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
+    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="549723663603f495aed2247685c38a9ec9d91e17" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
     <project name="third_party/OpenCL-Headers" path="third_party/OpenCL-Headers" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-Headers" revision="755ae0abe204b1821117e61645c5a3579a4a0dcd" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/OpenCL-ICD-Loader" path="third_party/OpenCL-ICD-Loader" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-ICD-Loader" revision="9ef8b1f3d66a491335863f490c07d0f8d9d1ac9b" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/Vulkan-Headers" path="third_party/Vulkan-Headers/src" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Headers" revision="c7ee01bfac7178848c45a12c9af141c3c3ed4b4c" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
@@ -166,7 +166,7 @@
     <project name="vendor/amlogic/drivers" path="vendor/amlogic/drivers" remote="sso://partner-fuchsia/vendor/amlogic/drivers" revision="e3140811271c940a9682f6fe79d3d2e4c07d293a" gerrithost="https://partner-fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="amlogic,google,projects,smart,smart-integration_71b323a395619e11"/>
     <project name="vendor/arm/camera" path="vendor/arm/camera" remote="sso://turquoise-internal/vendor/arm/camera" revision="6d81d0ddb9716a7605cb18d4f7b547526ba0dc2b" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google,smart,smart-integration_71b323a395619e11"/>
     <project name="smart" path="vendor/google-smart" remote="sso://turquoise-internal/smart" revision="fd418abf551d35f37af9e6d351fe7e6db316fa31" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="smart,smart-integration_71b323a395619e11"/>
-    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="ba50ddcc290651fbf006b2cafb2f992bf0fcf318" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform_internal"/>
+    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="30fff9ded314f54b8c08d4a30bbc690c453494e9" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform_internal"/>
     <project name="android/platform/external/uwb" path="vendor/google/connectivity/uwb/third_party/android/platform/external/uwb/src" remote="sso://turquoise-internal/third_party/googleplex-android/platform/external/uwb" revision="ab8022ab18fc741dee6e46886421e2f28278deea" gerrithost="https://googleplex-android-review.googlesource.com" git_attributes="manifests,platform_internal,third_party"/>
     <project name="vendor/google/eval" path="vendor/google/eval" remote="sso://turquoise-internal/fx-eval" revision="ab27426414813845a876c4c6760d576096a7f7a4" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="eval,google,smart,smart-integration_71b323a395619e11"/>
     <project name="third_party/github.com/axboe/liburing" path="vendor/google/starnix/third_party/github.com/axboe/liburing/src" remote="sso://turquoise-internal/third_party/github.com/axboe/liburing" revision="9d707e2b7f1f56158921ec7d45fcecbf5eb6222f" gerrithost="https://turquoise-internal-review.googlesource.com" git_attributes="manifests,platform_internal,third_party"/>
@@ -204,8 +204,8 @@
     <package name="chromecast/fuchsia/debug-symbols-userdebug-arm64" version="version:545180" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromecast">
       <instance name="chromecast/fuchsia/debug-symbols-userdebug-arm64" id="4wSNY267MxyPpEFJIxQx1qyumiU8rAuBaeuBVmtkKNIC"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine/arm64/debug-symbols" version="version:152.0.7945.0" path="prebuilt/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
-      <instance name="chromium/fuchsia/web_engine/arm64/debug-symbols" id="fcIvRDaahdyeWFwc5qPxDbSkOfLbDVV27IjEDyrcDJ4C"></instance>
+    <package name="chromium/fuchsia/web_engine/arm64/debug-symbols" version="version:152.0.7946.0" path="prebuilt/.build-id" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-chromium">
+      <instance name="chromium/fuchsia/web_engine/arm64/debug-symbols" id="ZBerFJvLxR4GzfroCv6zMB6YHD2l7cIjSrr0MfVJtlQC"></instance>
     </package>
     <package name="fuchsia/drivers/rtc/pcf8563/debug-symbols-arm64" version="git_revision:9e4d55033ef6af20fd91c058bce06da0a2a62341" path="prebuilt/.build-id" attributes="debug-symbols,debug-symbols-arm64">
       <instance name="fuchsia/drivers/rtc/pcf8563/debug-symbols-arm64" id="De0rulFbLQNSPqC2seiGGwLjfGDZAZunauxix1V7mpgC"></instance>
@@ -300,11 +300,11 @@
     <package name="turquoise_internal/libinteraction/perception/elaine/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-elaine">
       <instance name="turquoise_internal/libinteraction/perception/elaine/debug-symbols-arm64" id="8qpGTGveCJkBn-XyVoWI8-W0SwMQr5v-Hd8H5Rghlm4C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle-ml-framework">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" id="OM_fqn6iGk679HjSWIir_80O1mD9LP5WbhgleFtVWaEC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle-ml-framework">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" id="P8u-5z8NrLvTeivE9EA_YQu0qIx2K-ZR9EFf4rNKWJ0C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" id="HV8yLgECW8TCUN4sAno_wemIroliMmSrN-bQSSJTwv0C"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL6_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" id="1uzewK1IERTg02c-zhBXxSNLCQKvxrbWd0aVQXlpa0wC"></instance>
     </package>
     <package name="turquoise_internal/libinteraction/perception/newman/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-newman">
       <instance name="turquoise_internal/libinteraction/perception/newman/debug-symbols-arm64" id="HqTQ_B50RnZfrStbNBNwCR-sVqP0WrZm7CUEJgx3oasC"></instance>
@@ -324,17 +324,17 @@
     <package name="turquoise_internal/ml/openvx_nn_server/openvx_nn_server-debug-symbols-arm64" version="version:F28.202506271628" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-openvx_nn_server">
       <instance name="turquoise_internal/ml/openvx_nn_server/openvx_nn_server-debug-symbols-arm64" id="1A8tmHy75I_4n41V_5NmHbW4LQ43BIcVIjnqMjvyqoQC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" id="TLYB-oWFnLQzYJA3PUT0VlGGCuoneI4kPpaxjtRxd8MC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64" id="p1A2gYmAAjRA4iisaLSCyRgCcnQGUVimYSHsAvbMT6cC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" id="qFw4NfH4QJ7AvcrCuna9Ys5R115Nrh2PhMDGmCDk_yoC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/elaine/debug-symbols-arm64/eng" id="ZtTYcg8N0PSJYj32EaSzHV4i7-NX-rBqMkWte_OWMsQC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" id="W3eOB8xdUJTg6E3tjc7k8Tf4NWgwSREW-4q_ZSyOIkYC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64" id="zx6-8H7fsNUH4VqS9Af-DPi3Y3FWb_Ogkk-Tzkl-8BsC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
-      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" id="_rQcH5SDqM34SD7D7_0Dy-_QaJK8R1sU58pPJ13Da2AC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-ml-framework">
+      <instance name="turquoise_internal/ml_framework/newman/debug-symbols-arm64/eng" id="nz_2Sme83AOQ9A9EMV4jaxG8p8xNt1kr8gcVA2W9330C"></instance>
     </package>
     <package name="turquoise_internal/nest_thread_controller_agent/release/debug-symbols-arm64" version="g3-revision:nest_thread_controller_agent_20260429_0100_B03" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-nest-thread-controller-agent">
       <instance name="turquoise_internal/nest_thread_controller_agent/release/debug-symbols-arm64" id="LbVGwWHKhBqVqYLeAenNFtNygMWX6gBxSomgR1p-BpoC"></instance>
@@ -488,29 +488,29 @@
     <package name="turquoise_internal/ml/tests_cfv2/ml_fct-arm64" version="version:1.49_202209291931" path="prebuilt/ml/tests_cfv2/arm64" internal="true">
       <instance name="turquoise_internal/ml/tests_cfv2/ml_fct-arm64" id="DM_MuqBAc7pJ2osXaXGiUGVXDGZ3Ggdh7WmPemvMGGAC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3/elaine/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/arm64" id="C1MUAK_Rr4ptCgcxxaoW-LSzKcg7Z22Vgtx9tsQp3oMC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3/elaine/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/arm64" id="xCq-_Cjr-mNNUD1FiRFdLQ5BdBQDoYwqzjz2leRhduQC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/x64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3/elaine/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/x64" id="LtuUgzWe8pABNyOgnQm9uI08gq3V4sRaAEDPiwG-6SkC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/x64" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3/elaine/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/x64" id="VqXtHA5QRF_qKZ_HSn9_EkuVnMdyHZXDxtAQLJ84rlcC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3/newman/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/arm64" id="zVyHWklvUdAbXNjk_TKIrlP90YKFE0WHcxhbQbN3QVMC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3/newman/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/arm64" id="0g9P4K89rPf31FAvJdB6kQo_fFXJaF6yVRxy_0Ti4TAC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/x64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3/newman/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/x64" id="-VWi54L-iOty7AHGDPIe8ZLyEs2od0m5biOE2JPdl18C"></instance>
+    <package name="turquoise_internal/ml_framework/newman/x64" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3/newman/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/x64" id="GX9amzkegXoUSBIbwvaRYUCbIMlYfX2c_gz5inFsQDwC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3_eng/elaine/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/arm64/eng" id="CcLKs1jEmqcEBkYjw9XRyfM6ozdprtWaSXASBt6VsqIC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3_eng/elaine/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/arm64/eng" id="SQvqLUgCyBPz_KFrN6Kj2ddctoy2YgWKMGiEq_1SL5kC"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/elaine/x64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3_eng/elaine/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/elaine/x64/eng" id="QyK6p_urKyZN1aYni8wwd_cYCm2akKsqZWibJ3A_e_QC"></instance>
+    <package name="turquoise_internal/ml_framework/elaine/x64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3_eng/elaine/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/elaine/x64/eng" id="r_Wqc1l7-0ut3TZbGqoRW9QjwQUSKEn_hi4OS7KT6E8C"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3_eng/newman/arm64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/arm64/eng" id="QRfa1doFbWkV79o59-JUwGYtOiRga3dZFekm0AwfGw4C"></instance>
+    <package name="turquoise_internal/ml_framework/newman/arm64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3_eng/newman/arm64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/arm64/eng" id="MMjV8dgJeCa3gJI6YoMWDy48z4A-54R28RgTzJGXMb0C"></instance>
     </package>
-    <package name="turquoise_internal/ml_framework/newman/x64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/ml_framework_google3_eng/newman/x64" internal="true">
-      <instance name="turquoise_internal/ml_framework/newman/x64/eng" id="RQ6-KXXRlr-WagvSzHpxqctQBH5OhoCzMW_-7EiLb9oC"></instance>
+    <package name="turquoise_internal/ml_framework/newman/x64/eng" version="g3-revision:turquoise_libinteraction_20260712_RL4_RC0" path="prebuilt/ml_framework_google3_eng/newman/x64" internal="true">
+      <instance name="turquoise_internal/ml_framework/newman/x64/eng" id="cAY9A0abLhqSv2Kq0Gpjx4P4E_FnzVbLDgg2a9jWx2sC"></instance>
     </package>
     <package name="turquoise_internal/nest_thread_controller_agent/release/arm64" version="g3-revision:nest_thread_controller_agent_20260429_0100_B03" path="prebuilt/nest_thread_controller_agent/release/arm64" internal="true">
       <instance name="turquoise_internal/nest_thread_controller_agent/release/arm64" id="GMqrJtML-1sZ1j6EaxgCe9p3HOCewBqvSjUP7vuMqLgC"></instance>
@@ -527,17 +527,17 @@
     <package name="turquoise_internal/libinteraction/perception/elaine/x64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/perception/perception_elaine/x64" internal="true">
       <instance name="turquoise_internal/libinteraction/perception/elaine/x64" id="5n9v4J8teBmcUCFtLzK4RVIXPmLBcVUsYjbZX22nNFMC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/perception/perception_estelle/arm64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/arm64" id="nsunpmfAei5iY8YgWRh0YRAx2WmfHaR2F8ninSFVwOsC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL6_RC0" path="prebuilt/perception/perception_estelle/arm64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/arm64" id="LXNbQYbHf3pWS4M-f8pDa7SOKZj6Iz8Pa8fvilrAreYC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/perception/perception_estelle/ml_framework/arm64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" id="rNhOu01_KOs_k_nVRir-oTpc548ZVAJZ9nkfLACMIsIC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" version="g3-revision:turquoise_libinteraction_20260712_RL6_RC0" path="prebuilt/perception/perception_estelle/ml_framework/arm64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" id="8n7CltnaP1_p2CFHFEcE1MxBjpWBsohyDvPTSvvvcm8C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/perception/perception_estelle/ml_framework/x64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" id="x9PmsFqEZ6ZBdTF_qIhbd3m6brI-7-fMv2By-aUiLKUC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" version="g3-revision:turquoise_libinteraction_20260712_RL6_RC0" path="prebuilt/perception/perception_estelle/ml_framework/x64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" id="s9kcT0jrN29UwOeHf0ZDsVij3O8I4d3kDbtFRYcr_nkC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/x64" version="g3-revision:turquoise_libinteraction_20260712_RL3_RC0" path="prebuilt/perception/perception_estelle/x64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/x64" id="aPMao_w3li61udd0ezom7RjWaX82m4wTGagMJHEGbN4C"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/x64" version="g3-revision:turquoise_libinteraction_20260712_RL6_RC0" path="prebuilt/perception/perception_estelle/x64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/x64" id="5YXZ1xYW8iDz2tF3pUjbRdsp6v_VwXZpslmXXZGb4x0C"></instance>
     </package>
     <package name="turquoise_internal/libinteraction/perception/newman/arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/perception/perception_newman/arm64" internal="true">
       <instance name="turquoise_internal/libinteraction/perception/newman/arm64" id="xRiXEuhGT_h6LcYtYRdqBRv8lxNASRbHUwY6qw331scC"></instance>
@@ -885,8 +885,8 @@
     <package name="chromecast/fuchsia/castagent-userdebug-amd64" version="version:545180" path="prebuilt/third_party/chromecast_userdebug/arch/x64" internal="true">
       <instance name="chromecast/fuchsia/castagent-userdebug-amd64" id="4XIcX0xiPxWYAiwHOTuOKI4ZSDhSEEpuK0zUSrXTpuQC"></instance>
     </package>
-    <package name="chromium/fuchsia/host_tools/linux/amd64/chromedriver" version="version:152.0.7945.0" path="prebuilt/third_party/chromedriver_latest/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
-      <instance name="chromium/fuchsia/host_tools/linux/amd64/chromedriver" id="qWtCatldM3j7TbHdEwgWKRBLfmOOMgLXomsMH1HlK2kC"></instance>
+    <package name="chromium/fuchsia/host_tools/linux/amd64/chromedriver" version="version:152.0.7946.0" path="prebuilt/third_party/chromedriver_latest/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
+      <instance name="chromium/fuchsia/host_tools/linux/amd64/chromedriver" id="myoMLZezFDklkFaGF94pT3SV3bABb630m8FGcFDwz2wC"></instance>
     </package>
     <package name="fuchsia/third_party/clang/${platform}" version="git_revision:deb6854eec93529b2bd30178d400ad2ee7665cd4" path="prebuilt/third_party/clang/{{.OS}}-{{.Arch}}" platforms="linux-amd64,linux-arm64,mac-amd64,mac-arm64,windows-amd64">
       <instance name="fuchsia/third_party/clang/linux-amd64" id="I8zOVJIhHp_XANhQs53amuyD0Nt62509rQfIumVlK6YC"></instance>
@@ -1139,11 +1139,11 @@
     <package name="fuchsia/third_party/vulkan_runtime/${platform}" version="build_config:ac2f8ba8ed2d607042d92d62aa72ba5b4bf4ef4bcd1f56322fb279780f27d6bc" path="prebuilt/third_party/vulkan_runtime/{{.OS}}-{{.Arch}}" platforms="linux-amd64">
       <instance name="fuchsia/third_party/vulkan_runtime/linux-amd64" id="uD8TZ08psIxv05JJjgMQb2FIskLx8PCF4HEDN0NKw8kC"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine/arm64/web_engine" version="version:152.0.7945.0" path="prebuilt/third_party/web_engine_latest/arch/arm64">
-      <instance name="chromium/fuchsia/web_engine/arm64/web_engine" id="AveitlgfUEfIaKOXtJ5mESiT6jfevqMRBxE_DlowEDQC"></instance>
+    <package name="chromium/fuchsia/web_engine/arm64/web_engine" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_latest/arch/arm64">
+      <instance name="chromium/fuchsia/web_engine/arm64/web_engine" id="EmeTb4-nMD0yrB5cPjcoDQv216yS8XeldIQEaO6uSXQC"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine/amd64/web_engine" version="version:152.0.7945.0" path="prebuilt/third_party/web_engine_latest/arch/x64">
-      <instance name="chromium/fuchsia/web_engine/amd64/web_engine" id="W_iD1OXm_JnxvDs0Mvil4MLOG6DimDRf1ZRElnlxCqoC"></instance>
+    <package name="chromium/fuchsia/web_engine/amd64/web_engine" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_latest/arch/x64">
+      <instance name="chromium/fuchsia/web_engine/amd64/web_engine" id="ddcoi_3_SL2Td28x8ZyqkWWbgeyxq1F5YIyeXBVO7X0C"></instance>
     </package>
     <package name="chrome_internal/fuchsia_nest_sd/web_engine/arm64/web_engine" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_nest_sd/arch/arm64">
       <instance name="chrome_internal/fuchsia_nest_sd/web_engine/arm64/web_engine" id="BoAIoGoAva07kPWYZGmzmofc9uUtoCzBWoAHZzum2rUC"></instance>
@@ -1154,17 +1154,17 @@
     <package name="chrome_internal/fuchsia/nest_sd/perf/web_engine/arm64/web_engine" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_nest_sd_perf/arch/arm64">
       <instance name="chrome_internal/fuchsia/nest_sd/perf/web_engine/arm64/web_engine" id="Ym75Dvf7dDOZ3rNNA-d41koQon_rYTEA9bdwz5eTe3YC"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine/arm64/web_engine_shell" version="version:152.0.7945.0" path="prebuilt/third_party/web_engine_shell_latest/arch/arm64">
-      <instance name="chromium/fuchsia/web_engine/arm64/web_engine_shell" id="fm8YUD6fgEROHUR9p1QyLZ1QGRPciJoTy8c8LIXBMOgC"></instance>
+    <package name="chromium/fuchsia/web_engine/arm64/web_engine_shell" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_shell_latest/arch/arm64">
+      <instance name="chromium/fuchsia/web_engine/arm64/web_engine_shell" id="KYIlo41mz9RXAnAaN-hlChQitkKQOXRoDsARWmf8awwC"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine/amd64/web_engine_shell" version="version:152.0.7945.0" path="prebuilt/third_party/web_engine_shell_latest/arch/x64">
-      <instance name="chromium/fuchsia/web_engine/amd64/web_engine_shell" id="6FeW2XNWUDeOC4-Qw66k5fqbfVG_FhfpsX4rSUcpuZQC"></instance>
+    <package name="chromium/fuchsia/web_engine/amd64/web_engine_shell" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_shell_latest/arch/x64">
+      <instance name="chromium/fuchsia/web_engine/amd64/web_engine_shell" id="hYXiPcsQ4vx9KTPLRGM2eUDkFFs0efe__btbxqbkW80C"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine/arm64/tests" version="version:152.0.7945.0" path="prebuilt/third_party/web_engine_tests_latest/arch/arm64">
-      <instance name="chromium/fuchsia/web_engine/arm64/tests" id="LYMJ36Uw3uDcz3WotjoyTDQ4dAvDQXvxrzehYRprb84C"></instance>
+    <package name="chromium/fuchsia/web_engine/arm64/tests" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_tests_latest/arch/arm64">
+      <instance name="chromium/fuchsia/web_engine/arm64/tests" id="sDautYREBvl18MAqmFUz3jzFTEPnmntxXFQs-JkA0c4C"></instance>
     </package>
-    <package name="chromium/fuchsia/web_engine/amd64/tests" version="version:152.0.7945.0" path="prebuilt/third_party/web_engine_tests_latest/arch/x64">
-      <instance name="chromium/fuchsia/web_engine/amd64/tests" id="viue_IsurZTI4c_Ba9OgrUg2pJGxrReJeJhInjNQ3x8C"></instance>
+    <package name="chromium/fuchsia/web_engine/amd64/tests" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_tests_latest/arch/x64">
+      <instance name="chromium/fuchsia/web_engine/amd64/tests" id="xDGyl_OTP7CgB31uEA0hfvZ_FJLI1HIS4jp2L_AbFAwC"></instance>
     </package>
     <package name="chrome_internal/fuchsia_nest_sd/web_engine/arm64/tests" version="version:152.0.7946.0" path="prebuilt/third_party/web_engine_tests_nest_sd/arch/arm64">
       <instance name="chrome_internal/fuchsia_nest_sd/web_engine/arm64/tests" id="F3daxt8Hxn-8LHV6mgcpUooj7cXr6OcGwf3CAJ5npT0C"></instance>
