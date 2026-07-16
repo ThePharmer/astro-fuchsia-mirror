@@ -1,6 +1,4 @@
 driver
-allowed_scheduler_roles
-fuchsia.graphics.display.drivers.display.coordinator
 binary
 driver/display-coordinator.so
 bind
@@ -9,6 +7,8 @@ colocate
 true
 default_dispatcher_opts
 allow_sync_callsdefault_dispatcher_scheduler_role
+fuchsia.graphics.display.drivers.display.coordinator
+allowed_scheduler_roles
 memory_priority_role
 fuchsia.display.driver.memory
 fuchsia.inspect.InspectSink
