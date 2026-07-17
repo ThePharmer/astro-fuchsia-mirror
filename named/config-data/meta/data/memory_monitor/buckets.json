@@ -55,7 +55,7 @@
   },
   {
     "name": "Netstack",
-    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|stack-migration\\.cm|netstack-proxy\\.cm|/pkg/bin/netstack|/pkg/bin/netstack3|dhcp-client\\.cm",
+    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|stack_migration\\.cm|netstack-proxy\\.cm|/pkg/bin/netstack|/pkg/bin/netstack3|dhcp-client\\.cm",
     "vmo": "",
     "event_code": 11
   },
@@ -97,7 +97,7 @@
   },
   {
     "name": "Resolvers",
-    "process": "loopback_resolver\\.cm|.*-resolver\\.cm.*",
+    "process": ".*-resolver\\.cm.*",
     "vmo": "",
     "event_code": 42
   },
@@ -205,7 +205,7 @@
   },
   {
     "name": "EngTools",
-    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|debug-dash-launcher\\.cm|developer-console\\.cm|fdomain_runner|gtest-runner\\.cm|kernel_debug_broker\\.cm|ktrace_provider\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|ptysvc\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm|trace_manager\\.cm|sl4f\\.cm|profiler\\.cm",
+    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|developer-console\\.cm|fdomain_runner|gtest-runner\\.cm|kernel_debug_broker\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm",
     "vmo": "",
     "event_code": 64
   },
