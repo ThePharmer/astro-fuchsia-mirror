@@ -43,7 +43,7 @@
   },
   {
     "name": "Storage",
-    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage|fvm2\\.cm",
+    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage|fvm2\\.cm|stash\\.cm|stash_secure\\.cm",
     "vmo": "",
     "event_code": 72
   },
@@ -205,7 +205,7 @@
   },
   {
     "name": "EngTools",
-    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|debug-dash-launcher\\.cm|developer-console\\.cm|fdomain_runner|gtest-runner\\.cm|kernel_debug_broker\\.cm|ktrace_provider\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|ptysvc\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm|trace_manager\\.cm|sl4f\\.cm|profiler\\.cm",
+    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|debug-dash-launcher\\.cm|developer-console\\.cm|fdomain_runner|fs_realm\\.cm|gtest-runner\\.cm|kernel_debug_broker\\.cm|ktrace_provider\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|ptysvc\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm|trace_manager\\.cm|sl4f\\.cm|profiler\\.cm",
     "vmo": "",
     "event_code": 64
   },
@@ -229,7 +229,7 @@
   },
   {
     "name": "Perception",
-    "process": "concierge_agent\\.cm|fuchsia_perception_estelle_agent|fuchsia_perception_newman_agent|fuchsia_perception_elaine_agent|ml_framework_agent\\.cm|openvx_nn_server\\.cm|fuchsia_selina_agent\\.cm",
+    "process": "concierge_agent\\.cm|fuchsia_perception_estelle_agent?|fuchsia_perception_newman_agent|fuchsia_perception_elaine_agent|ml_framework_agent\\.cm|openvx_nn_server\\.cm|fuchsia_selina_agent\\.cm|stellar_agent\\.cm",
     "vmo": "",
     "event_code": 37
   },
