@@ -3,8 +3,6 @@ binary
 driver/ti-lp8556.so
 bind
 meta/bind/ti-lp8556.bindbc
-colocate
-false
 default_dispatcher_opts
 allow_sync_calls
 fuchsia.inspect.InspectSink
@@ -23,7 +21,7 @@ fuchsia.hardware.power.sensor.Service
 /svc/fuchsia.hardware.backlight.Service
 /svc/fuchsia.hardware.power.sensor.Service
 src/ui/backlight/drivers/ti-lp8556/meta/ti-lp8556.cml
-sdk/lib/driver_component/driver.shard.cml
+sdk/lib/driver/platform-device.shard.cmlsdk/lib/driver_component/driver.shard.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
