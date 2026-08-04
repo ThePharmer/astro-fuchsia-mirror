@@ -47,6 +47,8 @@ fuchsia.net.power.WakeGroupProvider
 http-client
 fuchsia.net.http.Loader
 fuchsia.pkg.http.Client
+google-http-client
+fuchsia.net.http.GoogleLoader
 dns-resolver
 fuchsia.net.name.Lookup
 fuchsia.net.policy.properties.DefaultNetworkWatcher
@@ -58,12 +60,15 @@ fuchsia.net.reachability.Monitor
 netstack-migration
 fuchsia.net.stackmigrationdeprecated.Control
 fuchsia.net.stackmigrationdeprecated.State
+fuchsia.pkg.http.GoogleClient
 fuchsia.posix.socket.Provider_Unproxied
 fuchsia.posix.socket.raw.Provider_Unproxied
 fuchsia.http-client.StopOnIdleTimeoutMillis
+fuchsia.http-client.TcpReceiveBufferSizeBytes
 fuchsia.power.SuspendEnabled
 config-data
 dev-class-network
+google-root-ssl-certificates
 root-ssl-certificates
 fuchsia.feedback.CrashReporter
 fuchsia.metrics.MetricEventLoggerFactory
@@ -91,6 +96,7 @@ fuchsia.tracing.provider.Registry
 fuchsia-pkg://fuchsia.com/dhcpv4-server#meta/dhcpv4_server.cm
 fuchsia-pkg://fuchsia.com/dhcpv6-client#meta/dhcpv6-client.cm
 fuchsia-pkg://fuchsia.com/dns-resolver#meta/dns_resolver.cm
+fuchsia-pkg://fuchsia.com/google-http-client#meta/google-http-client.cm
 fuchsia-pkg://fuchsia.com/http-client#meta/http-client.cm
 fuchsia-pkg://fuchsia.com/netcfg-basic#meta/netcfg-basic.cm
 netstackC
