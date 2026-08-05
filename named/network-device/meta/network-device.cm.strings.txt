@@ -1,14 +1,13 @@
 driver
-allowed_scheduler_roles
-fuchsia.devices.network.core.rx
-fuchsia.devices.network.core.tx
 binary
 driver/network-device.sobind
 meta/bind/network-device.bindbc
 colocate
 true
 default_dispatcher_opts
-allow_sync_calls
+allow_sync_callsallowed_scheduler_roles
+fuchsia.devices.network.core.rx
+fuchsia.devices.network.core.tx
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
