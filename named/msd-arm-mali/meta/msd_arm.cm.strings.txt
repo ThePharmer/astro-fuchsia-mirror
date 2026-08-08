@@ -6,8 +6,7 @@ fuchsia.graphics.drivers.msd-arm-mali.mmu-interrupt
 binary
 driver/msd_arm.so
 bind
-meta/bind/msd_arm_bind.bindbc
-colocate
+meta/bind/msd_arm.bindbccolocate
 true
 default_dispatcher_opts
 allow_sync_calls
@@ -42,7 +41,7 @@ fuchsia.gpu.magma.TrustedService%
 fuchsia.dash.launcher-tool-urls
 fuchsia-pkg://fuchsia.com/magma-debug-utils
 Qe'?7
-src/graphics/drivers/msd-arm-mali/meta/msd-arm-mali.cml
+gen/src/graphics/drivers/msd-arm-mali/msd_arm.cml
 sdk/lib/driver/platform-device.shard.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
