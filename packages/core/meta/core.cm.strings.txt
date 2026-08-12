@@ -214,12 +214,12 @@ build-info
 boot-config
 config
 boot-bin
-root-ssl-certificates
 system
 audio_core_pkg_config
 config-data
 audio_core
 google-root-ssl-certificates
+root-ssl-certificates
 hwinfo
 fonts
 system-update-committer-config-data
@@ -285,6 +285,7 @@ feedback-config
 pkgfs
 pkgfs-packages
 packages
+swd-root-ssl-certificates
 tzdata-provider
 tzdata-icu
 tzdata-icu-44-le
@@ -451,7 +452,6 @@ storage_cache_manager
 feedback(
 fuchsia.net.http.GoogleLoader
 fuchsia.net.http.Loader
-fuchsia.pkg.http.Client
 fuchsia.net.interfaces.State
 fuchsia.net.reachability.Monitor
 fuchsia.net.routes.State
@@ -474,6 +474,7 @@ fuchsia.pkg.PackageResolver-base
 fuchsia.pkg.PackageResolver-pkg
 fuchsia.pkg.PackageResolver-boot
 process_resolver 
+fuchsia.pkg.http.Client
 sl4f_bridge_server
 feedback$
 fuchsia.scheduler.deprecated.ProfileProvider
