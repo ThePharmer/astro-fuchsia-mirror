@@ -1,7 +1,6 @@
-binary
-cast_agent_exe
 args
---presence-agent
+--presence-agentbinary
+cast_agent_exe
 fuchsia.castsetup.ApiRegistry
 /svc/fuchsia.castsetup.ApiRegistry
 fuchsia.logger.LogSink
@@ -14,6 +13,8 @@ google.cast.feature.FeatureService
 /svc/google.cast.feature.FeatureService
 google.cast.hds.HdsService
 /svc/google.cast.hds.HdsService
+fuchsia.memory.sampler.Sampler
+/svc/fuchsia.memory.sampler.Sampler
 google.mlframework.OutputManager%
 /svc/google.mlframework.OutputManager
 google.presence.TouchActivity
