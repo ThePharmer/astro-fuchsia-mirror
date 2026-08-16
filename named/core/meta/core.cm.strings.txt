@@ -62,6 +62,7 @@ fuchsia.component.SamplerBinder
 diagnostics
 fuchsia.component.DetectBinder
 fuchsia.component.PersistenceBinder
+fuchsia.diagnostics.persistence.PreviousBootDataProvider
 pkg-resolver
 fuchsia.component.resolution.Resolver
 fuchsia.component.resolution.Resolver-full
@@ -120,8 +121,9 @@ fuchsia.bluetooth.Rfcomm
 fuchsia.bluetooth.ScoOffloadPathIndex
 fuchsia.bluetooth.LegacyPairing
 fuchsia.power.SuspendEnabled
-fuchsia.diagnostics.persist.SkipUpdateCheck
+fuchsia.diagnostics.persist.PersistencePeriodSeconds
 fuchsia.diagnostics.persist.StopOnIdleTimeoutMillis
+fuchsia.diagnostics.persist.SkipUpdateCheck
 fuchsia.diagnostics.sampler.ProjectConfigs
 fuchsia.fonts.FontManifest
 font_provider
@@ -224,8 +226,6 @@ fonts
 system-update-committer-config-data
 system-update-committer
 cobalt_system_metrics
-diagnostics-persistence-config-data
-diagnostics-persistence
 emergency
 factory_store_providers
 forensics
@@ -362,6 +362,7 @@ fuchsia.thermal.SensorManager
 fuchsia.diagnostics.ArchiveAccessor.feedback
 feedback,
 fuchsia.diagnostics.Sample
+feedback8
 fuchsia.driver.crash.CrashIntrospect
 fuchsia.sys2.CrashIntrospect
 fuchsia.driver.token.Debug
