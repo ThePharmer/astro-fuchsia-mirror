@@ -4,6 +4,8 @@ lifecycle.stop_event
 notify
 fuchsia.http-client.StopOnIdleTimeoutMillis
 stop_on_idle_timeout_millis
+fuchsia.http-client.TcpReceiveBufferSizeBytes
+tcp_receive_buffer_size_bytes
 google-root-ssl-certificates
 /config/ssl
 fuchsia.inspect.InspectSink
@@ -23,6 +25,7 @@ fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 /svc/fuchsia.net.http.Loader
 /svc/fuchsia.pkg.http.Client
+LS4@?
 src/connectivity/policy/http-client/meta/google_http_client.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
