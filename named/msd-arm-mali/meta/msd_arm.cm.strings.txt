@@ -9,7 +9,9 @@ bind
 meta/bind/msd_arm.bindbccolocate
 true
 default_dispatcher_opts
-allow_sync_callssuspend_enabled
+allow_sync_calls
+fuchsia.power.SuspendEnabled
+enable_suspend
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -19,8 +21,6 @@ fuchsia.kernel.InfoResource
 /svc/fuchsia.kernel.InfoResource
 fuchsia.scheduler.RoleManager
 /svc/fuchsia.scheduler.RoleManager
-fuchsia.power.broker.Topology
-/svc/fuchsia.power.broker.Topology
 fuchsia.power.system.ActivityGovernor
 /svc/fuchsia.power.system.ActivityGovernor
 fuchsia.hardware.gpu.mali.Service
@@ -40,6 +40,7 @@ fuchsia.gpu.magma.TrustedService%
 /svc/fuchsia.gpu.magma.TrustedService
 fuchsia.dash.launcher-tool-urls
 fuchsia-pkg://fuchsia.com/magma-debug-utils
+Qe'?7
 gen/src/graphics/drivers/msd-arm-mali/msd_arm.cml
 sdk/lib/driver/platform-device.shard.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
