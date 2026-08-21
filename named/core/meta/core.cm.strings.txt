@@ -130,6 +130,7 @@ font_provider
 fuchsia.fonts.VerboseLogging
 fuchsia.fshost.MergeSuperAndUserdata
 fuchsia.http-client.StopOnIdleTimeoutMillis
+fuchsia.http-client.TcpReceiveBufferSizeBytes
 fuchsia.memory.CaptureOnPressureChange
 memory_monitor
 fuchsia.memory.CriticalCaptureDelay
@@ -175,7 +176,6 @@ fuchsia.scenic.MinDisplayRefreshRateMillihertz
 fuchsia.scenic.MinDisplayVerticalResolutionPx
 fuchsia.scenic.PointerAutoFocus
 fuchsia.scenic.Renderer
-fuchsia.scenic.UseFlatland2UberstructSchema
 fuchsia.scenic.UseSeparateInputThread
 fuchsia.ui.AttachA11yView
 fuchsia.ui.DisplayPixelDensity
@@ -330,6 +330,8 @@ fuchsia.boot.Items
 fuchsia.boot.ReadOnlyLog
 fuchsia.hardware.power.statecontrol.ShutdownWatcherRegister
 feedback;
+fuchsia.kernel.RootJobForInspect
+feedback 
 fuchsia.process.Launcher
 fuchsia.sysinfo.SysInfo
 fuchsia.boot.WriteOnlyLog
@@ -341,7 +343,6 @@ fuchsia.castauth.CastCertificateRetriever
 fuchsia.castauth.CastKeySigner
 fuchsia.cobalt.SystemDataUpdater
 fuchsia.component.Introspector.root
-fuchsia.kernel.RootJobForInspect
 fuchsia.kernel.Stats
 fuchsia.scheduler.RoleManager
 fuchsia.device.NameProvider
