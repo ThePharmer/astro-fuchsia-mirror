@@ -2,8 +2,6 @@ binary
 bin/scenic
 fuchsia.scenic.DisplayComposition
 display_composition
-fuchsia.scenic.DisplayCompositionEnableHeuristics
-display_composition_enable_heuristics
 fuchsia.scenic.DisplayRotation
 display_rotation
 fuchsia.scenic.FrameCounterOverlay
@@ -16,6 +14,8 @@ fuchsia.scenic.ICanHazDisplayId
 i_can_haz_display_id
 fuchsia.scenic.ICanHazDisplayMode
 i_can_haz_display_mode
+fuchsia.scenic.InputNoncritical
+input_noncritical
 fuchsia.scenic.MaxDisplayHorizontalResolutionPx
 max_display_horizontal_resolution_px
 fuchsia.scenic.MaxDisplayRefreshRateMillihertz
@@ -32,6 +32,8 @@ fuchsia.scenic.PointerAutoFocus
 pointer_auto_focus
 fuchsia.scenic.Renderer
 renderer
+fuchsia.scenic.UseFlatland2UberstructSchema
+use_flatland2_uberstruct_schema
 fuchsia.scenic.UseSeparateInputThread
 use_separate_input_thread
 fuchsia.ui.Prefetch
@@ -115,6 +117,7 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.pointerinjector.dso.Registry
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
+Xf,V
 src/ui/scenic/bin/meta/scenic.bin.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
