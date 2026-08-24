@@ -32,6 +32,8 @@ fuchsia.scenic.PointerAutoFocus
 pointer_auto_focus
 fuchsia.scenic.Renderer
 renderer
+fuchsia.scenic.UseFlatland2UberstructSchema
+use_flatland2_uberstruct_schema
 fuchsia.scenic.UseSeparateInputThread
 use_separate_input_thread
 fuchsia.ui.Prefetch
@@ -67,7 +69,6 @@ fuchsia.ui.annotation.Registry
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Flatland
 fuchsia.ui.composition.FlatlandDisplay
-fuchsia.ui.composition.FlatlandFactory
 fuchsia.ui.composition.ScreenCapture
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.composition.TrustedFlatlandFactory
@@ -92,7 +93,6 @@ fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.Allocator
 /svc/fuchsia.ui.composition.Flatland
 /svc/fuchsia.ui.composition.FlatlandDisplay
-/svc/fuchsia.ui.composition.FlatlandFactory
 /svc/fuchsia.ui.composition.ScreenCapture
 /svc/fuchsia.ui.composition.Screenshot
 /svc/fuchsia.ui.composition.TrustedFlatlandFactory
@@ -117,6 +117,7 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.pointerinjector.dso.Registry
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
+P`T;
 src/ui/scenic/bin/meta/scenic.bin.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
