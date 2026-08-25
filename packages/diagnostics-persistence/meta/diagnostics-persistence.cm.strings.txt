@@ -4,6 +4,8 @@ binary
 bin/launcher
 environ
 SCUDO_OPTIONS=release_to_os_interval_ms=0
+fuchsia.diagnostics.persist.LowBatteryThresholdPercent
+low_battery_threshold_percent
 fuchsia.diagnostics.persist.PersistencePeriodSeconds
 persistence_period_seconds
 fuchsia.diagnostics.persist.SkipUpdateCheck
@@ -19,6 +21,8 @@ fuchsia.inspect.InspectSink
 diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
+fuchsia.power.battery.BatteryManager
+/svc/fuchsia.power.battery.BatteryManager
 cache
 /cache
 fuchsia.component.Binder
