@@ -2,8 +2,6 @@ binary
 bin/timekeeper
 fuchsia.time.config.WritableUTCTime
 serve_fuchsia_time_external_adjust
-dev-hrtimer
-/dev/class/hrtimer
 dev-rtc
 /dev/class/rtc
 fuchsia.component.Realm
@@ -53,6 +51,7 @@ has_always_on_counter
 has_real_time_clock
 initial_frequency_ppm
 max_frequency_error_ppm
+min_acceptable_boot_time_for_utc_update_minutes
 min_utc_reference_to_backstop_diff_minutes
 monitor_time_source_url
 monitor_uses_pull
@@ -69,6 +68,7 @@ utc_max_allowed_delta_future_sec
 utc_max_allowed_delta_past_sec
 utc_start_at_startup
 utc_start_at_startup_when_invalid_rtc
+h+jL
 meta/timekeeper.cvf
 src/sys/time/timekeeper/meta/service.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
