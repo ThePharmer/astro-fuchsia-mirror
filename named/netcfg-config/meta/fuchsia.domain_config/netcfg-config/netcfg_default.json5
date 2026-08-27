@@ -14,13 +14,15 @@
             "pass in proto tcp to port 8008;",
             "pass in proto tcp to port 8009;",
             "pass in proto tcp to port 8443;",
-            "drop in proto tcp devclass ap to range 1:15999;",
+            "drop in proto tcp devclass ap to range 0:15999;",
             "pass in proto tcp to range 1024:65535;",
-            "drop in proto tcp to range 1:65535;",
+            "drop in proto tcp to range 0:65535;",
         ],
     },
     filter_enabled_interface_types: [
-        "wlan",
+        "wlanap",
+        "wlanclient",
+        "lowpan",
     ],
     interface_metrics: {
         wlan_metric: 90,
