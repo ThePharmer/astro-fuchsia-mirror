@@ -1,4 +1,7 @@
 driver
+allowed_scheduler_roles
+fuchsia.devices.wlan.drivers.brcmf.sdio.oob-interrupt
+fuchsia.devices.wlan.drivers.brcmf.workqueue.runner
 binary
 driver/brcmfmac.so
 bind
@@ -6,9 +9,7 @@ meta/bind/brcmfmac_sdio.bindbc
 colocate
 true
 default_dispatcher_opts
-allow_sync_callsallowed_scheduler_roles
-fuchsia.devices.wlan.drivers.brcmf.sdio.oob-interrupt
-fuchsia.devices.wlan.drivers.brcmf.workqueue.runner
+allow_sync_calls
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -28,12 +29,12 @@ fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
 fuchsia.hardware.network.driver.Service
 fuchsia.wlan.fullmac.Service
-fuchsia.wlan.phyimpl.Service
+fuchsia.wlan.phy.Service
 /svc/fuchsia.hardware.network.driver.Service
 /svc/fuchsia.wlan.fullmac.Service
-/svc/fuchsia.wlan.phyimpl.Service
-src/connectivity/wlan/drivers/third_party/broadcom/brcmfmac/meta/brcmfmac_sdio.cml
-sdk/lib/driver_component/driver.shard.cml
+/svc/fuchsia.wlan.phy.Service
+src/connectivity/wlan/drivers/third_party/broadcom/brcmfmac/meta/brcmfmac.cml
+sdk/lib/driver/platform-device.shard.cmlsdk/lib/driver_component/driver.shard.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
