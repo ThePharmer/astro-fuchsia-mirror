@@ -1,7 +1,7 @@
-binary
-cast_agent_exe
 args
 --concierge-agent
+binary
+cast_agent_exe
 lifecycle.stop_event
 notify
 config-data
@@ -36,6 +36,8 @@ google.cast.hds.HdsService
 /svc/google.cast.hds.HdsService
 google.comms.dropin.DropInController
 /svc/google.comms.dropin.DropInController
+fuchsia.memory.sampler.Sampler
+/svc/fuchsia.memory.sampler.Sampler
 google.assistant.soundsensing.SoundSensing
 /svc/google.assistant.soundsensing.SoundSensing
 google.mlframework.OutputManager%
