@@ -1,13 +1,11 @@
 driver
-bind
+binary
+driver/compat.sobind
 meta/bind/aml-light.bindbc
-colocate
-false
 compat
 driver/aml-light.so
 default_dispatcher_opts
-allow_sync_callsbinary
-driver/compat.somodules
+allow_sync_callsmodules
 loader_overrides
 from
 libdriver.so
@@ -35,7 +33,7 @@ fuchsia.hardware.pwm.Service
 /svc/fuchsia.hardware.pwm.Service
 src/ui/light/drivers/aml-light/meta/aml-light.cml
 sdk/lib/driver/compat/compat.shard.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/driver/platform-device.shard.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
 sdk/lib/syslog/offer.shard.cml
