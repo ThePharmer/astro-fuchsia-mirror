@@ -1,6 +1,6 @@
-netstack
 diagnostics
 netstack-diagnostics
+netstack
 fuchsia.net.debug.Interfaces
 netstack'
 fuchsia.net.debug.PacketCaptureProvider
@@ -54,12 +54,11 @@ fuchsia.net.name.Lookup
 fuchsia.net.policy.properties.DefaultNetworkWatcher
 fuchsia.net.policy.socketproxy.FuchsiaNetworks
 fuchsia.net.policy.socketproxy.StarnixNetworks
+fuchsia.net.stackmigrationdeprecated.Control
+fuchsia.net.stackmigrationdeprecated.State
 fuchsia.net.virtualization.Control
 reachability
 fuchsia.net.reachability.Monitor
-netstack-migration
-fuchsia.net.stackmigrationdeprecated.Control
-fuchsia.net.stackmigrationdeprecated.State
 fuchsia.pkg.http.GoogleClient
 fuchsia.posix.socket.Provider_Unproxied
 fuchsia.posix.socket.raw.Provider_Unproxied
@@ -70,9 +69,7 @@ config-data
 dev-class-network
 google-root-ssl-certificates
 root-ssl-certificates
-fuchsia.feedback.CrashReporter
 fuchsia.metrics.MetricEventLoggerFactory
-fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.net.debug.Diagnostics
 fuchsia.net.dhcp.ClientProvider
 dhcpd
@@ -81,10 +78,8 @@ dhcpv6-client
 fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.filter.deprecated.Filter
 fuchsia.net.name.LookupAdmin
-netstack*
 fuchsia.power.broker.Topology
 fuchsia.power.system.ActivityGovernor
-fuchsia.process.Launcher
 fuchsia.scheduler.RoleManager
 fuchsia.scheduler.deprecated.ProfileProvider
 netstack,
@@ -99,9 +94,8 @@ fuchsia-pkg://fuchsia.com/dns-resolver#meta/dns_resolver.cm
 fuchsia-pkg://fuchsia.com/google-http-client#meta/google-http-client.cm
 fuchsia-pkg://fuchsia.com/http-client#meta/http-client.cm
 fuchsia-pkg://fuchsia.com/netcfg-basic#meta/netcfg-basic.cm
-netstackC
-fuchsia-pkg://fuchsia.com/netstack-migration#meta/netstack-proxy.cm
-fuchsia-pkg://fuchsia.com/netstack-migration#meta/stack-migration.cm
+netstack5
+fuchsia-pkg://fuchsia.com/netstack3#meta/netstack3.cm
 fuchsia-pkg://fuchsia.com/reachability#meta/reachability.cm
 bazel-out/fuchsia_sdk_arm64-opt/bin/vendor/google-smart/products/smart/generated/estelle_user_with_ota_config/astro/smart_product_image_product_assembly_out/network/network/network.cmlbazel-out/fuchsia_platform_arm64-opt/bin/bundles/assembly/platform/platform_artifacts/network_realm/compiled_packages/include/inspect/offer.shard.cml
 bazel-out/fuchsia_platform_arm64-opt/bin/bundles/assembly/platform/platform_artifacts/network_realm/compiled_packages/include/syslog/offer.shard.cml
