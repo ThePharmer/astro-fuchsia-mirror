@@ -22,7 +22,9 @@ fuchsia.driver.EnableEphemeralDrivers
 fuchsia.driver.manager.EnableTestShutdownDelays
 fuchsia.driver.manager.SetRootDriverHostCritical
 fuchsia.driver.manager.SuspendTimeoutFallback
+fuchsia.power.StoragePowerManagementEnabled
 fuchsia.power.SuspendEnabled
+fuchsia.power.WlanPowerManagementEnabled
 fuchsia.driver.ExposeDebugCapabilities
 boot-drivers
 fuchsia.driver.usb.peripheral
@@ -43,6 +45,7 @@ fuchsia.component.resolution.Resolver-hermetic
 fuchsia.pkg.PackageResolver-hermetic
 fuchsia.device.fs.lifecycle.Lifecycle
 base-drivers
+fuchsia.driver.framework.NodeManager
 full-drivers
 fuchsia.driver.index.DevelopmentManager
 fuchsia.driver.index.DriverIndex
