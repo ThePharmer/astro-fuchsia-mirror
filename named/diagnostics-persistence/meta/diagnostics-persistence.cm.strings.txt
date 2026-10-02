@@ -4,8 +4,6 @@ binary
 bin/launcher
 environ
 SCUDO_OPTIONS=release_to_os_interval_ms=0
-fuchsia.diagnostics.persist.EnableShutdownSnapshot
-enable_shutdown_snapshot
 fuchsia.diagnostics.persist.LowBatteryThresholdPercent
 low_battery_threshold_percent
 fuchsia.diagnostics.persist.PersistencePeriodSeconds
@@ -18,15 +16,13 @@ fuchsia.diagnostics.ArchiveAccessor.previous_boot
 /svc/fuchsia.diagnostics.ArchiveAccessor.previous_boot
 fuchsia.update.Listener
 /svc/fuchsia.update.Listener
-fuchsia.hardware.power.statecontrol.ShutdownWatcherRegister
-/svc/fuchsia.hardware.power.statecontrol.ShutdownWatcherRegister
-fuchsia.power.battery.BatteryManager
-/svc/fuchsia.power.battery.BatteryManager
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
+fuchsia.power.battery.BatteryManager
+/svc/fuchsia.power.battery.BatteryManager
 cache
 /cache
 fuchsia.component.Binder
