@@ -1,8 +1,8 @@
 <manifest version="1.1" attributes="debug-symbols-arm64">
   <projects>
-    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="6491d5da66f1fa58214dde74e11bffc86ad70c4d" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
+    <project name="fuchsia" path="." remote="https://fuchsia.googlesource.com/fuchsia" revision="ef2dc82041a567a127054297ad57ab9c1f19ffa0" gerrithost="https://fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
     <project name="protobuf-gn" path="build/secondary/third_party/protobuf" remote="https://fuchsia.googlesource.com/protobuf-gn" revision="bb281106dbf873323c07969d38ae85daf12c19f4" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
-    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="2398d21c042cc1b42357a2d9eab38a000b7cd423" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
+    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="20f886a9af8cb53514bcaf2d46ffe87642cfcb7e" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
     <project name="third_party/OpenCL-Headers" path="third_party/OpenCL-Headers" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-Headers" revision="755ae0abe204b1821117e61645c5a3579a4a0dcd" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/OpenCL-ICD-Loader" path="third_party/OpenCL-ICD-Loader" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-ICD-Loader" revision="9ef8b1f3d66a491335863f490c07d0f8d9d1ac9b" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/Vulkan-Headers" path="third_party/Vulkan-Headers/src" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Headers" revision="5dd484dc0db8e5719d81bc8afb13d378ea1d96e8" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
@@ -162,7 +162,7 @@
     <project name="vendor/amlogic/drivers" path="vendor/amlogic/drivers" remote="sso://partner-fuchsia/vendor/amlogic/drivers" revision="2feb021bc2bf3f8083d77fc0d08f36e843f21468" gerrithost="https://partner-fuchsia-review.googlesource.com" githooks="integration/git-hooks" git_attributes="amlogic,google,projects,smart,smart-integration_71b323a395619e11"/>
     <project name="vendor/arm/camera" path="vendor/arm/camera" remote="sso://turquoise-internal/vendor/arm/camera" revision="8c252093d02740e198937c7758dbb2949b99acb4" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="google,smart,smart-integration_71b323a395619e11"/>
     <project name="smart" path="vendor/google-smart" remote="sso://turquoise-internal/smart" revision="5983c66bc45bde0e95e81e97df5e11f1557fe652" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="smart,smart-integration_71b323a395619e11"/>
-    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="dcca50a41d24224ecff97e4e2c4b076d8245bd12" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform_internal"/>
+    <project name="vendor/google" path="vendor/google" remote="sso://turquoise-internal/vendor/google" revision="82a0dc721f00f0eeb4dd4731c4cc15262c70b4ec" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform_internal"/>
     <project name="android/platform/external/uwb" path="vendor/google/connectivity/uwb/third_party/android/platform/external/uwb/src" remote="sso://turquoise-internal/third_party/googleplex-android/platform/external/uwb" revision="ab8022ab18fc741dee6e46886421e2f28278deea" gerrithost="https://googleplex-android-review.googlesource.com" git_attributes="manifests,platform_internal,third_party"/>
     <project name="vendor/google/eval" path="vendor/google/eval" remote="sso://turquoise-internal/fx-eval" revision="5b92b41be75d8ad1a5dc5f42c0f45b674dda355e" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="eval,google,smart,smart-integration_71b323a395619e11"/>
     <project name="third_party/github.com/axboe/liburing" path="vendor/google/starnix/third_party/github.com/axboe/liburing/src" remote="sso://turquoise-internal/third_party/github.com/axboe/liburing" revision="9d707e2b7f1f56158921ec7d45fcecbf5eb6222f" gerrithost="https://turquoise-internal-review.googlesource.com" git_attributes="manifests,platform_internal,third_party"/>
@@ -228,14 +228,14 @@
     <package name="fuchsia_internal/starnix/iris-symbols" version="bid:2@16506454" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64">
       <instance name="fuchsia_internal/starnix/iris-symbols" id="7XYQbwklGU6J6_E_n8cETnXIx-zCE9pY9O6ODNc9xiIC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/sorrel-dev-symbols" version="bid:2@16506454" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64">
-      <instance name="fuchsia_internal/starnix/sorrel-dev-symbols" id="dOJZ98zSJjNZkB40gcH7hQFF3GeokCwaARYLZDgyCzgC"></instance>
+    <package name="fuchsia_internal/starnix/sorrel-dev-symbols" version="bid:2@16508680" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64">
+      <instance name="fuchsia_internal/starnix/sorrel-dev-symbols" id="qwgOm3A9lVyTYSVmxkSnK6FsX_txw0nZ1Y3LqO-6DEwC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/sorrel-symbols" version="bid:2@16506454" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64">
-      <instance name="fuchsia_internal/starnix/sorrel-symbols" id="4hAt-IJnauT2R5LBQz0VzQowVM0RS8KhADaYoR5KxvIC"></instance>
+    <package name="fuchsia_internal/starnix/sorrel-symbols" version="bid:2@16508680" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64">
+      <instance name="fuchsia_internal/starnix/sorrel-symbols" id="HKpHPwVvZdD3LsMUMAyh8hv4KCqG_SdNh7whC7P5C6EC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/starfish-arm64-symbols" version="bid:2@16504453" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64">
-      <instance name="fuchsia_internal/starnix/starfish-arm64-symbols" id="hqPUBg3n33AAMr8XU0cI4q9og7TL9dXjsZtsmUvQDckC"></instance>
+    <package name="fuchsia_internal/starnix/starfish-arm64-symbols" version="bid:2@16506813" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64">
+      <instance name="fuchsia_internal/starnix/starfish-arm64-symbols" id="lMwyTWKTv9C64UFJks56hWkI2cLBK4TASbXMyUgqPRwC"></instance>
     </package>
     <package name="turquoise_internal/duocore/release/debug-symbols-arm64" version="g3-revision:libduocore_fuchsia_20261002_RC00" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-duocore">
       <instance name="turquoise_internal/duocore/release/debug-symbols-arm64" id="imrBR72jb17SQTSUHaqRjOfSuv-E9yZR4icmMRnC-PQC"></instance>
@@ -297,11 +297,11 @@
     <package name="turquoise_internal/libinteraction/perception/elaine/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-elaine">
       <instance name="turquoise_internal/libinteraction/perception/elaine/debug-symbols-arm64" id="8qpGTGveCJkBn-XyVoWI8-W0SwMQr5v-Hd8H5Rghlm4C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20261003_RL9_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle-ml-framework">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" id="MnMm6Ke6JdEcnTy6kLjXDNOl6wybnzKM-eOiuLzqxsQC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20261004_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle-ml-framework">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/debug-symbols-arm64" id="GvUiW7m9NU6slR8ywYmIM-hBnv4vv5zxWMztHVPWk9IC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20261003_RL9_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" id="johV_fmaP1mgHAo_gajwSMH-1lFoLguP4VGNfIdJyw8C"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20261004_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-estelle">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/debug-symbols-arm64" id="v2V-xw60QMsik_N3c6URPLXODRBeFUWG1j1y46znldcC"></instance>
     </package>
     <package name="turquoise_internal/libinteraction/perception/newman/debug-symbols-arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/.build-id" internal="true" attributes="debug-symbols,debug-symbols-arm64,debug-symbols-perception-newman">
       <instance name="turquoise_internal/libinteraction/perception/newman/debug-symbols-arm64" id="HqTQ_B50RnZfrStbNBNwCR-sVqP0WrZm7CUEJgx3oasC"></instance>
@@ -521,17 +521,17 @@
     <package name="turquoise_internal/libinteraction/perception/elaine/x64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/perception/perception_elaine/x64" internal="true">
       <instance name="turquoise_internal/libinteraction/perception/elaine/x64" id="5n9v4J8teBmcUCFtLzK4RVIXPmLBcVUsYjbZX22nNFMC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/arm64" version="g3-revision:turquoise_libinteraction_20261003_RL9_RC0" path="prebuilt/perception/perception_estelle/arm64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/arm64" id="JrGoi3rBrfmIHaHxLmVeD6LboYG6FljaxtCEQgDCyloC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/arm64" version="g3-revision:turquoise_libinteraction_20261004_RL1_RC0" path="prebuilt/perception/perception_estelle/arm64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/arm64" id="zsXVEt6Oo9kPRu7QHJGNfLTbhRAcBH_hV7RhgkePXDEC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" version="g3-revision:turquoise_libinteraction_20261003_RL9_RC0" path="prebuilt/perception/perception_estelle/ml_framework/arm64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" id="_2zaTBLe6NA5XQry-EEGcys2Z_--D93O6d0CoCfxLeQC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" version="g3-revision:turquoise_libinteraction_20261004_RL1_RC0" path="prebuilt/perception/perception_estelle/ml_framework/arm64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/arm64" id="9pqseIIPuMmIP7LpiagbOH9XptXzbuDxHVJhnF5oZ88C"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" version="g3-revision:turquoise_libinteraction_20261003_RL9_RC0" path="prebuilt/perception/perception_estelle/ml_framework/x64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" id="_qbvqKlfnBzqrBfuefXkR3oyjVtsXPZyRCtPpG00iHQC"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" version="g3-revision:turquoise_libinteraction_20261004_RL1_RC0" path="prebuilt/perception/perception_estelle/ml_framework/x64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle-ml-framework/x64" id="y0YsPXz2d8FxrxhnGdqkxxWSM9XoUbkhPQWOdPTC0FAC"></instance>
     </package>
-    <package name="turquoise_internal/libinteraction/perception/estelle/x64" version="g3-revision:turquoise_libinteraction_20261003_RL9_RC0" path="prebuilt/perception/perception_estelle/x64" internal="true">
-      <instance name="turquoise_internal/libinteraction/perception/estelle/x64" id="WrjsEkiMm12X6WdPfVaEjXN5xqqMsPiDVcTIlBfixm8C"></instance>
+    <package name="turquoise_internal/libinteraction/perception/estelle/x64" version="g3-revision:turquoise_libinteraction_20261004_RL1_RC0" path="prebuilt/perception/perception_estelle/x64" internal="true">
+      <instance name="turquoise_internal/libinteraction/perception/estelle/x64" id="G0eY84qdfBNm_wv9CKS0G6g2bYVpl1w_KYjqYYudraMC"></instance>
     </package>
     <package name="turquoise_internal/libinteraction/perception/newman/arm64" version="g3-revision:turquoise_libinteraction_20240719_RL1_RC0" path="prebuilt/perception/perception_newman/arm64" internal="true">
       <instance name="turquoise_internal/libinteraction/perception/newman/arm64" id="xRiXEuhGT_h6LcYtYRdqBRv8lxNASRbHUwY6qw331scC"></instance>
@@ -569,8 +569,8 @@
     <package name="fuchsia_internal/starnix/cf-blazer-x64-assembly-inputs" version="bid:2@16506454" path="prebuilt/starnix/internal/cuttlefish-blazer" internal="true">
       <instance name="fuchsia_internal/starnix/cf-blazer-x64-assembly-inputs" id="8nJJ_VgRE1ssA48fegkqGHIYkBD4nRV51UtLTmlrZ8IC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/cf-phone-x64-assembly-inputs" version="bid:2@16504453" path="prebuilt/starnix/internal/cuttlefish-phone" internal="true">
-      <instance name="fuchsia_internal/starnix/cf-phone-x64-assembly-inputs" id="9x1fK_PDe4JLSERcbLQH6gOPoJIvVn_vsDKYTavwnigC"></instance>
+    <package name="fuchsia_internal/starnix/cf-phone-x64-assembly-inputs" version="bid:2@16506813" path="prebuilt/starnix/internal/cuttlefish-phone" internal="true">
+      <instance name="fuchsia_internal/starnix/cf-phone-x64-assembly-inputs" id="hbbMbCve_IKeQfgmFIVBuGzyGy3xJUZeT5I2JA867RcC"></instance>
     </package>
     <package name="fuchsia_internal/starnix/gki" version="z0Qwh8YEfcnRAQiJpc0vv-twpBQlDzvXyGSICt264C4C" path="prebuilt/starnix/internal/gki" internal="true"/>
     <package name="fuchsia_internal/starnix/iris-assembly-inputs" version="bid:2@16506454" path="prebuilt/starnix/internal/iris" internal="true">
@@ -588,20 +588,20 @@
     <package name="fuchsia_internal/starnix/selinux-image-amd64" version="build:dbe11951-86cc-4f2a-9702-eff32c66daf5" path="prebuilt/starnix/internal/selinux-amd64" internal="true">
       <instance name="fuchsia_internal/starnix/selinux-image-amd64" id="ygONU4OF4RjGbK-Np72FGYwuzOc4pPq38kJlFEXJTrMC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/sorrel-assembly-inputs" version="bid:2@16506454" path="prebuilt/starnix/internal/sorrel" internal="true">
-      <instance name="fuchsia_internal/starnix/sorrel-assembly-inputs" id="g0bxKpIHXSRUtTo14RM8pczftJeLXs6opO6IwrWGAlkC"></instance>
+    <package name="fuchsia_internal/starnix/sorrel-assembly-inputs" version="bid:2@16508680" path="prebuilt/starnix/internal/sorrel" internal="true">
+      <instance name="fuchsia_internal/starnix/sorrel-assembly-inputs" id="jErfZytkV1go9Yue5KQQ_qJlUTO0kOJk3YtQ3_ehKQYC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/sorrel-dev-assembly-inputs" version="bid:2@16506454" path="prebuilt/starnix/internal/sorrel-dev" internal="true">
-      <instance name="fuchsia_internal/starnix/sorrel-dev-assembly-inputs" id="YruNQZ77-lzB279neX0Ss6tCg2Tam25g-p-2KTTzn4YC"></instance>
+    <package name="fuchsia_internal/starnix/sorrel-dev-assembly-inputs" version="bid:2@16508680" path="prebuilt/starnix/internal/sorrel-dev" internal="true">
+      <instance name="fuchsia_internal/starnix/sorrel-dev-assembly-inputs" id="Q9AVa5VjYVHWAAnDNmIpliyJWOxw4wQub-o625xMoDoC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/starfish-amd64" version="bid:2@16504453" path="prebuilt/starnix/internal/starfish-amd64" internal="true">
-      <instance name="fuchsia_internal/starnix/starfish-amd64" id="FcI9rHBVPkqKexfSQa1jBi8g17Mn9HkRfuizJfIj3V4C"></instance>
+    <package name="fuchsia_internal/starnix/starfish-amd64" version="bid:2@16506813" path="prebuilt/starnix/internal/starfish-amd64" internal="true">
+      <instance name="fuchsia_internal/starnix/starfish-amd64" id="iYXuEo-nOymJYaUF9IecRwBFBbxjHmQEmx3f544DBy4C"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/starfish-arm64" version="bid:2@16504453" path="prebuilt/starnix/internal/starfish-arm64" internal="true">
-      <instance name="fuchsia_internal/starnix/starfish-arm64" id="-_M4Z-RpFdTdFjTm-m67w1ni2kV-ii64BbI3LLHLMbgC"></instance>
+    <package name="fuchsia_internal/starnix/starfish-arm64" version="bid:2@16506813" path="prebuilt/starnix/internal/starfish-arm64" internal="true">
+      <instance name="fuchsia_internal/starnix/starfish-arm64" id="qNOYSQzI0N7ZOs573V8RxR_YGXp97S7PLVXPQDt7floC"></instance>
     </package>
-    <package name="fuchsia_internal/starnix/cf-wear-x64-assembly-inputs" version="bid:2@16504453" path="prebuilt/starnix/internal/starfish-cuttlefish-wear" internal="true">
-      <instance name="fuchsia_internal/starnix/cf-wear-x64-assembly-inputs" id="6s-fwD3PnYDSrMCi4Qkjy8UT8G5EdsB86Cw3AMmwx2oC"></instance>
+    <package name="fuchsia_internal/starnix/cf-wear-x64-assembly-inputs" version="bid:2@16506813" path="prebuilt/starnix/internal/starfish-cuttlefish-wear" internal="true">
+      <instance name="fuchsia_internal/starnix/cf-wear-x64-assembly-inputs" id="xCCl-9NCYDhB0vidqKohzumY1q1L6CMaa2QvJu6UscoC"></instance>
     </package>
     <package name="fuchsia/third_party/starnix/linux-amd64" version="version:debian-sid-glibc-2.41-6" path="prebuilt/starnix/linux-amd64">
       <instance name="fuchsia/third_party/starnix/linux-amd64" id="sj2p7OFlbalx4_oTTGZ6R5WafRTd6i2Huwh5eh8weT8C"></instance>
