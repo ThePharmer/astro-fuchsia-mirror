@@ -27,7 +27,6 @@ fuchsia.net.interfaces.State
 fuchsia.net.interfaces.admin.Installer
 fuchsia.net.multicast.admin.Ipv4RoutingTableController
 fuchsia.net.multicast.admin.Ipv6RoutingTableController
-fuchsia.net.name.DnsServerWatcher
 fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider
 fuchsia.net.neighbor.Controller
 fuchsia.net.neighbor.View
@@ -67,7 +66,6 @@ fuchsia.net.filter.SocketControl%
 /svc/fuchsia.net.interfaces.admin.Installer
 /svc/fuchsia.net.multicast.admin.Ipv4RoutingTableController
 /svc/fuchsia.net.multicast.admin.Ipv6RoutingTableController
-/svc/fuchsia.net.name.DnsServerWatcher
 fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider=
 /svc/fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider
 /svc/fuchsia.net.neighbor.Controller
@@ -102,6 +100,8 @@ multi_vmo
 num_threads
 opaque_iids
 sampled_stats_enabled
+tcp_gro_enabled
+ZF]c@
 meta/netstack3.cvf
 src/connectivity/network/netstack3/meta/netstack3_prod.cml
 sdk/lib/inspect/offer.shard.cml
