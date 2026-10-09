@@ -1,10 +1,10 @@
 driver
-bind
+binary
+driver/compat.sobind
 meta/bind/aml-g12-tdm-dai.bindbccompat
 driver/aml-g12-tdm-dai.so
 default_dispatcher_opts
-allow_sync_callsbinary
-driver/compat.somodules
+allow_sync_callsmodules
 loader_overrides
 from
 libdriver.so
@@ -28,7 +28,7 @@ fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
 src/media/audio/drivers/aml-g12-tdm/meta/aml-g12-tdm-dai.cml
 sdk/lib/driver/compat/compat.shard.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/driver/platform-device.shard.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
 sdk/lib/syslog/offer.shard.cml
