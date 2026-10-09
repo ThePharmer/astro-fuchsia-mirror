@@ -4,8 +4,6 @@ fuchsia.system-updater.ConcurrentBlobFetches
 concurrent_blob_fetches
 fuchsia.system-updater.ConcurrentPackageResolves
 concurrent_package_resolves
-fuchsia.system-updater.ExcessiveUpdateDurationSeconds
-excessive_update_duration_seconds
 fuchsia.system-updater.ManifestPublicKeys
 manifest_public_keys
 fuchsia.system-updater.VerifyExistingBlobs
@@ -14,8 +12,6 @@ build-info
 /config/build-info
 system
 /system
-fuchsia.feedback.CrashReporter
-/svc/fuchsia.feedback.CrashReporter
 fuchsia.fxfs.BlobCreator
 /svc/fuchsia.fxfs.BlobCreator
 fuchsia.fxfs.BlobReader
@@ -49,6 +45,7 @@ data
 /data
 fuchsia.update.installer.Installer
 /svc/fuchsia.update.installer.Installer
+%Q$UE'
 src/sys/pkg/bin/system-updater/meta/system-updater.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml

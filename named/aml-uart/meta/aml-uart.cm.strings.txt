@@ -3,6 +3,8 @@ binary
 driver/aml-uart.so
 bind
 meta/bind/aml-uart.bindbc
+colocate
+false
 default_dispatcher_opts
 allow_sync_calls
 fuchsia.power.SuspendEnabled
@@ -20,13 +22,11 @@ fuchsia.boot.metadata.MacAddressMetadata-
 /svc/fuchsia.boot.metadata.MacAddressMetadata
 fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
-fuchsia.hardware.pin.PinStatesService
-/svc/fuchsia.hardware.pin.PinStatesService
 fuchsia.boot.metadata.MacAddressMetadata
 fuchsia.hardware.serialimpl.Service
 /svc/fuchsia.hardware.serialimpl.Service
 Qe'?7
-gen/src/devices/serial/drivers/aml-uart/aml-uart.cml
+src/devices/serial/drivers/aml-uart/meta/aml-uart.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
