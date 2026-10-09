@@ -22,10 +22,15 @@ fuchsia.driver.EnableEphemeralDrivers
 fuchsia.driver.manager.EnableTestShutdownDelays
 fuchsia.driver.manager.SetRootDriverHostCritical
 fuchsia.driver.manager.SuspendTimeoutFallback
+fuchsia.power.GpuPowerManagementEnabled
+fuchsia.power.PowerFrameworkEnabledForWlanDriver
+fuchsia.power.StoragePowerManagementEnabled
 fuchsia.power.SuspendEnabled
-fuchsia.driver.manager.PowerInjectOffer
+fuchsia.driver.ExposeDebugCapabilities
 boot-drivers
+fuchsia.driver.usb.peripheral
 fuchsia.usb.PeripheralConfig.Functions
+fuchsia.driver.manager.PowerInjectOffer
 fuchsia.boot.Items
 fuchsia.kernel.RootJob
 fuchsia.system.state.SystemStateTransition
@@ -41,6 +46,7 @@ fuchsia.component.resolution.Resolver-hermetic
 fuchsia.pkg.PackageResolver-hermetic
 fuchsia.device.fs.lifecycle.Lifecycle
 base-drivers
+fuchsia.driver.framework.NodeManager
 full-drivers
 fuchsia.driver.index.DevelopmentManager
 fuchsia.driver.index.DriverIndex
@@ -49,6 +55,10 @@ fuchsia.driver.test.Internal
 fuchsia.kernel.MexecResource
 fuchsia.kernel.PowerResource
 fuchsia.scheduler.RoleManager
+dtr.base-drivers
+dtr.boot-drivers
+dtr.driver-hosts
+dtr.full-drivers
 #meta/devfs.cm
 #meta/driver-index.cm
 #meta/driver_manager_test.cm

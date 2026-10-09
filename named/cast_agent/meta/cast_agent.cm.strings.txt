@@ -1,7 +1,7 @@
-binary
-cast_agent_exe
 args
 --cast-agent
+binary
+cast_agent_exe
 lifecycle.stop_event
 notify
 config-data
@@ -22,8 +22,8 @@ fuchsia.memory.sampler.Sampler
 /svc/fuchsia.memory.sampler.Sampler
 fuchsia.migration.CastProvider
 /svc/fuchsia.migration.CastProvider
-fuchsia.net.stackmigrationdeprecated.Control
-/svc/fuchsia.net.stackmigrationdeprecated.Control
+fuchsia.storage.blobfs.OverwriteConfiguration
+/svc/fuchsia.storage.blobfs.OverwriteConfiguration
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 fuchsia.update.config.OptOut
@@ -50,8 +50,8 @@ google.nest.thread.GcmReceiver
 /svc/google.nest.thread.GcmReceiver
 google.nest.thread.Telemetry
 /svc/google.nest.thread.Telemetry
-fuchsia.bluetooth.gatt.Server
-/svc/fuchsia.bluetooth.gatt.Server
+fuchsia.bluetooth.gatt2.Server
+/svc/fuchsia.bluetooth.gatt2.Server
 fuchsia.bluetooth.le.Central
 /svc/fuchsia.bluetooth.le.Central
 fuchsia.bluetooth.le.Peripheral
