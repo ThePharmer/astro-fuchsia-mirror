@@ -1,4 +1,6 @@
 driver
+allowed_scheduler_roles
+fuchsia.graphics.display.drivers.display.coordinator
 binary
 driver/display-coordinator.so
 bind
@@ -7,10 +9,12 @@ colocate
 true
 default_dispatcher_opts
 allow_sync_callsdefault_dispatcher_scheduler_role
-fuchsia.graphics.display.drivers.display.coordinator
-allowed_scheduler_roles
 memory_priority_role
 fuchsia.display.driver.memory
+fuchsia.display.FallbackHorizontalSizeMm
+fallback_horizontal_size_mm
+fuchsia.display.FallbackVerticalSizeMm
+fallback_vertical_size_mm
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
 diagnostics
@@ -20,7 +24,7 @@ fuchsia.driver.compat.Service
 /svc/fuchsia.driver.compat.Service
 fuchsia.hardware.display.engine.Service
 /svc/fuchsia.hardware.display.engine.Service
-src/graphics/display/drivers/coordinator/meta/display-coordinator.cml
+src/graphics/display/drivers/coordinator/meta/coordinator.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
