@@ -154,6 +154,7 @@ fuchsia.diagnostics.persist.LowBatteryThresholdPercent
 fuchsia.diagnostics.persist.PersistencePeriodSeconds
 fuchsia.diagnostics.persist.StopOnIdleTimeoutMillis
 fuchsia.diagnostics.persist.SkipUpdateCheck
+fuchsia.diagnostics.sampler.MinimumSampleRateSec
 fuchsia.diagnostics.sampler.ProjectConfigs
 fuchsia.fonts.FontManifest
 font_provider
@@ -161,6 +162,10 @@ fuchsia.fonts.VerboseLogging
 fuchsia.fshost.MergeSuperAndUserdata
 fuchsia.http-client.StopOnIdleTimeoutMillis
 fuchsia.http-client.TcpReceiveBufferSizeBytes
+fuchsia.hwinfo.ProductManufacturer
+hwinfo
+fuchsia.hwinfo.ProductModel
+fuchsia.hwinfo.ProductName
 fuchsia.memory.CaptureOnPressureChange
 memory_monitor
 fuchsia.memory.CriticalCaptureDelay
@@ -227,12 +232,21 @@ fuchsia.ui.ManageDisplayPower
 brightness_manager
 fuchsia.ui.PowerOffDelayMillis
 fuchsia.ui.PowerOnDelayMillis
+fuchsia.vulkan.loader.AllowGoldfishIcd
+vulkan_loader
+fuchsia.vulkan.loader.AllowLavapipeIcd
+fuchsia.vulkan.loader.AllowMagmaIcds
+fuchsia.vulkan.loader.LavapipeIcdUrl
+fuchsia.wlan.WepSupported
+wlandevicemonitor
+fuchsia.wlan.Wpa1Supported
 bluetooth-le-config
 tee-clients
 diagnostics-accessors
 diagnostics-persist-capabilities
 driver-services-for-session
 driver-services
+netstack3-config
 starnix-volume
 tee-client-capabilities
 base-bin
@@ -252,7 +266,6 @@ config-data
 audio_core
 google-root-ssl-certificates
 root-ssl-certificates
-hwinfo
 fonts
 system-update-committer-config-data
 system-update-committer
@@ -270,7 +283,6 @@ dev-gpu
 dev-class-network
 dev-thermal
 thermal
-vulkan_loader
 dev-goldfish-pipe
 goldfish-pipe
 dev-goldfish-control
@@ -553,7 +565,6 @@ fuchsia.weave.Bootstrap
 fuchsia.weave.Stack
 fuchsia.weave.StackProvider
 fuchsia.web.ContextProvider
-wlandevicemonitor
 fuchsia.wlan.device.service.DeviceMonitor
 fuchsia.wlan.policy.AccessPointProvider
 fuchsia.wlan.policy.ClientProvider
