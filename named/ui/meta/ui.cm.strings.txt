@@ -17,6 +17,7 @@ fuchsia.recovery.ui.FactoryResetCountdown
 fuchsia.session.scene.Manager
 fuchsia.ui.brightness.ColorAdjustment
 fuchsia.ui.brightness.ColorAdjustmentHandler
+fuchsia.ui.input.DeviceListenerRegistry
 fuchsia.ui.input.config.Features
 fuchsia.ui.policy.DeviceListenerRegistry
 fuchsia.ui.policy.DisplayBacklight
@@ -28,6 +29,7 @@ scenic
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Flatland
 fuchsia.ui.composition.FlatlandDisplay
+fuchsia.ui.composition.FlatlandFactory
 fuchsia.ui.composition.ScreenCapture
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.composition.TrustedFlatlandFactory
@@ -39,6 +41,7 @@ fuchsia.ui.display.singleton.DisplayPower
 fuchsia.ui.display.singleton.Info
 fuchsia.ui.display.singleton.VsyncSource
 fuchsia.ui.focus.FocusChainListenerRegistry
+fuchsia.ui.input.internal.InputOwnership
 fuchsia.ui.pointer.augment.LocalHit
 fuchsia.ui.pointerinjector.Registry
 fuchsia.ui.views.ViewRefInstalled
@@ -53,9 +56,12 @@ fuchsia.ui.AttachA11yView
 fuchsia.ui.DisplayPixelDensity
 fuchsia.ui.EnableMergeTouchEvents
 fuchsia.ui.IdleThresholdMs
+fuchsia.ui.Prefetch
 fuchsia.ui.SupportedInputDevices
 fuchsia.ui.ViewingDistance
+fuchsia.ui.VisualDebuggingLevel
 fuchsia.scenic.DisplayComposition
+fuchsia.scenic.DisplayCompositionEnableHeuristics
 fuchsia.scenic.FrameCounterOverlay
 fuchsia.scenic.FramePredictionMarginInUs
 fuchsia.scenic.FrameSchedulerMinPredictedFrameDurationInUs
@@ -69,7 +75,7 @@ fuchsia.scenic.MinDisplayRefreshRateMillihertz
 fuchsia.scenic.MinDisplayVerticalResolutionPx
 fuchsia.scenic.PointerAutoFocus
 fuchsia.scenic.Renderer
-fuchsia.ui.VisualDebuggingLevel
+fuchsia.scenic.UseSeparateInputThread
 sensor-config
 virtual_keyboard_manager
 config-data
@@ -92,7 +98,6 @@ fuchsia.settings.Keyboard
 fuchsia.sysmem.Allocator
 fuchsia.sysmem2.Allocator
 fuchsia.vulkan.loader.Loader
-fuchsia.stash.Store
 fuchsia.power.system.ActivityGovernor
 virtual_keyboard_manager!
 fuchsia.ui.annotation.Registry
