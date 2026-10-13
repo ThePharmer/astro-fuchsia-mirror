@@ -1,8 +1,8 @@
 <manifest version="1.1" attributes="debug-symbols-arm64">
   <projects>
-    <project name="fuchsia" path="." remote="https://turquoise-internal.googlesource.com/fuchsia" revision="5036eb566fd05e5f94780bc1c6e2ffb2ae9c1a6f" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
+    <project name="fuchsia" path="." remote="https://turquoise-internal.googlesource.com/fuchsia" revision="914634441bc086c6666d284692f4a9b22d9a4afa" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="manifests,platform"/>
     <project name="protobuf-gn" path="build/secondary/third_party/protobuf" remote="https://fuchsia.googlesource.com/protobuf-gn" revision="6486fcc7ef42bf35c877cdcaab17f69895076e73" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
-    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="9698e77e5bebe00478822d1299aecaaf0cfdbe0d" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
+    <project name="smart-integration" path="integration" remote="sso://turquoise-internal/smart-integration" revision="232f7180fff9d8af6e9d7a76f8d4659869857f77" gerrithost="https://turquoise-internal-review.googlesource.com" githooks="integration/git-hooks" git_attributes="flower,fuchsia,smart,smart-integration_71b323a395619e11,stem"/>
     <project name="third_party/OpenCL-Headers" path="third_party/OpenCL-Headers" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-Headers" revision="755ae0abe204b1821117e61645c5a3579a4a0dcd" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/OpenCL-ICD-Loader" path="third_party/OpenCL-ICD-Loader" remote="https://fuchsia.googlesource.com/third_party/github.com/KhronosGroup/OpenCL-ICD-Loader" revision="9ef8b1f3d66a491335863f490c07d0f8d9d1ac9b" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/Vulkan-Headers" path="third_party/Vulkan-Headers/src" remote="https://fuchsia.googlesource.com/third_party/Vulkan-Headers" revision="5dd484dc0db8e5719d81bc8afb13d378ea1d96e8" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
@@ -76,7 +76,7 @@
     <project name="third_party/github.com/gperftools/gperftools" path="third_party/gperftools" remote="https://fuchsia.googlesource.com/third_party/github.com/gperftools/gperftools" revision="1880a6c1e226352f5348518b159e40d1053289ba" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/grpc" path="third_party/grpc/src" remote="https://fuchsia.googlesource.com/third_party/grpc" revision="f5e2d6e856176c2f6b7691032adfefe21e5f64c1" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/half" path="third_party/half/src" remote="https://fuchsia.googlesource.com/third_party/half" revision="acdabdfd5360b4e47fc7a958d4766acb6ae20bc3" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
-    <project name="chromium/deps/icu@default" path="third_party/icu/default" remote="https://chromium.googlesource.com/chromium/deps/icu" revision="d578f2e8b7bd5938e21cfb6bf15c079e0aa5b738" gerrithost="https://chromium-review.googlesource.com" git_attributes="icu,manifests,platform,third_party"/>
+    <project name="chromium/deps/icu@default" path="third_party/icu/default" remote="https://chromium.googlesource.com/chromium/deps/icu" revision="19dfb44a62ae60ce6b0060de8c0cef5d5c527177" gerrithost="https://chromium-review.googlesource.com" git_attributes="icu,manifests,platform,third_party"/>
     <project name="chromium/deps/icu@latest" path="third_party/icu/latest" remote="https://chromium.googlesource.com/chromium/deps/icu" revision="d578f2e8b7bd5938e21cfb6bf15c079e0aa5b738" gerrithost="https://chromium-review.googlesource.com" git_attributes="icu,manifests,platform,third_party"/>
     <project name="third_party/inih" path="third_party/inih" remote="https://fuchsia.googlesource.com/third_party/inih" revision="88d38365a92e9226497dde3a16705399876fe54c" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
     <project name="third_party/intel/libva" path="third_party/intel/libva" remote="https://fuchsia.googlesource.com/third_party/github.com/intel/libva" revision="e7ba80ad5ab86620840481e03804cc0640d0bfe0" gerrithost="https://fuchsia-review.googlesource.com" git_attributes="manifests,platform,third_party"/>
@@ -1119,8 +1119,8 @@
     <package name="fuchsia/third_party/sysroot/focal" version="git_revision:1d35e3be9be587ed0de81ea4208be7cc01a7748c" path="prebuilt/third_party/sysroot/ubuntu20.04" platforms="linux-amd64,linux-arm64">
       <instance name="fuchsia/third_party/sysroot/focal" id="hx3aAt7x_q9Qk6w6TrpUVtcSqgrVM2-7lyTW9LWU2oIC"></instance>
     </package>
-    <package name="fuchsia/third_party/tzres" version="version:2024a" path="prebuilt/third_party/tzres" platforms="linux-amd64,linux-arm64">
-      <instance name="fuchsia/third_party/tzres" id="GtoH36uX4w1e7kci8yDflYfIDrs4D_rEEiQJPiMlvmoC"></instance>
+    <package name="fuchsia/third_party/tzres" version="version:2026e" path="prebuilt/third_party/tzres" platforms="linux-amd64,linux-arm64">
+      <instance name="fuchsia/third_party/tzres" id="ccDlh9MxwdISXQQrtExMOTlEDku-MSR4-9dgODwA5osC"></instance>
     </package>
     <package name="fuchsia/third_party/ucd" version="version:12.1.0rc1" path="prebuilt/third_party/ucd" platforms="linux-amd64,linux-arm64">
       <instance name="fuchsia/third_party/ucd" id="LQsbST4YT4horZnrcDCB8mkli3_FiCqudYrVN_5YPFgC"></instance>
@@ -1168,8 +1168,8 @@
     <package name="chrome_internal/fuchsia/nest_sd/perf/web_engine/arm64/tests" version="version:152.0.7977.160" path="prebuilt/third_party/web_engine_tests_nest_sd_perf/arch/arm64">
       <instance name="chrome_internal/fuchsia/nest_sd/perf/web_engine/arm64/tests" id="bm_YiGH1kq2ldXy1W0rHTXCfxYJUxQWZibDlW3emWOEC"></instance>
     </package>
-    <package name="fuchsia/third_party/zoneinfo" version="version:2024a" path="prebuilt/third_party/zoneinfo" platforms="linux-amd64,linux-arm64">
-      <instance name="fuchsia/third_party/zoneinfo" id="z6XB8XrWSg3ojZNtJGK_h27N-zLKDVi73_9ZopJs2JcC"></instance>
+    <package name="fuchsia/third_party/zoneinfo" version="version:2026e" path="prebuilt/third_party/zoneinfo" platforms="linux-amd64,linux-arm64">
+      <instance name="fuchsia/third_party/zoneinfo" id="6XYoFIfrJYeayIGFIxysxuvr3625oKMeSWfcCn0xU60C"></instance>
     </package>
     <package name="fuchsia/infra/artifacts/${platform}" version="git_revision:42ac5cfd31c2a51a38bdbd16f698de86ef990b13" path="prebuilt/tools/artifacts" platforms="linux-amd64,linux-arm64">
       <instance name="fuchsia/infra/artifacts/linux-amd64" id="btS-MyiivwPTChGJTLIs5qtLqaCCzj2NGxoZj9qhoOEC"></instance>
