@@ -1,9 +1,11 @@
-binary
-bin/launcher
 args
 sampler
+binary
+bin/launcher
 environ
 SCUDO_OPTIONS=release_to_os_interval_ms=0
+fuchsia.diagnostics.sampler.MinimumSampleRateSec
+minimum_sample_rate_sec
 fuchsia.diagnostics.sampler.ProjectConfigs
 project_configs
 fuchsia.diagnostics.Sample
@@ -18,8 +20,6 @@ diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.component.Binder
-minimum_sample_rate_sec
-meta/sampler.cvf
 src/diagnostics/sampler/meta/sampler.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
