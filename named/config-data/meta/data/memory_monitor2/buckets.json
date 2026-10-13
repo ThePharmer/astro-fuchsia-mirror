@@ -43,7 +43,7 @@
   },
   {
     "name": "Storage",
-    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage",
+    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage|fvm2\\.cm|stash\\.cm|stash_secure\\.cm",
     "vmo": "",
     "event_code": 72
   },
@@ -55,7 +55,7 @@
   },
   {
     "name": "Netstack",
-    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|stack_migration\\.cm|netstack-proxy\\.cm|/pkg/bin/netstack|/pkg/bin/netstack3|dhcp-client\\.cm",
+    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|stack-migration\\.cm|netstack-proxy\\.cm|/pkg/bin/netstack|/pkg/bin/netstack3|dhcp-client\\.cm",
     "vmo": "",
     "event_code": 11
   },
@@ -67,7 +67,7 @@
   },
   {
     "name": "Archivist",
-    "process": "archivist\\.cm|sampler\\.cm|diagnostics-persistence\\.cm",
+    "process": "archivist\\.cm|sampler\\.cm|diagnostics-persistence\\.cm|triage-detect\\.cm",
     "vmo": "",
     "event_code": 22
   },
@@ -97,7 +97,7 @@
   },
   {
     "name": "Resolvers",
-    "process": ".*-resolver\\.cm.*",
+    "process": "loopback_resolver\\.cm|.*-resolver\\.cm.*",
     "vmo": "",
     "event_code": 42
   },
@@ -127,7 +127,7 @@
   },
   {
     "name": "I18N",
-    "process": "httpsdate_time_source\\.cm|fonts\\.cm|intl\\.cm|intl_services\\.cm|timezone\\.cm|time-zone-info-service\\.cm",
+    "process": "httpsdate_time_source\\.cm|fonts\\.cm|font-server\\.cm|intl\\.cm|intl_services\\.cm|timezone\\.cm|time-zone-info-service\\.cm",
     "vmo": "",
     "event_code": 53
   },
@@ -157,7 +157,7 @@
   },
   {
     "name": "Power",
-    "process": "power-manager\\.cm|shutdown-shim\\.cm",
+    "process": "battery_manager\\.cm|cpu-manager\\.cm|power-broker\\.cm|power-manager\\.cm|shutdown-shim\\.cm|system-activity-governor\\.cm",
     "vmo": "",
     "event_code": 65
   },
@@ -193,7 +193,7 @@
   },
   {
     "name": "OtherDrivers",
-    "process": "driver_host.*|driver-host-.*|pwrbtn-monitor\\.cm|aml-rawnand\\.cm.*|aml-sdmmc\\.cm.*|aml-usb-phy\\.cm|platform-bus\\.cm.*|aml-uart\\.cm.*|amlogic-display\\.cm|aml-gpio\\.cm.*|aml-meson-power\\.cm.*|xhci.cm\\.*|aml-i2c\\.cm.*|optee\\.cm.*|aml-pwm\\.cm.*|amlogic_video_decoder\\.cm.*|aml-g12-tdm\\.cm.*|tas27xx\\.cm.*|ams-light\\.cm.*|aml-securemem\\.cm.*|aml-g12-pdm\\.cm.*|aml-ram\\.cm.*|aml-thermistor\\.cm.*|aml-canvas\\.cm.*|focaltech\\.cm.*|aml-thermal\\.cm.*|buttons\\.cm.*|aml-light\\.cm.*|ti-lp8556\\.cm.*|aml-g12-tdm-dai\\.cm.*|registers\\.cm.*|aml-pwm-init\\.cm.*|aml_mipicsi\\.cm.*|lowpan-ot-driver\\.cm.*|aml-thermal-s905d2g-legacy\\.cm.*|amlogic_h264_encoder_driver\\.cm.*|focaltech-sherlock\\.cm.*|tas5720\\.cm.*|camera_device\\.cm.*|aml-nna\\.cm.*|gt6853\\.cm.*|ti-ina231\\.cm.*|nelson-brownout-protection\\.cm.*|shtv3\\.cm.*",
+    "process": "driver_host.*|driver-host-.*|pwrbtn-monitor\\.cm|aml-rawnand\\.cm.*|aml-sdmmc\\.cm.*|aml-usb-phy\\.cm|platform-bus\\.cm.*|aml-uart\\.cm.*|amlogic-display\\.cm|aml-gpio\\.cm.*|aml-meson-power\\.cm.*|xhci.cm\\.*|aml-i2c\\.cm.*|optee\\.cm.*|aml-pwm\\.cm.*|amlogic_video_decoder\\.cm.*|aml-g12-tdm\\.cm.*|tas27xx\\.cm.*|ams-light\\.cm.*|aml-securemem\\.cm.*|aml-g12-pdm\\.cm.*|aml-ram\\.cm.*|aml-thermistor\\.cm.*|aml-canvas\\.cm.*|focaltech\\.cm.*|aml-thermal\\.cm.*|buttons\\.cm.*|aml-light\\.cm.*|ti-lp8556\\.cm.*|aml-g12-tdm-dai\\.cm.*|registers\\.cm.*|aml-pwm-init\\.cm.*|aml_mipicsi\\.cm.*|lowpan-ot-driver\\.cm.*|aml-thermal-s905d2g-legacy\\.cm.*|amlogic_h264_encoder_driver\\.cm.*|focaltech-sherlock\\.cm.*|tas5720\\.cm.*|camera_device\\.cm.*|aml-nna\\.cm.*|gt6853\\.cm.*|ti-ina231\\.cm.*|nelson-brownout-protection\\.cm.*|shtv3\\.cm.*|goodix\\.cm|dwc2\\.cm",
     "vmo": "",
     "event_code": 48
   },
@@ -205,7 +205,7 @@
   },
   {
     "name": "EngTools",
-    "process": "/boot/bin/sh|/pkg/bin/sshd|overnetstack\\.cm|remote.*|sh:console|sshd-host\\.cm",
+    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|debug-dash-launcher\\.cm|developer-console\\.cm|fdomain_runner|fs_realm\\.cm|gtest-runner\\.cm|kernel_debug_broker\\.cm|ktrace_provider\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|ptysvc\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm|trace_manager\\.cm|sl4f\\.cm|profiler\\.cm",
     "vmo": "",
     "event_code": 64
   },
@@ -229,7 +229,7 @@
   },
   {
     "name": "Perception",
-    "process": "concierge_agent\\.cm|fuchsia_perception_estelle_agent|fuchsia_perception_newman_agent|fuchsia_perception_elaine_agent|ml_framework_agent\\.cm|openvx_nn_server\\.cm|fuchsia_selina_agent\\.cm",
+    "process": "concierge_agent\\.cm|fuchsia_perception_estelle_agent?|fuchsia_perception_newman_agent|fuchsia_perception_elaine_agent|ml_framework_agent\\.cm|openvx_nn_server\\.cm|fuchsia_selina_agent\\.cm|stellar_agent\\.cm",
     "vmo": "",
     "event_code": 37
   },
@@ -328,5 +328,11 @@
     "process": "usonia_agent\\.cm",
     "vmo": "",
     "event_code": 75
+  },
+  {
+    "name": "Code88",
+    "process": "waves_host\\.cm",
+    "vmo": "",
+    "event_code": 88
   }
 ]
