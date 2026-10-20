@@ -2,8 +2,6 @@ binary
 bin/scenic
 fuchsia.scenic.DisplayComposition
 display_composition
-fuchsia.scenic.DisplayCompositionEnableHeuristics
-display_composition_enable_heuristics
 fuchsia.scenic.DisplayRotation
 display_rotation
 fuchsia.scenic.FrameCounterOverlay
@@ -32,10 +30,6 @@ fuchsia.scenic.PointerAutoFocus
 pointer_auto_focus
 fuchsia.scenic.Renderer
 renderer
-fuchsia.scenic.UseSeparateInputThread
-use_separate_input_thread
-fuchsia.ui.Prefetch
-prefetch
 fuchsia.ui.VisualDebuggingLevel
 visual_debugging_level
 fuchsia.inspect.InspectSink
@@ -67,7 +61,6 @@ fuchsia.ui.annotation.Registry
 fuchsia.ui.composition.Allocator
 fuchsia.ui.composition.Flatland
 fuchsia.ui.composition.FlatlandDisplay
-fuchsia.ui.composition.FlatlandFactory
 fuchsia.ui.composition.ScreenCapture
 fuchsia.ui.composition.Screenshot
 fuchsia.ui.composition.TrustedFlatlandFactory
@@ -80,7 +73,6 @@ fuchsia.ui.display.singleton.Info
 fuchsia.ui.display.singleton.VsyncSource
 fuchsia.ui.focus.FocusChainListenerRegistry
 fuchsia.ui.input.accessibility.PointerEventRegistry
-fuchsia.ui.input.internal.InputOwnership
 fuchsia.ui.lifecycle.LifecycleController
 fuchsia.ui.observation.scope.Registry
 fuchsia.ui.observation.test.Registry
@@ -93,7 +85,6 @@ fuchsia.ui.composition.Allocator%
 /svc/fuchsia.ui.composition.Allocator
 /svc/fuchsia.ui.composition.Flatland
 /svc/fuchsia.ui.composition.FlatlandDisplay
-/svc/fuchsia.ui.composition.FlatlandFactory
 /svc/fuchsia.ui.composition.ScreenCapture
 /svc/fuchsia.ui.composition.Screenshot
 /svc/fuchsia.ui.composition.TrustedFlatlandFactory
@@ -109,8 +100,6 @@ fuchsia.ui.display.singleton.VsyncSource-
 /svc/fuchsia.ui.display.singleton.VsyncSource
 /svc/fuchsia.ui.focus.FocusChainListenerRegistry
 /svc/fuchsia.ui.input.accessibility.PointerEventRegistry
-fuchsia.ui.input.internal.InputOwnership-
-/svc/fuchsia.ui.input.internal.InputOwnership
 fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.lifecycle.LifecycleController
 /svc/fuchsia.ui.observation.scope.Registry
@@ -120,6 +109,7 @@ fuchsia.ui.lifecycle.LifecycleController-
 /svc/fuchsia.ui.pointerinjector.dso.Registry
 /svc/fuchsia.ui.views.ViewRefInstalled
 #meta/image-compression.cm
+"=)k?
 src/ui/scenic/bin/meta/scenic.bin.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
