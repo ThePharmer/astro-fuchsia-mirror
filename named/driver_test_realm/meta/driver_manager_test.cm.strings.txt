@@ -13,6 +13,8 @@ fuchsia.driver.manager.SetRootDriverHostCritical
 set_root_driver_host_critical
 fuchsia.driver.manager.SuspendTimeoutFallback
 suspend_timeout_fallback
+fuchsia.power.StoragePowerManagementEnabled
+storage_power_management_enabled
 fuchsia.power.SuspendEnabled
 power_suspend_enabled
 fuchsia.power.WaitForSuspendingToken
@@ -37,8 +39,6 @@ fuchsia.diagnostics.LogFlusher
 /svc/fuchsia.diagnostics.LogFlusher
 fuchsia.hardware.power.statecontrol.Admin
 /svc/fuchsia.hardware.power.statecontrol.Admin
-fuchsia.kernel.MexecResource
-/svc/fuchsia.kernel.MexecResource
 fuchsia.kernel.PowerResource
 /svc/fuchsia.kernel.PowerResource
 fuchsia.power.broker.Topology
@@ -59,6 +59,7 @@ fuchsia.device.fs.with.pkg.lifecycle.Lifecycle
 fuchsia.driver.crash.CrashIntrospect
 fuchsia.driver.development.Manager
 fuchsia.driver.framework.CompositeNodeManager
+fuchsia.driver.framework.NodeManager
 fuchsia.driver.token.Debug
 fuchsia.driver.token.NodeBusTopology
 fuchsia.firmware.crash.Reporter
@@ -74,6 +75,7 @@ fuchsia.driver.compat.Service
 /svc/fuchsia.driver.crash.CrashIntrospect
 /svc/fuchsia.driver.development.Manager
 /svc/fuchsia.driver.framework.CompositeNodeManager
+/svc/fuchsia.driver.framework.NodeManager
 /svc/fuchsia.driver.token.Debug
 /svc/fuchsia.driver.token.NodeBusTopology
 /svc/fuchsia.firmware.crash.Reporter
@@ -83,6 +85,7 @@ fuchsia.driver.compat.Service
 /svc/fuchsia.component.runner.ComponentRunner
 /svc/fuchsia.component.runner.DriverHostRunner
 /svc/fuchsia.driver.compat.Service
+ie[SWrE
 sdk/lib/driver_test_realm/meta/driver_manager_test.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
