@@ -1,7 +1,7 @@
-args
---comms
 binary
 cast_agent_exe
+args
+--comms
 lifecycle.stop_event
 notify
 config-data
@@ -90,8 +90,6 @@ google.duocore.DuoCore
 /svc/google.duocore.DuoCore
 google.flashts.Reader
 /svc/google.flashts.Reader
-google.ghp.InteractionService
-/svc/google.ghp.InteractionService
 google.policy.comms.SmartFramingConnection
 /svc/google.policy.comms.SmartFramingConnection
 google.usonia.IpcHandler
@@ -100,8 +98,6 @@ fuchsia.component.Realm
 /svc/fuchsia.component.Realm
 fuchsia.element.GraphicalPresenter
 /svc/fuchsia.element.GraphicalPresenter
-fuchsia.memory.sampler.Sampler
-/svc/fuchsia.memory.sampler.Sampler
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 google.camera.CameraStateProvider
@@ -117,6 +113,8 @@ data
 /tmp
 fuchsia.camera3.DeviceWatcher
 google.assistant.libassistantv2.CommsAgent
+google.comms.assistant.ExplicitAutomationHandler
+google.comms.assistant.ShowSmartDeviceControlHandler
 google.comms.dropin.DropInController
 google.comms.hfbluetooth.CallStateWatcher
 google.comms.hfbluetooth.HfCallManager
@@ -130,6 +128,9 @@ for_dynamic_component_host
 /for_dynamic_component_host
 /svc/fuchsia.camera3.DeviceWatcher
 /svc/google.assistant.libassistantv2.CommsAgent
+google.comms.assistant.ExplicitAutomationHandler5
+/svc/google.comms.assistant.ExplicitAutomationHandler
+/svc/google.comms.assistant.ShowSmartDeviceControlHandler
 /svc/google.comms.dropin.DropInController
 /svc/google.comms.hfbluetooth.CallStateWatcher
 /svc/google.comms.hfbluetooth.HfCallManager
