@@ -43,19 +43,19 @@
   },
   {
     "name": "Storage",
-    "process": "fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage|fvm2\\.cm|stash\\.cm|stash_secure\\.cm",
+    "process": "factory_store_providers\\.cm|fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage|fvm2\\.cm|stash\\.cm|stash_secure\\.cm",
     "vmo": "",
     "event_code": 72
   },
   {
     "name": "Scenic",
-    "process": "root_presenter\\.cm|scenic\\.cm",
+    "process": "root_presenter\\.cm|scenic\\.cm|image-compression\\.cm",
     "vmo": "",
     "event_code": 9
   },
   {
     "name": "Netstack",
-    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|stack-migration\\.cm|netstack-proxy\\.cm|/pkg/bin/netstack|/pkg/bin/netstack3|dhcp-client\\.cm",
+    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|dhcp-client\\.cm",
     "vmo": "",
     "event_code": 11
   },
@@ -103,7 +103,7 @@
   },
   {
     "name": "Feedback",
-    "process": "exceptions\\.cm|feedback\\.cm|system_log_recorder|feedback_id\\.cm",
+    "process": "exceptions\\.cm|exception_handler_[0-9]+|feedback\\.cm|system_log_recorder|feedback_id\\.cm",
     "vmo": "",
     "event_code": 46
   },
@@ -193,7 +193,7 @@
   },
   {
     "name": "OtherDrivers",
-    "process": "driver_host.*|driver-host-.*|pwrbtn-monitor\\.cm|aml-rawnand\\.cm.*|aml-sdmmc\\.cm.*|aml-usb-phy\\.cm|platform-bus\\.cm.*|aml-uart\\.cm.*|amlogic-display\\.cm|aml-gpio\\.cm.*|aml-meson-power\\.cm.*|xhci.cm\\.*|aml-i2c\\.cm.*|optee\\.cm.*|aml-pwm\\.cm.*|amlogic_video_decoder\\.cm.*|aml-g12-tdm\\.cm.*|tas27xx\\.cm.*|ams-light\\.cm.*|aml-securemem\\.cm.*|aml-g12-pdm\\.cm.*|aml-ram\\.cm.*|aml-thermistor\\.cm.*|aml-canvas\\.cm.*|focaltech\\.cm.*|aml-thermal\\.cm.*|buttons\\.cm.*|aml-light\\.cm.*|ti-lp8556\\.cm.*|aml-g12-tdm-dai\\.cm.*|registers\\.cm.*|aml-pwm-init\\.cm.*|aml_mipicsi\\.cm.*|lowpan-ot-driver\\.cm.*|aml-thermal-s905d2g-legacy\\.cm.*|amlogic_h264_encoder_driver\\.cm.*|focaltech-sherlock\\.cm.*|tas5720\\.cm.*|camera_device\\.cm.*|aml-nna\\.cm.*|gt6853\\.cm.*|ti-ina231\\.cm.*|nelson-brownout-protection\\.cm.*|shtv3\\.cm.*|goodix\\.cm|dwc2\\.cm",
+    "process": "driver_host.*|driver-host-.*|pwrbtn-monitor\\.cm|aml-rawnand\\.cm.*|aml-sdmmc\\.cm.*|aml-usb-phy\\.cm|platform-bus\\.cm.*|aml-uart\\.cm.*|amlogic-display\\.cm|aml-gpio\\.cm.*|aml-meson-power\\.cm.*|xhci.cm\\.*|aml-i2c\\.cm.*|optee\\.cm.*|aml-pwm\\.cm.*|amlogic_video_decoder\\.cm.*|aml-g12-tdm\\.cm.*|tas27xx\\.cm.*|ams-light\\.cm.*|aml-securemem\\.cm.*|aml-g12-pdm\\.cm.*|aml-ram\\.cm.*|aml-thermistor\\.cm.*|aml-canvas\\.cm.*|focaltech\\.cm.*|aml-thermal\\.cm.*|buttons\\.cm.*|aml-light\\.cm.*|ti-lp8556\\.cm.*|aml-g12-tdm-dai\\.cm.*|registers\\.cm.*|aml-pwm-init\\.cm.*|aml_mipicsi\\.cm.*|lowpan-ot-driver\\.cm.*|aml-thermal-s905d2g-legacy\\.cm.*|amlogic_h264_encoder_driver\\.cm.*|focaltech-sherlock\\.cm.*|tas5720\\.cm.*|camera_device\\.cm.*|aml-nna\\.cm.*|goodix-gt6853\\.cm.*|ti-ina231\\.cm.*|nelson-brownout-protection\\.cm.*|shtv3\\.cm.*|goodix-gt92xx\\.cm.*|dwc2\\.cm",
     "vmo": "",
     "event_code": 48
   },
@@ -205,7 +205,7 @@
   },
   {
     "name": "EngTools",
-    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|debug-dash-launcher\\.cm|developer-console\\.cm|fdomain_runner|fs_realm\\.cm|gtest-runner\\.cm|kernel_debug_broker\\.cm|ktrace_provider\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|ptysvc\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm|trace_manager\\.cm|sl4f\\.cm|profiler\\.cm",
+    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|debug-dash-launcher\\.cm|developer-console\\.cm|fdomain_runner|fs_realm\\.cm|gtest-runner\\.cm|kernel_debug_broker\\.cm|ktrace_provider\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|ptysvc\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm|trace_manager\\.cm|sl4f\\.cm|cpu_profiler\\.cm",
     "vmo": "",
     "event_code": 64
   },
