@@ -1,5 +1,9 @@
 binary
 bin/cache_manager
+fuchsia.sys.CacheClearingThreshold
+cache_clearing_threshold
+fuchsia.sys.StorageCheckingFrequency
+storage_checking_frequency
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 diagnostics
@@ -7,9 +11,6 @@ fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.sys2.StorageAdmin
 /svc/fuchsia.sys2.StorageAdmin
-cache_clearing_threshold
-storage_checking_frequency
-meta/cache_manager.cvf
 src/sys/cache_manager/meta/cache_manager.cml
 sdk/lib/syslog/client.shard.cml
 sdk/lib/syslog/offer.shard.cml
