@@ -225,8 +225,6 @@ fuchsia.wlan.RecoveryEnabled
 fuchsia.wlan.RecoveryProfile
 fuchsia.wlan.RoamingPolicy
 fuchsia.power.cpu.BoostEnabled
-fuchsia.recovery.UseFxBlob
-factory_reset
 fuchsia.sys.CacheClearingThreshold
 storage_cache_manager
 fuchsia.sys.StorageCheckingFrequency
@@ -346,6 +344,7 @@ bt-hci
 dev-securemem
 securemem
 dev-tee
+factory_reset
 factory
 feedback-config
 pkgfs
@@ -409,6 +408,8 @@ fuchsia.cobalt.SystemDataUpdater
 fuchsia.component.Introspector.root
 fuchsia.kernel.Stats
 fuchsia.scheduler.RoleManager
+cache
+fuchsia.component.StorageAdmin
 fuchsia.device.NameProvider
 agis
 fuchsia.hardware.power.statecontrol.Admin
@@ -562,8 +563,6 @@ fuchsia.stash.Store
 stash2
 fuchsia.stash.Store2
 fuchsia.storage.ext4.Server
-cache
-fuchsia.sys2.StorageAdmin
 fuchsia.tee.Application.808032e0-fd9e-4e6f-8896-544735c98480
 fuchsia.tee.Application.93a424e2-5608-4413-84a8-58b16a064dce
 fuchsia.tee.Application.9a04f079-9840-4286-ab92-e65be0885f95
