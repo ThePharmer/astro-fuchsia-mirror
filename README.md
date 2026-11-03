@@ -1,6 +1,6 @@
 # Nest Hub (1st gen) Fuchsia package repository mirror
 
-A git rebuild of Google's Fuchsia package repository for the 1st-generation Nest Hub (board `astro`), made for exploring. The source is the TUF repository at `a3i1gkkxw4t8hleigzvg15pn8.fuchsia-updates.googleusercontent.com`, with blobs from `fuchsia-blobs.googleusercontent.com`.
+A git rebuild of Google's Fuchsia package repository for the 1st-generation Nest Hub (board astro), made for exploring. The source is the TUF repository at `a3i1gkkxw4t8hleigzvg15pn8.fuchsia-updates.googleusercontent.com`, with blobs from `fuchsia-blobs.googleusercontent.com`.
 
 Nothing from the source was dropped. What could not be retrieved is listed in [MISSING.md](MISSING.md). Blob bytes stay on Google's servers: every file that is not small text is a pointer file that records the blob's merkle root, size and URL, and [tools/fetch_blob.py](tools/fetch_blob.py) downloads and verifies it.
 
