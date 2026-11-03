@@ -2,16 +2,12 @@ binary
 bin/memory_monitor
 fuchsia.memory.CaptureOnPressureChange
 capture_on_pressure_change
-fuchsia.memory.CapturePeriodically
-capture_periodically
 fuchsia.memory.CriticalCaptureDelay
 critical_capture_delay_s
 fuchsia.memory.ImminentOomCaptureDelay
 imminent_oom_capture_delay_s
 fuchsia.memory.NormalCaptureDelay
 normal_capture_delay_s
-fuchsia.memory.PeriodicCaptureDelay
-periodic_capture_delay_s
 fuchsia.memory.WarningCaptureDelay
 warning_capture_delay_s
 config-data
@@ -43,6 +39,7 @@ fuchsia.memory.inspection.Collector
 fuchsia.memory.debug.MemoryPressure
 /svc/fuchsia.memory.debug.MemoryPressure
 /svc/fuchsia.memory.inspection.Collector
+meta/memory_monitor.cvf
 src/developer/memory/monitor/meta/memory_monitor.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
