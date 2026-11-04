@@ -1,9 +1,11 @@
 binary
 bin/bt_init
+fuchsia.bluetooth.AutostartSnoop
+autostart_snoop
 fuchsia.bluetooth.FastPairProvider
 fastpair_provider_enabled
-dev-bt-hci
-/dev/class/bt-hci
+fuchsia.bluetooth.Rfcomm
+rfcomm_enabled
 fuchsia.bluetooth.snoop.Snoop
 /svc/fuchsia.bluetooth.snoop.Snoop
 fuchsia.component.Realm
@@ -31,6 +33,15 @@ fuchsia.bluetooth.sys.Bootstrap
 fuchsia.bluetooth.sys.Configuration
 fuchsia.bluetooth.sys.HostWatcher
 fuchsia.bluetooth.rfcomm.test.RfcommTest
+fuchsia.bluetooth.rfcomm.test.RfcommTest%
+fuchsia.bluetooth.BredrConnectable
+fuchsia.bluetooth.BredrSecurityMode
+fuchsia.bluetooth.LeBackgroundScanning
+fuchsia.bluetooth.LePrivacy
+fuchsia.bluetooth.LeSecurityMode
+fuchsia.bluetooth.FastPairFirmwareRevision
+fuchsia.bluetooth.FastPairModelId
+fuchsia.bluetooth.FastPairPrivateKey
 fuchsia.bluetooth.HciCommandTimeout
 bt-host-collection
 fuchsia.bluetooth.OverrideVendorCapabilitiesVersion
@@ -44,6 +55,7 @@ fuchsia.device.NameProvider
 fuchsia.stash.SecureStore
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.power.system.ActivityGovernor
+fuchsia.time.alarms.WakeAlarms
 fuchsia.scheduler.RoleManager
 data
 /svc/fuchsia.bluetooth.bredr.Profile
@@ -51,9 +63,6 @@ data
 fuchsia-pkg://fuchsia.com/bt-fastpair-provider#meta/bt-fastpair-provider.cm
 #meta/bt-gap.cm
 fuchsia-pkg://fuchsia.com/bt-rfcomm#meta/bt-rfcomm.cm
-autostart_snoop
-rfcomm_enabled
-meta/bt-init.cvf
 src/connectivity/bluetooth/core/bt-init/meta/bt-init.cmlsdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
