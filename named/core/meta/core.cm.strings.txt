@@ -58,8 +58,6 @@ fuchsia.intl.PropertyProvider
 tee_manager
 fuchsia.tee.DeviceInfo
 /svc/fuchsia.tee.DeviceInfo
-network
-netstack-diagnostics
 fuchsia.component.Binder
 sampler
 fuchsia.component.SamplerBinder
@@ -81,6 +79,7 @@ memory_pressure_signaler
 fuchsia.memorypressure.Provider
 cobalt
 fuchsia.metrics.MetricEventLoggerFactory
+network
 fuchsia.net.name.Lookup
 fuchsia.posix.socket.Provider
 paver
@@ -148,6 +147,10 @@ fuchsia.bluetooth.EnableSink
 fuchsia.bluetooth.SourceType
 fuchsia.bluetooth.LegacyPairing
 fuchsia.power.SuspendEnabled
+fuchsia.connectivity.RedactNetworkIdentifiers
+fuchsia.http-client.StopOnIdleTimeoutMillis
+fuchsia.http-client.TcpReceiveBufferSizeBytes
+wlancfg
 fuchsia.diagnostics.persist.EnableShutdownSnapshot
 fuchsia.diagnostics.persist.LowBatteryThresholdPercent
 fuchsia.diagnostics.persist.PersistencePeriodSeconds
@@ -159,17 +162,17 @@ fuchsia.fonts.FontManifest
 font_provider
 fuchsia.fonts.VerboseLogging
 fuchsia.fshost.MergeSuperAndUserdata
-fuchsia.http-client.StopOnIdleTimeoutMillis
-fuchsia.http-client.TcpReceiveBufferSizeBytes
 fuchsia.hwinfo.ProductManufacturer
 hwinfo
 fuchsia.hwinfo.ProductModel
 fuchsia.hwinfo.ProductName
 fuchsia.memory.CaptureOnPressureChange
 memory_monitor
+fuchsia.memory.CapturePeriodically
 fuchsia.memory.CriticalCaptureDelay
 fuchsia.memory.ImminentOomCaptureDelay
 fuchsia.memory.NormalCaptureDelay
+fuchsia.memory.PeriodicCaptureDelay
 fuchsia.memory.WarningCaptureDelay
 fuchsia.omaha.AllowRebootWhenIdle
 fuchsia.omaha.FuzzPercentageRange
@@ -221,13 +224,10 @@ fuchsia.ui.IdleThresholdMs
 fuchsia.ui.Prefetch
 fuchsia.ui.SupportedInputDevices
 fuchsia.ui.ViewingDistance
-wlancfg
 fuchsia.wlan.RecoveryEnabled
 fuchsia.wlan.RecoveryProfile
 fuchsia.wlan.RoamingPolicy
 fuchsia.power.cpu.BoostEnabled
-fuchsia.recovery.UseFxBlob
-factory_reset
 fuchsia.sys.CacheClearingThreshold
 storage_cache_manager
 fuchsia.sys.StorageCheckingFrequency
@@ -326,11 +326,8 @@ goldfish-sync
 dev-rtc
 dev-hrtimer
 hrtimer
-dev-class-block
 dev-class-skip-block
 skip-block
-dev-input-report
-input-report
 dev-backlight
 backlight
 dev-light
@@ -350,6 +347,7 @@ bt-hci
 dev-securemem
 securemem
 dev-tee
+factory_reset
 factory
 feedback-config
 pkgfs
@@ -396,6 +394,8 @@ fuchsia.bluetooth.snoop.Snoop
 fuchsia.boot.FactoryItems
 fuchsia.boot.Items
 fuchsia.boot.ReadOnlyLog
+fuchsia.diagnostics.ArchiveAccessor.logs
+feedback(
 fuchsia.hardware.power.statecontrol.ShutdownWatcherRegister
 feedback;
 fuchsia.kernel.RootJobForInspect
@@ -413,6 +413,8 @@ fuchsia.cobalt.SystemDataUpdater
 fuchsia.component.Introspector.root
 fuchsia.kernel.Stats
 fuchsia.scheduler.RoleManager
+cache
+fuchsia.component.StorageAdmin
 fuchsia.device.NameProvider
 agis
 fuchsia.hardware.power.statecontrol.Admin
@@ -519,7 +521,6 @@ fuchsia.media.sounds.Player
 fuchsia.mediacodec.CodecFactory
 fuchsia.memory.sampler.Sampler
 bt-avrcp(
-feedback(
 fuchsia.net.http.GoogleLoader
 fuchsia.net.http.Loader
 fuchsia.net.interfaces.State
@@ -566,8 +567,6 @@ fuchsia.stash.Store
 stash2
 fuchsia.stash.Store2
 fuchsia.storage.ext4.Server
-cache
-fuchsia.sys2.StorageAdmin
 fuchsia.tee.Application.808032e0-fd9e-4e6f-8896-544735c98480
 fuchsia.tee.Application.93a424e2-5608-4413-84a8-58b16a064dce
 fuchsia.tee.Application.9a04f079-9840-4286-ab92-e65be0885f95
