@@ -1,6 +1,6 @@
 driver
 binary
-driver/focaltech.so
+driver/focaltech-cpp.so
 bind
 meta/bind/focaltech.bindbc
 default_dispatcher_opts
@@ -19,7 +19,11 @@ fuchsia.hardware.i2c.Service
 /svc/fuchsia.hardware.i2c.Service
 fuchsia.hardware.platform.device.Service-
 /svc/fuchsia.hardware.platform.device.Service
-src/ui/input/drivers/focaltech/meta/focaltech.cml
+fuchsia.hardware.pin.PinStatesService
+/svc/fuchsia.hardware.pin.PinStatesService
+fuchsia.input.report.Service
+/svc/fuchsia.input.report.Service
+gen/src/ui/input/drivers/focaltech/focaltech-cpp.cml
 sdk/lib/driver/platform-device.shard.cmlsdk/lib/driver_component/driver.shard.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
