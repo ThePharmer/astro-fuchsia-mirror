@@ -28,8 +28,6 @@ fuchsia.power.broker.Topology
 /svc/fuchsia.power.broker.Topology
 fuchsia.power.system.ActivityGovernor
 /svc/fuchsia.power.system.ActivityGovernor
-fuchsia.time.alarms.WakeAlarms
-/svc/fuchsia.time.alarms.WakeAlarms
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 data
@@ -70,6 +68,8 @@ fuchsia.posix.socket.Provider
 fuchsia.posix.socket.packet.Provider
 fuchsia.posix.socket.raw.Provider
 fuchsia.update.verify.ComponentOtaHealthCheck
+dhcp-client
+fuchsia.net.dhcp.ClientProvider
 /svc/fuchsia.net.debug.Diagnostics
 /svc/fuchsia.net.debug.Interfaces
 /svc/fuchsia.net.debug.PacketCaptureProvider
@@ -108,9 +108,10 @@ fuchsia.net.ndp.RouterAdvertisementOptionWatcherProvider=
 /svc/fuchsia.posix.socket.packet.Provider
 /svc/fuchsia.posix.socket.raw.Provider
 /svc/fuchsia.update.verify.ComponentOtaHealthCheck
+#meta/dhcp-client.cm
 ZF]c@
 src/connectivity/network/netstack3/meta/netstack3_prod.cml
-sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
+sdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
 sdk/lib/syslog/offer.shard.cml
