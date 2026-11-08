@@ -2,11 +2,15 @@ binary
 bin/netcfg
 lifecycle.stop_event
 notify
+fuchsia.connectivity.RedactNetworkIdentifiers
+redact_network_identifiers
 netcfg-config
 /netcfg-config
+fuchsia.diagnostics.SaltProvider%
+/svc/fuchsia.diagnostics.SaltProvider
+diagnostics
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
-diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.net.dhcp.ClientProvider
@@ -53,6 +57,8 @@ fuchsia.net.reachability.Monitor
 fuchsia.net.reachability.Monitor%
 /svc/fuchsia.net.reachability.Monitor
 fuchsia-pkg://fuchsia.com/netcfg-config#meta/netcfg-config.cm
+=FK,
+t]#_C
 src/connectivity/policy/netcfg/meta/netcfg.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
