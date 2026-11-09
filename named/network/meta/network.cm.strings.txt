@@ -1,5 +1,3 @@
-diagnostics
-netstack-diagnostics
 netstack
 fuchsia.net.debug.Interfaces
 netstack'
@@ -58,6 +56,7 @@ fuchsia.net.reachability.Monitor
 fuchsia.pkg.http.GoogleClient
 fuchsia.posix.socket.Provider_Unproxied
 fuchsia.posix.socket.raw.Provider_Unproxied
+fuchsia.connectivity.RedactNetworkIdentifiers
 fuchsia.http-client.StopOnIdleTimeoutMillis
 fuchsia.http-client.TcpReceiveBufferSizeBytes
 fuchsia.netstack3.DebugLogs
@@ -70,6 +69,7 @@ google-root-ssl-certificates
 root-ssl-certificates
 fuchsia.metrics.MetricEventLoggerFactory
 fuchsia.net.debug.Diagnostics
+dhcp-client
 fuchsia.net.dhcp.ClientProvider
 dhcpd
 fuchsia.net.dhcp.Server
@@ -78,17 +78,20 @@ fuchsia.net.dhcpv6.ClientProvider
 fuchsia.net.name.LookupAdmin
 fuchsia.power.broker.Topology
 fuchsia.power.system.ActivityGovernor
+fuchsia.time.alarms.WakeAlarms
 fuchsia.scheduler.RoleManager
 fuchsia.stash.SecureStore
 fuchsia.hardware.network.Service
 data
+diagnostics
 fuchsia.tracing.provider.Registry
+fuchsia-pkg://fuchsia.com/dhcp-client#meta/dhcp-client.cm
 fuchsia-pkg://fuchsia.com/dhcpv4-server#meta/dhcpv4_server.cm
 fuchsia-pkg://fuchsia.com/dhcpv6-client#meta/dhcpv6-client.cm
 fuchsia-pkg://fuchsia.com/dns-resolver#meta/dns_resolver.cm
 fuchsia-pkg://fuchsia.com/google-http-client#meta/google-http-client.cm
 fuchsia-pkg://fuchsia.com/http-client#meta/http-client.cm
-fuchsia-pkg://fuchsia.com/netcfg-basic#meta/netcfg-basic.cm
+fuchsia-pkg://fuchsia.com/netcfg#meta/netcfg.cm
 netstack5
 fuchsia-pkg://fuchsia.com/netstack3#meta/netstack3.cm
 fuchsia-pkg://fuchsia.com/reachability#meta/reachability.cm
