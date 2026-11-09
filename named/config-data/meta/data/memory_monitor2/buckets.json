@@ -1,629 +1,338 @@
 [
   {
     "name": "ZBI Buffer",
-    "process": [],
-    "vmo": [
-      "uncompressed-bootfs"
-    ],
+    "process": "",
+    "vmo": "uncompressed-bootfs",
     "event_code": 1
   },
   {
     "name": "BlobfsInactive",
-    "process": [
-      "/pkg/bin/blobfs",
-      "blobfs.cm"
-    ],
-    "vmo": [
-      "inactive-blob-"
-    ],
+    "process": "/pkg/bin/blobfs|blobfs\\.cm",
+    "vmo": "inactive-blob-.*",
     "event_code": 29
   },
   {
     "name": "Blobfs",
-    "process": [
-      "/pkg/bin/blobfs",
-      "blobfs.cm"
-    ],
-    "vmo": [],
+    "process": "/pkg/bin/blobfs|blobfs\\.cm",
+    "vmo": "",
     "event_code": 5
   },
   {
     "name": "ProtectedPoolUnallocated",
-    "process": [
-      "sysmem.cm"
-    ],
-    "vmo": [
-      "SysmemProtectedPool"
-    ],
+    "process": "sysmem\\.cm",
+    "vmo": "SysmemProtectedPool",
     "event_code": 27
   },
   {
     "name": "ContiguousPoolUnallocated",
-    "process": [
-      "sysmem.cm"
-    ],
-    "vmo": [
-      "SysmemContiguousPool"
-    ],
+    "process": "sysmem\\.cm",
+    "vmo": "SysmemContiguousPool",
     "event_code": 26
   },
   {
     "name": "FlutterApps",
-    "process": [
-      "io.flutter."
-    ],
-    "vmo": [
-      "dart"
-    ],
+    "process": "io\\.flutter\\..*",
+    "vmo": "dart.*",
     "event_code": 28
   },
   {
     "name": "Graphics",
-    "process": [
-      "driver-host-#display",
-      "driver-host-#gpu",
-      "aml-gpu.cm",
-      "vulkan_loader.cm"
-    ],
-    "vmo": [],
+    "process": "driver-host-#display|driver-host-#gpu|aml-gpu\\.cm.*|vulkan_loader\\.cm",
+    "vmo": "",
     "event_code": 2
   },
   {
     "name": "Storage",
-    "process": [
-      "factory_store_providers.cm",
-      "fshost.cm",
-      "fxfs-crypt.cm",
-      "fxfs.cm",
-      "memfs.cm",
-      "decompressor-sandbox.cm",
-      "driver-host-#storage",
-      "fvm2.cm",
-      "stash.cm",
-      "stash_secure.cm"
-    ],
-    "vmo": [],
+    "process": "factory_store_providers\\.cm|fshost\\.cm|fxfs-crypt\\.cm|fxfs\\.cm|memfs\\.cm|decompressor-sandbox\\.cm|driver-host-#storage|fvm2\\.cm|stash\\.cm|stash_secure\\.cm",
+    "vmo": "",
     "event_code": 72
   },
   {
     "name": "Scenic",
-    "process": [
-      "root_presenter.cm",
-      "scenic.cm",
-      "image-compression.cm"
-    ],
-    "vmo": [],
+    "process": "root_presenter\\.cm|scenic\\.cm|image-compression\\.cm",
+    "vmo": "",
     "event_code": 9
   },
   {
     "name": "Netstack",
-    "process": [
-      "dhcpd.cm",
-      "dhcpv6-client.cm",
-      "dns_resolver.cm",
-      "netstack3.cm",
-      "network-tun.cm",
-      "mdns.cm",
-      "dhcpv4_server.cm",
-      "dhcp-client.cm"
-    ],
-    "vmo": [],
+    "process": "dhcpd\\.cm|dhcpv6-client\\.cm|dns_resolver\\.cm|netstack3\\.cm|network-tun\\.cm|mdns\\.cm|dhcpv4_server\\.cm|dhcp-client\\.cm",
+    "vmo": "",
     "event_code": 11
   },
   {
     "name": "Netsvc",
-    "process": [
-      "netsvc.cm",
-      "device-name-provider.cm"
-    ],
-    "vmo": [],
+    "process": "netsvc\\.cm|device-name-provider\\.cm",
+    "vmo": "",
     "event_code": 71
   },
   {
     "name": "Archivist",
-    "process": [
-      "archivist.cm",
-      "sampler.cm",
-      "diagnostics-persistence.cm",
-      "triage-detect.cm"
-    ],
-    "vmo": [],
+    "process": "archivist\\.cm|sampler\\.cm|diagnostics-persistence\\.cm|triage-detect\\.cm",
+    "vmo": "",
     "event_code": 22
   },
   {
     "name": "Cobalt",
-    "process": [
-      "cobalt.cm",
-      "cobalt_system_metrics.cm"
-    ],
-    "vmo": [],
+    "process": "cobalt\\.cm|cobalt_system_metrics\\.cm",
+    "vmo": "",
     "event_code": 23
   },
   {
     "name": "Audio",
-    "process": [
-      "audio_core.cm",
-      "audio_device_registry.cm",
-      "soundplayer.cm",
-      "driver-host-#audio-and-haptics",
-      "virtual-audio-driver.cm",
-      "virtual-audio-legacy-driver.cm"
-    ],
-    "vmo": [],
+    "process": "audio_core\\.cm|audio_device_registry\\.cm|soundplayer\\.cm|driver-host-#audio-and-haptics|virtual-audio(-legacy)?-driver\\.cm",
+    "vmo": "",
     "event_code": 24
   },
   {
     "name": "Context",
-    "process": [
-      "context_provider.cm"
-    ],
-    "vmo": [],
+    "process": "context_provider\\.cm",
+    "vmo": "",
     "event_code": 25
   },
   {
     "name": "ComponentManager",
-    "process": [
-      "bin/bootsvc",
-      "bin/component_manager",
-      "miscsvc.cm",
-      "svchost.cm",
-      "sysmgr.cm"
-    ],
-    "vmo": [],
+    "process": "bin/bootsvc|bin/component_manager|miscsvc\\.cm|svchost\\.cm|sysmgr\\.cm",
+    "vmo": "",
     "event_code": 40
   },
   {
     "name": "Resolvers",
-    "process": [
-      "pkg-resolver.cm",
-      "dns_resolver.cm",
-      "process_resolver.cm",
-      "loopback_resolver.cm"
-    ],
-    "vmo": [],
+    "process": "loopback_resolver\\.cm|.*-resolver\\.cm.*",
+    "vmo": "",
     "event_code": 42
   },
   {
     "name": "Feedback",
-    "process": [
-      "exceptions.cm",
-      "exception_handler_",
-      "feedback.cm",
-      "system_log_recorder",
-      "feedback_id.cm"
-    ],
-    "vmo": [],
+    "process": "exceptions\\.cm|exception_handler_[0-9]+|feedback\\.cm|system_log_recorder|feedback_id\\.cm",
+    "vmo": "",
     "event_code": 46
   },
   {
     "name": "A11y",
-    "process": [
-      "a11y-manager.cm"
-    ],
-    "vmo": [],
+    "process": "a11y-manager\\.cm",
+    "vmo": "",
     "event_code": 50
   },
   {
     "name": "Bluetooth",
-    "process": [
-      "bt-",
-      "driver-host-#bluetooth"
-    ],
-    "vmo": [],
+    "process": "bt-.*|driver-host-#bluetooth",
+    "vmo": "",
     "event_code": 51
   },
   {
     "name": "HCI",
-    "process": [
-      "activity.cm",
-      "text_manager.cm",
-      "driver-host-#input"
-    ],
-    "vmo": [],
+    "process": "activity\\.cm|text_manager\\.cm|text_manager\\.cm|driver-host-#input",
+    "vmo": "",
     "event_code": 52
   },
   {
     "name": "I18N",
-    "process": [
-      "httpsdate_time_source.cm",
-      "fonts.cm",
-      "font-server.cm",
-      "intl.cm",
-      "intl_services.cm",
-      "timezone.cm",
-      "time-zone-info-service.cm"
-    ],
-    "vmo": [],
+    "process": "httpsdate_time_source\\.cm|fonts\\.cm|font-server\\.cm|intl\\.cm|intl_services\\.cm|timezone\\.cm|time-zone-info-service\\.cm",
+    "vmo": "",
     "event_code": 53
   },
   {
     "name": "SoftwareDelivery",
-    "process": [
-      "omaha-client-service.cm",
-      "pkg-cache.cm",
-      "system-update"
-    ],
-    "vmo": [],
+    "process": "omaha-client-service\\.cm|pkg-cache\\.cm|system-update.*",
+    "vmo": "",
     "event_code": 55
   },
   {
     "name": "WLAN",
-    "process": [
-      "emergency.cm",
-      "regulatory_region.cm",
-      "wlan",
-      "driver-host-#wlan"
-    ],
-    "vmo": [],
+    "process": "emergency\\.cm|regulatory_region\\.cm|wlan.*|driver-host-#wlan",
+    "vmo": "",
     "event_code": 58
   },
   {
     "name": "NetworkPolicy",
-    "process": [
-      "http-client.cm",
-      "netcfg",
-      "reachability.cm"
-    ],
-    "vmo": [],
+    "process": "http-client\\.cm|netcfg.*\\.cm|reachability\\.cm",
+    "vmo": "",
     "event_code": 59
   },
   {
     "name": "DriverFramework",
-    "process": [
-      "driver-index.cm",
-      "driver_manager.cm",
-      "sysinfo.cm"
-    ],
-    "vmo": [],
+    "process": "driver-index\\.cm|driver_manager\\.cm|sysinfo\\.cm",
+    "vmo": "",
     "event_code": 63
   },
   {
     "name": "Power",
-    "process": [
-      "battery_manager.cm",
-      "cpu-manager.cm",
-      "power-broker.cm",
-      "power-manager.cm",
-      "shutdown-shim.cm",
-      "system-activity-governor.cm"
-    ],
-    "vmo": [],
+    "process": "battery_manager\\.cm|cpu-manager\\.cm|power-broker\\.cm|power-manager\\.cm|shutdown-shim\\.cm|system-activity-governor\\.cm",
+    "vmo": "",
     "event_code": 65
   },
   {
     "name": "SceneManager",
-    "process": [
-      "input-pipeline.cm",
-      "scene_manager.cm"
-    ],
-    "vmo": [],
+    "process": "input-pipeline\\.cm|scene_manager\\.cm",
+    "vmo": "",
     "event_code": 69
   },
   {
     "name": "PlatformDrivers",
-    "process": [
-      "driver-host-#battery",
-      "driver-host-#cpu-and-suspend",
-      "driver-host-#gpio",
-      "driver-host-#pmic",
-      "driver-host-#power-and-clocks",
-      "driver-host-#qcom-shared",
-      "driver-host-#root",
-      "driver-host-#smmu",
-      "driver-host-#temperature-sensor",
-      "driver-host-#usb"
-    ],
-    "vmo": [],
+    "process": "driver-host-#battery|driver-host-#cpu-and-suspend|driver-host-#gpio|driver-host-#pmic|driver-host-#power-and-clocks|driver-host-#qcom-shared|driver-host-#root|driver-host-#smmu|driver-host-#temperature-sensor|driver-host-#usb",
+    "vmo": "",
     "event_code": 82
   },
   {
     "name": "MCU",
-    "process": [
-      "driver-host-#mcu"
-    ],
-    "vmo": [],
+    "process": "driver-host-#mcu",
+    "vmo": "",
     "event_code": 83
   },
   {
     "name": "ConnectivityDrivers",
-    "process": [
-      "driver-host-#modem",
-      "driver-host-#nfc",
-      "driver-host-#uwb"
-    ],
-    "vmo": [],
+    "process": "driver-host-#modem|driver-host-#nfc|driver-host-#uwb",
+    "vmo": "",
     "event_code": 84
   },
   {
     "name": "SecurityDrivers",
-    "process": [
-      "driver-host-#tee"
-    ],
-    "vmo": [],
+    "process": "driver-host-#tee",
+    "vmo": "",
     "event_code": 85
   },
   {
     "name": "OtherDrivers",
-    "process": [
-      "driver_host",
-      "driver-host-",
-      "pwrbtn-monitor.cm",
-      "aml-rawnand.cm",
-      "aml-sdmmc.cm",
-      "aml-usb-phy.cm",
-      "platform-bus.cm",
-      "aml-uart.cm",
-      "amlogic-display.cm",
-      "aml-gpio.cm",
-      "aml-meson-power.cm",
-      "xhci.cm",
-      "aml-i2c.cm",
-      "optee.cm",
-      "aml-pwm.cm",
-      "amlogic_video_decoder.cm",
-      "aml-g12-tdm.cm",
-      "tas27xx.cm",
-      "ams-light.cm",
-      "aml-securemem.cm",
-      "aml-g12-pdm.cm",
-      "aml-ram.cm",
-      "aml-thermistor.cm",
-      "aml-canvas.cm",
-      "focaltech.cm",
-      "aml-thermal.cm",
-      "buttons.cm",
-      "aml-light.cm",
-      "ti-lp8556.cm",
-      "aml-g12-tdm-dai.cm",
-      "registers.cm",
-      "aml-pwm-init.cm",
-      "aml_mipicsi.cm",
-      "lowpan-ot-driver.cm",
-      "aml-thermal-s905d2g-legacy.cm",
-      "amlogic_h264_encoder_driver.cm",
-      "focaltech-sherlock.cm",
-      "tas5720.cm",
-      "camera_device.cm",
-      "aml-nna.cm",
-      "goodix-gt6853.cm",
-      "ti-ina231.cm",
-      "nelson-brownout-protection.cm",
-      "shtv3.cm",
-      "goodix-gt92xx.cm",
-      "dwc2.cm"
-    ],
-    "vmo": [],
+    "process": "driver_host.*|driver-host-.*|pwrbtn-monitor\\.cm|aml-rawnand\\.cm.*|aml-sdmmc\\.cm.*|aml-usb-phy\\.cm|platform-bus\\.cm.*|aml-uart\\.cm.*|amlogic-display\\.cm|aml-gpio\\.cm.*|aml-meson-power\\.cm.*|xhci.cm\\.*|aml-i2c\\.cm.*|optee\\.cm.*|aml-pwm\\.cm.*|amlogic_video_decoder\\.cm.*|aml-g12-tdm\\.cm.*|tas27xx\\.cm.*|ams-light\\.cm.*|aml-securemem\\.cm.*|aml-g12-pdm\\.cm.*|aml-ram\\.cm.*|aml-thermistor\\.cm.*|aml-canvas\\.cm.*|focaltech\\.cm.*|aml-thermal\\.cm.*|buttons\\.cm.*|aml-light\\.cm.*|ti-lp8556\\.cm.*|aml-g12-tdm-dai\\.cm.*|registers\\.cm.*|aml-pwm-init\\.cm.*|aml_mipicsi\\.cm.*|lowpan-ot-driver\\.cm.*|aml-thermal-s905d2g-legacy\\.cm.*|amlogic_h264_encoder_driver\\.cm.*|focaltech-sherlock\\.cm.*|tas5720\\.cm.*|camera_device\\.cm.*|aml-nna\\.cm.*|goodix-gt6853\\.cm.*|ti-ina231\\.cm.*|nelson-brownout-protection\\.cm.*|shtv3\\.cm.*|goodix-gt92xx\\.cm.*|dwc2\\.cm",
+    "vmo": "",
     "event_code": 48
   },
   {
     "name": "MemoryTooling",
-    "process": [
-      "memory_monitor.cm",
-      "memory_monitor2.cm",
-      "memory_pressure_signaler.cm"
-    ],
-    "vmo": [],
+    "process": "memory_monitor2?\\.cm|memory_pressure_signaler\\.cm",
+    "vmo": "",
     "event_code": 86
   },
   {
     "name": "EngTools",
-    "process": [
-      "/boot/bin/sh",
-      "/pkg/bin/sshd",
-      "console.cm",
-      "console-launcher.cm",
-      "debug-dash-launcher.cm",
-      "developer-console.cm",
-      "fdomain_runner",
-      "fs_realm.cm",
-      "gtest-runner.cm",
-      "kernel_debug_broker.cm",
-      "ktrace_provider.cm",
-      "lib_loader_runner_cache.cm",
-      "overnetstack.cm",
-      "ptysvc.cm",
-      "realm_builder_server.cm",
-      "remote",
-      "sh:console",
-      "sshd-host.cm",
-      "sshd-",
-      "test_manager.cm",
-      "trace_manager.cm",
-      "sl4f.cm",
-      "cpu_profiler.cm"
-    ],
-    "vmo": [],
+    "process": "/boot/bin/sh|/pkg/bin/sshd|console\\.cm|console-launcher\\.cm|debug-dash-launcher\\.cm|developer-console\\.cm|fdomain_runner|fs_realm\\.cm|gtest-runner\\.cm|kernel_debug_broker\\.cm|ktrace_provider\\.cm|lib_loader_runner_cache\\.cm|overnetstack\\.cm|ptysvc\\.cm|realm_builder_server\\.cm|remote.*|sh:console|sshd-host\\.cm|sshd-[0-9]+|test_manager\\.cm|trace_manager\\.cm|sl4f\\.cm|cpu_profiler\\.cm",
+    "vmo": "",
     "event_code": 64
   },
   {
     "name": "Minfs",
-    "process": [
-      "/pkg/bin/minfs",
-      "minfs.cm"
-    ],
-    "vmo": [],
+    "process": "/pkg/bin/minfs|minfs\\.cm",
+    "vmo": "",
     "event_code": 4
   },
   {
     "name": "SetUI",
-    "process": [
-      "setui_service.cm",
-      "setui_service_with_camera.cm"
-    ],
-    "vmo": [],
+    "process": "setui_service\\.cm|setui_service_with_camera\\.cm",
+    "vmo": "",
     "event_code": 54
   },
   {
     "name": "Amlogic",
-    "process": [
-      "driver_host:pdev:05:00:f"
-    ],
-    "vmo": [],
+    "process": "driver_host:pdev:05:00:f",
+    "vmo": "",
     "event_code": 10
   },
   {
     "name": "Perception",
-    "process": [
-      "concierge_agent.cm",
-      "fuchsia_perception_estelle_agen",
-      "fuchsia_perception_newman_agent",
-      "fuchsia_perception_elaine_agent",
-      "ml_framework_agent.cm",
-      "openvx_nn_server.cm",
-      "fuchsia_selina_agent.cm",
-      "stellar_agent.cm"
-    ],
-    "vmo": [],
+    "process": "concierge_agent\\.cm|fuchsia_perception_estelle_agent?|fuchsia_perception_newman_agent|fuchsia_perception_elaine_agent|ml_framework_agent\\.cm|openvx_nn_server\\.cm|fuchsia_selina_agent\\.cm|stellar_agent\\.cm",
+    "vmo": "",
     "event_code": 37
   },
   {
     "name": "Vision",
-    "process": [
-      "ml_vision_agent.cm"
-    ],
-    "vmo": [],
+    "process": "ml_vision_agent\\.cm",
+    "vmo": "",
     "event_code": 45
   },
   {
     "name": "FederatedLearning",
-    "process": [
-      "federated_learning_agent.cm"
-    ],
-    "vmo": [],
+    "process": "federated_learning_agent\\.cm",
+    "vmo": "",
     "event_code": 49
   },
   {
     "name": "Reconnect",
-    "process": [
-      "reconnect-agent.cm"
-    ],
-    "vmo": [],
+    "process": "reconnect-agent\\.cm",
+    "vmo": "",
     "event_code": 60
   },
   {
     "name": "Code66",
-    "process": [
-      "aurora_agent.cm",
-      "pref_control_agent.cm"
-    ],
-    "vmo": [],
+    "process": "aurora_agent\\.cm|pref_control_agent\\.cm",
+    "vmo": "",
     "event_code": 66
   },
   {
     "name": "Flutter",
-    "process": [
-      "io.flutter."
-    ],
-    "vmo": [],
+    "process": "io\\.flutter\\..*",
+    "vmo": "",
     "event_code": 20
   },
   {
     "name": "Web",
-    "process": [
-      "cast_runner.cm",
-      "web_instance.cm",
-      "web_engine_exe:"
-    ],
-    "vmo": [],
+    "process": "cast_runner\\.cm|web_instance\\.cm|web_engine_exe:.*",
+    "vmo": "",
     "event_code": 7
   },
   {
     "name": "Kronk",
-    "process": [
-      "kronk.cm",
-      "kronk_for_testing.cm"
-    ],
-    "vmo": [],
+    "process": "kronk\\.cm|kronk_for_testing\\.cm",
+    "vmo": "",
     "event_code": 8
   },
   {
     "name": "Cast",
-    "process": [
-      "cast_agent.cm",
-      "cast_assistant.cm",
-      "cast_auth_server.cm",
-      "multizone_leader.cm",
-      "multizone_follower.cm"
-    ],
-    "vmo": [],
+    "process": "cast_agent\\.cm|cast_assistant\\.cm|cast_auth_server\\.cm|multizone_leader\\.cm|multizone_follower\\.cm",
+    "vmo": "",
     "event_code": 14
   },
   {
     "name": "Comms",
-    "process": [
-      "comms_agent.cm",
-      "duocore.cm"
-    ],
-    "vmo": [],
+    "process": "comms_agent\\.cm|duocore\\.cm",
+    "vmo": "",
     "event_code": 41
   },
   {
     "name": "Ultrasound",
-    "process": [
-      "ultrasound_agent.cm"
-    ],
-    "vmo": [],
+    "process": "ultrasound_agent\\.cm",
+    "vmo": "",
     "event_code": 44
   },
   {
     "name": "Weave",
-    "process": [
-      "weave"
-    ],
-    "vmo": [],
+    "process": "weave.*",
+    "vmo": "",
     "event_code": 57
   },
   {
     "name": "SmartDisplaySession",
-    "process": [
-      "session",
-      "smart_session.cm"
-    ],
-    "vmo": [],
+    "process": "session.*|smart_session\\.cm",
+    "vmo": "",
     "event_code": 61
   },
   {
     "name": "OtherProductComponents",
-    "process": [
-      "brightness_manager.cm",
-      "color_tint_service.cm",
-      "nest_policy_agent.cm",
-      "presence_agent.cm",
-      "platform-nest-metrics.cm"
-    ],
-    "vmo": [],
+    "process": "brightness_manager\\.cm|color_tint_service\\.cm|nest_policy_agent\\.cm|presence_agent\\.cm|platform-nest-metrics\\.cm",
+    "vmo": "",
     "event_code": 62
   },
   {
     "name": "LocalHomePlatform",
-    "process": [
-      "localhome_platform.cm"
-    ],
-    "vmo": [],
+    "process": "localhome_platform\\.cm",
+    "vmo": "",
     "event_code": 67
   },
   {
     "name": "PhotonAgent",
-    "process": [
-      "photon_agent.cm"
-    ],
-    "vmo": [],
+    "process": "photon_agent\\.cm",
+    "vmo": "",
     "event_code": 74
   },
   {
     "name": "UsoniaAgent",
-    "process": [
-      "usonia_agent.cm"
-    ],
-    "vmo": [],
+    "process": "usonia_agent\\.cm",
+    "vmo": "",
     "event_code": 75
   },
   {
     "name": "Code88",
-    "process": [
-      "waves_host.cm"
-    ],
-    "vmo": [],
+    "process": "waves_host\\.cm",
+    "vmo": "",
     "event_code": 88
   }
 ]
