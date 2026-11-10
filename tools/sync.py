@@ -7,7 +7,9 @@ usage: sync.py --url REPO_URL --work DIR [--dry-run] [--push-url URL]
    against the sha256 its snapshot records, and fetches the packages and content blobs it needs.
 3. Appends commits, using the same rendering as the original build:
    - main: one commit per changed target, one `publish` commit per TUF version, then a bookkeeping commit
-     (MISSING, VARIANTS, REPUBLISHED, BASES, LATE_CHANNELS, current timestamp.json).
+     (MISSING, VARIANTS, REPUBLISHED, BASES, LATE_CHANNELS, current timestamp.json). Hand edits made on
+     main since the last sync are kept (and copied to condensed) as long as they are plain commits that
+     touch none of the files the sync manages; otherwise the sync stops without pushing.
    - condensed: one commit per publish.
    - lines/*: new builds on their release line; channels that arrive after their build was placed go on
      the line if the build is still its tip, otherwise on `lines/late/<version>`; re-publishes on
@@ -104,8 +106,29 @@ if "refs/heads/mirror-state" not in REMOTE:
 else:
     REMOTE_STATE_BASE = REMOTE["refs/heads/mirror-state"]; STATE_REF = "refs/heads/mirror-state"
 state = json.loads(show(STATE_REF, "state.json"))
-if REMOTE.get("refs/heads/main") != state["main"] or REMOTE.get("refs/heads/condensed") != state["condensed"]:
-    stop("main or condensed on GitHub is not where the last sync left it; not touching anything")
+if REMOTE.get("refs/heads/condensed") != state["condensed"]:
+    stop("condensed on GitHub is not where the last sync left it; not touching anything")
+# Hand edits on main are accepted when they sit on top of the last sync, are plain (non-merge) commits and
+# touch nothing the sync manages. They are carried over to condensed unchanged.
+MANAGED = ("tuf/", "builds/", "named/", "MISSING.md", "VARIANTS.md", "REPUBLISHED.md", "BASES.md", "LATE_CHANNELS.md")
+MAIN_BASE = REMOTE.get("refs/heads/main"); HAND = []
+if MAIN_BASE != state["main"]:
+    for depth in (50, 400):
+        git("fetch", "-q", "--no-write-fetch-head", f"--depth={depth}", "--filter=blob:none", "origin", "refs/heads/main")
+        refresh_local()
+        if state["main"] in LOCAL: break
+    else:
+        stop("main on GitHub does not contain the last synced commit within 400 commits; not touching anything")
+    rows = [l.split() for l in git("rev-list", "--parents", "--reverse", f"{state['main']}..{MAIN_BASE}").splitlines()]
+    prev_ = state["main"]
+    for row in rows:
+        if len(row) != 2 or row[1] != prev_:
+            stop(f"main on GitHub has a merge or rewritten history after the last sync (at {row[0][:10]}); not touching anything")
+        touched_ = [x for x in git("diff-tree", "-r", "--no-commit-id", "--name-only", row[0]).splitlines() if x.startswith(MANAGED)]
+        if touched_:
+            stop(f"hand edit {row[0][:10]} on main changes files the sync manages ({', '.join(touched_[:3])}); not touching anything")
+        HAND.append(row[0]); prev_ = row[0]
+    log(f"main has {len(HAND)} hand edit(s) since the last sync; building on top of them")
 LAST = state["last_tuf"]
 
 # ---------------------------------------------------------------- 1. new TUF versions
@@ -507,7 +530,7 @@ def run():
         docs["meta_only"].append(f"| v{tv} | {n} |")
 
     # 5d. main: publish history, exactly as gen_git.py pass 2
-    main_parent = state["main"]; entry_state = json.loads(show("refs/heads/main", "tuf/targets.json"))["signed"]["targets"] if not PLAN[0] else {}
+    main_parent = MAIN_BASE; entry_state = json.loads(show("refs/heads/main", "tuf/targets.json"))["signed"]["targets"] if not PLAN[0] else {}
     for ev in evs:
         v = ev["version"]
         if ev["missing"]:
@@ -608,13 +631,15 @@ refresh_local()
 
 main_new = git("rev-parse", "refs/heads/main").strip()
 def condense():
-    raw = git("log", "--first-parent", "--reverse", "--format=%H%x00%T%x00%ad%x00%cd%x00%B%x01", "--date=raw", f"{state['main']}..{main_new}")
+    raw = git("log", "--first-parent", "--reverse", "--format=%H%x00%T%x00%an%x00%ae%x00%ad%x00%cn%x00%ce%x00%cd%x00%B%x01", "--date=raw", f"{state['main']}..{main_new}")
     parent = state["condensed"]; pending = []; recs = [x.lstrip("\n") for x in raw.split("\x01") if x.strip()]
     for i, rec in enumerate(recs):
-        h, t, ad, cd, body = rec.split("\x00", 4); body = body.rstrip("\n"); subject = body.split("\n", 1)[0]
-        env = dict(ENV, GIT_AUTHOR_NAME=AUTHOR_NAME, GIT_AUTHOR_EMAIL=AUTHOR_EMAIL, GIT_AUTHOR_DATE=ad,
-                   GIT_COMMITTER_NAME=AUTHOR_NAME, GIT_COMMITTER_EMAIL=AUTHOR_EMAIL, GIT_COMMITTER_DATE=cd)
-        if subject.startswith("publish:"):
+        h, t, an, ae, ad, cn, ce, cd, body = rec.split("\x00", 8); body = body.rstrip("\n"); subject = body.split("\n", 1)[0]
+        env = dict(ENV, GIT_AUTHOR_NAME=an, GIT_AUTHOR_EMAIL=ae, GIT_AUTHOR_DATE=ad, GIT_COMMITTER_NAME=cn, GIT_COMMITTER_EMAIL=ce, GIT_COMMITTER_DATE=cd)
+        if h in HAND:                                   # a hand edit on main: carried over as it is
+            if pending: stop("hand edit in the middle of a publish")
+            msg = body + "\n"
+        elif subject.startswith("publish:"):
             rest = (body.split("\n", 1)[1] if "\n" in body else "").strip("\n")
             msg = subject + "\n\n" + (f"{len(pending)} target change(s) in this publish (one commit each on main):\n" + "\n".join("- " + x for x in pending)
                                        if pending else "No target changes in this publish (metadata re-sign only).") + "\n\n" + (rest + "\n\n" if rest else "")
@@ -643,7 +668,7 @@ top = {l.split("\t")[1]: l.split("\t")[0] for l in git("ls-tree", STATE_REF).spl
 blob_sha = lambda data: git("hash-object", "-w", "--stdin", input=data).strip()
 top["state.json"] = f"100644 blob {blob_sha(json.dumps(S, indent=0, sort_keys=True))}"
 top["tags.txt"] = f"100644 blob {blob_sha(tags_txt)}"
-tree = git("mktree", input="".join(f"{v}\t{k}\n" for k, v in sorted(top.items())), check=True).strip()
+tree = git("mktree", "--missing", input="".join(f"{v}\t{k}\n" for k, v in sorted(top.items())), check=True).strip()
 env = dict(ENV, GIT_AUTHOR_NAME=AUTHOR_NAME, GIT_AUTHOR_EMAIL=AUTHOR_EMAIL, GIT_COMMITTER_NAME=AUTHOR_NAME, GIT_COMMITTER_EMAIL=AUTHOR_EMAIL)
 state_new = subprocess.run(["git", "-C", R, "commit-tree", tree, "-p", git("rev-parse", STATE_REF).strip()],
                            input=f"sync through TUF targets v{NEWEST}\n\n{len(evs)} TUF versions, {len(new_tags)} new tags\n", capture_output=True, text=True, env=env, check=True).stdout.strip()
@@ -680,7 +705,8 @@ for k, c in S["channels"].items():
         if kk:
             check(pk == dict(kk[0]), f"{k}: pinned packages at its channel commit differ from packages.json")
             check({n: h for (c2, n), h in im.items() if c2 == c["channel"]} == dict(kk[1]), f"{k}: image packages differ from images.json")
-authors = set(git("log", "--format=%an <%ae>|%cn <%ce>", f"{state['main']}..{main_new}", f"{state['condensed']}..{cond_new}").split("\n")) - {""}
+authors = set(git("log", "--format=%an <%ae>|%cn <%ce>", f"{MAIN_BASE}..{main_new}").split("\n")) - {""}
+check(int(git("rev-list", "--count", f"{state['condensed']}..{cond_new}")) == len(HAND) + sum(1 for e in evs if not e["missing"]) + 1, "condensed does not have one commit per publish")
 check(authors <= {"Jared <77949461+ThePharmer@users.noreply.github.com>|Jared <77949461+ThePharmer@users.noreply.github.com>"}, f"unexpected authors {authors}")
 if fails:
     for f in fails[:20]: log("FAIL", f)
