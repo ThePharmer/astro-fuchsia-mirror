@@ -3,4 +3,4 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 URL="${MIRROR_URL:-https://github.com/ThePharmer/nest-hub-fuchsia-mirror.git}"
-python3 -I "$HERE/sync.py" --url "$URL" --work "${SYNC_WORK:-$HERE/../../sync-work}" "$@"
+python3 -I -B "$HERE/sync.py" --url "$URL" --work "${SYNC_WORK:-$HERE/../../sync-work}" "$@"
