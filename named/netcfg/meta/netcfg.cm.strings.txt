@@ -4,6 +4,12 @@ lifecycle.stop_event
 notify
 fuchsia.connectivity.RedactNetworkIdentifiers
 redact_network_identifiers
+fuchsia.netcfg.ConfigData
+config_data
+/netcfg-config/netcfg_default.json5
+fuchsia.netcfg.MinSeverity
+min_severity
+INFO
 netcfg-config
 /netcfg-config
 fuchsia.diagnostics.SaltProvider%
@@ -57,8 +63,6 @@ fuchsia.net.reachability.Monitor
 fuchsia.net.reachability.Monitor%
 /svc/fuchsia.net.reachability.Monitor
 fuchsia-pkg://fuchsia.com/netcfg-config#meta/netcfg-config.cm
-=FK,
-t]#_C
 src/connectivity/policy/netcfg/meta/netcfg.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
