@@ -17,3 +17,4 @@ The daily sync places each build when it first appears. When another channel shi
 | 34.20261102.103.1 | user-with-ota-canary-release-signed | v13237 | lines/late/34.20261102.103.1 |
 | 34.20261102.103.1 | user-with-ota-canary-signed | v13238 | lines/late/34.20261102.103.1 |
 | 34.20261102.103.1 | user-with-ota-canary-release-signed-netstack3 | v13239 | lines/late/34.20261102.103.1 |
+| 32.20260727.103.13702802 | user-with-ota-stable-channel | v13305 | lines/late/32.20260727.103.13702802 |
