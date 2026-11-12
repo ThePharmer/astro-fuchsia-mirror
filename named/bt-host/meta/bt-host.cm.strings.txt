@@ -4,9 +4,6 @@ forward_stderr_to
 forward_stdout_to
 lifecycle.stop_event
 notify
-fuchsia.bluetooth.DevicePath
-device_path
-/svc/fuchsia.hardware.bluetooth.Service/default/vendor
 fuchsia.bluetooth.HciCommandTimeout
 hci_command_timeout_seconds
 fuchsia.bluetooth.LeActiveScanInterval
@@ -60,6 +57,8 @@ fuchsia.time.alarms.WakeAlarms
 /svc/fuchsia.time.alarms.WakeAlarms
 fuchsia.hardware.bluetooth.Service
 /svc/fuchsia.hardware.bluetooth.Service
+device_path
+meta/bt-host.cvf
 pw_bluetooth_sapphire/fuchsia/bt_host/meta/bt-host.cml
 external/fuchsia_infra++cipd_ext+fuchsia_sdk/pkg/inspect/client.shard.cml
 external/fuchsia_infra++cipd_ext+fuchsia_sdk/pkg/inspect/offer.shard.cmlexternal/fuchsia_infra++cipd_ext+fuchsia_sdk/pkg/inspect/use.shard.cml
