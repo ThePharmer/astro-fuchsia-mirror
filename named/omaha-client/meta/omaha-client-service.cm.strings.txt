@@ -24,16 +24,14 @@ build-info
 /config/build-info
 config-data
 /config/data
-root-ssl-certificates
-/config/ssl
-fuchsia.cobalt.SystemDataUpdater%
-/svc/fuchsia.cobalt.SystemDataUpdater
 fuchsia.feedback.ComponentDataRegister
 /svc/fuchsia.feedback.ComponentDataRegister
 fuchsia.feedback.CrashReporter
 /svc/fuchsia.feedback.CrashReporter
 fuchsia.metrics.MetricEventLoggerFactory-
 /svc/fuchsia.metrics.MetricEventLoggerFactory
+fuchsia.net.http.Loader
+/svc/fuchsia.net.http.Loader
 fuchsia.pkg.Cup
 /svc/fuchsia.pkg.Cup
 fuchsia.power.CollaborativeRebootInitiator
@@ -51,10 +49,6 @@ fuchsia.inspect.InspectSink
 diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
-fuchsia.net.name.Lookup
-/svc/fuchsia.net.name.Lookup
-fuchsia.posix.socket.Provider
-/svc/fuchsia.posix.socket.Provider
 fuchsia.update.config.OptOut
 /svc/fuchsia.update.config.OptOut
 fuchsia.update.Listener
@@ -74,4 +68,3 @@ sdk/lib/inspect/use.shard.cml
 sdk/lib/syslog/client.shard.cml
 sdk/lib/syslog/offer.shard.cml
 sdk/lib/syslog/use.shard.cml
-src/lib/fuchsia-hyper/hyper.shard.cml
