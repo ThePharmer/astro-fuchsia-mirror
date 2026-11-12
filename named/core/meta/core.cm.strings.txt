@@ -92,8 +92,6 @@ fuchsia.pkg.http.GoogleClient
 fuchsia.pkg.http.Client
 fuchsia.power.battery.BatteryManager
 fuchsia.power.topology.test.SystemActivityControl
-process_resolver
-fuchsia.process.Resolver
 fuchsia.security.keymint.Admin
 fuchsia.security.keymint.SealingKeys
 setui_service
@@ -209,6 +207,8 @@ fuchsia.scenic.FramePredictionMarginInUs
 fuchsia.scenic.FrameSchedulerMinPredictedFrameDurationInUs
 fuchsia.scenic.ICanHazDisplayId
 fuchsia.scenic.ICanHazDisplayMode
+fuchsia.scenic.ImageImportPolicy
+fuchsia.scenic.ImageImportWorkers
 fuchsia.scenic.MaxDisplayHorizontalResolutionPx
 fuchsia.scenic.MaxDisplayRefreshRateMillihertz
 fuchsia.scenic.MaxDisplayVerticalResolutionPx
@@ -424,6 +424,7 @@ fuchsia.power.CollaborativeRebootInitiator
 fuchsia.power.button.Monitor
 fuchsia.power.profile.Watcher
 fuchsia.power.systemmode.ClientConfigurator
+fuchsia.process.Resolver
 fuchsia.sys2.RealmExplorer.root
 fuchsia.sys2.RealmQuery.root
 fuchsia.sysmem.Allocator
@@ -537,10 +538,6 @@ fuchsia.net.stack.Stack
 fuchsia.opencl.loader.Loader
 fuchsia.pkg.Cup
 fuchsia.pkg.FontResolver
-fuchsia.pkg.PackageResolver-base
-fuchsia.pkg.PackageResolver-pkg
-fuchsia.pkg.PackageResolver-boot
-process_resolver 
 sl4f_bridge_server
 feedback$
 fuchsia.scheduler.deprecated.ProfileProvider
@@ -640,8 +637,6 @@ feedback*
 memory_pressure_signaler*
 memory_pressure_signaler!
 multizone_leader*
-process_resolver*
-process_resolver!
 fuchsia.memory.debug.MemoryPressure
 /svc/fuchsia.memory.debug.MemoryPressure
 /svc/fuchsia.memorypressure.Provider
@@ -686,8 +681,6 @@ fuchsia-pkg://fuchsia.com/cast_agent#meta/multizone_leader.cm
 fuchsia-pkg://fuchsia.com/network#meta/network.cm
 fuchsia-pkg://fuchsia.com/paver#meta/paver.cm
 fuchsia-pkg://fuchsia.com/pkg-resolver#meta/pkg-resolver.cm
-process_resolverC
-fuchsia-pkg://fuchsia.com/process-resolver#meta/process_resolver.cm
 fuchsia-pkg://fuchsia.com/regulatory_region#meta/regulatory_region.cm
 fuchsia-pkg://fuchsia.com/sampler#meta/sampler.cm
 fuchsia-pkg://fuchsia.com/session_manager#meta/session_manager.cm
