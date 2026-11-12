@@ -1,5 +1,7 @@
 binary
 bin/driver_test_realm
+fuchsia.driver.testrealm.TunnelBootItems
+tunnel_boot_items
 fuchsia.boot.Items
 /svc/fuchsia.boot.Items
 fuchsia.component.Realm
@@ -15,6 +17,7 @@ dev-class
 dev-topological
 fuchsia.driver.development.Manager
 fuchsia.driver.framework.CompositeNodeManager
+fuchsia.driver.framework.NodeManager
 fuchsia.driver.registrar.DriverRegistrar
 fuchsia.driver.test.Realm
 fuchsia.system.state.Administrator
@@ -49,6 +52,7 @@ fuchsia.driver.index.DriverIndex%
 /svc/fuchsia.system.state.SystemStateTransition
 /realm_builder_exposed_dir/fuchsia.driver.development.Manager
 /realm_builder_exposed_dir/fuchsia.driver.framework.CompositeNodeManager
+/realm_builder_exposed_dir/fuchsia.driver.framework.NodeManager
 fuchsia.driver.registrar.DriverRegistrarC
 /realm_builder_exposed_dir/fuchsia.driver.registrar.DriverRegistrar
 /realm_builder_exposed_dir/fuchsia.inspect.InspectSink
@@ -57,9 +61,7 @@ fuchsia.driver.registrar.DriverRegistrarC
 realm_builder_env
 realm_builder_resolver
 realm-builder
-tunnel_boot_items
 r_uS
-meta/driver_test_realm.cvf
 sdk/lib/driver_test_realm/meta/driver_test_realm.cml
 sdk/lib/sys/component/realm_builder.shard.cml
 sdk/lib/sys/component/realm_builder_base_no_diagnostics.shard.cml
