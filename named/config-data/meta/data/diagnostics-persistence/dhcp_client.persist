@@ -7,9 +7,9 @@
 
         // Grows slowly: double and round observed max (4585 bytes)
         max_bytes: 10000,
-        min_seconds_between_fetch: 60,
+        min_seconds_between_fetch: 720,
         selectors: [
-            "INSPECT:core/network/dhcp-client:root/Clients",
+            "INSPECT:core/network/netstack/dhcp-client:root/Clients",
         ],
     },
 ]
