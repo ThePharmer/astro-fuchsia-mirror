@@ -1,5 +1,9 @@
 binary
 bin/wlancfg
+lifecycle.stop_event
+notify
+fuchsia.power.SuspendEnabled
+power_framework_enabled
 fuchsia.wlan.RecoveryEnabled
 recovery_enabled
 fuchsia.wlan.RecoveryProfile
@@ -21,6 +25,10 @@ fuchsia.wlan.device.service.DeviceMonitor
 /svc/fuchsia.wlan.device.service.DeviceMonitor
 fuchsia.location.sensor.WlanBaseStationWatcher
 /svc/fuchsia.location.sensor.WlanBaseStationWatcher
+fuchsia.power.broker.Topology
+/svc/fuchsia.power.broker.Topology
+fuchsia.power.system.ActivityGovernor
+/svc/fuchsia.power.system.ActivityGovernor
 fuchsia.tracing.provider.Registry
 /svc/fuchsia.tracing.provider.Registry
 data
@@ -37,7 +45,6 @@ fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
 /svc/fuchsia.wlan.policy.ClientProvider
 /svc/fuchsia.wlan.product.deprecatedclient.DeprecatedClient
 /svc/fuchsia.wlan.product.deprecatedconfiguration.DeprecatedConfigurator
-Te$i
 src/connectivity/wlan/wlancfg/meta/wlancfg.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
