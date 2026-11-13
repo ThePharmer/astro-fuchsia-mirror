@@ -21,3 +21,12 @@ The daily sync places each build when it first appears. When another channel shi
 | 34.20261108.103.1 | user-with-ota-prodfood-hotpatch-test | v13329 | lines/late/34.20261108.103.1 |
 | 34.20261108.103.1 | user-with-ota-teamfood-release-signed | v13334 | lines/late/34.20261108.103.1 |
 | 34.20261108.103.1 | user-with-ota-teamfood-release-signed-gia | v13335 | lines/late/34.20261108.103.1 |
+| 32.20260727.103.13702902 | user-with-ota-prodfood-test | v13341 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-teamfood-test-signed | v13342 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-partner-prodfood-minor-release | v13343 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-prodfood-minor-release-gia | v13344 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-prodfood-minor-release-signed-gia | v13345 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-prodfood-minor-release | v13346 | lines/releases/32.20260727.103 |
+| 33.20261022.103.3204 | user-with-ota-dogfood-release-signed | v13347 | lines/releases/33.20261022.103 |
+| 33.20261022.103.3204 | user-with-ota-dogfood-release-signed-gia | v13348 | lines/releases/33.20261022.103 |
+| 33.20261022.103.3204 | user-with-ota-partner-dogfood-release-signed | v13349 | lines/releases/33.20261022.103 |
