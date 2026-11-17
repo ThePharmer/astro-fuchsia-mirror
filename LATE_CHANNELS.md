@@ -35,3 +35,9 @@ The daily sync places each build when it first appears. When another channel shi
 | 32.20260727.103.13702902 | user-with-ota-prodfood-hotpatch-release-gia | v13374 | lines/releases/32.20260727.103 |
 | 33.20261022.103.3204 | user-with-ota-dogfood-release-signed-i18n | v13368 | lines/releases/33.20261022.103 |
 | 33.20261022.103.3204 | user-with-ota-dogfood-release-signed-i18n-gia | v13369 | lines/releases/33.20261022.103 |
+| 32.20260727.103.13702802 | user-with-ota-preview-leaving-stable-channel | v13381 | lines/late/32.20260727.103.13702802 |
+| 32.20260727.103.13702902 | user-with-ota-preview-joining-stable-channel | v13377 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-preview-stable-channel | v13378 | lines/releases/32.20260727.103 |
+| 34.20261116.103.1 | user-with-ota-canary-release-signed | v13382 | lines/late/34.20261116.103.1 |
+| 34.20261116.103.1 | user-with-ota-canary-signed | v13384 | lines/late/34.20261116.103.1 |
+| 34.20261116.103.1 | user-with-ota-canary-release-signed-netstack3 | v13385 | lines/late/34.20261116.103.1 |
