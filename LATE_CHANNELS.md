@@ -30,3 +30,8 @@ The daily sync places each build when it first appears. When another channel shi
 | 33.20261022.103.3204 | user-with-ota-dogfood-release-signed | v13347 | lines/releases/33.20261022.103 |
 | 33.20261022.103.3204 | user-with-ota-dogfood-release-signed-gia | v13348 | lines/releases/33.20261022.103 |
 | 33.20261022.103.3204 | user-with-ota-partner-dogfood-release-signed | v13349 | lines/releases/33.20261022.103 |
+| 32.20260727.103.13702902 | user-with-ota-partner-prodfood-hotpatch-release | v13372 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-prodfood-hotpatch-release | v13373 | lines/releases/32.20260727.103 |
+| 32.20260727.103.13702902 | user-with-ota-prodfood-hotpatch-release-gia | v13374 | lines/releases/32.20260727.103 |
+| 33.20261022.103.3204 | user-with-ota-dogfood-release-signed-i18n | v13368 | lines/releases/33.20261022.103 |
+| 33.20261022.103.3204 | user-with-ota-dogfood-release-signed-i18n-gia | v13369 | lines/releases/33.20261022.103 |
