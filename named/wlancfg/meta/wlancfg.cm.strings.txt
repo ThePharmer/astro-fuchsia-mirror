@@ -2,6 +2,8 @@ binary
 bin/wlancfg
 lifecycle.stop_event
 notify
+fuchsia.connectivity.RedactNetworkIdentifiers
+redact_network_identifiers
 fuchsia.power.SuspendEnabled
 power_framework_enabled
 fuchsia.wlan.RecoveryEnabled
@@ -10,9 +12,11 @@ fuchsia.wlan.RecoveryProfile
 recovery_profile
 fuchsia.wlan.RoamingPolicy
 roaming_policy
+fuchsia.diagnostics.SaltProvider%
+/svc/fuchsia.diagnostics.SaltProvider
+diagnostics
 fuchsia.inspect.InspectSink
 /svc/fuchsia.inspect.InspectSink
-diagnostics
 fuchsia.logger.LogSink
 /svc/fuchsia.logger.LogSink
 fuchsia.location.namedplace.RegulatoryRegionWatcher
