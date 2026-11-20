@@ -312,7 +312,6 @@ codec_factory
 dev-mediacodec
 media-codec
 dev-gpu
-dev-class-network
 dev-thermal
 thermal
 dev-goldfish-pipe
@@ -439,6 +438,9 @@ fuchsia.driver.crash.CrashIntrospect
 fuchsia.sys2.CrashIntrospect
 fuchsia.driver.token.Debug
 fuchsia.time.Maintenance
+fuchsia.driver.token.NodeBusTopology
+fuchsia.power.internal.CollaborativeRebootScheduler
+fuchsia.scheduler.deprecated.ProfileProvider
 fuchsia.factory.AlphaFactoryStoreProvider
 fuchsia.factory.CastCredentialsFactoryStoreProvider
 fuchsia.factory.MiscFactoryStoreProvider
@@ -468,7 +470,6 @@ fuchsia.pkg.PackageResolver-ota
 fuchsia.pkg.RetainedBlobs
 fuchsia.pkg.RetainedPackages
 fuchsia.pkg.internal.OtaDownloader
-fuchsia.power.internal.CollaborativeRebootScheduler
 fuchsia.update.verify.HealthVerification
 fuchsia.hardware.pty.Device
 fuchsia.power.system.ActivityGovernor
@@ -540,7 +541,6 @@ fuchsia.pkg.Cup
 fuchsia.pkg.FontResolver
 sl4f_bridge_server
 feedback$
-fuchsia.scheduler.deprecated.ProfileProvider
 fuchsia.process.explorer.Query
 fuchsia.recovery.FactoryReset
 fuchsia.sensors.Manager
