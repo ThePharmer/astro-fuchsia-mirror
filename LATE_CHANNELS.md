@@ -55,3 +55,7 @@ The daily sync places each build when it first appears. When another channel shi
 | 34.20261119.103.1 | user-with-ota-canary-release-signed | v13417 | lines/late/34.20261119.103.1 |
 | 34.20261119.103.1 | user-with-ota-canary-signed | v13418 | lines/late/34.20261119.103.1 |
 | 34.20261119.103.1 | user-with-ota-canary-release-signed-netstack3 | v13419 | lines/late/34.20261119.103.1 |
+| 32.20260727.103.13702902 | user-with-ota-preview-leaving-stable-channel | v13432 | lines/releases/32.20260727.103 |
+| 34.20261122.103.1 | user-with-ota-canary-release-signed | v13434 | lines/late/34.20261122.103.1 |
+| 34.20261122.103.1 | user-with-ota-canary-signed | v13435 | lines/late/34.20261122.103.1 |
+| 34.20261122.103.1 | user-with-ota-canary-release-signed-netstack3 | v13436 | lines/late/34.20261122.103.1 |
