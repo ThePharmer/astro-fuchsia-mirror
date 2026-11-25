@@ -62,3 +62,11 @@ The daily sync places each build when it first appears. When another channel shi
 | 34.20261123.103.1 | user-with-ota-canary-release-signed | v13443 | lines/late/34.20261123.103.1 |
 | 34.20261123.103.1 | user-with-ota-canary-signed | v13444 | lines/late/34.20261123.103.1 |
 | 34.20261123.103.1 | user-with-ota-canary-release-signed-netstack3 | v13445 | lines/late/34.20261123.103.1 |
+| 33.20261022.103.4100 | user-with-ota-partner-dogfood-release-signed | v13457 | lines/releases/33.20261022.103 |
+| 33.20261022.103.4100 | user-with-ota-dogfood-release-signed | v13458 | lines/releases/33.20261022.103 |
+| 33.20261022.103.4100 | user-with-ota-dogfood-release-signed-gia | v13459 | lines/releases/33.20261022.103 |
+| 33.20261022.103.4100 | user-with-ota-dogfood-release-signed-i18n | v13460 | lines/releases/33.20261022.103 |
+| 33.20261022.103.4100 | user-with-ota-dogfood-release-signed-i18n-gia | v13461 | lines/releases/33.20261022.103 |
+| 34.20261124.103.1 | user-with-ota-canary-release-signed | v13454 | lines/late/34.20261124.103.1 |
+| 34.20261124.103.1 | user-with-ota-canary-signed | v13455 | lines/late/34.20261124.103.1 |
+| 34.20261124.103.1 | user-with-ota-canary-release-signed-netstack3 | v13456 | lines/late/34.20261124.103.1 |
