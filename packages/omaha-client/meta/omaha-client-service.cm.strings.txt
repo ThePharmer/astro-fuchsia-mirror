@@ -2,6 +2,10 @@ binary
 bin/omaha_client_service
 fuchsia.omaha.AllowRebootWhenIdle
 allow_reboot_when_idle
+fuchsia.omaha.CupPublicKey
+cup_public_key
+fuchsia.omaha.CupPublicKeyId
+cup_public_key_id
 fuchsia.omaha.FuzzPercentageRange
 fuzz_percentage_range
 fuchsia.omaha.PeriodicIntervalMinutes
@@ -61,7 +65,6 @@ fuchsia.update.verify.ComponentOtaHealthCheck
 /svc/fuchsia.update.channel.Provider
 /svc/fuchsia.update.channelcontrol.ChannelControl
 /svc/fuchsia.update.verify.ComponentOtaHealthCheck
-t%S_
 src/sys/pkg/bin/omaha-client/meta/omaha-client-service.cml
 sdk/lib/inspect/client.shard.cmlsdk/lib/inspect/offer.shard.cml
 sdk/lib/inspect/use.shard.cml
